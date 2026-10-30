@@ -1,0 +1,23 @@
+[
+  "grain",
+  "legume",
+  "vegetable",
+  "fruit",
+  "nut_seed",
+  "dairy",
+  "egg",
+  "meat",
+  "poultry",
+  "seafood",
+  "mixed_dish",
+  "bakery",
+  "snack",
+  "sweet",
+  "beverage_nonalcoholic",
+  "beverage_alcoholic",
+  "condiment_sauce",
+  "fat_oil",
+  "soup",
+  "ingredient_other"
+]
+
