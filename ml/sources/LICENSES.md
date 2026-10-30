@@ -18,18 +18,38 @@ Food-101: not used.
 
 ## Data & Media Sources
 
-### 1. USDA FoodData Central (Foundation Foods & SR Legacy)
+### 1. USDA FoodData Central Packages
+
+#### 1a. USDA Foundation Foods (2026-10-29)
+- **Status**: EXCLUDED
+- **Download URL**: https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_foundation_food_csv_2026-10-29.zip
+- **HEAD Content-Length**: 1127612
+- **Reason**: The package lacks food.csv, food_nutrient.csv and food_portion.csv (core tables).
+- **Date Verified**: 2026-10-30
+
+#### 1b. USDA Foundation Foods (2024-10-31)
 - **Status**: ACCEPTED
-- **Official URL**: https://fdc.nal.usda.gov/
+- **Download URL**: https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_foundation_food_csv_2024-10-31.zip
+- **HEAD Content-Length**: 3258886
+- **What it provides**: Analytical food composition data including core tables (food.csv, food_nutrient.csv, food_portion.csv).
+- **Date Verified**: 2026-10-30
+
+#### 1c. USDA SR Legacy (2018-04)
+- **Status**: ACCEPTED
+- **Download URL**: https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip
+- **HEAD Content-Length**: 6074592
+- **What it provides**: Ground-truth standard reference food nutrient composition datasets and portion measurements across 7,793 items.
+- **Date Verified**: 2026-10-30
+
+#### USDA Legal & Usage Note
+- **Official Portal**: https://fdc.nal.usda.gov/
 - **Dataset Download Page**: https://fdc.nal.usda.gov/download-datasets.html
 - **Licence URL / Reference**: https://fdc.nal.usda.gov/faq.html#q21
 - **Policy & Legal Note**:
   USDA FoodData Central data is treated as a U.S. Government work (17 U.S.C. 105). The FAQ permits commercial software use. Legal basis to be confirmed by counsel before commercial launch.
 - **Fetched FAQ Text (https://fdc.nal.usda.gov/faq.html#q21)**:
   "USDA has been the authoritative source of food composition data for more than a century, and the primary source of publicly available data on the nutrients and other components found in foods. Users of these data include academic research institutions, federal agencies, nutrition and health professionals, software developers, foreign governments and organizations, the food industry, restaurants, and others. By combining a robust mix of food, nutrient, and other food component data in one system, FoodData Central can strengthen current uses of the data and facilitate new uses. The data in FoodData Central can be used in a variety of ways, such as ... Developing commercial nutrient analysis software and applications for private sector purposes."
-- **What it provides**: Ground-truth nutrient composition datasets (Foundation Foods CSV, SR Legacy CSV) providing calories, macronutrients, micronutrients, and standard serving portion weights.
 - **What is forbidden**: Implying USDA endorsement of commercial software/products; misrepresenting Government data.
-- **Date Verified**: 2026-10-30
 
 ### 2. Wikimedia Commons
 - **Status**: ACCEPTED (subject to image license filter gate)
