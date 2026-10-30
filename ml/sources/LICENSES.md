@@ -34,11 +34,12 @@ Food-101: not used.
 - **What it provides**: Analytical food composition data including core tables (food.csv, food_nutrient.csv, food_portion.csv).
 - **Date Verified**: 2026-10-30
 
-#### 1c. USDA SR Legacy (2018-04)
+#### 1c. USDA SR Legacy (2018-04 release)
 - **Status**: ACCEPTED
+- **Release**: 2018-04 release
 - **Download URL**: https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip
 - **HEAD Content-Length**: 6074592
-- **What it provides**: Ground-truth standard reference food nutrient composition datasets and portion measurements across 7,793 items.
+- **What it provides**: Ground-truth standard reference food nutrient composition datasets and portion measurements across 7,793 items (2018-04 release).
 - **Date Verified**: 2026-10-30
 
 #### USDA Legal & Usage Note
