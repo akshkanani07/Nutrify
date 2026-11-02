@@ -1,0 +1,93 @@
+{
+  "baseline_top1_acc": 55.0,
+  "baseline_top5_acc": 94.92,
+  "architectures_tested": {
+    "mobilenet_v3": {
+      "in_features": 960,
+      "test_top1": 73.1,
+      "test_top5": 98.7,
+      "test_loss": 1.4008,
+      "extract_time_s": 206.6
+    },
+    "efficientnet_b0": {
+      "in_features": 1280,
+      "test_top1": 76.1,
+      "test_top5": 98.7,
+      "test_loss": 1.3339,
+      "extract_time_s": 343.1
+    },
+    "resnet50": {
+      "in_features": 2048,
+      "test_top1": 70.3,
+      "test_top5": 97.3,
+      "test_loss": 1.4942,
+      "extract_time_s": 833.5
+    }
+  },
+  "best_architecture": "efficientnet_b0",
+  "final_test_top1_acc": 75.58,
+  "final_test_top5_acc": 98.88,
+  "final_test_loss": 0.7849,
+  "top_10_errors": [
+    {
+      "true_class": "archway home style cookies oatmeal",
+      "pred_class": "muffins oat bran",
+      "count": 26,
+      "pct_of_class": 54.2
+    },
+    {
+      "true_class": "wasabi root raw",
+      "pred_class": "celery raw",
+      "count": 22,
+      "pct_of_class": 45.8
+    },
+    {
+      "true_class": "pizza rolls frozen unprepared",
+      "pred_class": "peanuts spanish raw",
+      "count": 21,
+      "pct_of_class": 43.8
+    },
+    {
+      "true_class": "mushrooms white raw",
+      "pred_class": "garlic raw",
+      "count": 20,
+      "pct_of_class": 41.7
+    },
+    {
+      "true_class": "garlic raw",
+      "pred_class": "mushrooms white raw",
+      "count": 19,
+      "pct_of_class": 39.6
+    },
+    {
+      "true_class": "apples gala with skin raw",
+      "pred_class": "strawberries raw",
+      "count": 17,
+      "pct_of_class": 35.4
+    },
+    {
+      "true_class": "cornsalad raw",
+      "pred_class": "spinach raw",
+      "count": 17,
+      "pct_of_class": 35.4
+    },
+    {
+      "true_class": "croutons plain",
+      "pred_class": "potato pancakes",
+      "count": 16,
+      "pct_of_class": 33.3
+    },
+    {
+      "true_class": "potato pancakes",
+      "pred_class": "croutons plain",
+      "count": 16,
+      "pct_of_class": 33.3
+    },
+    {
+      "true_class": "broccoli leaves raw",
+      "pred_class": "spinach raw",
+      "count": 15,
+      "pct_of_class": 31.2
+    }
+  ]
+}

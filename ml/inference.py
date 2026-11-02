@@ -18,6 +18,7 @@ from typing import Any
 
 from PIL import Image
 import torch
+import torch.nn as nn
 import torch.nn.functional as F
 
 # Add project root to sys.path
@@ -61,7 +62,7 @@ class FoodPredictor:
             )
 
         logger.info(f"Loading weights from {self.checkpoint_path} onto {self.device}")
-        checkpoint = torch.load(self.checkpoint_path, map_location=self.device)
+        checkpoint = torch.load(self.checkpoint_path, map_location=self.device, weights_only=False)
 
         # Load class index mappings
         self.class_to_idx = checkpoint.get("class_to_idx", {})
@@ -80,9 +81,69 @@ class FoodPredictor:
         self.num_classes = len(self.class_to_idx)
         logger.info(f"Initialized predictor with {self.num_classes} output classes.")
 
-        # Instantiate model architecture and load state dict
-        self.model = build_model(num_classes=self.num_classes, pretrained=False)
-        self.model.load_state_dict(checkpoint["model_state_dict"])
+        state_dict = checkpoint["model_state_dict"]
+        # Check if checkpoint uses the enhanced multi-layer head architecture
+        if any("head.fc1" in k for k in state_dict.keys()):
+            import torchvision.models as models
+            arch = checkpoint.get("architecture", "efficientnet_b0")
+            if arch == "efficientnet_b0":
+                m = models.efficientnet_b0(weights=None)
+                extractor = nn.Sequential(m.features, m.avgpool, nn.Flatten(1))
+                in_feat = 1280
+            elif arch == "mobilenet_v3":
+                m = models.mobilenet_v3_large(weights=None)
+                extractor = nn.Sequential(m.features, m.avgpool, nn.Flatten(1))
+                in_feat = 960
+            elif arch == "resnet50":
+                m = models.resnet50(weights=None)
+                extractor = nn.Sequential(*list(m.children())[:-1], nn.Flatten(1))
+                in_feat = 2048
+            else:
+                m = models.efficientnet_b0(weights=None)
+                extractor = nn.Sequential(m.features, m.avgpool, nn.Flatten(1))
+                in_feat = 1280
+
+            class EnhancedClassifierHead(nn.Module):
+                def __init__(self, in_features: int, num_classes: int = 50, hidden_dim: int = 512, dropout: float = 0.3):
+                    super().__init__()
+                    self.fc1 = nn.Linear(in_features, hidden_dim)
+                    self.bn1 = nn.BatchNorm1d(hidden_dim)
+                    self.act = nn.GELU()
+                    self.drop = nn.Dropout(dropout)
+                    self.fc2 = nn.Linear(hidden_dim, num_classes)
+
+                def forward(self, x: torch.Tensor) -> torch.Tensor:
+                    out = self.fc1(x)
+                    out = self.bn1(out)
+                    out = self.act(out)
+                    out = self.drop(out)
+                    return self.fc2(out)
+
+            head = EnhancedClassifierHead(in_features=in_feat, num_classes=self.num_classes, hidden_dim=512, dropout=0.3)
+
+            class FullModel(nn.Module):
+                def __init__(self, ext: nn.Module, hd: nn.Module) -> None:
+                    super().__init__()
+                    self.extractor = ext
+                    self.head = hd
+
+                def forward(self, x: torch.Tensor) -> torch.Tensor:
+                    return self.head(self.extractor(x))
+
+                @torch.no_grad()
+                def predict_topk(self, x: torch.Tensor, k: int = 5) -> tuple[torch.Tensor, torch.Tensor]:
+                    self.eval()
+                    logits = self.forward(x)
+                    probs = F.softmax(logits, dim=-1)
+                    topk_probs, topk_indices = torch.topk(probs, min(k, logits.size(-1)), dim=-1)
+                    return topk_indices, topk_probs
+
+            self.model = FullModel(extractor, head)
+            self.model.load_state_dict(state_dict)
+        else:
+            self.model = build_model(num_classes=self.num_classes, pretrained=False)
+            self.model.load_state_dict(state_dict)
+
         self.model.to(self.device)
         self.model.eval()
 

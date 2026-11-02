@@ -1,0 +1,44 @@
+{
+  "total_images": 16000,
+  "total_classes": 50,
+  "images_per_class": {
+    "min": 320,
+    "max": 320,
+    "avg": 320.0,
+    "counts": {
+      "kale raw": 320,
+      "bread egg": 320,
+      "nectarines raw": 320,
+      "pasta gluten free corn cooked": 320,
+      "hummus commercial": 320,
+      "raspberries raw": 320,
+      "spinach raw": 320,
+      "apples gala with skin raw": 320,
+      "ice creams chocolate": 320,
+      "ketchup restaurant": 320,
+      "bread rye": 320,
+      "mushrooms white raw": 320,
+      "garlic raw": 320,
+      "yogurt plain low fat": 320,
+      "pork fresh ground raw": 320,
+      "cornsalad raw": 320,
+      "chicken spread": 320,
+      "pizza rolls frozen unprepared": 320,
+      "oranges raw navels": 320,
+      "wasabi root raw": 320
+    }
+  },
+  "missing_files": [],
+  "corrupted_images": [],
+  "duplicate_images": [],
+  "empty_labels": [],
+  "unmapped_nutrition_labels": [],
+  "split_counts": {
+    "train": 11200,
+    "val": 2400,
+    "test": 2400
+  },
+  "training_readiness_status": "READY",
+  "blockers": [],
+  "warnings": []
+}
