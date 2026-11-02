@@ -1,0 +1,1052 @@
+food_name,USDA_ID,calories,protein,carbs,fat,fiber
+kale raw,323505,35.0,2.92,4.42,1.49,4.1
+garlic raw,1104647,143.0,6.62,28.2,0.38,2.7
+broccoli raw,321900,32.0,2.57,6.29,0.34,2.4
+nectarines raw,327357,39.0,1.06,9.18,0.28,1.5
+egg yolk dried,329716,654.0,34.2,1.07,55.5,
+onions red raw,790577,44.0,0.94,9.93,0.1,2.2
+egg white dried,323793,376.0,79.9,6.02,0.65,
+strawberries raw,327699,31.0,0.64,7.63,0.22,1.8
+flour rice brown,1104812,365.2,7.19,75.5,3.85,
+hummus commercial,321358,229.0,7.35,14.9,17.1,5.4
+ketchup restaurant,747693,117.0,1.11,26.8,0.55,
+flour soy defatted,1104705,366.0,51.1,32.9,3.33,
+peaches yellow raw,325430,42.0,0.91,10.1,0.27,1.5
+oranges raw navels,746771,47.0,0.91,11.8,0.15,2.0
+kiwifruit green raw,327046,58.0,1.06,14.0,0.44,3.0
+bananas overripe raw,790774,85.0,0.73,20.1,0.22,1.7
+mustard prepared yellow,326698,61.0,4.25,5.3,3.38,4.3
+apples gala with skin raw,1105781,61.0,0.13,14.8,0.15,2.1
+eggs grade a large egg yolk,748236,334.0,16.2,1.02,28.8,
+poi,170431,112.0,0.38,27.23,0.14,0.4
+lard,171401,902.0,0.0,0.0,100.0,0.0
+miso,172442,198.0,12.79,25.37,6.01,5.4
+honey,169640,304.0,0.3,82.4,0.0,0.2
+natto,172443,211.0,19.4,12.68,11.0,5.4
+okara,172452,76.0,3.52,12.23,1.73,
+catsup,168556,101.0,1.04,27.4,0.1,0.3
+eggnog,171258,88.0,4.55,8.05,4.19,0.0
+wasabi,171831,292.0,2.23,46.13,10.9,6.1
+tempeh,174272,192.0,20.29,7.64,10.8,
+jellies,169642,266.0,0.15,69.95,0.02,1.0
+molasses,168820,290.0,0.0,74.73,0.1,0.0
+yam raw,170071,118.0,1.53,27.88,0.17,4.1
+oil oat,173576,884.0,0.0,0.0,100.0,0.0
+rye grain,168884,338.0,10.34,75.86,1.63,15.1
+okra raw,169260,33.0,1.93,7.45,0.19,3.2
+taro raw,169308,112.0,1.5,26.46,0.2,4.1
+triticale,169718,336.0,13.05,72.13,2.09,
+dock raw,170076,22.0,2.0,3.2,0.7,2.9
+buckwheat,170286,343.0,13.25,71.5,3.4,10.0
+oil palm,171015,884.0,0.0,0.0,100.0,0.0
+figs raw,173021,74.0,0.75,19.18,0.3,2.9
+rowal raw,167783,111.0,2.3,23.9,2.0,6.2
+limes raw,168155,30.0,0.7,10.54,0.2,2.8
+pears raw,169118,57.0,0.36,15.23,0.14,3.1
+beets raw,169145,43.0,1.61,9.56,0.17,2.8
+cornstarch,169698,381.0,0.26,91.27,0.05,0.9
+plums raw,169949,46.0,0.7,11.42,0.28,1.4
+eppaw raw,170078,150.0,4.6,31.68,1.8,
+fish broth,171606,16.0,2.0,0.4,0.6,0.0
+bread egg,172673,287.0,9.5,47.8,6.0,2.3
+bread rye,172684,259.0,8.5,48.3,3.3,5.8
+fat goose,173572,900.0,0.0,0.0,99.8,0.0
+pie peach,175020,224.0,1.9,32.9,10.0,0.8
+tofu yogurt,167722,94.0,3.5,15.96,1.8,0.2
+syrup cane,167743,269.0,0.0,73.14,0.0,0.0
+prune puree,167780,257.0,2.1,65.1,0.2,3.3
+fruit syrup,167953,341.0,0.0,85.13,0.0,0.1
+feijoa raw,168176,61.0,0.71,15.21,0.42,6.4
+endive raw,168412,17.0,1.25,3.35,0.2,3.1
+chewing gum,168771,360.0,0.0,96.7,0.3,2.4
+millet raw,169702,378.0,11.02,72.85,4.22,8.5
+mangos raw,169910,60.0,0.82,14.98,0.38,1.6
+celery raw,169988,14.0,0.69,2.97,0.17,1.6
+chives raw,169994,30.0,3.27,4.35,0.73,2.5
+onions raw,170000,40.0,1.1,9.34,0.1,1.7
+borage raw,170481,21.0,1.8,3.06,0.7,
+bulgur dry,170688,342.0,12.29,75.87,1.33,12.5
+tofu fried,172451,270.0,18.82,8.86,20.18,3.9
+salt table,173468,0.0,0.0,0.0,0.0,0.0
+fat turkey,173571,900.0,0.0,0.0,99.8,0.0
+carob flour,173755,222.0,4.62,88.88,0.65,39.8
+ham minced,173865,263.0,16.28,1.84,20.68,0.0
+bagels egg,174901,278.0,10.6,53.0,2.1,2.3
+pummelo raw,167754,38.0,0.76,9.62,0.04,1.0
+rhubarb raw,167758,21.0,0.9,4.54,0.2,1.8
+soursop raw,167761,66.0,1.0,16.84,0.3,3.3
+abiyuch raw,167782,69.0,1.5,17.6,0.1,5.3
+quinces raw,168163,57.0,0.4,15.3,0.1,1.9
+roselle raw,168170,49.0,0.96,11.31,0.64,
+potato flour,168446,357.0,6.9,83.1,0.34,5.9
+pumpkin raw,168448,26.0,1.0,6.5,0.1,0.5
+spinach raw,168462,23.0,2.86,3.63,0.39,2.2
+nopales raw,168571,16.0,1.32,3.33,0.09,2.2
+teff cooked,168918,101.0,3.87,19.86,0.65,2.8
+litchis raw,169086,66.0,0.83,16.53,0.44,1.3
+longans raw,169089,60.0,1.31,15.14,0.1,1.1
+arugula raw,169387,25.0,2.58,3.65,0.66,1.6
+epazote raw,169398,32.0,0.33,7.44,0.52,3.8
+syrups malt,169660,318.0,6.2,71.3,0.0,0.0
+wheat durum,169721,339.0,13.68,71.13,2.47,
+loquats raw,169908,47.0,0.43,12.14,0.2,1.7
+papayas raw,169926,43.0,0.47,10.82,0.26,1.7
+cabbage raw,169975,25.0,1.28,5.8,0.1,2.5
+cardoon raw,169981,17.0,0.7,4.07,0.1,1.6
+cassava raw,169985,160.0,1.36,38.06,0.28,1.8
+celtuce raw,169990,18.0,0.85,3.65,0.3,1.7
+nuts pecans,170182,691.0,9.17,13.86,71.97,9.6
+carrots raw,170393,41.0,0.93,9.58,0.24,2.8
+turnips raw,170465,28.0,0.9,6.43,0.1,1.8
+millet flour,172023,382.0,10.75,75.12,4.25,3.5
+cheese blue,172175,353.0,21.4,2.34,28.74,0.0
+cheese brie,172177,334.0,20.75,0.45,27.68,0.0
+basil fresh,172232,23.0,3.15,2.65,0.64,1.6
+lentils raw,172420,352.0,24.63,63.35,1.06,10.7
+phyllo dough,172791,299.0,7.1,52.6,6.0,1.9
+thyme fresh,173470,101.0,5.56,24.45,1.68,14.0
+fish surimi,173702,99.0,15.18,6.85,0.9,0.0
+bananas raw,173944,89.0,1.09,22.84,0.33,2.6
+bagels wheat,167533,250.0,10.2,48.89,1.53,4.1
+candies hard,167990,394.0,0.0,98.0,0.2,0.0
+kumquats raw,168154,71.0,1.88,15.9,0.86,6.5
+pepeao dried,168418,298.0,4.82,81.03,0.44,
+kohlrabi raw,168424,27.0,1.7,6.2,0.1,3.6
+sugars brown,168833,380.0,0.12,98.09,0.0,0.0
+oat bran raw,168872,246.0,17.3,66.22,7.03,15.4
+eggplant raw,169228,25.0,0.98,5.88,0.18,3.0
+purslane raw,169274,20.0,2.03,3.39,0.36,
+radishes raw,169276,16.0,0.68,3.4,0.1,1.6
+sugars maple,169658,354.0,0.1,90.9,0.2,0.0
+syrups maple,169661,260.0,0.04,67.04,0.06,0.0
+couscous dry,169699,376.0,12.76,77.43,0.64,5.0
+sorghum grain,169716,329.0,10.62,72.09,3.46,6.7
+spelt cooked,169746,127.0,5.5,26.44,0.85,3.9
+celeriac raw,170400,42.0,1.5,9.2,0.3,1.8
+collards raw,170406,32.0,3.02,5.42,0.61,4.0
+parsnips raw,170417,75.0,1.2,17.99,0.3,4.9
+shallots raw,170499,72.0,2.5,16.8,0.1,3.2
+nuts almonds,170567,579.0,21.15,21.55,49.93,12.5
+blood sausage,171618,379.0,14.6,1.29,34.5,0.0
+apricots raw,171697,48.0,1.4,11.12,0.39,2.0
+bologna beef,172012,299.0,10.91,4.29,26.13,0.0
+cracker meal,172750,383.0,9.3,80.9,1.7,2.6
+rolls french,172795,277.0,8.6,50.2,4.3,3.2
+rice crackers,173161,416.0,10.0,82.64,5.0,0.0
+bologna pork,173856,247.0,15.3,0.73,19.87,0.0
+meat extender,174268,311.0,41.71,34.71,2.97,17.5
+pectin liquid,167682,11.0,0.0,2.1,0.0,2.1
+millet puffed,167724,354.0,13.0,80.0,3.4,2.7
+sapodilla raw,167759,83.0,0.44,19.96,1.1,5.3
+tamarinds raw,167763,239.0,2.8,62.5,0.6,5.1
+frog legs raw,168148,73.0,16.4,0.0,0.3,0.0
+dates medjool,168191,277.0,1.81,74.97,0.15,6.7
+asparagus raw,168389,20.0,2.2,3.88,0.12,2.1
+rutabagas raw,168454,37.0,1.08,8.62,0.16,2.3
+arrowroot raw,168490,65.0,4.24,13.39,0.2,1.3
+radicchio raw,168564,23.0,1.43,4.48,0.25,0.9
+quinoa cooked,168917,120.0,4.4,21.3,1.92,2.8
+pretzels soft,169064,338.0,8.2,69.39,3.1,1.7
+litchis dried,169087,277.0,3.8,70.7,1.2,4.6
+arrowhead raw,169203,99.0,5.33,20.23,0.29,
+cornsalad raw,169219,21.0,2.0,3.6,0.4,
+wild rice raw,169726,357.0,14.73,74.9,1.08,6.2
+teff uncooked,169747,367.0,13.3,73.13,2.38,8.0
+longans dried,169907,286.0,4.9,74.0,0.4,
+barley hulled,170283,354.0,12.48,73.48,2.3,17.3
+bulgur cooked,170287,83.0,3.08,18.58,0.24,4.5
+parsley fresh,170416,36.0,2.97,6.33,0.79,3.3
+capers canned,172238,23.0,2.36,4.89,0.86,3.2
+scrapple pork,172969,213.0,8.06,14.06,13.87,0.3
+butter salted,173410,717.0,0.85,0.06,81.11,0.0
+dulce de leche,173461,315.0,6.84,55.35,7.35,0.0
+vinegar cider,173469,21.0,0.0,0.93,0.0,0.0
+chicken spread,173858,158.0,18.01,4.05,17.56,0.3
+cherimoya raw,173953,75.0,1.57,17.71,0.68,3.0
+jackfruit raw,174687,95.0,1.72,23.25,0.64,1.5
+crackers milk,174980,446.0,7.6,71.73,13.77,3.4
+strudel apple,175032,274.0,3.3,41.1,11.2,2.2
+sherbet orange,167577,144.0,1.1,30.4,2.0,1.3
+lemon peel raw,167749,47.0,1.5,16.0,0.3,10.6
+watermelon raw,167765,30.0,0.61,7.55,0.15,0.4
+lime juice raw,168156,25.0,0.42,8.42,0.07,0.4
+raisins seeded,168166,296.0,2.52,78.47,0.54,6.8
+pimento canned,168559,23.0,1.1,5.1,0.3,1.9
+tomatillos raw,168566,32.0,0.96,5.84,1.02,1.9
+rye flour dark,168885,325.0,15.91,68.63,2.22,23.8
+lotus root raw,169250,74.0,2.6,17.23,0.1,4.9
+seeds flaxseed,169414,534.0,18.29,28.88,42.16,27.3
+wheat sprouted,169725,198.0,7.49,42.53,1.27,1.1
+spelt uncooked,169745,338.0,14.57,70.19,2.43,10.7
+mulberries raw,169913,43.0,1.44,9.8,0.39,1.7
+watercress raw,170068,11.0,2.3,1.29,0.1,0.5
+potato pancakes,170092,268.0,6.08,27.81,14.76,3.3
+cabbage kimchi,170392,15.0,1.1,2.4,0.5,1.6
+spinach souffle,170494,172.0,7.89,5.9,12.95,0.7
+arrowroot flour,170684,357.0,0.3,88.15,0.1,3.4
+spices saffron,170934,310.0,11.43,65.37,5.85,3.9
+spices paprika,171329,282.0,14.14,53.99,12.89,34.9
+breadfruit raw,171714,103.0,1.07,27.12,0.23,4.9
+crabapples raw,171721,76.0,0.4,19.95,0.3,
+fish carp raw,171952,127.0,17.83,0.0,5.6,0.0
+bacon meatless,172439,309.0,11.69,5.31,29.52,2.6
+croutons plain,172751,407.0,11.9,73.5,6.6,5.1
+vanilla extract,173471,288.0,0.06,12.65,0.06,0.0
+rosemary fresh,173473,131.0,3.31,20.7,5.86,14.1
+sauce barbecue,174523,172.0,0.82,40.77,0.63,0.9
+lemon juice raw,167747,22.0,0.35,6.9,0.24,0.3
+raspberries raw,167755,52.0,1.2,11.94,0.65,6.5
+clementines raw,168195,47.0,0.85,12.02,0.15,1.7
+taro leaves raw,168487,42.0,4.98,6.7,0.74,3.7
+taro shoots raw,168489,11.0,0.92,2.32,0.09,
+oat bran cooked,168873,40.0,3.21,11.44,0.86,2.6
+quinoa uncooked,168874,368.0,14.12,64.16,6.07,7.0
+rye flour light,168887,357.0,9.82,76.68,1.33,8.0
+orange peel raw,169103,97.0,1.5,25.0,0.2,10.6
+ginger root raw,169231,80.0,1.82,17.77,0.75,2.0
+couscous cooked,169700,112.0,3.79,23.22,0.16,1.4
+rice bran crude,169713,316.0,13.35,49.69,20.85,21.0
+cauliflower raw,169986,25.0,1.92,4.97,0.28,2.0
+corn bran crude,170289,224.0,8.36,85.64,0.92,79.0
+beet greens raw,170375,22.0,2.2,4.33,0.13,3.7
+peas green raw,170419,81.0,5.42,14.45,0.4,5.7
+sugar turbinado,170674,399.0,0.0,99.8,0.0,
+headcheese pork,171630,157.0,13.83,0.0,10.9,0.0
+blueberries raw,171711,57.0,0.74,14.49,0.33,2.4
+cranberries raw,171722,46.0,0.46,11.97,0.13,3.6
+dill weed fresh,172233,43.0,3.46,7.02,1.12,2.1
+spearmint dried,172239,285.0,19.93,52.04,6.03,29.8
+fish oil salmon,172343,902.0,0.0,0.0,100.0,0.0
+cookies fortune,172722,378.0,4.2,84.0,2.7,1.6
+emu ground raw,172832,134.0,22.77,0.0,4.03,0.0
+emu oyster raw,172838,141.0,22.81,0.0,4.86,0.0
+olive loaf pork,172926,235.0,11.8,9.2,16.5,0.0
+pastrami turkey,172927,139.0,16.3,3.34,6.21,0.1
+spearmint fresh,173475,44.0,3.29,8.41,0.73,6.8
+ham salad spread,173866,216.0,8.68,10.64,15.53,0.0
+candies caramels,167974,382.0,4.6,77.0,8.1,0.0
+pears asian raw,168177,42.0,0.5,10.65,0.23,3.6
+grape leaves raw,168575,93.0,5.6,17.31,2.12,11.0
+wasabi root raw,168583,109.0,4.8,23.54,0.63,7.8
+marmalade orange,168819,246.0,0.3,66.3,0.0,0.7
+wheat germ crude,168892,360.0,23.15,51.8,9.72,13.2
+wild rice cooked,168897,101.0,3.99,21.34,0.34,1.8
+rice flour brown,168898,363.0,7.23,76.48,2.78,4.6
+corn grain white,168920,365.0,9.42,74.26,4.74,
+pomegranates raw,169134,83.0,1.67,18.7,1.17,4.0
+fennel bulb raw,169385,31.0,1.24,7.3,0.2,3.1
+wheat bran crude,169722,216.0,15.55,64.51,4.25,42.8
+barley malt flour,169740,361.0,10.28,78.3,1.84,7.1
+rice noodles dry,169742,364.0,5.95,80.18,0.56,1.6
+chicken meatless,169886,224.0,23.64,3.64,12.73,3.6
+eggplant pickled,169892,49.0,0.9,9.77,0.7,2.5
+oheloberries raw,169915,28.0,0.38,6.84,0.22,
+burdock root raw,169974,72.0,1.53,17.34,0.15,3.3
+chard swiss raw,169991,19.0,1.8,3.74,0.2,1.6
+butterbur canned,170387,3.0,0.11,0.38,0.13,
+whey acid fluid,170885,24.0,0.76,5.12,0.09,0.0
+whey acid dried,171281,339.0,11.73,73.45,0.54,0.0
+gravy brown dry,171565,367.0,10.74,59.38,9.61,2.0
+elderberries raw,171727,73.0,0.66,18.4,0.5,7.0
+vinegar red wine,172240,19.0,0.04,0.27,0.0,0.0
+fish oil herring,172340,902.0,0.0,0.0,100.0,0.0
+goose liver raw,172415,133.0,16.37,6.32,4.28,0.0
+cookies fig bars,172721,348.0,3.7,70.9,7.3,4.6
+muffins oat bran,172769,270.0,7.0,48.3,7.4,4.6
+luxury loaf pork,172931,141.0,18.4,4.9,4.8,0.0
+frankfurter pork,172964,269.0,12.81,0.28,23.68,0.1
+frankfurter meat,172968,290.0,10.26,4.17,25.76,0.0
+gooseberries raw,173030,44.0,0.88,10.18,0.58,4.3
+sour cream light,173443,136.0,3.5,7.1,10.6,0.0
+peppermint fresh,173474,70.0,3.75,14.89,0.94,8.0
+blackberries raw,173946,43.0,1.39,9.61,0.49,5.3
+sausage meatless,174269,255.0,20.28,8.09,18.16,2.8
+lamb ground raw,174370,282.0,16.56,0.0,23.41,0.0
+ostrich fan raw,174483,117.0,21.81,0.0,2.65,0.0
+liverwurst spread,174596,305.0,12.38,5.89,25.45,2.5
+roast beef spread,174597,223.0,15.27,3.73,16.28,0.2
+croissants apple,174988,254.0,7.4,37.1,8.7,2.5
+veal ground raw,175290,197.0,18.58,0.0,13.06,0.0
+turtle green raw,167745,89.0,19.8,0.0,0.5,0.0
+prickly pears raw,167750,41.0,0.73,9.57,0.51,3.6
+sapote mamey raw,167760,124.0,1.45,32.1,0.46,5.4
+cherry juice tart,167807,59.0,0.31,13.7,0.54,
+cress garden raw,168407,32.0,2.6,5.5,0.7,1.1
+jute potherb raw,168419,34.0,4.65,5.8,0.25,
+seaweed kelp raw,168457,43.0,1.68,9.57,0.56,1.3
+carrots baby raw,168568,35.0,0.64,8.24,0.13,2.9
+snacks corn cakes,168857,387.0,8.1,83.4,2.4,1.9
+snacks taro chips,168865,498.0,2.3,68.1,24.9,7.2
+vegetarian fillets,169068,290.0,23.0,9.0,18.0,6.1
+bamboo shoots raw,169210,27.0,2.6,5.2,0.3,2.2
+yardlong bean raw,169222,47.0,2.8,8.35,0.4,
+seaweed agar raw,169280,26.0,0.54,6.75,0.03,0.5
+catsup low sodium,169381,101.0,1.04,27.4,0.1,0.3
+jams and preserves,169641,278.0,0.37,68.86,0.07,1.1
+chicory roots raw,169993,72.0,1.4,17.51,0.2,1.5
+turnip greens raw,170061,32.0,1.5,7.13,0.3,3.2
+corn grain yellow,170288,365.0,9.42,74.26,4.74,7.3
+fast food biscuit,170302,370.0,7.08,42.82,18.92,2.5
+broccoli raab raw,170381,22.0,3.17,2.85,0.49,2.7
+carrot dehydrated,170500,341.0,8.1,79.57,1.49,23.6
+beef cured dried,170604,153.0,31.1,2.76,1.94,0.0
+milk sheep fluid,170882,108.0,5.98,5.36,7.0,0.0
+gravy au jus dry,171169,313.0,9.2,47.49,9.63,
+acerola juice raw,171687,23.0,0.4,4.8,0.3,0.3
+dates deglet noor,171726,282.0,2.45,75.03,0.39,8.0
+sauce horseradish,171833,503.0,1.09,10.05,50.89,1.0
+ice cream sandwich,172226,237.0,4.29,37.14,8.57,0.0
+soy flour low fat,172444,372.0,49.81,30.63,8.9,16.0
+croutons seasoned,172752,465.0,10.8,63.5,18.3,5.0
+taco shells baked,172800,476.0,6.41,63.49,21.79,6.7
+liver cheese pork,173869,304.0,15.2,2.1,25.6,0.0
+croissants butter,174987,406.0,8.2,45.8,21.0,2.6
+ice creams vanilla,167575,207.0,3.5,23.6,11.0,0.7
+prune juice canned,167753,71.0,0.61,17.45,0.03,1.0
+tomatoes sun dried,168567,258.0,14.11,55.76,2.97,12.3
+meatballs meatless,169067,197.0,21.0,8.0,9.0,4.6
+melons casaba raw,169093,28.0,1.11,6.58,0.1,0.9
+mustard greens raw,169256,27.0,2.86,4.67,0.42,3.2
+pumpkin leaves raw,169272,19.0,3.15,2.33,0.4,
+taro tahitian raw,169310,44.0,2.79,6.91,0.97,
+pepper banana raw,169394,27.0,1.66,5.35,0.45,3.4
+toppings pineapple,169665,253.0,0.1,66.4,0.1,0.4
+tapioca pearl dry,169717,358.0,0.19,88.69,0.02,0.9
+melon balls frozen,169912,33.0,0.84,7.94,0.25,0.7
+chicory greens raw,169992,23.0,1.7,4.7,0.3,4.0
+potatoes raw skin,170032,58.0,2.57,12.44,0.1,2.5
+chayote fruit raw,170402,19.0,0.82,4.51,0.13,1.7
+drumstick pods raw,170483,37.0,2.1,8.53,0.2,3.2
+turkey ground raw,171505,148.0,19.66,0.0,7.66,0.0
+ostrich round raw,172844,116.0,21.99,0.0,2.4,0.0
+mother s loaf pork,172932,282.0,12.07,7.53,22.3,0.0
+goji berries dried,173032,349.0,14.26,77.06,0.39,13.0
+guavas common raw,173044,68.0,2.55,14.32,0.95,5.4
+soy flour defatted,174275,327.0,51.46,33.92,1.22,17.5
+soy protein isolate,174276,335.0,88.32,0.0,3.39,0.0
+milk and cereal bar,174650,413.0,6.47,72.05,10.98,0.4
+figs dried stewed,174666,107.0,1.42,27.57,0.4,4.2
+guava sauce cooked,174686,36.0,0.32,9.48,0.14,3.6
+sweet rolls cheese,175033,360.0,7.1,43.7,18.3,1.2
+game meat elk raw,175301,111.0,22.95,0.0,1.45,0.0
+tostada shells corn,167525,474.0,6.15,64.43,23.38,5.8
+yeast extract spread,167717,185.0,23.88,20.42,0.9,6.5
+mollusks snail raw,167744,90.0,16.1,2.0,1.4,0.0
+mango nectar canned,167785,51.0,0.11,13.12,0.06,0.3
+garlic bread frozen,167939,350.0,8.36,41.72,16.61,2.5
+amaranth leaves raw,168385,23.0,2.46,4.02,0.33,
+sesbania flower raw,168459,27.0,1.28,6.73,0.04,
+pickle relish sweet,168561,130.0,0.37,35.06,0.47,1.1
+toppings strawberry,168758,254.0,0.2,66.3,0.1,0.7
+fruit butters apple,168816,173.0,0.39,42.47,0.3,1.5
+rice noodles cooked,168914,108.0,1.79,24.01,0.2,1.0
+soybean curd cheese,169083,151.0,12.5,6.9,8.1,0.0
+loganberries frozen,169088,55.0,1.52,13.02,0.31,5.3
+pumpkin flowers raw,169270,15.0,1.03,3.28,0.07,
+soybeans green raw,169282,147.0,12.95,11.05,6.8,4.2
+grape leaves canned,169393,69.0,4.27,11.71,1.97,9.9
+barley flour or meal,169739,345.0,10.5,74.52,1.6,10.1
+bacon bits meatless,169893,476.0,32.0,28.6,25.9,10.2
+tangerine juice raw,169925,43.0,0.5,10.1,0.2,0.2
+chives freeze dried,170075,311.0,21.2,64.29,3.5,26.2
+barley pearled raw,170284,352.0,9.91,77.72,1.16,15.6
+fast foods coleslaw,170300,153.0,0.95,14.89,9.91,1.9
+tomatoes green raw,170456,23.0,1.2,5.1,0.2,1.1
+carrot juice canned,170491,40.0,0.95,9.28,0.15,0.8
+ham chopped canned,171626,239.0,16.06,0.26,18.83,0.0
+cherries sweet raw,171719,63.0,1.06,16.01,0.2,2.1
+salami cooked beef,172935,261.0,12.6,1.9,22.2,0.0
+pate truffle flavor,172967,327.0,11.2,6.3,28.5,
+butter without salt,173430,717.0,0.85,0.06,81.11,0.0
+sour cream fat free,173444,74.0,3.1,15.6,0.0,0.0
+game meat bear raw,173845,161.0,20.1,0.0,8.3,0.0
+polish sausage pork,174577,326.0,14.1,1.63,28.72,0.0
+horned melon kiwano,167791,44.0,1.78,7.56,1.26,
+syrup fruit flavored,167957,261.0,0.0,65.1,0.02,0.0
+durian raw or frozen,168192,147.0,1.47,27.09,5.33,3.8
+plantains green raw,168215,152.0,1.25,36.66,0.07,2.2
+drumstick leaves raw,168416,64.0,9.4,8.28,1.4,2.0
+mushrooms morel raw,168423,31.0,3.12,5.1,0.57,2.8
+ice creams chocolate,168809,216.0,3.8,28.2,11.0,1.2
+papaya nectar canned,169107,57.0,0.17,14.51,0.15,0.6
+cucumber peeled raw,169225,10.0,0.59,2.16,0.16,0.7
+dandelion greens raw,169226,45.0,2.7,9.2,0.7,3.5
+mushrooms white raw,169251,22.0,3.09,3.26,0.34,1.0
+water convolvulus raw,169301,19.0,2.6,3.13,0.2,2.1
+peppers serrano raw,169395,32.0,1.74,6.7,0.44,3.7
+peppers ancho dried,169396,281.0,11.86,51.42,8.2,21.6
+fireweed leaves raw,169399,103.0,4.71,19.22,2.75,10.6
+yautia tannier raw,169401,98.0,1.46,23.63,0.4,1.5
+hominy canned white,169701,72.0,1.48,14.26,0.88,2.5
+melons honeydew raw,169911,36.0,0.54,9.09,0.14,0.8
+oranges raw florida,169918,46.0,0.7,11.54,0.21,2.4
+yambean jicama raw,170073,38.0,0.72,8.82,0.09,4.9
+beef cured pastrami,170204,147.0,21.8,0.36,5.82,0.0
+broccoli raab cooked,170382,25.0,3.83,3.12,0.52,2.8
+brussels sprouts raw,170383,43.0,3.38,8.95,0.3,3.8
+chicory witloof raw,170404,17.0,0.9,4.0,0.1,3.1
+parsley freeze dried,170486,271.0,31.3,42.38,5.2,32.7
+soup onion dry mix,171165,293.0,7.48,65.07,0.34,6.6
+cream sour cultured,171257,198.0,2.44,4.63,19.35,0.0
+ham and cheese spread,171629,245.0,16.18,2.28,18.53,0.0
+quail meat only raw,172419,134.0,21.76,0.0,4.53,0.0
+peanut flour low fat,172435,428.0,33.8,31.27,21.9,15.8
+hummus home prepared,172454,177.0,4.86,20.12,8.59,4.0
+danish pastry cheese,172754,374.0,8.0,37.2,21.9,1.0
+potato salad with egg,173343,157.0,1.96,16.18,9.4,1.3
+butter oil anhydrous,173412,876.0,0.28,0.0,99.48,0.0
+horseradish prepared,173472,48.0,1.18,11.29,0.69,3.3
+lebanon bologna beef,173868,172.0,19.03,0.44,10.44,0.0
+peanuts spanish raw,174263,570.0,26.15,15.83,49.6,9.5
+bacon and beef sticks,174602,517.0,29.1,0.8,44.2,0.0
+salami italian pork,174603,425.0,21.7,1.2,37.0,0.0
+lentils sprouted raw,168427,106.0,8.96,22.14,0.55,
+lettuce red leaf raw,168431,13.0,1.33,2.26,0.22,0.9
+pickle relish hot dog,168560,91.0,1.5,23.35,0.46,1.5
+hearts of palm canned,168569,28.0,2.52,4.62,0.62,2.4
+plantains yellow raw,169130,122.0,1.3,31.89,0.35,1.7
+hominy canned yellow,169752,72.0,1.48,14.26,0.88,2.5
+chewing gum sugarless,169882,268.0,0.0,94.8,0.4,2.4
+shallots freeze dried,170082,348.0,12.3,80.7,0.5,15.7
+butterbur fuki raw,170385,14.0,0.39,3.61,0.04,
+amaranth grain cooked,170683,102.0,3.8,18.69,1.58,2.1
+yogurt plain low fat,170886,63.0,5.25,7.04,1.55,0.0
+turkey ground cooked,171506,203.0,27.37,0.0,10.4,0.0
+avocados raw florida,171707,120.0,2.23,7.82,10.06,5.6
+currants zante dried,171724,290.0,3.43,76.98,0.22,4.4
+peanuts valencia raw,172432,570.0,25.09,20.91,47.58,8.7
+falafel home prepared,172455,333.0,13.31,31.84,17.8,
+pie fried pies fruit,172784,316.0,3.0,42.6,16.1,2.6
+grapes muscadine raw,173040,57.0,0.81,13.93,0.47,3.9
+egg substitute powder,173429,444.0,55.5,21.8,13.0,0.0
+peanut flour defatted,174267,327.0,52.2,34.7,0.55,15.8
+chickpea flour besan,174288,387.0,22.39,57.82,6.69,10.8
+mortadella beef pork,174573,311.0,16.37,3.05,25.39,0.0
+snack mixed berry bar,174803,383.0,13.16,58.84,10.53,7.9
+tamarind nectar canned,167786,57.0,0.09,14.73,0.12,0.5
+pork fresh belly raw,167812,518.0,9.34,0.0,53.01,0.0
+radishes oriental raw,168451,18.0,0.6,4.1,0.1,1.6
+seeds lotus seeds raw,168591,89.0,4.13,17.28,0.53,
+spaghetti spinach dry,168911,372.0,13.35,74.81,1.57,10.6
+pumpkin pie mix canned,169273,104.0,1.09,26.39,0.13,8.3
+pickles cucumber sour,169379,11.0,0.33,2.26,0.2,1.2
+cauliflower green raw,169389,31.0,2.95,6.09,0.3,3.2
+malabar spinach cooked,169400,23.0,2.98,2.71,0.78,2.1
+persimmons native raw,169943,127.0,0.8,33.5,0.4,
+beans snap green raw,169961,31.0,1.83,6.97,0.22,2.7
+sweetener syrup agave,170277,310.0,0.09,76.37,0.45,0.2
+milk low sodium fluid,170875,61.0,3.1,4.46,3.46,0.0
+bratwurst pork cooked,171620,333.0,13.72,2.85,29.18,0.0
+soy meal defatted raw,172445,337.0,49.2,35.89,2.39,
+muffins english wheat,172761,223.0,8.7,44.8,2.0,4.6
+picnic loaf pork beef,172933,232.0,14.92,4.76,16.64,0.0
+guavas strawberry raw,173045,69.0,0.58,17.36,0.6,5.4
+water bottled generic,174158,0.0,0.0,0.0,0.0,0.0
+bratwurst veal cooked,174595,341.0,13.99,0.0,31.7,0.0
+cake coffeecake fruit,174937,311.0,5.2,51.5,10.2,2.5
+pork fresh ground raw,167902,263.0,16.88,0.0,21.19,0.0
+jellyfish dried salted,168129,36.0,5.5,0.0,1.4,0.0
+guanabana nectar canned,168196,59.0,0.11,14.93,0.17,0.1
+cucumber with peel raw,168409,15.0,0.65,3.63,0.11,0.5
+new zealand spinach raw,168440,14.0,1.5,2.5,0.2,1.5
+beans fava in pod raw,168574,88.0,7.92,17.63,0.73,7.5
+fungi cloud ears dried,168581,284.0,9.25,73.01,0.73,70.1
+salad dressing coleslaw,169056,404.0,0.85,22.4,34.53,0.0
+cowpeas leafy tips raw,169224,29.0,4.1,4.82,0.25,
+jew s ear pepeao raw,169237,25.0,0.48,6.75,0.04,
+kale frozen unprepared,169239,28.0,2.66,4.88,0.46,2.0
+okra frozen unprepared,169262,30.0,1.69,6.63,0.25,2.2
+sweet potato leaves raw,169303,42.0,2.49,8.82,0.51,5.3
+peas edible podded raw,170010,42.0,2.8,7.55,0.2,2.6
+fast foods hush puppies,170301,296.0,6.16,40.21,13.25,2.9
+amaranth grain uncooked,170682,371.0,13.56,65.25,7.02,6.7
+yogurt plain skim milk,170887,56.0,5.73,7.68,0.18,0.0
+turkey and gravy frozen,171500,67.0,5.88,4.61,2.63,0.0
+animal fat bacon grease,172345,897.0,0.0,0.0,99.5,0.0
+cake coffeecake cheese,172699,339.0,7.0,44.3,15.2,1.0
+honey roll sausage beef,172943,182.0,18.58,2.18,10.5,0.0
+beerwurst pork and beef,172961,276.0,14.0,4.27,22.53,0.9
+beef stew canned entree,173330,99.0,4.41,7.85,5.53,0.9
+blackberry juice canned,173947,38.0,0.3,7.8,0.6,0.1
+cherries sour red raw,173954,50.0,1.0,12.18,0.3,1.6
+pheasant raw meat only,174473,133.0,23.57,0.0,3.64,0.0
+pretzels soft unsalted,174790,345.0,8.2,71.04,3.1,1.7
+veal seam fat only raw,174884,444.0,12.53,0.0,43.75,0.0
+tart breakfast low fat,175069,372.0,3.99,76.8,5.99,1.5
+crustaceans shrimp raw,175179,85.0,20.1,0.0,0.51,
+chili with beans canned,175207,103.0,6.12,13.24,3.76,3.3
+lemons raw without peel,167746,29.0,1.1,9.32,0.3,2.8
+frozen yogurts chocolate,168104,131.0,3.0,21.6,3.6,2.3
+raisins golden seedless,168164,301.0,3.28,80.02,0.2,3.3
+edamame frozen prepared,168411,121.0,11.91,8.91,5.2,5.2
+mountain yam hawaii raw,168432,67.0,1.34,16.3,0.1,2.5
+chrysanthemum leaves raw,168491,24.0,3.36,3.01,0.56,3.0
+luncheon slices meatless,169066,189.0,17.78,4.44,11.11,1.1
+sandwich spread meatless,169069,149.0,8.0,9.0,9.0,3.3
+jerusalem artichokes raw,169236,73.0,2.0,17.44,0.01,1.6
+vermicelli made from soy,169884,331.0,0.1,82.32,0.1,3.9
+mammy apple mamey raw,169909,51.0,0.5,12.5,0.5,3.0
+persimmons japanese raw,169941,70.0,0.58,18.59,0.19,3.6
+dessert topping powdered,170865,577.0,4.9,52.54,39.92,0.0
+barbecue loaf pork beef,171601,173.0,15.84,6.4,8.9,0.0
+bacon turkey microwaved,171639,368.0,29.5,4.24,25.87,0.0
+apples raw without skin,171689,48.0,0.27,12.76,0.13,1.3
+avocados raw california,171706,167.0,1.96,8.64,15.41,6.8
+ice cream cookie sandwich,172227,240.0,3.7,39.6,7.4,1.2
+quail meat and skin raw,172418,192.0,19.63,0.0,12.05,0.0
+lupins mature seeds raw,172423,371.0,36.17,40.37,9.74,18.9
+rice and wheat cereal bar,173006,409.0,9.09,72.73,9.09,1.8
+shake fast food vanilla,173226,148.0,3.37,19.59,6.52,0.9
+corned beef loaf jellied,173860,153.0,22.9,0.0,6.1,0.0
+peppered loaf pork beef,174574,149.0,17.3,4.53,6.37,0.0
+mayonnaise made with tofu,167695,322.0,5.95,3.06,31.79,1.1
+pomegranate juice bottled,167787,54.0,0.15,13.13,0.29,0.1
+nance frozen unsweetened,167789,73.0,0.66,16.97,1.16,7.5
+canadian bacon unprepared,167869,110.0,20.31,1.34,2.62,0.0
+java plum jambolan raw,168150,60.0,0.72,15.56,0.23,
+squash winter acorn raw,168472,40.0,0.8,10.42,0.1,1.5
+spaghetti spinach cooked,168912,130.0,4.58,26.15,0.63,
+sorghum flour whole grain,168943,359.0,8.43,76.64,3.34,6.6
+pumpkin canned with salt,170527,34.0,1.1,8.09,0.28,2.9
+milk shakes thick vanilla,170884,112.0,3.86,17.75,3.03,0.0
+cream substitute powdered,171263,529.0,2.48,59.29,32.92,0.0
+vegetable oil palm kernel,171422,862.0,0.0,0.0,100.0,0.0
+bockwurst pork veal raw,171619,301.0,14.03,2.95,25.87,1.0
+dip bean original flavor,171832,119.0,5.44,15.89,3.7,4.9
+oscar mayer salami hard,172947,368.0,25.9,1.6,28.7,0.0
+carissa natal plum raw,173952,62.0,0.5,13.63,1.3,
+beverages chocolate syrup,174117,279.0,2.1,65.1,1.13,2.6
+guinea hen meat only raw,174471,110.0,20.64,0.0,2.47,0.0
+grapefruit juice pink raw,167774,39.0,0.5,9.2,0.1,
+edamame frozen unprepared,168410,109.0,11.22,7.61,4.73,4.8
+pie fillings apple canned,168822,100.0,0.1,26.1,0.1,1.0
+noodles chinese chow mein,168905,471.0,10.88,63.64,21.24,6.7
+potato salad home prepared,169269,143.0,2.68,11.17,8.2,1.3
+chrysanthemum garland raw,169995,24.0,3.36,3.02,0.56,3.0
+turnips frozen unprepared,170059,16.0,1.04,2.94,0.16,1.8
+radish seeds sprouted raw,170095,43.0,3.81,3.6,2.53,
+corn pudding home prepared,170492,131.0,4.42,16.97,5.04,1.2
+jams and preserves apricot,170645,242.0,0.7,64.4,0.2,0.3
+ham and cheese loaf or roll,171628,241.0,13.6,4.0,18.7,0.0
+apricots frozen sweetened,171703,98.0,0.7,25.1,0.1,2.2
+carambola starfruit raw,171715,31.0,1.04,6.73,0.33,2.8
+pate chicken liver canned,172928,201.0,13.45,6.55,13.1,0.0
+corn dogs frozen prepared,173345,250.0,8.57,26.96,12.02,1.0
+mollusks mussel blue raw,174216,86.0,11.9,3.69,2.24,0.0
+soybeans mature seeds raw,174270,446.0,36.49,30.16,19.94,9.3
+luncheon meat pork canned,174571,334.0,12.5,2.1,30.3,0.0
+sandwich spread pork beef,174583,235.0,7.66,11.94,17.34,0.2
+sausage turkey fresh raw,174617,155.0,18.79,0.47,8.08,0.0
+beverages lemonade powder,174858,376.0,0.0,97.57,1.05,0.4
+crustaceans shrimp cooked,175180,99.0,23.98,0.2,0.28,
+orange pineapple juice blend,167792,51.0,0.41,12.2,0.08,0.2
+cranberry juice unsweetened,168117,46.0,0.39,12.2,0.13,0.1
+rambutan canned syrup pack,168167,82.0,0.65,20.87,0.21,0.9
+alfalfa seeds sprouted raw,168384,23.0,3.99,2.1,0.69,1.9
+tree fern cooked with salt,168553,40.0,0.29,10.78,0.07,3.7
+puddings rice ready to eat,168782,108.0,3.23,18.39,2.15,0.3
+pie fillings canned cherry,168824,115.0,0.37,28.0,0.07,0.6
+triticale flour whole grain,168888,338.0,13.18,73.14,1.81,14.6
+noodles japanese soba dry,168906,336.0,14.38,74.62,0.71,
+kanpyo dried gourd strips,169241,258.0,8.58,65.03,0.56,9.8
+sweet potato canned mashed,169305,101.0,1.98,23.19,0.2,1.7
+buckwheat flour whole groat,170687,335.0,12.62,70.59,3.1,10.0
+dessert topping pressurized,170867,264.0,0.98,16.07,22.3,0.0
+milk shakes thick chocolate,170883,119.0,3.05,21.15,2.7,0.3
+beerwurst beer salami pork,171616,238.0,14.24,2.06,18.8,0.0
+mothbeans mature seeds raw,172425,343.0,22.94,61.52,1.61,
+pastrami beef 98 fat free,172959,95.0,19.6,1.54,1.16,0.0
+grapefruit juice white raw,173039,39.0,0.5,9.2,0.1,0.1
+currants red and white raw,173964,56.0,1.4,13.8,0.2,4.3
+pancakes plain reduced fat,174086,269.0,5.71,57.32,1.9,1.0
+pheasant raw meat and skin,174472,181.0,22.7,0.0,9.29,0.0
+nance canned syrup drained,167788,95.0,0.56,22.79,1.28,7.0
+sugar apples sweetsop raw,168175,94.0,2.06,23.64,0.29,4.4
+jackfruit canned syrup pack,168190,92.0,0.36,23.94,0.14,0.9
+lemon grass citronella raw,168573,99.0,1.82,25.31,0.49,
+pasta gluten free corn dry,168899,357.0,7.46,79.26,2.08,11.0
+pineapple raw all varieties,169124,50.0,0.54,13.12,0.12,1.4
+asparagus frozen unprepared,169208,24.0,3.23,4.1,0.23,1.9
+nopales cooked without salt,169388,15.0,1.35,3.28,0.05,2.0
+dove cooked includes squab,169905,213.0,23.9,0.0,13.0,0.0
+beets canned drained solids,169966,31.0,0.91,7.21,0.14,1.8
+potatoes flesh and skin raw,170026,77.0,2.05,17.49,0.09,2.1
+pokeberry shoots poke raw,170432,23.0,2.6,3.7,0.4,1.7
+chicken patty frozen cooked,171513,287.0,14.85,12.84,19.58,0.3
+turkey pot pie frozen entree,172092,176.0,6.5,17.7,8.8,1.1
+cheese substitute mozzarella,172198,248.0,11.47,23.67,12.22,0.0
+tofu dried frozen koyadofu,172450,477.0,52.47,10.03,30.34,7.2
+lamb ground cooked broiled,172544,283.0,24.75,0.0,19.65,0.0
+pulled pork in barbecue sauce,173344,168.0,13.19,18.74,4.42,1.2
+mung beans mature seeds raw,174256,347.0,23.86,62.62,1.15,16.3
+poultry salad sandwich spread,174581,200.0,11.64,7.41,13.52,0.0
+rolls hard includes kaiser,175031,293.0,9.9,52.7,4.3,2.3
+leavening agents baking soda,175040,0.0,0.0,0.0,0.0,0.0
+bison ground grass fed raw,175293,146.0,20.23,0.05,7.21,0.0
+mangosteen canned syrup pack,169090,73.0,0.41,17.91,0.58,1.8
+pitanga surinam cherry raw,169129,33.0,0.8,7.49,0.4,
+cocoa dry powder unsweetened,169593,228.0,19.6,57.9,13.7,37.0
+oat flour partially debranned,169741,404.0,14.66,65.7,9.12,6.5
+corn flour whole grain white,169748,361.0,6.93,76.85,3.86,7.3
+salad dressing sweet and sour,169875,15.0,0.1,3.7,0.0,0.0
+vegetarian meatloaf or patties,169888,197.0,21.0,8.0,9.0,4.6
+tomato products canned sauce,170054,24.0,1.2,5.31,0.3,1.5
+buckwheat groats roasted dry,170685,346.0,11.73,74.95,2.71,10.3
+chili no beans canned entree,172098,118.0,7.53,6.1,7.1,0.5
+guinea hen meat and skin raw,172416,158.0,23.4,0.0,6.45,0.0
+nabisco nabisco ritz crackers,173258,492.0,7.23,63.51,23.21,2.3
+ravioli cheese filled canned,173328,77.0,2.48,13.64,1.45,1.3
+burrito beef and bean frozen,173335,239.0,7.26,30.84,9.61,4.2
+mungo beans mature seeds raw,174259,341.0,25.21,58.99,1.64,18.3
+duck domesticated liver raw,174467,136.0,18.74,3.53,4.64,0.0
+duck wild meat and skin raw,174468,211.0,17.42,0.0,15.2,0.0
+pickle and pimiento loaf pork,174576,225.0,11.23,8.46,15.95,1.5
+alcoholic beverage rice sake,167723,134.0,0.5,5.0,0.0,0.0
+cream substitute liquid light,168097,71.0,0.8,9.1,3.5,0.0
+lima beans immature seeds raw,168396,113.0,6.84,20.17,0.86,4.9
+alcoholic beverage beer light,168749,29.0,0.24,1.64,0.0,0.0
+frozen novelties ice type pop,168813,79.0,0.0,19.23,0.24,0.0
+pizza rolls frozen unprepared,168957,328.0,8.73,50.72,9.98,1.2
+puddings vanilla ready to eat,169608,130.0,1.45,22.6,3.78,0.0
+eggs scrambled frozen mixture,169904,131.0,13.1,7.5,5.6,0.0
+pigeonpeas immature seeds raw,170025,136.0,7.2,23.88,1.64,5.1
+broadbeans immature seeds raw,170377,72.0,5.6,11.7,0.6,4.2
+tree fern cooked without salt,170464,40.0,0.29,10.98,0.07,3.7
+squab pigeon meat only raw,171079,142.0,17.5,0.0,7.5,0.0
+chicken patty frozen uncooked,171512,292.0,14.33,13.61,20.04,1.2
+alcoholic beverages wine rose,171908,83.0,0.36,3.8,0.0,0.0
+refried beans canned fat free,172465,79.0,5.34,13.5,0.45,4.7
+grapefruit raw white florida,173034,32.0,0.63,8.19,0.1,
+carbonated beverage cream soda,173199,51.0,0.0,13.3,0.0,0.0
+soymilk all flavors enhanced,173765,45.0,2.94,3.45,1.99,0.4
+liver sausage liverwurst pork,173870,326.0,14.1,2.2,28.5,0.0
+kielbasa fully cooked grilled,173877,337.0,12.45,5.03,29.68,0.0
+cranberry orange relish canned,173962,178.0,0.3,46.2,0.1,0.0
+winged beans mature seeds raw,174283,409.0,29.65,41.71,16.32,25.9
+luncheon sausage pork and beef,174587,260.0,15.38,1.58,20.9,0.0
+whipped topping frozen low fat,167687,224.0,3.0,23.6,13.1,0.0
+pasta gluten free corn cooked,168900,126.0,2.63,27.91,0.73,4.8
+cheese spread cream cheese base,169081,295.0,7.1,3.5,28.6,0.0
+passion fruit juice purple raw,169109,51.0,0.39,13.6,0.05,0.2
+passion fruit juice yellow raw,169110,60.0,0.67,14.45,0.18,0.2
+salsify vegetable oyster raw,169277,82.0,3.3,18.6,0.2,3.3
+frozen novelties ice type lime,169638,128.0,0.4,32.6,0.0,0.0
+coriander cilantro leaves raw,169997,23.0,2.13,3.67,0.52,2.8
+potato puffs frozen unprepared,170047,178.0,1.93,24.8,8.71,2.3
+vegetable juice cocktail canned,170063,22.0,0.93,3.87,0.31,0.5
+cheese food cold pack american,170856,331.0,19.66,8.32,24.46,0.0
+meatballs frozen italian style,171638,286.0,14.4,8.06,22.21,2.3
+burrito bean and cheese frozen,173336,221.0,7.07,34.01,6.3,3.4
+ice cream soft serve chocolate,173465,222.0,4.1,22.2,13.0,0.7
+bison ground grass fed cooked,173847,179.0,25.45,0.0,8.62,0.0
+kielbasa fully cooked unheated,173879,325.0,10.84,3.72,29.63,0.0
+soy sauce made from soy tamari,174278,60.0,10.51,5.57,0.1,0.8
+pepperoni beef and pork sliced,174575,504.0,19.25,1.18,46.28,0.0
+canadian bacon cooked pan fried,168383,146.0,28.31,1.8,2.78,0.0
+sweet potato canned vacuum pack,168485,91.0,1.65,21.12,0.2,1.8
+orange juice canned unsweetened,169099,47.0,0.68,11.01,0.15,0.3
+taro shoots cooked without salt,169309,14.0,0.73,3.2,0.08,
+gelatins dry powder unsweetened,169599,335.0,85.6,0.0,0.1,0.0
+potato puffs frozen oven heated,170048,192.0,2.13,27.29,9.05,2.0
+turnip greens frozen unprepared,170468,22.0,2.47,3.67,0.31,2.5
+winged beans immature seeds raw,170476,49.0,6.95,4.31,0.87,
+buckwheat groats roasted cooked,170686,92.0,3.38,19.94,0.62,2.7
+dressing honey mustard fat free,171046,169.0,1.07,38.43,1.47,1.2
+margarine spread 35 39 fat tub,171415,349.0,0.23,1.52,37.98,0.0
+cranberry juice cocktail bottled,171903,54.0,0.0,13.52,0.1,0.0
+lasagna vegetable frozen baked,172106,139.0,6.87,14.18,6.04,1.9
+parmesan cheese topping fat free,172206,370.0,40.0,40.0,5.0,0.0
+lasagna cheese frozen prepared,173333,130.0,6.54,13.84,5.33,1.7
+yardlong beans mature seeds raw,174281,347.0,24.33,61.91,1.31,11.0
+refried beans canned vegetarian,174296,83.0,5.28,13.5,0.87,4.7
+grapefruit raw white all areas,174676,33.0,0.69,8.41,0.1,1.1
+leavening agents cream of tartar,175041,258.0,0.0,61.5,0.0,0.2
+nabisco nabisco grahams crackers,175083,424.0,6.99,76.2,10.0,3.4
+hyacinth beans mature seeds raw,175210,344.0,23.9,60.74,1.69,25.6
+focaccia italian flatbread plain,167945,249.0,8.77,35.82,7.89,1.8
+baking chocolate mexican squares,167999,426.0,3.64,77.41,15.59,4.0
+chocolate flavored hazelnut spread,168000,539.0,5.41,62.36,29.73,5.4
+gourd dishcloth towelgourd raw,168414,20.0,1.2,4.35,0.2,1.1
+salisbury steak with gravy frozen,168965,149.0,6.98,6.78,10.47,1.0
+peaches frozen sliced sweetened,169116,94.0,0.63,23.98,0.13,1.8
+artichokes globe or french raw,169205,47.0,3.27,10.51,0.15,5.4
+mustard greens frozen unprepared,169258,20.0,2.49,3.41,0.27,3.3
+acerola west indian cherry raw,171686,32.0,0.4,7.69,0.3,1.1
+boysenberries canned heavy syrup,171712,88.0,0.99,22.31,0.12,2.6
+boysenberries frozen unsweetened,171713,50.0,1.1,12.19,0.26,5.3
+cheese sauce prepared from recipe,172200,197.0,10.33,5.48,14.92,0.1
+reddi wip fat free whipped topping,172213,149.0,3.0,25.0,5.0,0.4
+seasoning mix dry taco original,172243,322.0,4.5,58.0,0.0,13.3
+peanut butter smooth reduced fat,172458,520.0,25.9,35.65,34.0,5.2
+peanut butter with omega 3 creamy,172471,608.0,24.47,17.0,54.17,6.1
+doughnuts french crullers glazed,172756,412.0,3.1,59.5,18.3,1.2
+puff pastry frozen ready to bake,172790,551.0,7.3,45.1,38.1,1.5
+turkey breast sliced prepackaged,172941,106.0,14.81,2.2,3.77,0.0
+macaroni and cheese canned entree,173325,82.0,3.38,11.52,2.46,0.5
+macaroni and cheese frozen entree,173342,149.0,5.6,17.28,6.41,1.1
+lemonade frozen concentrate pink,173666,192.0,0.22,48.86,0.69,0.3
+knackwurst knockwurst pork beef,173867,307.0,11.1,3.2,27.7,0.0
+cranberry sauce canned sweetened,173961,159.0,0.9,40.4,0.15,1.1
+english muffins whole grain white,174093,245.0,7.02,50.17,1.75,3.5
+chicken breast roll oven roasted,174608,134.0,14.59,1.79,7.65,0.0
+hush puppies prepared from recipe,174999,337.0,7.7,46.0,13.5,2.8
+mayonnaise dressing no cholesterol,167736,688.0,0.0,0.3,77.8,0.0
+pineapple raw extra sweet variety,168194,51.0,0.53,13.5,0.11,1.4
+mustard spinach tendergreen raw,168438,22.0,2.2,3.9,0.3,2.8
+frozen yogurts vanilla soft serve,168815,159.0,4.0,24.2,5.6,0.0
+pasta mix classic beef unprepared,168954,354.0,12.32,72.2,1.78,2.0
+tomato sauce canned no salt added,169074,24.0,1.2,5.31,0.3,1.5
+tangerines mandarin oranges raw,169105,53.0,0.81,13.34,0.31,1.8
+hyacinth beans immature seeds raw,169234,46.0,2.1,9.19,0.2,3.3
+peas and onions frozen unprepared,170020,70.0,3.98,13.51,0.32,3.5
+vanilla extract imitation alcohol,172235,237.0,0.05,2.41,0.0,0.0
+goose domesticated meat only raw,172413,161.0,22.75,0.0,7.13,0.0
+french toast frozen ready to heat,172763,213.0,7.4,32.1,6.1,1.1
+lemonade frozen concentrate white,173216,196.0,0.22,49.89,0.7,0.3
+seasoning mix dry chili original,173476,335.0,10.82,56.56,7.3,10.8
+soy protein isolate potassium type,174302,321.0,88.32,2.59,0.53,0.0
+squab pigeon meat and skin raw,174475,294.0,18.47,0.0,23.8,0.0
+ice cream cones cake or wafer type,175000,417.0,8.1,79.0,6.9,3.0
+ice cream cones sugar rolled type,175001,402.0,7.9,84.1,3.8,1.7
+archway home style cookies oatmeal,175074,421.0,5.48,68.17,14.08,2.9
+maraschino cherries canned drained,167766,165.0,0.22,41.97,0.21,3.2
+guava nectar with sucralose canned,168210,48.0,0.3,13.3,0.07,1.2
+frostings coconut nut ready to eat,169618,433.0,1.5,52.7,24.0,2.5
+papaya canned heavy syrup drained,169927,206.0,0.14,55.83,0.55,1.5
+brussels sprouts frozen unprepared,169972,41.0,3.78,7.86,0.41,3.8
+chocolate dark 60 69 cacao solids,170272,579.0,6.12,52.42,38.31,8.0
+chocolate dark 70 85 cacao solids,170273,598.0,7.79,45.9,42.63,10.9
+peas and carrots frozen unprepared,170425,53.0,3.4,11.15,0.47,3.4
+lean pockets meatballs mozzarella,172109,240.0,10.49,32.28,7.7,2.0
+chili with beans microwavable bowls,172110,100.0,5.85,10.88,3.68,2.9
+pork sausage link patty unprepared,172934,288.0,15.39,0.93,24.8,0.0
+lima beans large mature seeds raw,174252,338.0,21.46,63.38,0.69,19.0
+waffles plain prepared from recipe,175039,291.0,7.9,32.9,14.1,
+archway home style cookies molasses,175073,403.0,4.25,69.41,12.06,1.2
+artificial blueberry muffin mix dry,175078,407.0,4.7,77.45,8.7,
+baking chocolate unsweetened liquid,167567,472.0,12.1,36.2,47.7,18.1
+salad dressing coleslaw reduced fat,168109,329.0,0.0,40.0,20.0,0.4
+balsam pear bitter gourd pods raw,168393,17.0,1.0,3.7,0.17,2.8
+bamboo shoots canned drained solids,169212,19.0,1.72,3.22,0.4,1.4
+gourd white flowered calabash raw,169232,14.0,0.62,3.39,0.02,0.5
+waterchestnuts chinese matai raw,170066,97.0,1.4,23.94,0.1,3.0
+collards frozen chopped unprepared,170408,33.0,2.69,6.46,0.37,3.6
+tomato juice canned with salt added,170458,17.0,0.85,3.53,0.29,0.4
+vegetables mixed frozen unprepared,170471,72.0,3.33,13.47,0.52,4.0
+beef pot pie frozen entree prepared,172093,220.0,7.25,22.05,11.39,0.8
+egg rolls pork refrigerated heated,172103,227.0,9.94,28.49,8.18,0.0
+tortilla chips yellow plain salted,173143,497.0,6.62,67.38,22.33,4.7
+snack pretzel hard chocolate coated,173156,467.0,7.05,70.07,17.64,3.5
+peanut butter chunk style with salt,174265,589.0,24.06,21.57,49.94,8.0
+pancakes plain prepared from recipe,175009,227.0,6.4,28.3,9.7,
+waffles plain frozen ready to heat,175038,285.0,6.47,42.98,9.7,2.2
+andrea s gluten free soft dinner roll,167590,257.0,5.65,40.24,8.2,2.9
+tomato and vegetable juice low sodium,167708,22.0,0.6,4.59,0.1,0.8
+keikitos muffins latino bakery item,167936,467.0,6.81,53.16,25.24,1.2
+sweet potato puffs frozen unprepared,168016,161.0,1.36,30.72,3.58,1.9
+popcorn microwave low fat and sodium,168139,429.0,12.6,73.39,9.5,14.2
+sweeteners tabletop fructose liquid,168142,279.0,0.0,76.1,0.0,0.1
+desserts rennin tablets unsweetened,168794,84.0,1.0,19.8,0.1,0.0
+pasta mix italian lasagna unprepared,168955,356.0,10.9,73.77,1.97,2.8
+sauerkraut canned solids and liquids,169279,19.0,0.91,4.28,0.14,2.9
+frostings glaze prepared from recipe,169668,341.0,0.44,83.65,0.53,0.0
+popcorn sugar syrup caramel fat free,169685,381.0,2.0,90.06,1.4,2.5
+braunschweiger a liver sausage pork,171621,327.0,14.5,3.1,28.5,0.0
+egg rolls vegetable frozen prepared,172105,214.0,5.95,31.77,6.97,2.4
+strawberry flavor beverage mix powder,174869,389.0,0.1,99.1,0.2,0.0
+cream puff shell prepared from recipe,174986,360.0,9.0,22.8,25.9,0.8
+tortillas ready to bake or fry corn,175036,218.0,5.7,44.64,2.85,6.3
+taco shells baked without added salt,175067,468.0,7.2,62.4,22.6,7.5
+pie crust refrigerated regular baked,167930,506.0,3.41,58.52,28.69,1.4
+schar gluten free classic white rolls,168008,239.0,3.34,50.47,2.65,5.1
+strawberries frozen sweetened sliced,168174,96.0,0.53,25.92,0.13,1.9
+butter replacement without fat powder,169894,373.0,2.0,89.0,1.0,0.0
+mung beans mature seeds sprouted raw,169957,30.0,3.04,5.94,0.18,1.8
+potato chips without salt reduced fat,170253,487.0,7.1,67.8,20.8,6.1
+turkey sticks breaded battered fried,171103,279.0,14.2,17.0,16.9,
+cheese food pasteurized process swiss,171253,323.0,21.92,4.5,24.14,0.0
+ice cream light soft serve chocolate,171293,141.0,3.36,23.15,3.69,0.0
+mayonnaise reduced fat with olive oil,171443,361.0,0.37,0.0,40.0,0.0
+cheesefurter cheese smokie pork beef,171623,328.0,14.1,1.51,29.0,0.0
+cereals ready to eat granola homemade,171646,489.0,13.67,53.88,24.31,8.9
+yachtwurst with pistachio nuts cooked,172960,268.0,14.8,1.4,22.6,0.0
+salmon nuggets breaded frozen heated,173721,212.0,12.69,13.96,11.72,0.0
+applesauce canned sweetened with salt,167773,76.0,0.18,19.91,0.18,1.2
+olives ripe canned small extra large,169094,116.0,0.84,6.04,10.9,1.6
+passion fruit granadilla purple raw,169108,97.0,2.2,23.38,0.7,10.4
+cowpeas blackeyes immature seeds raw,169220,90.0,2.95,18.83,0.35,5.0
+rice white steamed chinese restaurant,169712,151.0,3.2,33.88,0.27,0.9
+spaghetti with meat sauce frozen entree,172089,90.0,5.05,15.24,1.01,1.8
+pasta with tomato sauce no meat canned,172100,71.0,2.22,13.94,0.71,0.9
+chicken pot pie frozen entree prepared,173331,204.0,5.11,19.21,11.85,1.1
+lasagna with meat sauce frozen entree,173334,124.0,6.63,14.39,4.42,1.4
+dutch brand loaf chicken pork and beef,173861,273.0,12.0,3.93,22.91,0.3
+cookie chocolate with icing or coating,174080,507.0,4.5,67.87,24.2,2.3
+veggie burgers or soyburgers unprepared,174287,177.0,15.7,14.27,6.3,4.9
+cereals ready to eat post waffle crisp,174628,390.0,6.6,83.0,5.0,4.4
+salad dressing mayonnaise like fat free,167700,84.0,0.2,15.5,2.7,1.9
+pie crust refrigerated regular unbaked,167932,445.0,2.97,51.11,25.46,1.8
+prunes dehydrated low moisture stewed,168161,113.0,1.23,29.7,0.24,
+leeks bulb and lower leaf portion raw,169246,61.0,1.5,14.15,0.3,1.8
+waxgourd chinese preserving melon raw,170069,13.0,0.4,3.0,0.2,2.9
+chicken breast tenders breaded uncooked,171515,263.0,14.73,15.01,15.75,1.1
+alcoholic beverages beer higher alcohol,171906,58.0,0.9,0.27,0.0,0.0
+fast foods biscuit with egg and sausage,172028,312.0,11.13,21.05,20.77,0.2
+chili con carne with beans canned entree,172097,107.0,5.8,13.1,3.47,3.3
+lasagna with meat sauce frozen prepared,172114,135.0,7.28,15.36,4.92,1.7
+pigeon peas red gram mature seeds raw,172436,343.0,21.7,62.78,1.49,15.0
+biscuits mixed grain refrigerated dough,172671,263.0,6.1,47.4,5.6,
+puff pastry frozen ready to bake baked,172738,558.0,7.4,45.7,38.5,1.5
+ruffed grouse breast meat skinless raw,172831,112.0,25.94,0.0,0.88,0.0
+macaroni and cheese canned microwavable,173337,134.0,5.98,13.96,5.99,0.4
+soy sauce made from soy and wheat shoyu,174277,53.0,8.14,4.93,0.57,0.8
+hormel pillow pak sliced turkey pepperoni,174593,243.0,30.99,3.78,11.52,0.0
+breakfast bar corn flake crust with fruit,167734,376.0,4.4,72.8,7.5,2.1
+lime juice canned or bottled unsweetened,168157,21.0,0.25,6.69,0.23,0.4
+tortilla chips low fat baked without fat,168859,448.0,11.0,80.2,5.7,5.3
+dumpling potato or cheese filled frozen,169779,195.0,5.26,29.64,6.14,0.9
+chicken skin drumsticks and thighs raw,172855,440.0,9.58,0.79,44.23,0.0
+chicken tenders breaded frozen prepared,173346,240.0,14.62,14.86,13.58,1.7
+egg substitute liquid or frozen fat free,173462,48.0,10.0,2.0,0.0,0.0
+malt beverage includes non alcoholic beer,174863,37.0,0.21,8.05,0.12,0.0
+broadbeans fava beans mature seeds raw,175205,341.0,26.12,58.29,1.53,25.0
+glutino gluten free cookies vanilla creme,167593,487.0,2.19,77.34,18.79,0.0
+naranjilla lulo pulp frozen unsweetened,167790,25.0,0.44,5.9,0.22,1.1
+glutino gluten free wafers lemon flavored,168002,515.0,0.0,74.39,24.18,0.0
+prunes dehydrated low moisture uncooked,168160,339.0,3.7,89.07,0.73,
+balsam pear bitter gourd leafy tips raw,168391,30.0,5.3,3.29,0.69,
+olives ripe canned jumbo super colossal,169095,81.0,0.97,5.61,6.87,2.5
+desserts apple crisp prepared from recipe,169601,161.0,1.75,30.84,3.43,1.4
+applesauce canned sweetened without salt,171696,68.0,0.16,17.49,0.17,1.2
+alcoholic beverage wine table red gamay,171872,78.0,0.07,2.38,0.0,
+yokan prepared from adzuki beans and sugar,173730,260.0,3.29,60.72,0.12,
+roast beef deli style prepackaged sliced,174570,115.0,18.62,0.64,3.69,0.0
+pork sausage link patty cooked pan fried,174578,325.0,18.53,1.42,27.25,0.0
+alcoholic beverage wine table red syrah,174836,83.0,0.07,2.58,0.0,
+salmon sockeye canned total can contents,175174,153.0,20.63,0.0,7.17,0.0
+pastry pastelitos de guava guava pastries,167528,379.0,5.48,47.76,18.5,2.2
+udi s gluten free whole grain dinner rolls,167600,329.0,11.8,44.29,11.6,11.2
+vegetable oil butter spread reduced calorie,167691,465.0,0.0,0.0,53.0,0.0
+cinnamon buns frosted includes honey buns,167940,452.0,4.45,48.6,26.61,1.2
+van s gluten free totally original waffles,168011,248.0,2.99,40.54,8.22,
+fruit cocktail canned heavy syrup drained,168178,70.0,0.47,18.8,0.1,1.7
+gums seed gums includes locust bean guar,169045,332.0,4.6,77.3,0.5,77.3
+vegetable juice cocktail low sodium canned,170473,19.0,0.91,3.83,0.32,0.5
+cheese spread pasteurized process american,171254,290.0,16.41,8.73,21.23,0.0
+cereals whole wheat hot natural cereal dry,171667,342.0,11.2,75.2,2.0,9.5
+carbonated beverage chocolate flavored soda,171921,42.0,0.0,10.7,0.0,0.0
+biscuits plain or buttermilk frozen baked,172667,338.0,6.2,53.87,11.03,1.3
+wonton wrappers includes egg roll wrappers,172802,291.0,9.8,57.9,1.5,1.8
+cranberry juice cocktail frozen concentrate,173653,201.0,0.05,51.45,0.0,0.2
+kraft stove top stuffing mix chicken flavor,175079,381.0,12.6,73.1,4.1,2.5
+van s gluten free totally original pancakes,167601,215.0,3.31,40.32,4.55,1.5
+pear nectar canned with added ascorbic acid,168186,60.0,0.11,15.76,0.01,0.6
+milk substitutes fluid with lauric acid oil,171264,61.0,1.75,6.16,3.41,0.0
+oscar mayer ham chopped with natural juice,172946,180.0,16.3,3.65,11.15,0.0
+shortening industrial lard and vegetable oil,173566,900.0,0.0,0.0,100.0,0.0
+canada goose breast meat only skinless raw,173634,133.0,24.31,0.0,4.02,0.0
+salmon nuggets cooked as purchased unheated,173722,189.0,11.97,11.85,10.43,0.0
+tortillas ready to bake or fry whole wheat,174081,310.0,9.76,45.89,9.76,9.8
+george weston bakeries thomas english muffins,167515,232.0,8.0,46.0,1.8,
+pie crust cookie type chocolate ready crust,167521,484.0,6.08,64.48,22.42,2.7
+milk dessert frozen milk fat free chocolate,167686,167.0,4.3,37.7,1.0,0.0
+guava nectar canned with added ascorbic acid,167784,63.0,0.09,16.25,0.06,1.0
+interstate brands corp wonder hamburger rolls,167923,273.0,8.07,50.84,4.15,2.6
+peach nectar canned with added ascorbic acid,168185,50.0,0.21,11.93,0.51,0.1
+rice mix white and wild flavored unprepared,168964,142.0,3.49,26.28,2.57,0.8
+taquitos frozen beef and cheese oven heated,169772,287.0,9.4,33.46,12.79,2.8
+yogurt parfait lowfat with fruit and granola,170355,84.0,3.36,15.86,1.01,1.1
+chicken breast oven roasted fat free sliced,172963,79.0,16.79,2.17,0.39,0.0
+dip salsa con queso cheese and salsa medium,174068,143.0,3.14,11.14,9.51,0.7
+soy protein concentrate produced by acid wash,174301,328.0,63.63,25.41,0.46,5.5
+waffle plain frozen ready to heat microwave,167519,298.0,6.71,45.41,9.91,2.4
+lemon juice from concentrate canned or bottled,167748,17.0,0.45,5.62,0.07,0.7
+heinz weight watcher chocolate eclair frozen,167922,241.0,4.4,40.3,6.9,2.1
+udi s gluten free classic french dinner rolls,168010,310.0,7.99,55.1,6.4,3.6
+succotash corn and limas frozen unprepared,168480,93.0,4.31,19.94,0.89,4.0
+milk dessert bar frozen made from lowfat milk,170890,147.0,4.41,32.0,1.47,6.6
+thuringer cervelat summer sausage beef pork,172940,362.0,17.45,3.33,30.43,0.0
+lupins mature seeds cooked boiled with salt,173804,116.0,15.57,9.29,2.92,2.8
+pork sausage rice links brown and serve cooked,167698,407.0,13.7,2.36,37.63,0.0
+restaurant latino bunuelos fried yeast bread,168071,462.0,8.02,48.57,26.24,1.5
+rice and vermicelli mix beef flavor unprepared,168949,359.0,10.84,76.02,1.27,1.6
+orange juice chilled includes from concentrate,169100,49.0,0.68,11.54,0.12,0.3
+lettuce iceberg includes crisphead types raw,169248,14.0,0.9,2.97,0.14,1.2
+pear nectar canned without added ascorbic acid,169940,60.0,0.11,15.76,0.01,0.6
+school lunch chicken patty whole grain breaded,170794,246.0,17.64,12.5,13.93,2.3
+margarine regular hard soybean hydrogenated,171018,719.0,0.9,0.9,80.5,0.0
+apricot nectar canned with added ascorbic acid,171704,56.0,0.17,13.63,0.45,0.1
+pizza meat topping thick crust frozen cooked,172095,274.0,11.76,30.76,11.52,2.3
+crackers saltines includes oyster soda soup,172746,418.0,9.46,74.05,8.64,2.8
+macaroni and cheese loaf chicken pork and beef,172965,228.0,11.76,11.63,14.96,0.0
+groundcherries cape gooseberries or poha raw,173043,53.0,1.9,11.2,0.7,
+soy sauce made from hydrolyzed vegetable protein,174279,60.0,7.0,7.84,0.51,0.5
+cream puff eclair custard or cream filled iced,167534,334.0,4.41,37.43,18.52,0.9
+muffin blueberry commercially prepared low fat,167929,255.0,4.23,50.05,4.22,4.2
+sage valley gluten free vanilla sandwich cookies,168007,499.0,3.13,71.88,22.15,1.0
+rice cake cracker include hain mini rice cakes,168107,392.0,7.1,81.1,4.3,4.2
+artichokes globe or french frozen unprepared,168387,38.0,2.63,7.75,0.43,3.9
+taquitos frozen chicken and cheese oven heated,169771,284.0,9.21,33.63,12.54,2.9
+pizza cheese topping thin crust frozen cooked,170373,263.0,11.91,28.8,11.07,3.0
+sweetener herbal extract powder from stevia leaf,170679,0.0,0.0,100.0,0.0,0.0
+cream fluid light coffee cream or table cream,170857,195.0,2.96,3.66,19.1,0.0
+lasagna with meat sauce low fat frozen entree,172101,101.0,6.81,13.5,2.23,1.3
+pillsbury crusty french loaf refrigerated dough,173261,243.0,8.59,46.35,2.88,2.6
+waffle buttermilk frozen ready to heat toasted,167517,309.0,7.42,48.39,9.49,2.6
+turnover filled with egg meat and cheese frozen,168963,228.0,7.87,20.67,12.6,0.8
+sweeteners tabletop saccharin sodium saccharin,169072,360.0,0.94,89.11,0.0,0.0
+tangerines mandarin oranges canned juice pack,169106,37.0,0.62,9.57,0.03,0.7
+leeks bulb and lower leaf portion freeze dried,170485,321.0,15.2,74.65,2.1,10.4
+school lunch chicken nuggets whole grain breaded,170795,270.0,15.67,22.86,12.9,2.2
+ice cream sandwich vanilla light no sugar added,172230,200.0,5.71,42.86,2.86,7.1
+mothbeans mature seeds cooked boiled with salt,173805,117.0,7.81,20.96,0.55,
+pie crust cookie type graham cracker ready crust,167520,501.0,5.1,64.3,24.83,1.9
+rudi s gluten free bakery original sandwich bread,167597,320.0,3.13,52.83,10.7,3.5
+cheese puffs and twists corn based baked low fat,168860,432.0,8.5,72.35,12.1,3.6
+ice cream bar stick or nugget with crunch coating,171294,358.0,2.11,37.12,25.26,1.1
+chicken breast tenders breaded cooked microwaved,171514,252.0,16.35,17.56,12.89,0.0
+shortening frying heavy duty palm hydrogenated,172331,884.0,0.0,0.0,100.0,0.0
+margarine like vegetable oil spread fat free tub,172353,44.0,0.1,4.34,3.04,0.0
+protein supplement milk based muscle milk powder,173459,411.0,45.71,18.5,17.14,7.1
+pate de foie gras canned goose liver pate smoked,171100,462.0,11.4,4.67,43.84,0.0
+poultry mechanically deboned from mature hens raw,171106,243.0,14.72,0.0,19.98,0.0
+cookie with peanut butter filling chocolate coated,171836,562.0,8.1,52.9,35.3,3.5
+shortening household soybean hydrogenated and palm,172332,884.0,0.0,0.0,100.0,0.0
+swisswurst pork and beef with swiss cheese smoked,174601,307.0,12.69,1.6,27.37,0.0
+mungo beans mature seeds cooked boiled with salt,175256,105.0,7.54,18.34,0.55,6.4
+restaurant latino arepa unleavened cornmeal bread,168070,219.0,5.48,37.14,5.38,2.6
+corn flour whole grain blue harina de maiz morado,168921,364.0,8.75,73.89,5.09,8.4
+cocoa dry powder unsweetened processed with alkali,169594,220.0,18.1,58.3,13.1,29.8
+frijoles rojos volteados refried beans red canned,172466,144.0,5.0,15.47,6.93,4.7
+soy sauce made from soy and wheat shoyu low sodium,172473,57.0,9.05,5.59,0.3,0.7
+formulated bar high fiber chewy oats and chocolate,173149,389.0,5.0,69.82,10.0,22.5
+pillsbury chocolate chip cookies refrigerated dough,173260,450.0,3.82,60.75,21.26,1.7
+pepperidge farm goldfish baked snack crackers pizza,167596,469.0,9.67,65.11,18.93,3.5
+imitation cheese american or cheddar low cholesterol,168089,390.0,25.0,1.0,32.0,0.0
+juice apple and grape blend with added ascorbic acid,168197,50.0,0.16,12.46,0.12,0.2
+rice and vermicelli mix rice pilaf flavor unprepared,168951,359.0,10.42,76.31,1.37,1.2
+yellow rice with seasoning dry packet mix unprepared,168956,343.0,7.02,74.68,1.75,1.8
+jellies no sugar with sodium saccharin any flavors,169879,121.0,0.55,29.6,0.0,2.2
+granola bar soft milk chocolate coated peanut butter,168095,536.0,9.6,54.1,31.2,3.8
+orange grapefruit juice canned or bottled unsweetened,169104,43.0,0.6,10.28,0.1,0.1
+jams preserves marmalades sweetened with fruit juice,170280,212.0,0.0,52.93,0.0,0.9
+nutritional supplement for people with diabetes liquid,170892,88.0,4.4,11.88,3.08,2.2
+light ice cream soft serve blended with cookie pieces,172085,169.0,3.97,25.55,5.66,0.1
+pasta with sliced franks in tomato sauce canned entree,172091,90.0,4.37,12.7,2.38,1.6
+shortening bread soybean hydrogenated and cottonseed,172329,884.0,0.0,0.0,100.0,0.0
+soy protein concentrate produced by alcohol extraction,172447,328.0,63.63,25.41,0.46,5.5
+sweet rolls cinnamon refrigerated dough with frosting,172798,333.0,5.0,51.6,12.2,
+yardlong beans mature seeds cooked boiled with salt,174306,118.0,8.29,21.09,0.45,3.8
+hyacinth beans mature seeds cooked boiled with salt,175253,117.0,8.14,20.7,0.58,
+pepperidge farm goldfish baked snack crackers cheddar,168005,457.0,11.71,66.2,16.11,
+macaroni and cheese box mix with cheese sauce prepared,169770,164.0,6.68,23.1,4.99,1.2
+turkey thigh pre basted meat and skin cooked roasted,171502,157.0,18.8,0.0,8.54,0.0
+margarine like vegetable oil spread 20 fat with salt,172354,175.0,0.0,0.4,19.5,0.0
+pillsbury grands buttermilk biscuits refrigerated dough,167921,293.0,6.16,42.41,11.34,1.5
+sour dressing non butterfat cultured filled cream type,171259,178.0,3.25,4.68,16.57,0.0
+turkey breast pre basted meat and skin cooked roasted,171501,126.0,22.16,0.0,3.46,0.0
+protein supplement milk based muscle milk light powder,173460,396.0,50.0,22.0,12.0,2.0
+mission foods mission flour tortillas soft taco 8 inch,175082,287.0,8.7,49.6,6.0,
+macaroni or noodles with cheese microwaveable unprepared,169776,388.0,11.48,70.75,6.56,1.6
+whipped cream substitute dietetic made from powdered mix,169899,100.0,0.9,10.6,6.0,0.0
+gooseberries canned light syrup pack solids and liquids,173031,73.0,0.65,18.75,0.2,2.4
+whiskey sour mix bottled with added potassium and sodium,173661,84.0,0.1,21.4,0.1,0.0
+chickpeas garbanzo beans bengal gram mature seeds raw,173756,378.0,20.47,62.95,6.04,12.2
+pineapple juice frozen concentrate unsweetened undiluted,169948,179.0,1.3,44.3,0.1,0.7
+fast foods fried chicken wing meat and skin and breading,170360,310.0,21.14,11.19,20.09,0.1
+beef macaroni with tomato sauce frozen entree reduced fat,172090,113.0,5.89,17.99,1.96,1.4
+pancakes plain frozen ready to heat includes buttermilk,172771,233.0,5.23,37.75,6.83,1.0
+mary s gone crackers original crackers organic gluten free,168004,446.0,12.06,64.29,15.63,16.2
+pickles cucumber sweet includes bread and butter pickles,169378,91.0,0.58,21.15,0.41,1.0
+potsticker or wonton pork and vegetable frozen unprepared,169773,136.0,8.28,13.28,5.52,1.4
+margarine like spread with yogurt 70 fat stick with salt,172352,630.0,0.3,0.5,70.0,0.0
+shortening industrial soybean hydrogenated and cottonseed,173569,884.0,0.0,0.0,100.0,0.0
+crunchmaster multi grain crisps snack crackers gluten free,167591,456.0,10.91,67.18,15.92,7.5
+fast food pizza chain 14 pizza cheese topping thin crust,173294,302.0,12.85,31.2,13.95,2.5
+ravioli meat filled with tomato sauce or meat sauce canned,173329,97.0,3.24,13.26,3.41,1.5
+fast food pizza chain 14 pizza sausage topping thin crust,170366,321.0,13.36,27.0,17.71,2.5
+macaroni and cheese dinner with dry sauce mix boxed uncooked,173340,379.0,13.86,70.12,4.82,3.2
+martha white foods martha white s buttermilk biscuit mix dry,175081,388.0,7.81,59.41,13.23,1.5
+turnover cheese filled tomato based sauce frozen unprepared,169775,235.0,10.24,27.29,9.45,1.6
+pigeon peas red gram mature seeds cooked boiled with salt,172472,121.0,6.76,23.25,0.38,6.7
+doughnuts cake type plain includes unsugared old fashioned,174990,434.0,5.31,47.06,24.93,1.7
+french toast prepared from recipe made with low fat 2 milk,174998,229.0,7.7,25.0,10.8,
+martha white foods martha white s chewy fudge brownie mix dry,175080,407.0,4.42,83.58,6.16,2.9
+kraft foods shake n bake original recipe coating for pork dry,167514,377.0,6.1,79.8,3.7,
+beverage instant breakfast powder chocolate not reconstituted,169073,353.0,19.9,66.2,1.4,0.4
+light ice cream soft serve blended with milk chocolate candies,173324,182.0,4.02,26.82,6.46,0.2
+fat free ice cream no sugar added flavors other than chocolate,173467,133.0,4.41,28.86,0.0,7.4
+peach nectar canned with sucralose without added ascorbic acid,169117,49.0,0.1,11.61,0.57,0.1
+poultry mechanically deboned from backs and necks with skin raw,171104,272.0,11.39,0.0,24.73,0.0
+turkey roast boneless frozen seasoned light and dark meat raw,171503,120.0,17.6,6.4,2.2,0.0
+turkey from whole light meat meat only with added solution raw,172864,101.0,21.54,0.0,1.66,0.0
+breakfast bars oats sugar raisins coconut include granola bar,169063,464.0,9.8,66.7,17.6,3.1
+george weston bakeries brownberry sage and onion stuffing mix dry,173254,390.0,13.3,72.7,5.1,5.4
+soymilk all flavors lowfat with added calcium vitamins a and d,173769,43.0,1.65,7.2,0.62,0.8
+luncheon meat pork with ham minced canned includes spam hormel,172951,315.0,13.4,4.6,26.6,0.0
+grapes red or green european type such as thompson seedless raw,174683,69.0,0.72,18.1,0.16,0.9
+apple juice canned or bottled unsweetened with added ascorbic acid,167771,46.0,0.1,11.3,0.13,0.2
+cereals whole wheat hot natural cereal cooked with water with salt,171677,62.0,2.0,13.7,0.4,1.6
+grape juice canned or bottled unsweetened with added ascorbic acid,173041,60.0,0.37,14.77,0.13,0.2
+turkey from whole light meat meat and skin with added solution raw,174511,147.0,20.02,0.14,7.42,0.0
+tortellini pasta with cheese filling fresh refrigerated as purchased,172094,307.0,13.5,47.0,7.23,1.9
+toaster pastries fruit includes apple blueberry cherry strawberry,175035,388.0,4.2,70.32,9.95,1.0
+juice apple grape and pear blend with added ascorbic acid and calcium,168198,52.0,0.17,12.96,0.12,0.2
+grape juice canned or bottled unsweetened without added ascorbic acid,173042,60.0,0.37,14.77,0.13,0.2
+shortening multipurpose soybean hydrogenated and palm hydrogenated,173579,884.0,0.0,0.0,100.0,0.0
+margarine like spread with yogurt approximately 40 fat tub with salt,173586,330.0,2.0,2.0,35.0,0.0
+apple juice canned or bottled unsweetened without added ascorbic acid,173933,46.0,0.1,11.3,0.13,0.2
+pineapple juice canned or bottled unsweetened with added ascorbic acid,168187,53.0,0.36,12.87,0.12,0.2
+shortening cake mix soybean hydrogenated and cottonseed hydrogenated,172330,884.0,0.0,0.0,100.0,0.0
+ice cream cone chocolate covered with nuts flavors other than chocolate,172228,354.0,5.21,34.38,21.88,1.0
+cranberry juice blend 100 juice bottled with added vitamin c and calcium,168212,45.0,0.27,10.91,0.12,0.1
+beverage instant breakfast powder chocolate sugar free not reconstituted,169897,358.0,35.8,41.0,5.1,2.0
+water with corn syrup and or sugar and low calorie sweetener fruit flavored,171940,18.0,0.0,4.5,0.0,0.0
+chickpeas garbanzo beans bengal gram mature seeds canned drained solids,173800,139.0,7.05,22.53,2.77,6.4
+toaster pastries fruit toasted include apple blueberry cherry strawberry,167928,409.0,4.7,72.7,11.03,1.0
+macaroni or noodles with cheese made from reduced fat packaged mix unprepared,169774,297.0,13.1,52.06,4.03,2.0
+shortening frying heavy duty soybean hydrogenated linoleic less than 1,172333,884.0,0.0,0.0,100.0,0.0
+creamy dressing made with sour cream and or buttermilk and oil reduced calorie,167684,160.0,1.5,7.0,14.0,0.0
+toaster pastries fruit frosted include apples blueberry cherry strawberry,167927,385.0,4.01,71.83,9.02,1.8
+pillsbury golden layer buttermilk biscuits artificial flavor refrigerated dough,167512,307.0,5.88,41.18,13.24,1.2
+shortening confectionery coconut hydrogenated and or palm kernel hydrogenated,173568,884.0,0.0,0.0,100.0,0.0
+continental mills krusteaz almond poppyseed muffin mix artificially flavored dry,173256,418.0,5.6,75.6,10.3,1.7
+margarine like vegetable oil spread stick tub bottle 60 fat with added vitamin d,171039,535.0,0.6,0.0,59.17,0.0
+mckee baking little debbie nutty bars wafers with peanut butter chocolate covered,173257,548.0,8.0,55.2,32.8,
+vegetables mixed corn lima beans peas green beans carrots canned no salt added,169085,37.0,1.4,7.31,0.2,3.1
+creamy dressing made with sour cream and or buttermilk and oil reduced calorie fat free,168099,107.0,1.4,20.0,2.7,0.0
+shortening household soybean partially hydrogenated cottonseed partially hydrogenated,171011,884.0,0.0,0.0,100.0,0.0
+pan dulce la ricura salpora de arroz con azucar cookie like contains wheat flour and rice flour,167938,445.0,8.81,66.28,16.11,1.2
+rice bowl with chicken frozen entree prepared includes fried teriyaki and sweet and sour varieties,173339,126.0,5.65,22.46,1.56,0.7
+fruit salad peach and pear and apricot and pineapple and cherry canned water pack solids and liquids,174669,30.0,0.35,7.87,0.07,1.0
+fruit salad peach and pear and apricot and pineapple and cherry canned juice pack solids and liquids,174670,50.0,0.51,13.05,0.03,1.0
+fruit cocktail peach and pineapple and pear and grape and cherry canned water pack solids and liquids,174667,32.0,0.42,8.51,0.05,1.0
+margarine like shortening industrial soy partially hydrogenated cottonseed and soy principal use flaky pastries,173599,628.0,0.0,0.0,71.0,0.0
+papad,168106,371.0,25.56,59.87,3.25,18.6
+jujube raw,168151,79.0,1.2,20.23,0.2,
+candied fruit,167781,322.0,0.34,82.74,0.07,1.6
+baobab powder,167806,250.0,3.69,79.65,0.47,44.5
+tomato powder,170461,302.0,12.91,74.68,0.44,16.5
+tempeh cooked,172467,195.0,19.91,7.62,11.38,
+rose apples raw,168171,25.0,0.6,5.7,0.3,
+vital wheat gluten,168147,370.0,75.16,13.79,1.85,0.6
+lambsquarters raw,169244,43.0,4.2,7.3,0.8,4.0
+hearts of palm raw,167714,115.0,2.7,25.61,0.2,1.5
+broccoli leaves raw,169329,28.0,2.98,5.06,0.35,2.3
+fiddlehead ferns raw,169405,34.0,4.55,5.54,0.4,
+ice cream sundae cone,171306,254.0,3.0,28.89,14.0,1.0
+winged bean tuber raw,170070,148.0,11.6,28.1,0.9,
+mango dried sweetened,169091,319.0,2.45,78.58,1.18,2.4
+winged bean leaves raw,170478,74.0,5.85,14.1,1.1,
+raspberry juice concentrate,168217,221.0,3.04,53.19,1.34,1.1
+vinespinach basella raw,170474,19.0,1.8,3.4,0.3,
+light ice cream creamsicle,171307,165.0,1.54,32.75,3.08,0.0
+jujube chinese fresh dried,168152,281.0,4.72,72.52,0.5,6.0
+succotash corn and limas raw,169300,99.0,5.03,19.59,1.02,3.8
+margarine spread 40 49 fat tub,173589,401.0,0.27,0.0,44.46,0.0
+fiddlehead ferns frozen unprepared,168584,34.0,4.31,5.74,0.35,
+wheat flour whole grain soft wheat,168944,332.0,9.61,74.48,1.95,13.1
+custard apple bullock s heart raw,171725,101.0,1.7,25.2,0.6,2.4
+dock cooked boiled drained with salt,169371,20.0,1.83,2.93,0.64,
+ice cream bar covered with chocolate and nuts,171305,303.0,5.62,11.89,25.84,1.1
+schar gluten free wheat free classic white bread,168009,240.0,3.81,46.13,4.47,5.1
