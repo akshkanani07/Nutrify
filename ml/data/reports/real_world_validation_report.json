@@ -1,0 +1,6824 @@
+{
+  "timestamp": "2026-11-02T12:19:42Z",
+  "model_architecture": "EfficientNet-B0 + MLP Head",
+  "num_classes": 50,
+  "total_test_samples": 87,
+  "overall_top1_accuracy": 58.62,
+  "overall_top5_accuracy": 85.06,
+  "average_latency_ms": 80.6,
+  "category_metrics": {
+    "Fruits": {
+      "total": 23,
+      "top1_correct": 15,
+      "top5_correct": 21
+    },
+    "Vegetables": {
+      "total": 26,
+      "top1_correct": 15,
+      "top5_correct": 22
+    },
+    "Prepared Foods": {
+      "total": 21,
+      "top1_correct": 9,
+      "top5_correct": 16
+    },
+    "Indian Foods": {
+      "total": 12,
+      "top1_correct": 9,
+      "top5_correct": 11
+    },
+    "Edge Cases (Quality)": {
+      "total": 5,
+      "top1_correct": 3,
+      "top5_correct": 4
+    }
+  },
+  "confidence_distribution": {
+    "high_confidence_above_80": 20,
+    "medium_confidence_50_to_80": 33,
+    "low_confidence_below_50": 34
+  },
+  "error_handling_tests_passed": 3,
+  "failures_count": 36,
+  "failures": [
+    {
+      "test_id": "heldout_fruits_02",
+      "category": "Fruits",
+      "description": "Held-out test image: apples gala with skin raw (img_0259.jpg)",
+      "true_class": "apples gala with skin raw",
+      "predicted_class": "strawberries raw",
+      "confidence": 0.3524,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 98.88,
+      "calories": 31.0,
+      "protein": 0.64,
+      "carbs": 7.63,
+      "fat": 0.22,
+      "fiber": 1.8,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "strawberries raw",
+          "conf": 0.3524
+        },
+        {
+          "rank": 2,
+          "food": "apples gala with skin raw",
+          "conf": 0.2891
+        },
+        {
+          "rank": 3,
+          "food": "nectarines raw",
+          "conf": 0.134
+        },
+        {
+          "rank": 4,
+          "food": "raspberries raw",
+          "conf": 0.0408
+        },
+        {
+          "rank": 5,
+          "food": "garlic raw",
+          "conf": 0.0319
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 593.69,
+        "contrast_score": 44.58,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_fruits_06",
+      "category": "Fruits",
+      "description": "Held-out test image: strawberries raw (img_0072.jpg)",
+      "true_class": "strawberries raw",
+      "predicted_class": "apples gala with skin raw",
+      "confidence": 0.5687,
+      "is_top1_correct": false,
+      "is_top5_correct": false,
+      "latency_ms": 59.46,
+      "calories": 61.0,
+      "protein": 0.13,
+      "carbs": 14.8,
+      "fat": 0.15,
+      "fiber": 2.1,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "apples gala with skin raw",
+          "conf": 0.5687
+        },
+        {
+          "rank": 2,
+          "food": "nectarines raw",
+          "conf": 0.1719
+        },
+        {
+          "rank": 3,
+          "food": "muffins oat bran",
+          "conf": 0.0201
+        },
+        {
+          "rank": 4,
+          "food": "raspberries raw",
+          "conf": 0.0146
+        },
+        {
+          "rank": 5,
+          "food": "ketchup restaurant",
+          "conf": 0.0141
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 229.4,
+        "contrast_score": 17.59,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_fruits_09",
+      "category": "Fruits",
+      "description": "Held-out test image: oranges raw navels (img_0179.jpg)",
+      "true_class": "oranges raw navels",
+      "predicted_class": "mangos raw",
+      "confidence": 0.8218,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 76.01,
+      "calories": 99.0,
+      "protein": 1.35,
+      "carbs": 24.72,
+      "fat": 0.63,
+      "fiber": 2.64,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "mangos raw",
+          "conf": 0.8218
+        },
+        {
+          "rank": 2,
+          "food": "oranges raw navels",
+          "conf": 0.1248
+        },
+        {
+          "rank": 3,
+          "food": "bread rye",
+          "conf": 0.0067
+        },
+        {
+          "rank": 4,
+          "food": "nectarines raw",
+          "conf": 0.0062
+        },
+        {
+          "rank": 5,
+          "food": "rice crackers",
+          "conf": 0.0051
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 198.68,
+        "contrast_score": 19.18,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_fruits_13",
+      "category": "Fruits",
+      "description": "Held-out test image: raspberries raw (img_0071.jpg)",
+      "true_class": "raspberries raw",
+      "predicted_class": "strawberries raw",
+      "confidence": 0.3879,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 78.75,
+      "calories": 31.0,
+      "protein": 0.64,
+      "carbs": 7.63,
+      "fat": 0.22,
+      "fiber": 1.8,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "strawberries raw",
+          "conf": 0.3879
+        },
+        {
+          "rank": 2,
+          "food": "raspberries raw",
+          "conf": 0.1795
+        },
+        {
+          "rank": 3,
+          "food": "onions red raw",
+          "conf": 0.1205
+        },
+        {
+          "rank": 4,
+          "food": "apples gala with skin raw",
+          "conf": 0.0806
+        },
+        {
+          "rank": 5,
+          "food": "celery raw",
+          "conf": 0.0159
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 215.41,
+        "contrast_score": 61.31,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_fruits_15",
+      "category": "Fruits",
+      "description": "Held-out test image: blackberries raw (img_0253.jpg)",
+      "true_class": "blackberries raw",
+      "predicted_class": "blueberries raw",
+      "confidence": 0.4085,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 79.07,
+      "calories": 84.4,
+      "protein": 1.1,
+      "carbs": 21.45,
+      "fat": 0.49,
+      "fiber": 3.55,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "blueberries raw",
+          "conf": 0.4085
+        },
+        {
+          "rank": 2,
+          "food": "blackberries raw",
+          "conf": 0.1348
+        },
+        {
+          "rank": 3,
+          "food": "muffins oat bran",
+          "conf": 0.0466
+        },
+        {
+          "rank": 4,
+          "food": "bread rye",
+          "conf": 0.0414
+        },
+        {
+          "rank": 5,
+          "food": "oranges raw navels",
+          "conf": 0.0224
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 192.05,
+        "contrast_score": 24.26,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_vegetables_23",
+      "category": "Vegetables",
+      "description": "Held-out test image: spinach raw (img_0098.jpg)",
+      "true_class": "spinach raw",
+      "predicted_class": "broccoli leaves raw",
+      "confidence": 0.2436,
+      "is_top1_correct": false,
+      "is_top5_correct": false,
+      "latency_ms": 99.41,
+      "calories": 28.0,
+      "protein": 2.98,
+      "carbs": 5.06,
+      "fat": 0.35,
+      "fiber": 2.3,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "broccoli leaves raw",
+          "conf": 0.2436
+        },
+        {
+          "rank": 2,
+          "food": "tortilla chips yellow plain salted",
+          "conf": 0.1491
+        },
+        {
+          "rank": 3,
+          "food": "croutons plain",
+          "conf": 0.098
+        },
+        {
+          "rank": 4,
+          "food": "cornsalad raw",
+          "conf": 0.0892
+        },
+        {
+          "rank": 5,
+          "food": "blueberries raw",
+          "conf": 0.0336
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 333.13,
+        "contrast_score": 19.76,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_vegetables_24",
+      "category": "Vegetables",
+      "description": "Held-out test image: spinach raw (img_0241.jpg)",
+      "true_class": "spinach raw",
+      "predicted_class": "kale raw",
+      "confidence": 0.3796,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 87.4,
+      "calories": 7.2,
+      "protein": 0.6,
+      "carbs": 0.91,
+      "fat": 0.31,
+      "fiber": 0.84,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "kale raw",
+          "conf": 0.3796
+        },
+        {
+          "rank": 2,
+          "food": "cornsalad raw",
+          "conf": 0.1585
+        },
+        {
+          "rank": 3,
+          "food": "spinach raw",
+          "conf": 0.0731
+        },
+        {
+          "rank": 4,
+          "food": "broccoli leaves raw",
+          "conf": 0.0721
+        },
+        {
+          "rank": 5,
+          "food": "broccoli raw",
+          "conf": 0.0578
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 656.37,
+        "contrast_score": 37.39,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_vegetables_25",
+      "category": "Vegetables",
+      "description": "Held-out test image: onions red raw (img_0220.jpg)",
+      "true_class": "onions red raw",
+      "predicted_class": "raspberries raw",
+      "confidence": 0.4918,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 96.24,
+      "calories": 64.0,
+      "protein": 1.48,
+      "carbs": 14.69,
+      "fat": 0.8,
+      "fiber": 8.0,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "raspberries raw",
+          "conf": 0.4918
+        },
+        {
+          "rank": 2,
+          "food": "onions red raw",
+          "conf": 0.4696
+        },
+        {
+          "rank": 3,
+          "food": "blueberries raw",
+          "conf": 0.004
+        },
+        {
+          "rank": 4,
+          "food": "blackberries raw",
+          "conf": 0.0027
+        },
+        {
+          "rank": 5,
+          "food": "ice creams chocolate",
+          "conf": 0.0022
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 392.4,
+        "contrast_score": 31.93,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_vegetables_26",
+      "category": "Vegetables",
+      "description": "Held-out test image: onions red raw (img_0031.jpg)",
+      "true_class": "onions red raw",
+      "predicted_class": "raspberries raw",
+      "confidence": 0.6337,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 93.81,
+      "calories": 64.0,
+      "protein": 1.48,
+      "carbs": 14.69,
+      "fat": 0.8,
+      "fiber": 8.0,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "raspberries raw",
+          "conf": 0.6337
+        },
+        {
+          "rank": 2,
+          "food": "onions red raw",
+          "conf": 0.1041
+        },
+        {
+          "rank": 3,
+          "food": "blueberries raw",
+          "conf": 0.0235
+        },
+        {
+          "rank": 4,
+          "food": "tomatoes green raw",
+          "conf": 0.016
+        },
+        {
+          "rank": 5,
+          "food": "muffins oat bran",
+          "conf": 0.0137
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 193.9,
+        "contrast_score": 18.44,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_vegetables_29",
+      "category": "Vegetables",
+      "description": "Held-out test image: mushrooms white raw (img_0317.jpg)",
+      "true_class": "mushrooms white raw",
+      "predicted_class": "blackberries raw",
+      "confidence": 0.6626,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 96.31,
+      "calories": 61.9,
+      "protein": 2.0,
+      "carbs": 13.84,
+      "fat": 0.71,
+      "fiber": 7.63,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "blackberries raw",
+          "conf": 0.6626
+        },
+        {
+          "rank": 2,
+          "food": "garlic raw",
+          "conf": 0.1612
+        },
+        {
+          "rank": 3,
+          "food": "mushrooms white raw",
+          "conf": 0.0104
+        },
+        {
+          "rank": 4,
+          "food": "blueberries raw",
+          "conf": 0.0079
+        },
+        {
+          "rank": 5,
+          "food": "wasabi root raw",
+          "conf": 0.0076
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 176.21,
+        "contrast_score": 47.67,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_vegetables_30",
+      "category": "Vegetables",
+      "description": "Held-out test image: mushrooms white raw (img_0268.jpg)",
+      "true_class": "mushrooms white raw",
+      "predicted_class": "garlic raw",
+      "confidence": 0.5434,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 79.61,
+      "calories": 143.0,
+      "protein": 6.62,
+      "carbs": 28.2,
+      "fat": 0.38,
+      "fiber": 2.7,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "garlic raw",
+          "conf": 0.5434
+        },
+        {
+          "rank": 2,
+          "food": "mushrooms white raw",
+          "conf": 0.3204
+        },
+        {
+          "rank": 3,
+          "food": "rice crackers",
+          "conf": 0.0142
+        },
+        {
+          "rank": 4,
+          "food": "cabbage raw",
+          "conf": 0.013
+        },
+        {
+          "rank": 5,
+          "food": "raspberries raw",
+          "conf": 0.0092
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 588.91,
+        "contrast_score": 18.53,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_prepared foods_41",
+      "category": "Prepared Foods",
+      "description": "Held-out test image: potato pancakes (img_0241.jpg)",
+      "true_class": "potato pancakes",
+      "predicted_class": "croutons plain",
+      "confidence": 0.4387,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 70.86,
+      "calories": 57.8,
+      "protein": 1.69,
+      "carbs": 10.44,
+      "fat": 0.94,
+      "fiber": 0.72,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "croutons plain",
+          "conf": 0.4387
+        },
+        {
+          "rank": 2,
+          "food": "potato pancakes",
+          "conf": 0.3591
+        },
+        {
+          "rank": 3,
+          "food": "salmon nuggets breaded frozen heated",
+          "conf": 0.1392
+        },
+        {
+          "rank": 4,
+          "food": "apples gala with skin raw",
+          "conf": 0.0044
+        },
+        {
+          "rank": 5,
+          "food": "bread rye",
+          "conf": 0.0034
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 431.35,
+        "contrast_score": 60.17,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_prepared foods_42",
+      "category": "Prepared Foods",
+      "description": "Held-out test image: potato pancakes (img_0213.jpg)",
+      "true_class": "potato pancakes",
+      "predicted_class": "nuts almonds",
+      "confidence": 0.5685,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 84.35,
+      "calories": 828.0,
+      "protein": 30.24,
+      "carbs": 30.82,
+      "fat": 71.4,
+      "fiber": 17.88,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "nuts almonds",
+          "conf": 0.5685
+        },
+        {
+          "rank": 2,
+          "food": "potato pancakes",
+          "conf": 0.1159
+        },
+        {
+          "rank": 3,
+          "food": "croutons plain",
+          "conf": 0.0646
+        },
+        {
+          "rank": 4,
+          "food": "scrapple pork",
+          "conf": 0.04
+        },
+        {
+          "rank": 5,
+          "food": "spinach raw",
+          "conf": 0.0165
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 503.62,
+        "contrast_score": 52.09,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_prepared foods_47",
+      "category": "Prepared Foods",
+      "description": "Held-out test image: croutons plain (img_0052.jpg)",
+      "true_class": "croutons plain",
+      "predicted_class": "salmon nuggets breaded frozen heated",
+      "confidence": 0.3497,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 52.06,
+      "calories": 60.1,
+      "protein": 3.6,
+      "carbs": 3.96,
+      "fat": 3.32,
+      "fiber": 0.0,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "salmon nuggets breaded frozen heated",
+          "conf": 0.3497
+        },
+        {
+          "rank": 2,
+          "food": "croutons plain",
+          "conf": 0.2809
+        },
+        {
+          "rank": 3,
+          "food": "potato pancakes",
+          "conf": 0.1681
+        },
+        {
+          "rank": 4,
+          "food": "pork fresh ground raw",
+          "conf": 0.0214
+        },
+        {
+          "rank": 5,
+          "food": "bread rye",
+          "conf": 0.0209
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 465.33,
+        "contrast_score": 63.16,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_prepared foods_48",
+      "category": "Prepared Foods",
+      "description": "Held-out test image: croutons plain (img_0187.jpg)",
+      "true_class": "croutons plain",
+      "predicted_class": "potato pancakes",
+      "confidence": 0.6378,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 59.88,
+      "calories": 59.0,
+      "protein": 1.34,
+      "carbs": 6.12,
+      "fat": 3.25,
+      "fiber": 0.73,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "potato pancakes",
+          "conf": 0.6378
+        },
+        {
+          "rank": 2,
+          "food": "croutons plain",
+          "conf": 0.1835
+        },
+        {
+          "rank": 3,
+          "food": "salmon nuggets breaded frozen heated",
+          "conf": 0.0753
+        },
+        {
+          "rank": 4,
+          "food": "pork fresh ground raw",
+          "conf": 0.0149
+        },
+        {
+          "rank": 5,
+          "food": "strawberries raw",
+          "conf": 0.0094
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 475.49,
+        "contrast_score": 18.15,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_prepared foods_49",
+      "category": "Prepared Foods",
+      "description": "Held-out test image: muffins oat bran (img_0147.jpg)",
+      "true_class": "muffins oat bran",
+      "predicted_class": "archway home style cookies oatmeal",
+      "confidence": 0.6315,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 55.04,
+      "calories": 105.2,
+      "protein": 1.37,
+      "carbs": 17.04,
+      "fat": 3.52,
+      "fiber": 0.72,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "archway home style cookies oatmeal",
+          "conf": 0.6315
+        },
+        {
+          "rank": 2,
+          "food": "muffins oat bran",
+          "conf": 0.2604
+        },
+        {
+          "rank": 3,
+          "food": "oranges raw navels",
+          "conf": 0.0103
+        },
+        {
+          "rank": 4,
+          "food": "chicken spread",
+          "conf": 0.0103
+        },
+        {
+          "rank": 5,
+          "food": "rice crackers",
+          "conf": 0.0083
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 221.65,
+        "contrast_score": 59.5,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_prepared foods_51",
+      "category": "Prepared Foods",
+      "description": "Held-out test image: bread rye (img_0279.jpg)",
+      "true_class": "bread rye",
+      "predicted_class": "peanuts spanish raw",
+      "confidence": 0.289,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 65.52,
+      "calories": 832.2,
+      "protein": 38.18,
+      "carbs": 23.11,
+      "fat": 72.42,
+      "fiber": 13.87,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "peanuts spanish raw",
+          "conf": 0.289
+        },
+        {
+          "rank": 2,
+          "food": "pizza rolls frozen unprepared",
+          "conf": 0.1583
+        },
+        {
+          "rank": 3,
+          "food": "bread rye",
+          "conf": 0.1285
+        },
+        {
+          "rank": 4,
+          "food": "ice creams chocolate",
+          "conf": 0.0426
+        },
+        {
+          "rank": 5,
+          "food": "pork fresh ground raw",
+          "conf": 0.0373
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 456.84,
+        "contrast_score": 22.11,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_prepared foods_53",
+      "category": "Prepared Foods",
+      "description": "Held-out test image: bread egg (img_0316.jpg)",
+      "true_class": "bread egg",
+      "predicted_class": "pizza rolls frozen unprepared",
+      "confidence": 0.4861,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 57.15,
+      "calories": 262.4,
+      "protein": 6.98,
+      "carbs": 40.58,
+      "fat": 7.98,
+      "fiber": 0.96,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "pizza rolls frozen unprepared",
+          "conf": 0.4861
+        },
+        {
+          "rank": 2,
+          "food": "bread egg",
+          "conf": 0.1943
+        },
+        {
+          "rank": 3,
+          "food": "peanuts spanish raw",
+          "conf": 0.1417
+        },
+        {
+          "rank": 4,
+          "food": "onions red raw",
+          "conf": 0.0112
+        },
+        {
+          "rank": 5,
+          "food": "potato pancakes",
+          "conf": 0.0103
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 529.63,
+        "contrast_score": 16.9,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_indian foods_62",
+      "category": "Indian Foods",
+      "description": "Held-out test image: flour rice brown (img_0249.jpg)",
+      "true_class": "flour rice brown",
+      "predicted_class": "chicken spread",
+      "confidence": 0.2267,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 92.78,
+      "calories": 88.5,
+      "protein": 10.09,
+      "carbs": 2.27,
+      "fat": 9.83,
+      "fiber": 0.17,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "chicken spread",
+          "conf": 0.2267
+        },
+        {
+          "rank": 2,
+          "food": "hummus commercial",
+          "conf": 0.0945
+        },
+        {
+          "rank": 3,
+          "food": "flour rice brown",
+          "conf": 0.0872
+        },
+        {
+          "rank": 4,
+          "food": "lentils sprouted raw",
+          "conf": 0.0514
+        },
+        {
+          "rank": 5,
+          "food": "ice creams chocolate",
+          "conf": 0.0456
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 565.91,
+        "contrast_score": 19.78,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_indian foods_63",
+      "category": "Indian Foods",
+      "description": "Held-out test image: flour rice brown (img_0132.jpg)",
+      "true_class": "flour rice brown",
+      "predicted_class": "flour soy defatted",
+      "confidence": 0.1971,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 91.41,
+      "calories": 366.0,
+      "protein": 51.1,
+      "carbs": 32.9,
+      "fat": 3.33,
+      "fiber": 0.0,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "flour soy defatted",
+          "conf": 0.1971
+        },
+        {
+          "rank": 2,
+          "food": "chicken spread",
+          "conf": 0.1199
+        },
+        {
+          "rank": 3,
+          "food": "flour rice brown",
+          "conf": 0.1156
+        },
+        {
+          "rank": 4,
+          "food": "ice creams chocolate",
+          "conf": 0.0626
+        },
+        {
+          "rank": 5,
+          "food": "scrapple pork",
+          "conf": 0.0517
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 156.58,
+        "contrast_score": 66.5,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "fruit_03_strawberry",
+      "category": "Fruits",
+      "description": "Red ripe strawberries on marble countertop",
+      "true_class": "strawberries raw",
+      "predicted_class": "broccoli raw",
+      "confidence": 0.5492,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 88.24,
+      "calories": 24.3,
+      "protein": 1.95,
+      "carbs": 4.78,
+      "fat": 0.26,
+      "fiber": 1.82,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "broccoli raw",
+          "conf": 0.5492
+        },
+        {
+          "rank": 2,
+          "food": "raspberries raw",
+          "conf": 0.2571
+        },
+        {
+          "rank": 3,
+          "food": "kale raw",
+          "conf": 0.0266
+        },
+        {
+          "rank": 4,
+          "food": "strawberries raw",
+          "conf": 0.0151
+        },
+        {
+          "rank": 5,
+          "food": "pork fresh ground raw",
+          "conf": 0.0149
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 578.42,
+        "contrast_score": 50.99,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "fruit_04_blueberry",
+      "category": "Fruits",
+      "description": "Blueberries cluster on serving dish",
+      "true_class": "blueberries raw",
+      "predicted_class": "broccoli raw",
+      "confidence": 0.3477,
+      "is_top1_correct": false,
+      "is_top5_correct": false,
+      "latency_ms": 79.17,
+      "calories": 24.3,
+      "protein": 1.95,
+      "carbs": 4.78,
+      "fat": 0.26,
+      "fiber": 1.82,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "broccoli raw",
+          "conf": 0.3477
+        },
+        {
+          "rank": 2,
+          "food": "kale raw",
+          "conf": 0.0669
+        },
+        {
+          "rank": 3,
+          "food": "lemons raw without peel",
+          "conf": 0.0534
+        },
+        {
+          "rank": 4,
+          "food": "blackberries raw",
+          "conf": 0.0404
+        },
+        {
+          "rank": 5,
+          "food": "apples gala with skin raw",
+          "conf": 0.0395
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 788.43,
+        "contrast_score": 73.23,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "fruit_05_orange",
+      "category": "Fruits",
+      "description": "Navel orange on wooden cutting board",
+      "true_class": "oranges raw navels",
+      "predicted_class": "bread rye",
+      "confidence": 0.5225,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 80.34,
+      "calories": 73.4,
+      "protein": 2.41,
+      "carbs": 13.69,
+      "fat": 0.94,
+      "fiber": 1.64,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "bread rye",
+          "conf": 0.5225
+        },
+        {
+          "rank": 2,
+          "food": "mangos raw",
+          "conf": 0.1109
+        },
+        {
+          "rank": 3,
+          "food": "oranges raw navels",
+          "conf": 0.0818
+        },
+        {
+          "rank": 4,
+          "food": "nectarines raw",
+          "conf": 0.0683
+        },
+        {
+          "rank": 5,
+          "food": "wasabi root raw",
+          "conf": 0.0272
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 274.96,
+        "contrast_score": 7.63,
+        "is_blurry": false,
+        "is_low_contrast": true,
+        "format": "PIL",
+        "warnings": [
+          "Low contrast image: scene may be underexposed or blank."
+        ]
+      }
+    },
+    {
+      "test_id": "veg_02_carrot",
+      "category": "Vegetables",
+      "description": "Whole raw carrot on kitchen surface",
+      "true_class": "carrots raw",
+      "predicted_class": "mangos raw",
+      "confidence": 0.5004,
+      "is_top1_correct": false,
+      "is_top5_correct": false,
+      "latency_ms": 71.78,
+      "calories": 99.0,
+      "protein": 1.35,
+      "carbs": 24.72,
+      "fat": 0.63,
+      "fiber": 2.64,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "mangos raw",
+          "conf": 0.5004
+        },
+        {
+          "rank": 2,
+          "food": "broccoli raw",
+          "conf": 0.1334
+        },
+        {
+          "rank": 3,
+          "food": "kale raw",
+          "conf": 0.0759
+        },
+        {
+          "rank": 4,
+          "food": "oranges raw navels",
+          "conf": 0.0511
+        },
+        {
+          "rank": 5,
+          "food": "raspberries raw",
+          "conf": 0.0453
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 523.53,
+        "contrast_score": 37.94,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "veg_03_spinach",
+      "category": "Vegetables",
+      "description": "Fresh green spinach leaves on dish",
+      "true_class": "spinach raw",
+      "predicted_class": "broccoli raw",
+      "confidence": 0.7551,
+      "is_top1_correct": false,
+      "is_top5_correct": false,
+      "latency_ms": 65.85,
+      "calories": 24.3,
+      "protein": 1.95,
+      "carbs": 4.78,
+      "fat": 0.26,
+      "fiber": 1.82,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "broccoli raw",
+          "conf": 0.7551
+        },
+        {
+          "rank": 2,
+          "food": "apples gala with skin raw",
+          "conf": 0.0405
+        },
+        {
+          "rank": 3,
+          "food": "bread egg",
+          "conf": 0.0155
+        },
+        {
+          "rank": 4,
+          "food": "cheese blue",
+          "conf": 0.0127
+        },
+        {
+          "rank": 5,
+          "food": "raspberries raw",
+          "conf": 0.012
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 946.98,
+        "contrast_score": 74.11,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "veg_04_onion",
+      "category": "Vegetables",
+      "description": "Red onion with papery skin on prep surface",
+      "true_class": "onions red raw",
+      "predicted_class": "broccoli raw",
+      "confidence": 0.4531,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 71.72,
+      "calories": 24.3,
+      "protein": 1.95,
+      "carbs": 4.78,
+      "fat": 0.26,
+      "fiber": 1.82,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "broccoli raw",
+          "conf": 0.4531
+        },
+        {
+          "rank": 2,
+          "food": "bread rye",
+          "conf": 0.1254
+        },
+        {
+          "rank": 3,
+          "food": "onions red raw",
+          "conf": 0.0872
+        },
+        {
+          "rank": 4,
+          "food": "mangos raw",
+          "conf": 0.0643
+        },
+        {
+          "rank": 5,
+          "food": "raspberries raw",
+          "conf": 0.0463
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 342.92,
+        "contrast_score": 26.46,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "veg_05_garlic",
+      "category": "Vegetables",
+      "description": "Garlic bulb on rustic wooden table",
+      "true_class": "garlic raw",
+      "predicted_class": "kale raw",
+      "confidence": 0.6958,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 68.56,
+      "calories": 7.2,
+      "protein": 0.6,
+      "carbs": 0.91,
+      "fat": 0.31,
+      "fiber": 0.84,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "kale raw",
+          "conf": 0.6958
+        },
+        {
+          "rank": 2,
+          "food": "broccoli raw",
+          "conf": 0.1081
+        },
+        {
+          "rank": 3,
+          "food": "garlic raw",
+          "conf": 0.0232
+        },
+        {
+          "rank": 4,
+          "food": "rice crackers",
+          "conf": 0.0159
+        },
+        {
+          "rank": 5,
+          "food": "lentils sprouted raw",
+          "conf": 0.0129
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 254.01,
+        "contrast_score": 46.77,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "veg_06_celery",
+      "category": "Vegetables",
+      "description": "Crisp green celery stalk pieces",
+      "true_class": "celery raw",
+      "predicted_class": "broccoli raw",
+      "confidence": 0.3587,
+      "is_top1_correct": false,
+      "is_top5_correct": false,
+      "latency_ms": 201.15,
+      "calories": 24.3,
+      "protein": 1.95,
+      "carbs": 4.78,
+      "fat": 0.26,
+      "fiber": 1.82,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "broccoli raw",
+          "conf": 0.3587
+        },
+        {
+          "rank": 2,
+          "food": "bread rye",
+          "conf": 0.194
+        },
+        {
+          "rank": 3,
+          "food": "mangos raw",
+          "conf": 0.0874
+        },
+        {
+          "rank": 4,
+          "food": "potato pancakes",
+          "conf": 0.0526
+        },
+        {
+          "rank": 5,
+          "food": "carrots raw",
+          "conf": 0.0286
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 292.47,
+        "contrast_score": 9.76,
+        "is_blurry": false,
+        "is_low_contrast": true,
+        "format": "PIL",
+        "warnings": [
+          "Low contrast image: scene may be underexposed or blank."
+        ]
+      }
+    },
+    {
+      "test_id": "prep_01_pizza_rolls",
+      "category": "Prepared Foods",
+      "description": "Frozen pizza rolls served on plate",
+      "true_class": "pizza rolls frozen unprepared",
+      "predicted_class": "broccoli raw",
+      "confidence": 0.2055,
+      "is_top1_correct": false,
+      "is_top5_correct": false,
+      "latency_ms": 80.8,
+      "calories": 24.3,
+      "protein": 1.95,
+      "carbs": 4.78,
+      "fat": 0.26,
+      "fiber": 1.82,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "broccoli raw",
+          "conf": 0.2055
+        },
+        {
+          "rank": 2,
+          "food": "apples gala with skin raw",
+          "conf": 0.1129
+        },
+        {
+          "rank": 3,
+          "food": "archway home style cookies oatmeal",
+          "conf": 0.1117
+        },
+        {
+          "rank": 4,
+          "food": "hummus commercial",
+          "conf": 0.0557
+        },
+        {
+          "rank": 5,
+          "food": "tortilla chips yellow plain salted",
+          "conf": 0.0522
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 668.16,
+        "contrast_score": 24.72,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "prep_02_potato_pancakes",
+      "category": "Prepared Foods",
+      "description": "Golden-brown shredded potato pancakes",
+      "true_class": "potato pancakes",
+      "predicted_class": "broccoli raw",
+      "confidence": 0.3765,
+      "is_top1_correct": false,
+      "is_top5_correct": false,
+      "latency_ms": 84.8,
+      "calories": 24.3,
+      "protein": 1.95,
+      "carbs": 4.78,
+      "fat": 0.26,
+      "fiber": 1.82,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "broccoli raw",
+          "conf": 0.3765
+        },
+        {
+          "rank": 2,
+          "food": "apples gala with skin raw",
+          "conf": 0.0671
+        },
+        {
+          "rank": 3,
+          "food": "tortilla chips yellow plain salted",
+          "conf": 0.0429
+        },
+        {
+          "rank": 4,
+          "food": "bananas raw",
+          "conf": 0.0427
+        },
+        {
+          "rank": 5,
+          "food": "scrapple pork",
+          "conf": 0.0394
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 759.91,
+        "contrast_score": 26.64,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "prep_03_pasta",
+      "category": "Prepared Foods",
+      "description": "Steaming cooked gluten-free corn pasta",
+      "true_class": "pasta gluten free corn cooked",
+      "predicted_class": "broccoli raw",
+      "confidence": 0.2868,
+      "is_top1_correct": false,
+      "is_top5_correct": false,
+      "latency_ms": 83.86,
+      "calories": 24.3,
+      "protein": 1.95,
+      "carbs": 4.78,
+      "fat": 0.26,
+      "fiber": 1.82,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "broccoli raw",
+          "conf": 0.2868
+        },
+        {
+          "rank": 2,
+          "food": "lemons raw without peel",
+          "conf": 0.184
+        },
+        {
+          "rank": 3,
+          "food": "muffins oat bran",
+          "conf": 0.0549
+        },
+        {
+          "rank": 4,
+          "food": "oranges raw navels",
+          "conf": 0.0515
+        },
+        {
+          "rank": 5,
+          "food": "mangos raw",
+          "conf": 0.0327
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 664.78,
+        "contrast_score": 18.03,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "prep_04_hummus",
+      "category": "Prepared Foods",
+      "description": "Smooth beige chickpea hummus dip in bowl",
+      "true_class": "hummus commercial",
+      "predicted_class": "muffins oat bran",
+      "confidence": 0.1726,
+      "is_top1_correct": false,
+      "is_top5_correct": false,
+      "latency_ms": 81.12,
+      "calories": 76.5,
+      "protein": 1.98,
+      "carbs": 13.69,
+      "fat": 2.1,
+      "fiber": 1.3,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "muffins oat bran",
+          "conf": 0.1726
+        },
+        {
+          "rank": 2,
+          "food": "blackberries raw",
+          "conf": 0.1612
+        },
+        {
+          "rank": 3,
+          "food": "potato pancakes",
+          "conf": 0.0672
+        },
+        {
+          "rank": 4,
+          "food": "mangos raw",
+          "conf": 0.062
+        },
+        {
+          "rank": 5,
+          "food": "flour rice brown",
+          "conf": 0.0458
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 201.01,
+        "contrast_score": 39.55,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "prep_05_croutons",
+      "category": "Prepared Foods",
+      "description": "Toasted crunchy salad crouton cubes",
+      "true_class": "croutons plain",
+      "predicted_class": "broccoli raw",
+      "confidence": 0.2064,
+      "is_top1_correct": false,
+      "is_top5_correct": false,
+      "latency_ms": 77.69,
+      "calories": 24.3,
+      "protein": 1.95,
+      "carbs": 4.78,
+      "fat": 0.26,
+      "fiber": 1.82,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "broccoli raw",
+          "conf": 0.2064
+        },
+        {
+          "rank": 2,
+          "food": "apples gala with skin raw",
+          "conf": 0.1464
+        },
+        {
+          "rank": 3,
+          "food": "garlic raw",
+          "conf": 0.0804
+        },
+        {
+          "rank": 4,
+          "food": "bread rye",
+          "conf": 0.0601
+        },
+        {
+          "rank": 5,
+          "food": "tortilla chips yellow plain salted",
+          "conf": 0.048
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 729.7,
+        "contrast_score": 29.96,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "indian_03_brown_rice_flour",
+      "category": "Indian Foods",
+      "description": "Indian whole grain brown rice flour for dosas and rotis",
+      "true_class": "flour rice brown",
+      "predicted_class": "muffins oat bran",
+      "confidence": 0.6284,
+      "is_top1_correct": false,
+      "is_top5_correct": false,
+      "latency_ms": 89.54,
+      "calories": 76.5,
+      "protein": 1.98,
+      "carbs": 13.69,
+      "fat": 2.1,
+      "fiber": 1.3,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "muffins oat bran",
+          "conf": 0.6284
+        },
+        {
+          "rank": 2,
+          "food": "archway home style cookies oatmeal",
+          "conf": 0.0771
+        },
+        {
+          "rank": 3,
+          "food": "croutons plain",
+          "conf": 0.0519
+        },
+        {
+          "rank": 4,
+          "food": "rice crackers",
+          "conf": 0.0377
+        },
+        {
+          "rank": 5,
+          "food": "potato pancakes",
+          "conf": 0.0276
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 487.03,
+        "contrast_score": 11.02,
+        "is_blurry": false,
+        "is_low_contrast": true,
+        "format": "PIL",
+        "warnings": [
+          "Low contrast image: scene may be underexposed or blank."
+        ]
+      }
+    },
+    {
+      "test_id": "edge_02_grayscale",
+      "category": "Edge Cases (Quality)",
+      "description": "Grayscale single-channel food photo",
+      "true_class": "apples gala with skin raw",
+      "predicted_class": "blackberries raw",
+      "confidence": 0.7921,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 80.26,
+      "calories": 61.9,
+      "protein": 2.0,
+      "carbs": 13.84,
+      "fat": 0.71,
+      "fiber": 7.63,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "blackberries raw",
+          "conf": 0.7921
+        },
+        {
+          "rank": 2,
+          "food": "apples gala with skin raw",
+          "conf": 0.0257
+        },
+        {
+          "rank": 3,
+          "food": "bread rye",
+          "conf": 0.016
+        },
+        {
+          "rank": 4,
+          "food": "kale raw",
+          "conf": 0.0113
+        },
+        {
+          "rank": 5,
+          "food": "nectarines raw",
+          "conf": 0.0106
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 744.15,
+        "contrast_score": 62.55,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "edge_04_dim_light",
+      "category": "Edge Cases (Quality)",
+      "description": "Underexposed / dim kitchen lighting conditions",
+      "true_class": "strawberries raw",
+      "predicted_class": "broccoli raw",
+      "confidence": 0.6288,
+      "is_top1_correct": false,
+      "is_top5_correct": false,
+      "latency_ms": 78.71,
+      "calories": 24.3,
+      "protein": 1.95,
+      "carbs": 4.78,
+      "fat": 0.26,
+      "fiber": 1.82,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "broccoli raw",
+          "conf": 0.6288
+        },
+        {
+          "rank": 2,
+          "food": "kale raw",
+          "conf": 0.1087
+        },
+        {
+          "rank": 3,
+          "food": "raspberries raw",
+          "conf": 0.0667
+        },
+        {
+          "rank": 4,
+          "food": "scrapple pork",
+          "conf": 0.0211
+        },
+        {
+          "rank": 5,
+          "food": "muffins oat bran",
+          "conf": 0.0186
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 69.72,
+        "contrast_score": 17.66,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    }
+  ],
+  "test_results": [
+    {
+      "test_id": "heldout_fruits_01",
+      "category": "Fruits",
+      "description": "Held-out test image: apples gala with skin raw (img_0115.jpg)",
+      "true_class": "apples gala with skin raw",
+      "predicted_class": "apples gala with skin raw",
+      "confidence": 0.6397,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 79.23,
+      "calories": 61.0,
+      "protein": 0.13,
+      "carbs": 14.8,
+      "fat": 0.15,
+      "fiber": 2.1,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "apples gala with skin raw",
+          "conf": 0.6397
+        },
+        {
+          "rank": 2,
+          "food": "strawberries raw",
+          "conf": 0.2206
+        },
+        {
+          "rank": 3,
+          "food": "nectarines raw",
+          "conf": 0.0484
+        },
+        {
+          "rank": 4,
+          "food": "wasabi root raw",
+          "conf": 0.0085
+        },
+        {
+          "rank": 5,
+          "food": "raspberries raw",
+          "conf": 0.0059
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 257.6,
+        "contrast_score": 16.99,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_fruits_02",
+      "category": "Fruits",
+      "description": "Held-out test image: apples gala with skin raw (img_0259.jpg)",
+      "true_class": "apples gala with skin raw",
+      "predicted_class": "strawberries raw",
+      "confidence": 0.3524,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 98.88,
+      "calories": 31.0,
+      "protein": 0.64,
+      "carbs": 7.63,
+      "fat": 0.22,
+      "fiber": 1.8,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "strawberries raw",
+          "conf": 0.3524
+        },
+        {
+          "rank": 2,
+          "food": "apples gala with skin raw",
+          "conf": 0.2891
+        },
+        {
+          "rank": 3,
+          "food": "nectarines raw",
+          "conf": 0.134
+        },
+        {
+          "rank": 4,
+          "food": "raspberries raw",
+          "conf": 0.0408
+        },
+        {
+          "rank": 5,
+          "food": "garlic raw",
+          "conf": 0.0319
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 593.69,
+        "contrast_score": 44.58,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_fruits_03",
+      "category": "Fruits",
+      "description": "Held-out test image: bananas raw (img_0026.jpg)",
+      "true_class": "bananas raw",
+      "predicted_class": "bananas raw",
+      "confidence": 0.8331,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 52.98,
+      "calories": 200.2,
+      "protein": 2.45,
+      "carbs": 51.39,
+      "fat": 0.74,
+      "fiber": 5.85,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "bananas raw",
+          "conf": 0.8331
+        },
+        {
+          "rank": 2,
+          "food": "strawberries raw",
+          "conf": 0.0164
+        },
+        {
+          "rank": 3,
+          "food": "ketchup restaurant",
+          "conf": 0.0137
+        },
+        {
+          "rank": 4,
+          "food": "salmon nuggets breaded frozen heated",
+          "conf": 0.0101
+        },
+        {
+          "rank": 5,
+          "food": "cheese brie",
+          "conf": 0.0085
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 486.09,
+        "contrast_score": 24.09,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_fruits_04",
+      "category": "Fruits",
+      "description": "Held-out test image: bananas raw (img_0015.jpg)",
+      "true_class": "bananas raw",
+      "predicted_class": "bananas raw",
+      "confidence": 0.5557,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 58.63,
+      "calories": 200.2,
+      "protein": 2.45,
+      "carbs": 51.39,
+      "fat": 0.74,
+      "fiber": 5.85,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "bananas raw",
+          "conf": 0.5557
+        },
+        {
+          "rank": 2,
+          "food": "garlic raw",
+          "conf": 0.0868
+        },
+        {
+          "rank": 3,
+          "food": "mushrooms white raw",
+          "conf": 0.0818
+        },
+        {
+          "rank": 4,
+          "food": "nuts almonds",
+          "conf": 0.0293
+        },
+        {
+          "rank": 5,
+          "food": "peanuts spanish raw",
+          "conf": 0.021
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 551.35,
+        "contrast_score": 21.46,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_fruits_05",
+      "category": "Fruits",
+      "description": "Held-out test image: strawberries raw (img_0152.jpg)",
+      "true_class": "strawberries raw",
+      "predicted_class": "strawberries raw",
+      "confidence": 0.6078,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 63.9,
+      "calories": 31.0,
+      "protein": 0.64,
+      "carbs": 7.63,
+      "fat": 0.22,
+      "fiber": 1.8,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "strawberries raw",
+          "conf": 0.6078
+        },
+        {
+          "rank": 2,
+          "food": "raspberries raw",
+          "conf": 0.2854
+        },
+        {
+          "rank": 3,
+          "food": "cabbage raw",
+          "conf": 0.0077
+        },
+        {
+          "rank": 4,
+          "food": "potato pancakes",
+          "conf": 0.0058
+        },
+        {
+          "rank": 5,
+          "food": "apples gala with skin raw",
+          "conf": 0.0057
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 622.34,
+        "contrast_score": 33.95,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_fruits_06",
+      "category": "Fruits",
+      "description": "Held-out test image: strawberries raw (img_0072.jpg)",
+      "true_class": "strawberries raw",
+      "predicted_class": "apples gala with skin raw",
+      "confidence": 0.5687,
+      "is_top1_correct": false,
+      "is_top5_correct": false,
+      "latency_ms": 59.46,
+      "calories": 61.0,
+      "protein": 0.13,
+      "carbs": 14.8,
+      "fat": 0.15,
+      "fiber": 2.1,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "apples gala with skin raw",
+          "conf": 0.5687
+        },
+        {
+          "rank": 2,
+          "food": "nectarines raw",
+          "conf": 0.1719
+        },
+        {
+          "rank": 3,
+          "food": "muffins oat bran",
+          "conf": 0.0201
+        },
+        {
+          "rank": 4,
+          "food": "raspberries raw",
+          "conf": 0.0146
+        },
+        {
+          "rank": 5,
+          "food": "ketchup restaurant",
+          "conf": 0.0141
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 229.4,
+        "contrast_score": 17.59,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_fruits_07",
+      "category": "Fruits",
+      "description": "Held-out test image: blueberries raw (img_0251.jpg)",
+      "true_class": "blueberries raw",
+      "predicted_class": "blueberries raw",
+      "confidence": 0.336,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 83.66,
+      "calories": 84.4,
+      "protein": 1.1,
+      "carbs": 21.45,
+      "fat": 0.49,
+      "fiber": 3.55,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "blueberries raw",
+          "conf": 0.336
+        },
+        {
+          "rank": 2,
+          "food": "muffins oat bran",
+          "conf": 0.0449
+        },
+        {
+          "rank": 3,
+          "food": "garlic raw",
+          "conf": 0.0412
+        },
+        {
+          "rank": 4,
+          "food": "cabbage raw",
+          "conf": 0.041
+        },
+        {
+          "rank": 5,
+          "food": "rice crackers",
+          "conf": 0.037
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 236.03,
+        "contrast_score": 19.13,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_fruits_08",
+      "category": "Fruits",
+      "description": "Held-out test image: blueberries raw (img_0072.jpg)",
+      "true_class": "blueberries raw",
+      "predicted_class": "blueberries raw",
+      "confidence": 0.452,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 67.57,
+      "calories": 84.4,
+      "protein": 1.1,
+      "carbs": 21.45,
+      "fat": 0.49,
+      "fiber": 3.55,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "blueberries raw",
+          "conf": 0.452
+        },
+        {
+          "rank": 2,
+          "food": "raspberries raw",
+          "conf": 0.0593
+        },
+        {
+          "rank": 3,
+          "food": "blackberries raw",
+          "conf": 0.0381
+        },
+        {
+          "rank": 4,
+          "food": "broccoli leaves raw",
+          "conf": 0.0246
+        },
+        {
+          "rank": 5,
+          "food": "cabbage raw",
+          "conf": 0.0243
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 869.73,
+        "contrast_score": 57.71,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_fruits_09",
+      "category": "Fruits",
+      "description": "Held-out test image: oranges raw navels (img_0179.jpg)",
+      "true_class": "oranges raw navels",
+      "predicted_class": "mangos raw",
+      "confidence": 0.8218,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 76.01,
+      "calories": 99.0,
+      "protein": 1.35,
+      "carbs": 24.72,
+      "fat": 0.63,
+      "fiber": 2.64,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "mangos raw",
+          "conf": 0.8218
+        },
+        {
+          "rank": 2,
+          "food": "oranges raw navels",
+          "conf": 0.1248
+        },
+        {
+          "rank": 3,
+          "food": "bread rye",
+          "conf": 0.0067
+        },
+        {
+          "rank": 4,
+          "food": "nectarines raw",
+          "conf": 0.0062
+        },
+        {
+          "rank": 5,
+          "food": "rice crackers",
+          "conf": 0.0051
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 198.68,
+        "contrast_score": 19.18,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_fruits_10",
+      "category": "Fruits",
+      "description": "Held-out test image: oranges raw navels (img_0170.jpg)",
+      "true_class": "oranges raw navels",
+      "predicted_class": "oranges raw navels",
+      "confidence": 0.8152,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 72.55,
+      "calories": 77.5,
+      "protein": 1.5,
+      "carbs": 19.47,
+      "fat": 0.25,
+      "fiber": 3.3,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "oranges raw navels",
+          "conf": 0.8152
+        },
+        {
+          "rank": 2,
+          "food": "mangos raw",
+          "conf": 0.0501
+        },
+        {
+          "rank": 3,
+          "food": "garlic raw",
+          "conf": 0.011
+        },
+        {
+          "rank": 4,
+          "food": "lemons raw without peel",
+          "conf": 0.0104
+        },
+        {
+          "rank": 5,
+          "food": "muffins oat bran",
+          "conf": 0.01
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 172.52,
+        "contrast_score": 17.34,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_fruits_11",
+      "category": "Fruits",
+      "description": "Held-out test image: lemons raw without peel (img_0183.jpg)",
+      "true_class": "lemons raw without peel",
+      "predicted_class": "lemons raw without peel",
+      "confidence": 0.8064,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 78.06,
+      "calories": 61.5,
+      "protein": 2.33,
+      "carbs": 19.76,
+      "fat": 0.64,
+      "fiber": 5.94,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "lemons raw without peel",
+          "conf": 0.8064
+        },
+        {
+          "rank": 2,
+          "food": "garlic raw",
+          "conf": 0.0385
+        },
+        {
+          "rank": 3,
+          "food": "broccoli leaves raw",
+          "conf": 0.0098
+        },
+        {
+          "rank": 4,
+          "food": "bananas raw",
+          "conf": 0.0097
+        },
+        {
+          "rank": 5,
+          "food": "blueberries raw",
+          "conf": 0.0091
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 489.37,
+        "contrast_score": 18.59,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_fruits_12",
+      "category": "Fruits",
+      "description": "Held-out test image: lemons raw without peel (img_0051.jpg)",
+      "true_class": "lemons raw without peel",
+      "predicted_class": "lemons raw without peel",
+      "confidence": 0.8985,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 69.35,
+      "calories": 61.5,
+      "protein": 2.33,
+      "carbs": 19.76,
+      "fat": 0.64,
+      "fiber": 5.94,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "lemons raw without peel",
+          "conf": 0.8985
+        },
+        {
+          "rank": 2,
+          "food": "blueberries raw",
+          "conf": 0.0104
+        },
+        {
+          "rank": 3,
+          "food": "mushrooms white raw",
+          "conf": 0.0101
+        },
+        {
+          "rank": 4,
+          "food": "pasta gluten free corn cooked",
+          "conf": 0.0084
+        },
+        {
+          "rank": 5,
+          "food": "celery raw",
+          "conf": 0.005
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 171.13,
+        "contrast_score": 62.55,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_fruits_13",
+      "category": "Fruits",
+      "description": "Held-out test image: raspberries raw (img_0071.jpg)",
+      "true_class": "raspberries raw",
+      "predicted_class": "strawberries raw",
+      "confidence": 0.3879,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 78.75,
+      "calories": 31.0,
+      "protein": 0.64,
+      "carbs": 7.63,
+      "fat": 0.22,
+      "fiber": 1.8,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "strawberries raw",
+          "conf": 0.3879
+        },
+        {
+          "rank": 2,
+          "food": "raspberries raw",
+          "conf": 0.1795
+        },
+        {
+          "rank": 3,
+          "food": "onions red raw",
+          "conf": 0.1205
+        },
+        {
+          "rank": 4,
+          "food": "apples gala with skin raw",
+          "conf": 0.0806
+        },
+        {
+          "rank": 5,
+          "food": "celery raw",
+          "conf": 0.0159
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 215.41,
+        "contrast_score": 61.31,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_fruits_14",
+      "category": "Fruits",
+      "description": "Held-out test image: raspberries raw (img_0156.jpg)",
+      "true_class": "raspberries raw",
+      "predicted_class": "raspberries raw",
+      "confidence": 0.9171,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 70.44,
+      "calories": 64.0,
+      "protein": 1.48,
+      "carbs": 14.69,
+      "fat": 0.8,
+      "fiber": 8.0,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "raspberries raw",
+          "conf": 0.9171
+        },
+        {
+          "rank": 2,
+          "food": "strawberries raw",
+          "conf": 0.0383
+        },
+        {
+          "rank": 3,
+          "food": "onions red raw",
+          "conf": 0.0056
+        },
+        {
+          "rank": 4,
+          "food": "garlic raw",
+          "conf": 0.0052
+        },
+        {
+          "rank": 5,
+          "food": "cabbage raw",
+          "conf": 0.005
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 359.07,
+        "contrast_score": 25.74,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_fruits_15",
+      "category": "Fruits",
+      "description": "Held-out test image: blackberries raw (img_0253.jpg)",
+      "true_class": "blackberries raw",
+      "predicted_class": "blueberries raw",
+      "confidence": 0.4085,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 79.07,
+      "calories": 84.4,
+      "protein": 1.1,
+      "carbs": 21.45,
+      "fat": 0.49,
+      "fiber": 3.55,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "blueberries raw",
+          "conf": 0.4085
+        },
+        {
+          "rank": 2,
+          "food": "blackberries raw",
+          "conf": 0.1348
+        },
+        {
+          "rank": 3,
+          "food": "muffins oat bran",
+          "conf": 0.0466
+        },
+        {
+          "rank": 4,
+          "food": "bread rye",
+          "conf": 0.0414
+        },
+        {
+          "rank": 5,
+          "food": "oranges raw navels",
+          "conf": 0.0224
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 192.05,
+        "contrast_score": 24.26,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_fruits_16",
+      "category": "Fruits",
+      "description": "Held-out test image: blackberries raw (img_0292.jpg)",
+      "true_class": "blackberries raw",
+      "predicted_class": "blackberries raw",
+      "confidence": 0.2908,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 68.97,
+      "calories": 61.9,
+      "protein": 2.0,
+      "carbs": 13.84,
+      "fat": 0.71,
+      "fiber": 7.63,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "blackberries raw",
+          "conf": 0.2908
+        },
+        {
+          "rank": 2,
+          "food": "garlic raw",
+          "conf": 0.24
+        },
+        {
+          "rank": 3,
+          "food": "blueberries raw",
+          "conf": 0.0986
+        },
+        {
+          "rank": 4,
+          "food": "mushrooms white raw",
+          "conf": 0.0425
+        },
+        {
+          "rank": 5,
+          "food": "ice creams chocolate",
+          "conf": 0.028
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 707.47,
+        "contrast_score": 77.8,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_fruits_17",
+      "category": "Fruits",
+      "description": "Held-out test image: nectarines raw (img_0225.jpg)",
+      "true_class": "nectarines raw",
+      "predicted_class": "nectarines raw",
+      "confidence": 0.9766,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 76.02,
+      "calories": 55.8,
+      "protein": 1.52,
+      "carbs": 13.13,
+      "fat": 0.4,
+      "fiber": 2.15,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "nectarines raw",
+          "conf": 0.9766
+        },
+        {
+          "rank": 2,
+          "food": "oranges raw navels",
+          "conf": 0.0035
+        },
+        {
+          "rank": 3,
+          "food": "ketchup restaurant",
+          "conf": 0.0031
+        },
+        {
+          "rank": 4,
+          "food": "apples gala with skin raw",
+          "conf": 0.0013
+        },
+        {
+          "rank": 5,
+          "food": "mangos raw",
+          "conf": 0.0009
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 398.48,
+        "contrast_score": 22.06,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_fruits_18",
+      "category": "Fruits",
+      "description": "Held-out test image: nectarines raw (img_0194.jpg)",
+      "true_class": "nectarines raw",
+      "predicted_class": "nectarines raw",
+      "confidence": 0.344,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 66.67,
+      "calories": 55.8,
+      "protein": 1.52,
+      "carbs": 13.13,
+      "fat": 0.4,
+      "fiber": 2.15,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "nectarines raw",
+          "conf": 0.344
+        },
+        {
+          "rank": 2,
+          "food": "strawberries raw",
+          "conf": 0.3065
+        },
+        {
+          "rank": 3,
+          "food": "apples gala with skin raw",
+          "conf": 0.1488
+        },
+        {
+          "rank": 4,
+          "food": "mangos raw",
+          "conf": 0.0188
+        },
+        {
+          "rank": 5,
+          "food": "salmon nuggets breaded frozen heated",
+          "conf": 0.0122
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 434.87,
+        "contrast_score": 20.87,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_vegetables_19",
+      "category": "Vegetables",
+      "description": "Held-out test image: broccoli raw (img_0312.jpg)",
+      "true_class": "broccoli raw",
+      "predicted_class": "broccoli raw",
+      "confidence": 0.716,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 76.22,
+      "calories": 24.3,
+      "protein": 1.95,
+      "carbs": 4.78,
+      "fat": 0.26,
+      "fiber": 1.82,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "broccoli raw",
+          "conf": 0.716
+        },
+        {
+          "rank": 2,
+          "food": "cheese brie",
+          "conf": 0.0367
+        },
+        {
+          "rank": 3,
+          "food": "tortilla chips yellow plain salted",
+          "conf": 0.028
+        },
+        {
+          "rank": 4,
+          "food": "croutons plain",
+          "conf": 0.0211
+        },
+        {
+          "rank": 5,
+          "food": "cabbage raw",
+          "conf": 0.0162
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 494.03,
+        "contrast_score": 65.32,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_vegetables_20",
+      "category": "Vegetables",
+      "description": "Held-out test image: broccoli raw (img_0032.jpg)",
+      "true_class": "broccoli raw",
+      "predicted_class": "broccoli raw",
+      "confidence": 0.9317,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 70.84,
+      "calories": 24.3,
+      "protein": 1.95,
+      "carbs": 4.78,
+      "fat": 0.26,
+      "fiber": 1.82,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "broccoli raw",
+          "conf": 0.9317
+        },
+        {
+          "rank": 2,
+          "food": "cornsalad raw",
+          "conf": 0.0042
+        },
+        {
+          "rank": 3,
+          "food": "broccoli leaves raw",
+          "conf": 0.0039
+        },
+        {
+          "rank": 4,
+          "food": "cabbage raw",
+          "conf": 0.0034
+        },
+        {
+          "rank": 5,
+          "food": "lentils sprouted raw",
+          "conf": 0.003
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 289.41,
+        "contrast_score": 21.79,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_vegetables_21",
+      "category": "Vegetables",
+      "description": "Held-out test image: carrots raw (img_0225.jpg)",
+      "true_class": "carrots raw",
+      "predicted_class": "carrots raw",
+      "confidence": 0.7915,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 89.57,
+      "calories": 52.5,
+      "protein": 1.19,
+      "carbs": 12.26,
+      "fat": 0.31,
+      "fiber": 3.58,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "carrots raw",
+          "conf": 0.7915
+        },
+        {
+          "rank": 2,
+          "food": "bread rye",
+          "conf": 0.0203
+        },
+        {
+          "rank": 3,
+          "food": "wasabi root raw",
+          "conf": 0.0178
+        },
+        {
+          "rank": 4,
+          "food": "peanuts spanish raw",
+          "conf": 0.0163
+        },
+        {
+          "rank": 5,
+          "food": "cheese brie",
+          "conf": 0.0132
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 134.89,
+        "contrast_score": 18.55,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_vegetables_22",
+      "category": "Vegetables",
+      "description": "Held-out test image: carrots raw (img_0056.jpg)",
+      "true_class": "carrots raw",
+      "predicted_class": "carrots raw",
+      "confidence": 0.8771,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 77.66,
+      "calories": 52.5,
+      "protein": 1.19,
+      "carbs": 12.26,
+      "fat": 0.31,
+      "fiber": 3.58,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "carrots raw",
+          "conf": 0.8771
+        },
+        {
+          "rank": 2,
+          "food": "celery raw",
+          "conf": 0.0264
+        },
+        {
+          "rank": 3,
+          "food": "tortilla chips yellow plain salted",
+          "conf": 0.0091
+        },
+        {
+          "rank": 4,
+          "food": "egg yolk dried",
+          "conf": 0.0084
+        },
+        {
+          "rank": 5,
+          "food": "broccoli raw",
+          "conf": 0.0044
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 169.21,
+        "contrast_score": 17.38,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_vegetables_23",
+      "category": "Vegetables",
+      "description": "Held-out test image: spinach raw (img_0098.jpg)",
+      "true_class": "spinach raw",
+      "predicted_class": "broccoli leaves raw",
+      "confidence": 0.2436,
+      "is_top1_correct": false,
+      "is_top5_correct": false,
+      "latency_ms": 99.41,
+      "calories": 28.0,
+      "protein": 2.98,
+      "carbs": 5.06,
+      "fat": 0.35,
+      "fiber": 2.3,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "broccoli leaves raw",
+          "conf": 0.2436
+        },
+        {
+          "rank": 2,
+          "food": "tortilla chips yellow plain salted",
+          "conf": 0.1491
+        },
+        {
+          "rank": 3,
+          "food": "croutons plain",
+          "conf": 0.098
+        },
+        {
+          "rank": 4,
+          "food": "cornsalad raw",
+          "conf": 0.0892
+        },
+        {
+          "rank": 5,
+          "food": "blueberries raw",
+          "conf": 0.0336
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 333.13,
+        "contrast_score": 19.76,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_vegetables_24",
+      "category": "Vegetables",
+      "description": "Held-out test image: spinach raw (img_0241.jpg)",
+      "true_class": "spinach raw",
+      "predicted_class": "kale raw",
+      "confidence": 0.3796,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 87.4,
+      "calories": 7.2,
+      "protein": 0.6,
+      "carbs": 0.91,
+      "fat": 0.31,
+      "fiber": 0.84,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "kale raw",
+          "conf": 0.3796
+        },
+        {
+          "rank": 2,
+          "food": "cornsalad raw",
+          "conf": 0.1585
+        },
+        {
+          "rank": 3,
+          "food": "spinach raw",
+          "conf": 0.0731
+        },
+        {
+          "rank": 4,
+          "food": "broccoli leaves raw",
+          "conf": 0.0721
+        },
+        {
+          "rank": 5,
+          "food": "broccoli raw",
+          "conf": 0.0578
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 656.37,
+        "contrast_score": 37.39,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_vegetables_25",
+      "category": "Vegetables",
+      "description": "Held-out test image: onions red raw (img_0220.jpg)",
+      "true_class": "onions red raw",
+      "predicted_class": "raspberries raw",
+      "confidence": 0.4918,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 96.24,
+      "calories": 64.0,
+      "protein": 1.48,
+      "carbs": 14.69,
+      "fat": 0.8,
+      "fiber": 8.0,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "raspberries raw",
+          "conf": 0.4918
+        },
+        {
+          "rank": 2,
+          "food": "onions red raw",
+          "conf": 0.4696
+        },
+        {
+          "rank": 3,
+          "food": "blueberries raw",
+          "conf": 0.004
+        },
+        {
+          "rank": 4,
+          "food": "blackberries raw",
+          "conf": 0.0027
+        },
+        {
+          "rank": 5,
+          "food": "ice creams chocolate",
+          "conf": 0.0022
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 392.4,
+        "contrast_score": 31.93,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_vegetables_26",
+      "category": "Vegetables",
+      "description": "Held-out test image: onions red raw (img_0031.jpg)",
+      "true_class": "onions red raw",
+      "predicted_class": "raspberries raw",
+      "confidence": 0.6337,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 93.81,
+      "calories": 64.0,
+      "protein": 1.48,
+      "carbs": 14.69,
+      "fat": 0.8,
+      "fiber": 8.0,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "raspberries raw",
+          "conf": 0.6337
+        },
+        {
+          "rank": 2,
+          "food": "onions red raw",
+          "conf": 0.1041
+        },
+        {
+          "rank": 3,
+          "food": "blueberries raw",
+          "conf": 0.0235
+        },
+        {
+          "rank": 4,
+          "food": "tomatoes green raw",
+          "conf": 0.016
+        },
+        {
+          "rank": 5,
+          "food": "muffins oat bran",
+          "conf": 0.0137
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 193.9,
+        "contrast_score": 18.44,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_vegetables_27",
+      "category": "Vegetables",
+      "description": "Held-out test image: garlic raw (img_0061.jpg)",
+      "true_class": "garlic raw",
+      "predicted_class": "garlic raw",
+      "confidence": 0.9623,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 126.21,
+      "calories": 143.0,
+      "protein": 6.62,
+      "carbs": 28.2,
+      "fat": 0.38,
+      "fiber": 2.7,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "garlic raw",
+          "conf": 0.9623
+        },
+        {
+          "rank": 2,
+          "food": "mushrooms white raw",
+          "conf": 0.0139
+        },
+        {
+          "rank": 3,
+          "food": "strawberries raw",
+          "conf": 0.0022
+        },
+        {
+          "rank": 4,
+          "food": "salmon nuggets breaded frozen heated",
+          "conf": 0.0016
+        },
+        {
+          "rank": 5,
+          "food": "blackberries raw",
+          "conf": 0.0013
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 433.46,
+        "contrast_score": 39.68,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_vegetables_28",
+      "category": "Vegetables",
+      "description": "Held-out test image: garlic raw (img_0141.jpg)",
+      "true_class": "garlic raw",
+      "predicted_class": "garlic raw",
+      "confidence": 0.6964,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 224.0,
+      "calories": 143.0,
+      "protein": 6.62,
+      "carbs": 28.2,
+      "fat": 0.38,
+      "fiber": 2.7,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "garlic raw",
+          "conf": 0.6964
+        },
+        {
+          "rank": 2,
+          "food": "mushrooms white raw",
+          "conf": 0.0851
+        },
+        {
+          "rank": 3,
+          "food": "potato pancakes",
+          "conf": 0.0142
+        },
+        {
+          "rank": 4,
+          "food": "blackberries raw",
+          "conf": 0.013
+        },
+        {
+          "rank": 5,
+          "food": "strawberries raw",
+          "conf": 0.0117
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 644.62,
+        "contrast_score": 74.84,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_vegetables_29",
+      "category": "Vegetables",
+      "description": "Held-out test image: mushrooms white raw (img_0317.jpg)",
+      "true_class": "mushrooms white raw",
+      "predicted_class": "blackberries raw",
+      "confidence": 0.6626,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 96.31,
+      "calories": 61.9,
+      "protein": 2.0,
+      "carbs": 13.84,
+      "fat": 0.71,
+      "fiber": 7.63,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "blackberries raw",
+          "conf": 0.6626
+        },
+        {
+          "rank": 2,
+          "food": "garlic raw",
+          "conf": 0.1612
+        },
+        {
+          "rank": 3,
+          "food": "mushrooms white raw",
+          "conf": 0.0104
+        },
+        {
+          "rank": 4,
+          "food": "blueberries raw",
+          "conf": 0.0079
+        },
+        {
+          "rank": 5,
+          "food": "wasabi root raw",
+          "conf": 0.0076
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 176.21,
+        "contrast_score": 47.67,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_vegetables_30",
+      "category": "Vegetables",
+      "description": "Held-out test image: mushrooms white raw (img_0268.jpg)",
+      "true_class": "mushrooms white raw",
+      "predicted_class": "garlic raw",
+      "confidence": 0.5434,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 79.61,
+      "calories": 143.0,
+      "protein": 6.62,
+      "carbs": 28.2,
+      "fat": 0.38,
+      "fiber": 2.7,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "garlic raw",
+          "conf": 0.5434
+        },
+        {
+          "rank": 2,
+          "food": "mushrooms white raw",
+          "conf": 0.3204
+        },
+        {
+          "rank": 3,
+          "food": "rice crackers",
+          "conf": 0.0142
+        },
+        {
+          "rank": 4,
+          "food": "cabbage raw",
+          "conf": 0.013
+        },
+        {
+          "rank": 5,
+          "food": "raspberries raw",
+          "conf": 0.0092
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 588.91,
+        "contrast_score": 18.53,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_vegetables_31",
+      "category": "Vegetables",
+      "description": "Held-out test image: celery raw (img_0078.jpg)",
+      "true_class": "celery raw",
+      "predicted_class": "celery raw",
+      "confidence": 0.8628,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 84.64,
+      "calories": 14.1,
+      "protein": 0.7,
+      "carbs": 3.0,
+      "fat": 0.17,
+      "fiber": 1.62,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "celery raw",
+          "conf": 0.8628
+        },
+        {
+          "rank": 2,
+          "food": "wasabi root raw",
+          "conf": 0.0541
+        },
+        {
+          "rank": 3,
+          "food": "broccoli leaves raw",
+          "conf": 0.0111
+        },
+        {
+          "rank": 4,
+          "food": "garlic raw",
+          "conf": 0.0056
+        },
+        {
+          "rank": 5,
+          "food": "peanuts spanish raw",
+          "conf": 0.0055
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 559.95,
+        "contrast_score": 21.77,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_vegetables_32",
+      "category": "Vegetables",
+      "description": "Held-out test image: celery raw (img_0028.jpg)",
+      "true_class": "celery raw",
+      "predicted_class": "celery raw",
+      "confidence": 0.9287,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 77.71,
+      "calories": 14.1,
+      "protein": 0.7,
+      "carbs": 3.0,
+      "fat": 0.17,
+      "fiber": 1.62,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "celery raw",
+          "conf": 0.9287
+        },
+        {
+          "rank": 2,
+          "food": "wasabi root raw",
+          "conf": 0.0232
+        },
+        {
+          "rank": 3,
+          "food": "tortilla chips yellow plain salted",
+          "conf": 0.0038
+        },
+        {
+          "rank": 4,
+          "food": "lemons raw without peel",
+          "conf": 0.0023
+        },
+        {
+          "rank": 5,
+          "food": "broccoli raw",
+          "conf": 0.002
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 179.75,
+        "contrast_score": 62.98,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_vegetables_33",
+      "category": "Vegetables",
+      "description": "Held-out test image: kale raw (img_0199.jpg)",
+      "true_class": "kale raw",
+      "predicted_class": "kale raw",
+      "confidence": 0.5963,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 84.46,
+      "calories": 7.2,
+      "protein": 0.6,
+      "carbs": 0.91,
+      "fat": 0.31,
+      "fiber": 0.84,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "kale raw",
+          "conf": 0.5963
+        },
+        {
+          "rank": 2,
+          "food": "spinach raw",
+          "conf": 0.0474
+        },
+        {
+          "rank": 3,
+          "food": "tortilla chips yellow plain salted",
+          "conf": 0.0427
+        },
+        {
+          "rank": 4,
+          "food": "croutons plain",
+          "conf": 0.0343
+        },
+        {
+          "rank": 5,
+          "food": "onions red raw",
+          "conf": 0.034
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 316.66,
+        "contrast_score": 26.15,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_vegetables_34",
+      "category": "Vegetables",
+      "description": "Held-out test image: kale raw (img_0243.jpg)",
+      "true_class": "kale raw",
+      "predicted_class": "kale raw",
+      "confidence": 0.422,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 85.14,
+      "calories": 7.2,
+      "protein": 0.6,
+      "carbs": 0.91,
+      "fat": 0.31,
+      "fiber": 0.84,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "kale raw",
+          "conf": 0.422
+        },
+        {
+          "rank": 2,
+          "food": "broccoli leaves raw",
+          "conf": 0.238
+        },
+        {
+          "rank": 3,
+          "food": "spinach raw",
+          "conf": 0.0971
+        },
+        {
+          "rank": 4,
+          "food": "blueberries raw",
+          "conf": 0.0199
+        },
+        {
+          "rank": 5,
+          "food": "croutons plain",
+          "conf": 0.0198
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 585.51,
+        "contrast_score": 26.21,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_vegetables_35",
+      "category": "Vegetables",
+      "description": "Held-out test image: cabbage raw (img_0258.jpg)",
+      "true_class": "cabbage raw",
+      "predicted_class": "cabbage raw",
+      "confidence": 0.3272,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 77.8,
+      "calories": 22.2,
+      "protein": 1.14,
+      "carbs": 5.16,
+      "fat": 0.09,
+      "fiber": 2.23,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "cabbage raw",
+          "conf": 0.3272
+        },
+        {
+          "rank": 2,
+          "food": "tomatoes green raw",
+          "conf": 0.267
+        },
+        {
+          "rank": 3,
+          "food": "lentils sprouted raw",
+          "conf": 0.0533
+        },
+        {
+          "rank": 4,
+          "food": "celery raw",
+          "conf": 0.0315
+        },
+        {
+          "rank": 5,
+          "food": "raspberries raw",
+          "conf": 0.0207
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 398.95,
+        "contrast_score": 62.17,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_vegetables_36",
+      "category": "Vegetables",
+      "description": "Held-out test image: cabbage raw (img_0320.jpg)",
+      "true_class": "cabbage raw",
+      "predicted_class": "cabbage raw",
+      "confidence": 0.7382,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 82.11,
+      "calories": 22.2,
+      "protein": 1.14,
+      "carbs": 5.16,
+      "fat": 0.09,
+      "fiber": 2.23,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "cabbage raw",
+          "conf": 0.7382
+        },
+        {
+          "rank": 2,
+          "food": "tomatoes green raw",
+          "conf": 0.1126
+        },
+        {
+          "rank": 3,
+          "food": "onions red raw",
+          "conf": 0.0161
+        },
+        {
+          "rank": 4,
+          "food": "lentils sprouted raw",
+          "conf": 0.0132
+        },
+        {
+          "rank": 5,
+          "food": "potato pancakes",
+          "conf": 0.0115
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 499.95,
+        "contrast_score": 17.84,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_vegetables_37",
+      "category": "Vegetables",
+      "description": "Held-out test image: tomatoes green raw (img_0138.jpg)",
+      "true_class": "tomatoes green raw",
+      "predicted_class": "tomatoes green raw",
+      "confidence": 0.8687,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 81.36,
+      "calories": 41.4,
+      "protein": 2.16,
+      "carbs": 9.18,
+      "fat": 0.36,
+      "fiber": 1.98,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "tomatoes green raw",
+          "conf": 0.8687
+        },
+        {
+          "rank": 2,
+          "food": "cabbage raw",
+          "conf": 0.0284
+        },
+        {
+          "rank": 3,
+          "food": "celery raw",
+          "conf": 0.0116
+        },
+        {
+          "rank": 4,
+          "food": "flour rice brown",
+          "conf": 0.0065
+        },
+        {
+          "rank": 5,
+          "food": "lentils sprouted raw",
+          "conf": 0.0057
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 199.84,
+        "contrast_score": 56.35,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_vegetables_38",
+      "category": "Vegetables",
+      "description": "Held-out test image: tomatoes green raw (img_0231.jpg)",
+      "true_class": "tomatoes green raw",
+      "predicted_class": "tomatoes green raw",
+      "confidence": 0.4845,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 91.89,
+      "calories": 41.4,
+      "protein": 2.16,
+      "carbs": 9.18,
+      "fat": 0.36,
+      "fiber": 1.98,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "tomatoes green raw",
+          "conf": 0.4845
+        },
+        {
+          "rank": 2,
+          "food": "lentils sprouted raw",
+          "conf": 0.064
+        },
+        {
+          "rank": 3,
+          "food": "celery raw",
+          "conf": 0.0428
+        },
+        {
+          "rank": 4,
+          "food": "nectarines raw",
+          "conf": 0.0336
+        },
+        {
+          "rank": 5,
+          "food": "apples gala with skin raw",
+          "conf": 0.0309
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 517.51,
+        "contrast_score": 62.93,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_prepared foods_39",
+      "category": "Prepared Foods",
+      "description": "Held-out test image: pizza rolls frozen unprepared (img_0053.jpg)",
+      "true_class": "pizza rolls frozen unprepared",
+      "predicted_class": "pizza rolls frozen unprepared",
+      "confidence": 0.7103,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 73.63,
+      "calories": 262.4,
+      "protein": 6.98,
+      "carbs": 40.58,
+      "fat": 7.98,
+      "fiber": 0.96,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "pizza rolls frozen unprepared",
+          "conf": 0.7103
+        },
+        {
+          "rank": 2,
+          "food": "salmon nuggets breaded frozen heated",
+          "conf": 0.0821
+        },
+        {
+          "rank": 3,
+          "food": "peanuts spanish raw",
+          "conf": 0.0352
+        },
+        {
+          "rank": 4,
+          "food": "bread egg",
+          "conf": 0.0288
+        },
+        {
+          "rank": 5,
+          "food": "strawberries raw",
+          "conf": 0.0108
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 454.99,
+        "contrast_score": 19.29,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_prepared foods_40",
+      "category": "Prepared Foods",
+      "description": "Held-out test image: pizza rolls frozen unprepared (img_0219.jpg)",
+      "true_class": "pizza rolls frozen unprepared",
+      "predicted_class": "pizza rolls frozen unprepared",
+      "confidence": 0.9582,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 81.61,
+      "calories": 262.4,
+      "protein": 6.98,
+      "carbs": 40.58,
+      "fat": 7.98,
+      "fiber": 0.96,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "pizza rolls frozen unprepared",
+          "conf": 0.9582
+        },
+        {
+          "rank": 2,
+          "food": "salmon nuggets breaded frozen heated",
+          "conf": 0.0166
+        },
+        {
+          "rank": 3,
+          "food": "bread egg",
+          "conf": 0.0042
+        },
+        {
+          "rank": 4,
+          "food": "broccoli leaves raw",
+          "conf": 0.0029
+        },
+        {
+          "rank": 5,
+          "food": "peanuts spanish raw",
+          "conf": 0.002
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 638.23,
+        "contrast_score": 22.52,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_prepared foods_41",
+      "category": "Prepared Foods",
+      "description": "Held-out test image: potato pancakes (img_0241.jpg)",
+      "true_class": "potato pancakes",
+      "predicted_class": "croutons plain",
+      "confidence": 0.4387,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 70.86,
+      "calories": 57.8,
+      "protein": 1.69,
+      "carbs": 10.44,
+      "fat": 0.94,
+      "fiber": 0.72,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "croutons plain",
+          "conf": 0.4387
+        },
+        {
+          "rank": 2,
+          "food": "potato pancakes",
+          "conf": 0.3591
+        },
+        {
+          "rank": 3,
+          "food": "salmon nuggets breaded frozen heated",
+          "conf": 0.1392
+        },
+        {
+          "rank": 4,
+          "food": "apples gala with skin raw",
+          "conf": 0.0044
+        },
+        {
+          "rank": 5,
+          "food": "bread rye",
+          "conf": 0.0034
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 431.35,
+        "contrast_score": 60.17,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_prepared foods_42",
+      "category": "Prepared Foods",
+      "description": "Held-out test image: potato pancakes (img_0213.jpg)",
+      "true_class": "potato pancakes",
+      "predicted_class": "nuts almonds",
+      "confidence": 0.5685,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 84.35,
+      "calories": 828.0,
+      "protein": 30.24,
+      "carbs": 30.82,
+      "fat": 71.4,
+      "fiber": 17.88,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "nuts almonds",
+          "conf": 0.5685
+        },
+        {
+          "rank": 2,
+          "food": "potato pancakes",
+          "conf": 0.1159
+        },
+        {
+          "rank": 3,
+          "food": "croutons plain",
+          "conf": 0.0646
+        },
+        {
+          "rank": 4,
+          "food": "scrapple pork",
+          "conf": 0.04
+        },
+        {
+          "rank": 5,
+          "food": "spinach raw",
+          "conf": 0.0165
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 503.62,
+        "contrast_score": 52.09,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_prepared foods_43",
+      "category": "Prepared Foods",
+      "description": "Held-out test image: pasta gluten free corn cooked (img_0061.jpg)",
+      "true_class": "pasta gluten free corn cooked",
+      "predicted_class": "pasta gluten free corn cooked",
+      "confidence": 0.9577,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 76.73,
+      "calories": 176.4,
+      "protein": 3.68,
+      "carbs": 39.07,
+      "fat": 1.02,
+      "fiber": 6.72,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "pasta gluten free corn cooked",
+          "conf": 0.9577
+        },
+        {
+          "rank": 2,
+          "food": "flour soy defatted",
+          "conf": 0.0088
+        },
+        {
+          "rank": 3,
+          "food": "muffins oat bran",
+          "conf": 0.0021
+        },
+        {
+          "rank": 4,
+          "food": "spinach raw",
+          "conf": 0.0021
+        },
+        {
+          "rank": 5,
+          "food": "croutons plain",
+          "conf": 0.0017
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 420.2,
+        "contrast_score": 27.33,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_prepared foods_44",
+      "category": "Prepared Foods",
+      "description": "Held-out test image: pasta gluten free corn cooked (img_0108.jpg)",
+      "true_class": "pasta gluten free corn cooked",
+      "predicted_class": "pasta gluten free corn cooked",
+      "confidence": 0.7114,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 65.85,
+      "calories": 176.4,
+      "protein": 3.68,
+      "carbs": 39.07,
+      "fat": 1.02,
+      "fiber": 6.72,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "pasta gluten free corn cooked",
+          "conf": 0.7114
+        },
+        {
+          "rank": 2,
+          "food": "egg yolk dried",
+          "conf": 0.2136
+        },
+        {
+          "rank": 3,
+          "food": "croutons plain",
+          "conf": 0.0104
+        },
+        {
+          "rank": 4,
+          "food": "rice crackers",
+          "conf": 0.0059
+        },
+        {
+          "rank": 5,
+          "food": "potato pancakes",
+          "conf": 0.0054
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 101.46,
+        "contrast_score": 67.06,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_prepared foods_45",
+      "category": "Prepared Foods",
+      "description": "Held-out test image: hummus commercial (img_0229.jpg)",
+      "true_class": "hummus commercial",
+      "predicted_class": "hummus commercial",
+      "confidence": 0.3688,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 59.37,
+      "calories": 77.6,
+      "protein": 2.49,
+      "carbs": 5.05,
+      "fat": 5.8,
+      "fiber": 1.83,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "hummus commercial",
+          "conf": 0.3688
+        },
+        {
+          "rank": 2,
+          "food": "chicken spread",
+          "conf": 0.2539
+        },
+        {
+          "rank": 3,
+          "food": "flour soy defatted",
+          "conf": 0.0581
+        },
+        {
+          "rank": 4,
+          "food": "pasta gluten free corn cooked",
+          "conf": 0.0538
+        },
+        {
+          "rank": 5,
+          "food": "garlic raw",
+          "conf": 0.0265
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 581.07,
+        "contrast_score": 19.65,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_prepared foods_46",
+      "category": "Prepared Foods",
+      "description": "Held-out test image: hummus commercial (img_0150.jpg)",
+      "true_class": "hummus commercial",
+      "predicted_class": "hummus commercial",
+      "confidence": 0.9094,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 57.11,
+      "calories": 77.6,
+      "protein": 2.49,
+      "carbs": 5.05,
+      "fat": 5.8,
+      "fiber": 1.83,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "hummus commercial",
+          "conf": 0.9094
+        },
+        {
+          "rank": 2,
+          "food": "chicken spread",
+          "conf": 0.0197
+        },
+        {
+          "rank": 3,
+          "food": "kale raw",
+          "conf": 0.0043
+        },
+        {
+          "rank": 4,
+          "food": "croutons plain",
+          "conf": 0.0033
+        },
+        {
+          "rank": 5,
+          "food": "cheese brie",
+          "conf": 0.0031
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 354.14,
+        "contrast_score": 23.46,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_prepared foods_47",
+      "category": "Prepared Foods",
+      "description": "Held-out test image: croutons plain (img_0052.jpg)",
+      "true_class": "croutons plain",
+      "predicted_class": "salmon nuggets breaded frozen heated",
+      "confidence": 0.3497,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 52.06,
+      "calories": 60.1,
+      "protein": 3.6,
+      "carbs": 3.96,
+      "fat": 3.32,
+      "fiber": 0.0,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "salmon nuggets breaded frozen heated",
+          "conf": 0.3497
+        },
+        {
+          "rank": 2,
+          "food": "croutons plain",
+          "conf": 0.2809
+        },
+        {
+          "rank": 3,
+          "food": "potato pancakes",
+          "conf": 0.1681
+        },
+        {
+          "rank": 4,
+          "food": "pork fresh ground raw",
+          "conf": 0.0214
+        },
+        {
+          "rank": 5,
+          "food": "bread rye",
+          "conf": 0.0209
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 465.33,
+        "contrast_score": 63.16,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_prepared foods_48",
+      "category": "Prepared Foods",
+      "description": "Held-out test image: croutons plain (img_0187.jpg)",
+      "true_class": "croutons plain",
+      "predicted_class": "potato pancakes",
+      "confidence": 0.6378,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 59.88,
+      "calories": 59.0,
+      "protein": 1.34,
+      "carbs": 6.12,
+      "fat": 3.25,
+      "fiber": 0.73,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "potato pancakes",
+          "conf": 0.6378
+        },
+        {
+          "rank": 2,
+          "food": "croutons plain",
+          "conf": 0.1835
+        },
+        {
+          "rank": 3,
+          "food": "salmon nuggets breaded frozen heated",
+          "conf": 0.0753
+        },
+        {
+          "rank": 4,
+          "food": "pork fresh ground raw",
+          "conf": 0.0149
+        },
+        {
+          "rank": 5,
+          "food": "strawberries raw",
+          "conf": 0.0094
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 475.49,
+        "contrast_score": 18.15,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_prepared foods_49",
+      "category": "Prepared Foods",
+      "description": "Held-out test image: muffins oat bran (img_0147.jpg)",
+      "true_class": "muffins oat bran",
+      "predicted_class": "archway home style cookies oatmeal",
+      "confidence": 0.6315,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 55.04,
+      "calories": 105.2,
+      "protein": 1.37,
+      "carbs": 17.04,
+      "fat": 3.52,
+      "fiber": 0.72,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "archway home style cookies oatmeal",
+          "conf": 0.6315
+        },
+        {
+          "rank": 2,
+          "food": "muffins oat bran",
+          "conf": 0.2604
+        },
+        {
+          "rank": 3,
+          "food": "oranges raw navels",
+          "conf": 0.0103
+        },
+        {
+          "rank": 4,
+          "food": "chicken spread",
+          "conf": 0.0103
+        },
+        {
+          "rank": 5,
+          "food": "rice crackers",
+          "conf": 0.0083
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 221.65,
+        "contrast_score": 59.5,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_prepared foods_50",
+      "category": "Prepared Foods",
+      "description": "Held-out test image: muffins oat bran (img_0318.jpg)",
+      "true_class": "muffins oat bran",
+      "predicted_class": "muffins oat bran",
+      "confidence": 0.5041,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 56.32,
+      "calories": 76.5,
+      "protein": 1.98,
+      "carbs": 13.69,
+      "fat": 2.1,
+      "fiber": 1.3,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "muffins oat bran",
+          "conf": 0.5041
+        },
+        {
+          "rank": 2,
+          "food": "archway home style cookies oatmeal",
+          "conf": 0.2143
+        },
+        {
+          "rank": 3,
+          "food": "rice crackers",
+          "conf": 0.1081
+        },
+        {
+          "rank": 4,
+          "food": "onions red raw",
+          "conf": 0.0106
+        },
+        {
+          "rank": 5,
+          "food": "ice creams chocolate",
+          "conf": 0.0105
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 382.92,
+        "contrast_score": 15.78,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_prepared foods_51",
+      "category": "Prepared Foods",
+      "description": "Held-out test image: bread rye (img_0279.jpg)",
+      "true_class": "bread rye",
+      "predicted_class": "peanuts spanish raw",
+      "confidence": 0.289,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 65.52,
+      "calories": 832.2,
+      "protein": 38.18,
+      "carbs": 23.11,
+      "fat": 72.42,
+      "fiber": 13.87,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "peanuts spanish raw",
+          "conf": 0.289
+        },
+        {
+          "rank": 2,
+          "food": "pizza rolls frozen unprepared",
+          "conf": 0.1583
+        },
+        {
+          "rank": 3,
+          "food": "bread rye",
+          "conf": 0.1285
+        },
+        {
+          "rank": 4,
+          "food": "ice creams chocolate",
+          "conf": 0.0426
+        },
+        {
+          "rank": 5,
+          "food": "pork fresh ground raw",
+          "conf": 0.0373
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 456.84,
+        "contrast_score": 22.11,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_prepared foods_52",
+      "category": "Prepared Foods",
+      "description": "Held-out test image: bread rye (img_0124.jpg)",
+      "true_class": "bread rye",
+      "predicted_class": "bread rye",
+      "confidence": 0.9757,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 53.05,
+      "calories": 73.4,
+      "protein": 2.41,
+      "carbs": 13.69,
+      "fat": 0.94,
+      "fiber": 1.64,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "bread rye",
+          "conf": 0.9757
+        },
+        {
+          "rank": 2,
+          "food": "peanuts spanish raw",
+          "conf": 0.0081
+        },
+        {
+          "rank": 3,
+          "food": "scrapple pork",
+          "conf": 0.0029
+        },
+        {
+          "rank": 4,
+          "food": "spinach raw",
+          "conf": 0.0013
+        },
+        {
+          "rank": 5,
+          "food": "cheese brie",
+          "conf": 0.0013
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 208.36,
+        "contrast_score": 56.43,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_prepared foods_53",
+      "category": "Prepared Foods",
+      "description": "Held-out test image: bread egg (img_0316.jpg)",
+      "true_class": "bread egg",
+      "predicted_class": "pizza rolls frozen unprepared",
+      "confidence": 0.4861,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 57.15,
+      "calories": 262.4,
+      "protein": 6.98,
+      "carbs": 40.58,
+      "fat": 7.98,
+      "fiber": 0.96,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "pizza rolls frozen unprepared",
+          "conf": 0.4861
+        },
+        {
+          "rank": 2,
+          "food": "bread egg",
+          "conf": 0.1943
+        },
+        {
+          "rank": 3,
+          "food": "peanuts spanish raw",
+          "conf": 0.1417
+        },
+        {
+          "rank": 4,
+          "food": "onions red raw",
+          "conf": 0.0112
+        },
+        {
+          "rank": 5,
+          "food": "potato pancakes",
+          "conf": 0.0103
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 529.63,
+        "contrast_score": 16.9,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_prepared foods_54",
+      "category": "Prepared Foods",
+      "description": "Held-out test image: bread egg (img_0179.jpg)",
+      "true_class": "bread egg",
+      "predicted_class": "bread egg",
+      "confidence": 0.1571,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 69.8,
+      "calories": 81.4,
+      "protein": 2.69,
+      "carbs": 13.55,
+      "fat": 1.7,
+      "fiber": 0.65,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "bread egg",
+          "conf": 0.1571
+        },
+        {
+          "rank": 2,
+          "food": "peanuts spanish raw",
+          "conf": 0.086
+        },
+        {
+          "rank": 3,
+          "food": "croutons plain",
+          "conf": 0.0849
+        },
+        {
+          "rank": 4,
+          "food": "cheese brie",
+          "conf": 0.0723
+        },
+        {
+          "rank": 5,
+          "food": "pizza rolls frozen unprepared",
+          "conf": 0.061
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 418.32,
+        "contrast_score": 64.88,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_indian foods_55",
+      "category": "Indian Foods",
+      "description": "Held-out test image: lentils sprouted raw (img_0274.jpg)",
+      "true_class": "lentils sprouted raw",
+      "predicted_class": "lentils sprouted raw",
+      "confidence": 0.6673,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 76.29,
+      "calories": 81.6,
+      "protein": 6.9,
+      "carbs": 17.05,
+      "fat": 0.42,
+      "fiber": 0.0,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "lentils sprouted raw",
+          "conf": 0.6673
+        },
+        {
+          "rank": 2,
+          "food": "flour soy defatted",
+          "conf": 0.027
+        },
+        {
+          "rank": 3,
+          "food": "egg white dried",
+          "conf": 0.0218
+        },
+        {
+          "rank": 4,
+          "food": "ice creams chocolate",
+          "conf": 0.0174
+        },
+        {
+          "rank": 5,
+          "food": "yogurt plain low fat",
+          "conf": 0.0166
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 614.99,
+        "contrast_score": 21.05,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_indian foods_56",
+      "category": "Indian Foods",
+      "description": "Held-out test image: lentils sprouted raw (img_0244.jpg)",
+      "true_class": "lentils sprouted raw",
+      "predicted_class": "lentils sprouted raw",
+      "confidence": 0.5255,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 76.11,
+      "calories": 81.6,
+      "protein": 6.9,
+      "carbs": 17.05,
+      "fat": 0.42,
+      "fiber": 0.0,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "lentils sprouted raw",
+          "conf": 0.5255
+        },
+        {
+          "rank": 2,
+          "food": "yogurt plain low fat",
+          "conf": 0.0545
+        },
+        {
+          "rank": 3,
+          "food": "ketchup restaurant",
+          "conf": 0.0464
+        },
+        {
+          "rank": 4,
+          "food": "spinach raw",
+          "conf": 0.0215
+        },
+        {
+          "rank": 5,
+          "food": "pasta gluten free corn cooked",
+          "conf": 0.0208
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 455.76,
+        "contrast_score": 20.96,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_indian foods_57",
+      "category": "Indian Foods",
+      "description": "Held-out test image: lentils sprouted raw (img_0047.jpg)",
+      "true_class": "lentils sprouted raw",
+      "predicted_class": "lentils sprouted raw",
+      "confidence": 0.9465,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 67.8,
+      "calories": 81.6,
+      "protein": 6.9,
+      "carbs": 17.05,
+      "fat": 0.42,
+      "fiber": 0.0,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "lentils sprouted raw",
+          "conf": 0.9465
+        },
+        {
+          "rank": 2,
+          "food": "cabbage raw",
+          "conf": 0.0085
+        },
+        {
+          "rank": 3,
+          "food": "pasta gluten free corn cooked",
+          "conf": 0.0041
+        },
+        {
+          "rank": 4,
+          "food": "onions red raw",
+          "conf": 0.0025
+        },
+        {
+          "rank": 5,
+          "food": "celery raw",
+          "conf": 0.0025
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 408.21,
+        "contrast_score": 20.16,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_indian foods_58",
+      "category": "Indian Foods",
+      "description": "Held-out test image: mangos raw (img_0192.jpg)",
+      "true_class": "mangos raw",
+      "predicted_class": "mangos raw",
+      "confidence": 0.4589,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 76.69,
+      "calories": 99.0,
+      "protein": 1.35,
+      "carbs": 24.72,
+      "fat": 0.63,
+      "fiber": 2.64,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "mangos raw",
+          "conf": 0.4589
+        },
+        {
+          "rank": 2,
+          "food": "oranges raw navels",
+          "conf": 0.2881
+        },
+        {
+          "rank": 3,
+          "food": "nectarines raw",
+          "conf": 0.0382
+        },
+        {
+          "rank": 4,
+          "food": "garlic raw",
+          "conf": 0.0227
+        },
+        {
+          "rank": 5,
+          "food": "strawberries raw",
+          "conf": 0.0191
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 461.7,
+        "contrast_score": 20.93,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_indian foods_59",
+      "category": "Indian Foods",
+      "description": "Held-out test image: mangos raw (img_0025.jpg)",
+      "true_class": "mangos raw",
+      "predicted_class": "mangos raw",
+      "confidence": 0.8716,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 67.98,
+      "calories": 99.0,
+      "protein": 1.35,
+      "carbs": 24.72,
+      "fat": 0.63,
+      "fiber": 2.64,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "mangos raw",
+          "conf": 0.8716
+        },
+        {
+          "rank": 2,
+          "food": "oranges raw navels",
+          "conf": 0.0712
+        },
+        {
+          "rank": 3,
+          "food": "nectarines raw",
+          "conf": 0.0116
+        },
+        {
+          "rank": 4,
+          "food": "rice crackers",
+          "conf": 0.0042
+        },
+        {
+          "rank": 5,
+          "food": "cheese brie",
+          "conf": 0.0028
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 302.84,
+        "contrast_score": 19.54,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_indian foods_60",
+      "category": "Indian Foods",
+      "description": "Held-out test image: mangos raw (img_0319.jpg)",
+      "true_class": "mangos raw",
+      "predicted_class": "mangos raw",
+      "confidence": 0.9213,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 90.86,
+      "calories": 99.0,
+      "protein": 1.35,
+      "carbs": 24.72,
+      "fat": 0.63,
+      "fiber": 2.64,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "mangos raw",
+          "conf": 0.9213
+        },
+        {
+          "rank": 2,
+          "food": "oranges raw navels",
+          "conf": 0.0242
+        },
+        {
+          "rank": 3,
+          "food": "raspberries raw",
+          "conf": 0.0051
+        },
+        {
+          "rank": 4,
+          "food": "egg yolk dried",
+          "conf": 0.0039
+        },
+        {
+          "rank": 5,
+          "food": "lemons raw without peel",
+          "conf": 0.0026
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 468.01,
+        "contrast_score": 18.0,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_indian foods_61",
+      "category": "Indian Foods",
+      "description": "Held-out test image: flour rice brown (img_0272.jpg)",
+      "true_class": "flour rice brown",
+      "predicted_class": "flour rice brown",
+      "confidence": 0.77,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 116.63,
+      "calories": 365.2,
+      "protein": 7.19,
+      "carbs": 75.5,
+      "fat": 3.85,
+      "fiber": 0.0,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "flour rice brown",
+          "conf": 0.77
+        },
+        {
+          "rank": 2,
+          "food": "chicken spread",
+          "conf": 0.0998
+        },
+        {
+          "rank": 3,
+          "food": "flour soy defatted",
+          "conf": 0.0361
+        },
+        {
+          "rank": 4,
+          "food": "onions red raw",
+          "conf": 0.0105
+        },
+        {
+          "rank": 5,
+          "food": "egg white dried",
+          "conf": 0.0083
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 440.06,
+        "contrast_score": 19.79,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_indian foods_62",
+      "category": "Indian Foods",
+      "description": "Held-out test image: flour rice brown (img_0249.jpg)",
+      "true_class": "flour rice brown",
+      "predicted_class": "chicken spread",
+      "confidence": 0.2267,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 92.78,
+      "calories": 88.5,
+      "protein": 10.09,
+      "carbs": 2.27,
+      "fat": 9.83,
+      "fiber": 0.17,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "chicken spread",
+          "conf": 0.2267
+        },
+        {
+          "rank": 2,
+          "food": "hummus commercial",
+          "conf": 0.0945
+        },
+        {
+          "rank": 3,
+          "food": "flour rice brown",
+          "conf": 0.0872
+        },
+        {
+          "rank": 4,
+          "food": "lentils sprouted raw",
+          "conf": 0.0514
+        },
+        {
+          "rank": 5,
+          "food": "ice creams chocolate",
+          "conf": 0.0456
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 565.91,
+        "contrast_score": 19.78,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "heldout_indian foods_63",
+      "category": "Indian Foods",
+      "description": "Held-out test image: flour rice brown (img_0132.jpg)",
+      "true_class": "flour rice brown",
+      "predicted_class": "flour soy defatted",
+      "confidence": 0.1971,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 91.41,
+      "calories": 366.0,
+      "protein": 51.1,
+      "carbs": 32.9,
+      "fat": 3.33,
+      "fiber": 0.0,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "flour soy defatted",
+          "conf": 0.1971
+        },
+        {
+          "rank": 2,
+          "food": "chicken spread",
+          "conf": 0.1199
+        },
+        {
+          "rank": 3,
+          "food": "flour rice brown",
+          "conf": 0.1156
+        },
+        {
+          "rank": 4,
+          "food": "ice creams chocolate",
+          "conf": 0.0626
+        },
+        {
+          "rank": 5,
+          "food": "scrapple pork",
+          "conf": 0.0517
+        }
+      ],
+      "quality_assessment": {
+        "width": 224,
+        "height": 224,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 156.58,
+        "contrast_score": 66.5,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "fruit_01_banana",
+      "category": "Fruits",
+      "description": "Banana on wooden dining table under daylight",
+      "true_class": "bananas raw",
+      "predicted_class": "bananas raw",
+      "confidence": 0.3454,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 84.06,
+      "calories": 200.2,
+      "protein": 2.45,
+      "carbs": 51.39,
+      "fat": 0.74,
+      "fiber": 5.85,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "bananas raw",
+          "conf": 0.3454
+        },
+        {
+          "rank": 2,
+          "food": "apples gala with skin raw",
+          "conf": 0.0808
+        },
+        {
+          "rank": 3,
+          "food": "spinach raw",
+          "conf": 0.071
+        },
+        {
+          "rank": 4,
+          "food": "bread rye",
+          "conf": 0.0431
+        },
+        {
+          "rank": 5,
+          "food": "muffins oat bran",
+          "conf": 0.0401
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 215.53,
+        "contrast_score": 26.68,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "fruit_02_apple",
+      "category": "Fruits",
+      "description": "Fresh Gala apple placed on ceramic plate",
+      "true_class": "apples gala with skin raw",
+      "predicted_class": "apples gala with skin raw",
+      "confidence": 0.5309,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 83.24,
+      "calories": 61.0,
+      "protein": 0.13,
+      "carbs": 14.8,
+      "fat": 0.15,
+      "fiber": 2.1,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "apples gala with skin raw",
+          "conf": 0.5309
+        },
+        {
+          "rank": 2,
+          "food": "nectarines raw",
+          "conf": 0.1149
+        },
+        {
+          "rank": 3,
+          "food": "bread rye",
+          "conf": 0.0675
+        },
+        {
+          "rank": 4,
+          "food": "strawberries raw",
+          "conf": 0.0288
+        },
+        {
+          "rank": 5,
+          "food": "wasabi root raw",
+          "conf": 0.0204
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 791.25,
+        "contrast_score": 58.62,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "fruit_03_strawberry",
+      "category": "Fruits",
+      "description": "Red ripe strawberries on marble countertop",
+      "true_class": "strawberries raw",
+      "predicted_class": "broccoli raw",
+      "confidence": 0.5492,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 88.24,
+      "calories": 24.3,
+      "protein": 1.95,
+      "carbs": 4.78,
+      "fat": 0.26,
+      "fiber": 1.82,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "broccoli raw",
+          "conf": 0.5492
+        },
+        {
+          "rank": 2,
+          "food": "raspberries raw",
+          "conf": 0.2571
+        },
+        {
+          "rank": 3,
+          "food": "kale raw",
+          "conf": 0.0266
+        },
+        {
+          "rank": 4,
+          "food": "strawberries raw",
+          "conf": 0.0151
+        },
+        {
+          "rank": 5,
+          "food": "pork fresh ground raw",
+          "conf": 0.0149
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 578.42,
+        "contrast_score": 50.99,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "fruit_04_blueberry",
+      "category": "Fruits",
+      "description": "Blueberries cluster on serving dish",
+      "true_class": "blueberries raw",
+      "predicted_class": "broccoli raw",
+      "confidence": 0.3477,
+      "is_top1_correct": false,
+      "is_top5_correct": false,
+      "latency_ms": 79.17,
+      "calories": 24.3,
+      "protein": 1.95,
+      "carbs": 4.78,
+      "fat": 0.26,
+      "fiber": 1.82,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "broccoli raw",
+          "conf": 0.3477
+        },
+        {
+          "rank": 2,
+          "food": "kale raw",
+          "conf": 0.0669
+        },
+        {
+          "rank": 3,
+          "food": "lemons raw without peel",
+          "conf": 0.0534
+        },
+        {
+          "rank": 4,
+          "food": "blackberries raw",
+          "conf": 0.0404
+        },
+        {
+          "rank": 5,
+          "food": "apples gala with skin raw",
+          "conf": 0.0395
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 788.43,
+        "contrast_score": 73.23,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "fruit_05_orange",
+      "category": "Fruits",
+      "description": "Navel orange on wooden cutting board",
+      "true_class": "oranges raw navels",
+      "predicted_class": "bread rye",
+      "confidence": 0.5225,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 80.34,
+      "calories": 73.4,
+      "protein": 2.41,
+      "carbs": 13.69,
+      "fat": 0.94,
+      "fiber": 1.64,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "bread rye",
+          "conf": 0.5225
+        },
+        {
+          "rank": 2,
+          "food": "mangos raw",
+          "conf": 0.1109
+        },
+        {
+          "rank": 3,
+          "food": "oranges raw navels",
+          "conf": 0.0818
+        },
+        {
+          "rank": 4,
+          "food": "nectarines raw",
+          "conf": 0.0683
+        },
+        {
+          "rank": 5,
+          "food": "wasabi root raw",
+          "conf": 0.0272
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 274.96,
+        "contrast_score": 7.63,
+        "is_blurry": false,
+        "is_low_contrast": true,
+        "format": "PIL",
+        "warnings": [
+          "Low contrast image: scene may be underexposed or blank."
+        ]
+      }
+    },
+    {
+      "test_id": "veg_01_broccoli",
+      "category": "Vegetables",
+      "description": "Raw broccoli crown on kitchen prep board",
+      "true_class": "broccoli raw",
+      "predicted_class": "broccoli raw",
+      "confidence": 0.7435,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 73.49,
+      "calories": 24.3,
+      "protein": 1.95,
+      "carbs": 4.78,
+      "fat": 0.26,
+      "fiber": 1.82,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "broccoli raw",
+          "conf": 0.7435
+        },
+        {
+          "rank": 2,
+          "food": "bread rye",
+          "conf": 0.0874
+        },
+        {
+          "rank": 3,
+          "food": "scrapple pork",
+          "conf": 0.0231
+        },
+        {
+          "rank": 4,
+          "food": "mangos raw",
+          "conf": 0.0149
+        },
+        {
+          "rank": 5,
+          "food": "carrots raw",
+          "conf": 0.0128
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 352.07,
+        "contrast_score": 33.92,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "veg_02_carrot",
+      "category": "Vegetables",
+      "description": "Whole raw carrot on kitchen surface",
+      "true_class": "carrots raw",
+      "predicted_class": "mangos raw",
+      "confidence": 0.5004,
+      "is_top1_correct": false,
+      "is_top5_correct": false,
+      "latency_ms": 71.78,
+      "calories": 99.0,
+      "protein": 1.35,
+      "carbs": 24.72,
+      "fat": 0.63,
+      "fiber": 2.64,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "mangos raw",
+          "conf": 0.5004
+        },
+        {
+          "rank": 2,
+          "food": "broccoli raw",
+          "conf": 0.1334
+        },
+        {
+          "rank": 3,
+          "food": "kale raw",
+          "conf": 0.0759
+        },
+        {
+          "rank": 4,
+          "food": "oranges raw navels",
+          "conf": 0.0511
+        },
+        {
+          "rank": 5,
+          "food": "raspberries raw",
+          "conf": 0.0453
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 523.53,
+        "contrast_score": 37.94,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "veg_03_spinach",
+      "category": "Vegetables",
+      "description": "Fresh green spinach leaves on dish",
+      "true_class": "spinach raw",
+      "predicted_class": "broccoli raw",
+      "confidence": 0.7551,
+      "is_top1_correct": false,
+      "is_top5_correct": false,
+      "latency_ms": 65.85,
+      "calories": 24.3,
+      "protein": 1.95,
+      "carbs": 4.78,
+      "fat": 0.26,
+      "fiber": 1.82,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "broccoli raw",
+          "conf": 0.7551
+        },
+        {
+          "rank": 2,
+          "food": "apples gala with skin raw",
+          "conf": 0.0405
+        },
+        {
+          "rank": 3,
+          "food": "bread egg",
+          "conf": 0.0155
+        },
+        {
+          "rank": 4,
+          "food": "cheese blue",
+          "conf": 0.0127
+        },
+        {
+          "rank": 5,
+          "food": "raspberries raw",
+          "conf": 0.012
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 946.98,
+        "contrast_score": 74.11,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "veg_04_onion",
+      "category": "Vegetables",
+      "description": "Red onion with papery skin on prep surface",
+      "true_class": "onions red raw",
+      "predicted_class": "broccoli raw",
+      "confidence": 0.4531,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 71.72,
+      "calories": 24.3,
+      "protein": 1.95,
+      "carbs": 4.78,
+      "fat": 0.26,
+      "fiber": 1.82,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "broccoli raw",
+          "conf": 0.4531
+        },
+        {
+          "rank": 2,
+          "food": "bread rye",
+          "conf": 0.1254
+        },
+        {
+          "rank": 3,
+          "food": "onions red raw",
+          "conf": 0.0872
+        },
+        {
+          "rank": 4,
+          "food": "mangos raw",
+          "conf": 0.0643
+        },
+        {
+          "rank": 5,
+          "food": "raspberries raw",
+          "conf": 0.0463
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 342.92,
+        "contrast_score": 26.46,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "veg_05_garlic",
+      "category": "Vegetables",
+      "description": "Garlic bulb on rustic wooden table",
+      "true_class": "garlic raw",
+      "predicted_class": "kale raw",
+      "confidence": 0.6958,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 68.56,
+      "calories": 7.2,
+      "protein": 0.6,
+      "carbs": 0.91,
+      "fat": 0.31,
+      "fiber": 0.84,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "kale raw",
+          "conf": 0.6958
+        },
+        {
+          "rank": 2,
+          "food": "broccoli raw",
+          "conf": 0.1081
+        },
+        {
+          "rank": 3,
+          "food": "garlic raw",
+          "conf": 0.0232
+        },
+        {
+          "rank": 4,
+          "food": "rice crackers",
+          "conf": 0.0159
+        },
+        {
+          "rank": 5,
+          "food": "lentils sprouted raw",
+          "conf": 0.0129
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 254.01,
+        "contrast_score": 46.77,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "veg_06_celery",
+      "category": "Vegetables",
+      "description": "Crisp green celery stalk pieces",
+      "true_class": "celery raw",
+      "predicted_class": "broccoli raw",
+      "confidence": 0.3587,
+      "is_top1_correct": false,
+      "is_top5_correct": false,
+      "latency_ms": 201.15,
+      "calories": 24.3,
+      "protein": 1.95,
+      "carbs": 4.78,
+      "fat": 0.26,
+      "fiber": 1.82,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "broccoli raw",
+          "conf": 0.3587
+        },
+        {
+          "rank": 2,
+          "food": "bread rye",
+          "conf": 0.194
+        },
+        {
+          "rank": 3,
+          "food": "mangos raw",
+          "conf": 0.0874
+        },
+        {
+          "rank": 4,
+          "food": "potato pancakes",
+          "conf": 0.0526
+        },
+        {
+          "rank": 5,
+          "food": "carrots raw",
+          "conf": 0.0286
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 292.47,
+        "contrast_score": 9.76,
+        "is_blurry": false,
+        "is_low_contrast": true,
+        "format": "PIL",
+        "warnings": [
+          "Low contrast image: scene may be underexposed or blank."
+        ]
+      }
+    },
+    {
+      "test_id": "prep_01_pizza_rolls",
+      "category": "Prepared Foods",
+      "description": "Frozen pizza rolls served on plate",
+      "true_class": "pizza rolls frozen unprepared",
+      "predicted_class": "broccoli raw",
+      "confidence": 0.2055,
+      "is_top1_correct": false,
+      "is_top5_correct": false,
+      "latency_ms": 80.8,
+      "calories": 24.3,
+      "protein": 1.95,
+      "carbs": 4.78,
+      "fat": 0.26,
+      "fiber": 1.82,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "broccoli raw",
+          "conf": 0.2055
+        },
+        {
+          "rank": 2,
+          "food": "apples gala with skin raw",
+          "conf": 0.1129
+        },
+        {
+          "rank": 3,
+          "food": "archway home style cookies oatmeal",
+          "conf": 0.1117
+        },
+        {
+          "rank": 4,
+          "food": "hummus commercial",
+          "conf": 0.0557
+        },
+        {
+          "rank": 5,
+          "food": "tortilla chips yellow plain salted",
+          "conf": 0.0522
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 668.16,
+        "contrast_score": 24.72,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "prep_02_potato_pancakes",
+      "category": "Prepared Foods",
+      "description": "Golden-brown shredded potato pancakes",
+      "true_class": "potato pancakes",
+      "predicted_class": "broccoli raw",
+      "confidence": 0.3765,
+      "is_top1_correct": false,
+      "is_top5_correct": false,
+      "latency_ms": 84.8,
+      "calories": 24.3,
+      "protein": 1.95,
+      "carbs": 4.78,
+      "fat": 0.26,
+      "fiber": 1.82,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "broccoli raw",
+          "conf": 0.3765
+        },
+        {
+          "rank": 2,
+          "food": "apples gala with skin raw",
+          "conf": 0.0671
+        },
+        {
+          "rank": 3,
+          "food": "tortilla chips yellow plain salted",
+          "conf": 0.0429
+        },
+        {
+          "rank": 4,
+          "food": "bananas raw",
+          "conf": 0.0427
+        },
+        {
+          "rank": 5,
+          "food": "scrapple pork",
+          "conf": 0.0394
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 759.91,
+        "contrast_score": 26.64,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "prep_03_pasta",
+      "category": "Prepared Foods",
+      "description": "Steaming cooked gluten-free corn pasta",
+      "true_class": "pasta gluten free corn cooked",
+      "predicted_class": "broccoli raw",
+      "confidence": 0.2868,
+      "is_top1_correct": false,
+      "is_top5_correct": false,
+      "latency_ms": 83.86,
+      "calories": 24.3,
+      "protein": 1.95,
+      "carbs": 4.78,
+      "fat": 0.26,
+      "fiber": 1.82,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "broccoli raw",
+          "conf": 0.2868
+        },
+        {
+          "rank": 2,
+          "food": "lemons raw without peel",
+          "conf": 0.184
+        },
+        {
+          "rank": 3,
+          "food": "muffins oat bran",
+          "conf": 0.0549
+        },
+        {
+          "rank": 4,
+          "food": "oranges raw navels",
+          "conf": 0.0515
+        },
+        {
+          "rank": 5,
+          "food": "mangos raw",
+          "conf": 0.0327
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 664.78,
+        "contrast_score": 18.03,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "prep_04_hummus",
+      "category": "Prepared Foods",
+      "description": "Smooth beige chickpea hummus dip in bowl",
+      "true_class": "hummus commercial",
+      "predicted_class": "muffins oat bran",
+      "confidence": 0.1726,
+      "is_top1_correct": false,
+      "is_top5_correct": false,
+      "latency_ms": 81.12,
+      "calories": 76.5,
+      "protein": 1.98,
+      "carbs": 13.69,
+      "fat": 2.1,
+      "fiber": 1.3,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "muffins oat bran",
+          "conf": 0.1726
+        },
+        {
+          "rank": 2,
+          "food": "blackberries raw",
+          "conf": 0.1612
+        },
+        {
+          "rank": 3,
+          "food": "potato pancakes",
+          "conf": 0.0672
+        },
+        {
+          "rank": 4,
+          "food": "mangos raw",
+          "conf": 0.062
+        },
+        {
+          "rank": 5,
+          "food": "flour rice brown",
+          "conf": 0.0458
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 201.01,
+        "contrast_score": 39.55,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "prep_05_croutons",
+      "category": "Prepared Foods",
+      "description": "Toasted crunchy salad crouton cubes",
+      "true_class": "croutons plain",
+      "predicted_class": "broccoli raw",
+      "confidence": 0.2064,
+      "is_top1_correct": false,
+      "is_top5_correct": false,
+      "latency_ms": 77.69,
+      "calories": 24.3,
+      "protein": 1.95,
+      "carbs": 4.78,
+      "fat": 0.26,
+      "fiber": 1.82,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "broccoli raw",
+          "conf": 0.2064
+        },
+        {
+          "rank": 2,
+          "food": "apples gala with skin raw",
+          "conf": 0.1464
+        },
+        {
+          "rank": 3,
+          "food": "garlic raw",
+          "conf": 0.0804
+        },
+        {
+          "rank": 4,
+          "food": "bread rye",
+          "conf": 0.0601
+        },
+        {
+          "rank": 5,
+          "food": "tortilla chips yellow plain salted",
+          "conf": 0.048
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 729.7,
+        "contrast_score": 29.96,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "indian_01_sprouted_lentils",
+      "category": "Indian Foods",
+      "description": "Traditional Indian sprouted moong / lentils (ankurit dal)",
+      "true_class": "lentils sprouted raw",
+      "predicted_class": "lentils sprouted raw",
+      "confidence": 0.308,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 85.61,
+      "calories": 81.6,
+      "protein": 6.9,
+      "carbs": 17.05,
+      "fat": 0.42,
+      "fiber": 0.0,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "lentils sprouted raw",
+          "conf": 0.308
+        },
+        {
+          "rank": 2,
+          "food": "broccoli raw",
+          "conf": 0.0984
+        },
+        {
+          "rank": 3,
+          "food": "bread egg",
+          "conf": 0.0839
+        },
+        {
+          "rank": 4,
+          "food": "hummus commercial",
+          "conf": 0.0455
+        },
+        {
+          "rank": 5,
+          "food": "lemons raw without peel",
+          "conf": 0.0441
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 1276.3,
+        "contrast_score": 35.1,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "indian_02_mango",
+      "category": "Indian Foods",
+      "description": "Sweet Alphonso / Indian golden mango fruit",
+      "true_class": "mangos raw",
+      "predicted_class": "mangos raw",
+      "confidence": 0.7244,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 78.54,
+      "calories": 99.0,
+      "protein": 1.35,
+      "carbs": 24.72,
+      "fat": 0.63,
+      "fiber": 2.64,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "mangos raw",
+          "conf": 0.7244
+        },
+        {
+          "rank": 2,
+          "food": "lemons raw without peel",
+          "conf": 0.1037
+        },
+        {
+          "rank": 3,
+          "food": "wasabi root raw",
+          "conf": 0.0139
+        },
+        {
+          "rank": 4,
+          "food": "spinach raw",
+          "conf": 0.0133
+        },
+        {
+          "rank": 5,
+          "food": "bread rye",
+          "conf": 0.012
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 148.68,
+        "contrast_score": 31.92,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "indian_03_brown_rice_flour",
+      "category": "Indian Foods",
+      "description": "Indian whole grain brown rice flour for dosas and rotis",
+      "true_class": "flour rice brown",
+      "predicted_class": "muffins oat bran",
+      "confidence": 0.6284,
+      "is_top1_correct": false,
+      "is_top5_correct": false,
+      "latency_ms": 89.54,
+      "calories": 76.5,
+      "protein": 1.98,
+      "carbs": 13.69,
+      "fat": 2.1,
+      "fiber": 1.3,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "muffins oat bran",
+          "conf": 0.6284
+        },
+        {
+          "rank": 2,
+          "food": "archway home style cookies oatmeal",
+          "conf": 0.0771
+        },
+        {
+          "rank": 3,
+          "food": "croutons plain",
+          "conf": 0.0519
+        },
+        {
+          "rank": 4,
+          "food": "rice crackers",
+          "conf": 0.0377
+        },
+        {
+          "rank": 5,
+          "food": "potato pancakes",
+          "conf": 0.0276
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 487.03,
+        "contrast_score": 11.02,
+        "is_blurry": false,
+        "is_low_contrast": true,
+        "format": "PIL",
+        "warnings": [
+          "Low contrast image: scene may be underexposed or blank."
+        ]
+      }
+    },
+    {
+      "test_id": "edge_01_transparent_png",
+      "category": "Edge Cases (Quality)",
+      "description": "PNG image with alpha transparency channel",
+      "true_class": "bananas raw",
+      "predicted_class": "bananas raw",
+      "confidence": 0.2039,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 79.27,
+      "calories": 200.2,
+      "protein": 2.45,
+      "carbs": 51.39,
+      "fat": 0.74,
+      "fiber": 5.85,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "bananas raw",
+          "conf": 0.2039
+        },
+        {
+          "rank": 2,
+          "food": "garlic raw",
+          "conf": 0.0614
+        },
+        {
+          "rank": 3,
+          "food": "salmon nuggets breaded frozen heated",
+          "conf": 0.0605
+        },
+        {
+          "rank": 4,
+          "food": "pizza rolls frozen unprepared",
+          "conf": 0.0487
+        },
+        {
+          "rank": 5,
+          "food": "blueberries raw",
+          "conf": 0.0454
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 599.97,
+        "contrast_score": 18.18,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "edge_02_grayscale",
+      "category": "Edge Cases (Quality)",
+      "description": "Grayscale single-channel food photo",
+      "true_class": "apples gala with skin raw",
+      "predicted_class": "blackberries raw",
+      "confidence": 0.7921,
+      "is_top1_correct": false,
+      "is_top5_correct": true,
+      "latency_ms": 80.26,
+      "calories": 61.9,
+      "protein": 2.0,
+      "carbs": 13.84,
+      "fat": 0.71,
+      "fiber": 7.63,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "blackberries raw",
+          "conf": 0.7921
+        },
+        {
+          "rank": 2,
+          "food": "apples gala with skin raw",
+          "conf": 0.0257
+        },
+        {
+          "rank": 3,
+          "food": "bread rye",
+          "conf": 0.016
+        },
+        {
+          "rank": 4,
+          "food": "kale raw",
+          "conf": 0.0113
+        },
+        {
+          "rank": 5,
+          "food": "nectarines raw",
+          "conf": 0.0106
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 744.15,
+        "contrast_score": 62.55,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "edge_03_smartphone_aspect",
+      "category": "Edge Cases (Quality)",
+      "description": "Tall vertical 9:16 mobile camera aspect ratio",
+      "true_class": "broccoli raw",
+      "predicted_class": "broccoli raw",
+      "confidence": 0.7354,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 82.52,
+      "calories": 24.3,
+      "protein": 1.95,
+      "carbs": 4.78,
+      "fat": 0.26,
+      "fiber": 1.82,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "broccoli raw",
+          "conf": 0.7354
+        },
+        {
+          "rank": 2,
+          "food": "bread rye",
+          "conf": 0.0703
+        },
+        {
+          "rank": 3,
+          "food": "potato pancakes",
+          "conf": 0.0488
+        },
+        {
+          "rank": 4,
+          "food": "croutons plain",
+          "conf": 0.0208
+        },
+        {
+          "rank": 5,
+          "food": "scrapple pork",
+          "conf": 0.0148
+        }
+      ],
+      "quality_assessment": {
+        "width": 360,
+        "height": 640,
+        "aspect_ratio": 1.78,
+        "is_valid": true,
+        "blur_score": 289.94,
+        "contrast_score": 29.54,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "edge_04_dim_light",
+      "category": "Edge Cases (Quality)",
+      "description": "Underexposed / dim kitchen lighting conditions",
+      "true_class": "strawberries raw",
+      "predicted_class": "broccoli raw",
+      "confidence": 0.6288,
+      "is_top1_correct": false,
+      "is_top5_correct": false,
+      "latency_ms": 78.71,
+      "calories": 24.3,
+      "protein": 1.95,
+      "carbs": 4.78,
+      "fat": 0.26,
+      "fiber": 1.82,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "broccoli raw",
+          "conf": 0.6288
+        },
+        {
+          "rank": 2,
+          "food": "kale raw",
+          "conf": 0.1087
+        },
+        {
+          "rank": 3,
+          "food": "raspberries raw",
+          "conf": 0.0667
+        },
+        {
+          "rank": 4,
+          "food": "scrapple pork",
+          "conf": 0.0211
+        },
+        {
+          "rank": 5,
+          "food": "muffins oat bran",
+          "conf": 0.0186
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 69.72,
+        "contrast_score": 17.66,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    },
+    {
+      "test_id": "edge_05_blurry_photo",
+      "category": "Edge Cases (Quality)",
+      "description": "Out-of-focus mobile photo with optical blur",
+      "true_class": "oranges raw navels",
+      "predicted_class": "oranges raw navels",
+      "confidence": 0.4618,
+      "is_top1_correct": true,
+      "is_top5_correct": true,
+      "latency_ms": 84.73,
+      "calories": 77.5,
+      "protein": 1.5,
+      "carbs": 19.47,
+      "fat": 0.25,
+      "fiber": 3.3,
+      "top5_candidates": [
+        {
+          "rank": 1,
+          "food": "oranges raw navels",
+          "conf": 0.4618
+        },
+        {
+          "rank": 2,
+          "food": "mangos raw",
+          "conf": 0.3001
+        },
+        {
+          "rank": 3,
+          "food": "egg yolk dried",
+          "conf": 0.0409
+        },
+        {
+          "rank": 4,
+          "food": "lemons raw without peel",
+          "conf": 0.0164
+        },
+        {
+          "rank": 5,
+          "food": "ice creams chocolate",
+          "conf": 0.0098
+        }
+      ],
+      "quality_assessment": {
+        "width": 400,
+        "height": 400,
+        "aspect_ratio": 1.0,
+        "is_valid": true,
+        "blur_score": 460.53,
+        "contrast_score": 26.76,
+        "is_blurry": false,
+        "is_low_contrast": false,
+        "format": "PIL",
+        "warnings": []
+      }
+    }
+  ]
+}
