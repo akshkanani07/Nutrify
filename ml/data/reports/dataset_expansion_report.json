@@ -1,0 +1,23 @@
+{
+  "tier": 1,
+  "target_classes_count": 50,
+  "indexed_classes_count": 50,
+  "cleaning_stats": {
+    "total_scanned": 16000,
+    "passed_validation": 15985,
+    "duplicates_removed": 0,
+    "corrupted_removed": 0,
+    "sub_resolution_removed": 0,
+    "extreme_aspect_removed": 0,
+    "blurry_removed": 15,
+    "modes_converted": 0
+  },
+  "split_counts": {
+    "train": 11190,
+    "val": 2399,
+    "test": 2396,
+    "total_classes": 50
+  },
+  "duration_seconds": 44.56,
+  "timestamp": "2026-11-03T04:14:03Z"
+}

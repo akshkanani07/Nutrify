@@ -116,3 +116,4 @@ test("E2E Workflow: Low confidence triggers uncertain status and warning", () =>
   assert.equal(getConfidenceLevel(parsed.confidence), "low");
   assert.equal(parsed.status, "unsure");
 });
+
