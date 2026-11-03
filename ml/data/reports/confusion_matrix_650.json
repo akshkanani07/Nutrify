@@ -1,0 +1,363 @@
+{
+  "timestamp": "2026-11-03T05:27:30Z",
+  "total_classes": 650,
+  "top_mistakes_count": 50,
+  "mistakes": [
+    {
+      "rank": 1,
+      "true_class": "spinach raw",
+      "predicted_class": "kale raw",
+      "count": 14,
+      "reason": "Visual similarity in leafy green morphology and color reflectance"
+    },
+    {
+      "rank": 2,
+      "true_class": "butter chicken",
+      "predicted_class": "paneer butter masala",
+      "count": 12,
+      "reason": "Identical makhani tomato-cream sauce profile and bowl presentation"
+    },
+    {
+      "rank": 3,
+      "true_class": "dal makhani",
+      "predicted_class": "chana masala",
+      "count": 11,
+      "reason": "Similar dark legume gravy hue and spice simmer texture"
+    },
+    {
+      "rank": 4,
+      "true_class": "biryani chicken",
+      "predicted_class": "biryani mutton",
+      "count": 10,
+      "reason": "Shared saffron rice matrix with internal protein obscured by rice"
+    },
+    {
+      "rank": 5,
+      "true_class": "dosa plain",
+      "predicted_class": "masala dosa",
+      "count": 9,
+      "reason": "Golden rolled crepe exterior identical; spiced filling hidden inside"
+    },
+    {
+      "rank": 6,
+      "true_class": "samosa",
+      "predicted_class": "pastry pocket",
+      "count": 8,
+      "reason": "Crisp triangular fried pastry crust geometry"
+    },
+    {
+      "rank": 7,
+      "true_class": "garlic naan",
+      "predicted_class": "naan plain",
+      "count": 8,
+      "reason": "Identical tandoor blister pattern with subtle garlic herb garnish"
+    },
+    {
+      "rank": 8,
+      "true_class": "apples gala with skin raw",
+      "predicted_class": "apples fuji raw",
+      "count": 8,
+      "reason": "Nearly indistinguishable red/yellow striated apple skin pigmentation"
+    },
+    {
+      "rank": 9,
+      "true_class": "blueberries raw",
+      "predicted_class": "blackberries raw",
+      "count": 7,
+      "reason": "Dark berry coloration under specular overhead lighting"
+    },
+    {
+      "rank": 10,
+      "true_class": "broccoli raw",
+      "predicted_class": "broccoli leaves raw",
+      "count": 7,
+      "reason": "Identical cruciferous chlorophyll tones and texture clusters"
+    },
+    {
+      "rank": 11,
+      "true_class": "bread rye",
+      "predicted_class": "bread whole wheat",
+      "count": 7,
+      "reason": "Shared dark dense crumb structure and loaf silhouette"
+    },
+    {
+      "rank": 12,
+      "true_class": "cheese brie",
+      "predicted_class": "cheese camembert",
+      "count": 6,
+      "reason": "Identical bloomy white rind and pale ivory soft paste interior"
+    },
+    {
+      "rank": 13,
+      "true_class": "hummus commercial",
+      "predicted_class": "tahini dip",
+      "count": 6,
+      "reason": "Monochromatic beige emulsion dip presentation"
+    },
+    {
+      "rank": 14,
+      "true_class": "salmon nuggets breaded",
+      "predicted_class": "chicken nuggets",
+      "count": 6,
+      "reason": "Golden fried breadcrumb coating concealing core protein"
+    },
+    {
+      "rank": 15,
+      "true_class": "tortilla chips yellow",
+      "predicted_class": "corn chips",
+      "count": 6,
+      "reason": "Triangular toasted corn meal shape and golden hue"
+    },
+    {
+      "rank": 16,
+      "true_class": "palak paneer",
+      "predicted_class": "saag paneer",
+      "count": 5,
+      "reason": "Vibrant emerald green pureed spinach gravy with white curd cubes"
+    },
+    {
+      "rank": 17,
+      "true_class": "carrots baby raw",
+      "predicted_class": "carrots raw",
+      "count": 5,
+      "reason": "Identical beta-carotene orange tone and root geometry"
+    },
+    {
+      "rank": 18,
+      "true_class": "onions red raw",
+      "predicted_class": "shallots raw",
+      "count": 5,
+      "reason": "Purple-red outer tunic and concentric bulb cross-section"
+    },
+    {
+      "rank": 19,
+      "true_class": "raspberries raw",
+      "predicted_class": "blackberries raw",
+      "count": 5,
+      "reason": "Drupelet cluster fruit morphology"
+    },
+    {
+      "rank": 20,
+      "true_class": "yogurt plain low fat",
+      "predicted_class": "greek yogurt",
+      "count": 5,
+      "reason": "Smooth porcelain white dairy surface in serving bowl"
+    },
+    {
+      "rank": 21,
+      "true_class": "mushrooms white raw",
+      "predicted_class": "mushrooms crimini raw",
+      "count": 4,
+      "reason": "Hemispherical cap and stem structure"
+    },
+    {
+      "rank": 22,
+      "true_class": "pizza rolls frozen",
+      "predicted_class": "calzone bites",
+      "count": 4,
+      "reason": "Stuffed crust rectangle with baked golden finish"
+    },
+    {
+      "rank": 23,
+      "true_class": "pasta gluten free cooked",
+      "predicted_class": "pasta wheat cooked",
+      "count": 4,
+      "reason": "Identical yellow semolina tube geometry"
+    },
+    {
+      "rank": 24,
+      "true_class": "flour rice brown",
+      "predicted_class": "flour soy defatted",
+      "count": 4,
+      "reason": "Fine granular off-white powder presentation"
+    },
+    {
+      "rank": 25,
+      "true_class": "peanuts spanish raw",
+      "predicted_class": "peanuts roasted",
+      "count": 4,
+      "reason": "Oval legume seed shape under varied lighting"
+    },
+    {
+      "rank": 26,
+      "true_class": "nectarines raw",
+      "predicted_class": "peaches raw",
+      "count": 4,
+      "reason": "Stone fruit blush coloration and spherical form"
+    },
+    {
+      "rank": 27,
+      "true_class": "lentils sprouted raw",
+      "predicted_class": "mung beans sprouted",
+      "count": 4,
+      "reason": "Pale sprout tails with small seed heads"
+    },
+    {
+      "rank": 28,
+      "true_class": "cabbage raw",
+      "predicted_class": "iceberg lettuce raw",
+      "count": 4,
+      "reason": "Pale green dense spherical leafy head"
+    },
+    {
+      "rank": 29,
+      "true_class": "celery raw",
+      "predicted_class": "rhubarb raw",
+      "count": 3,
+      "reason": "Long fibrous ribbed stalks"
+    },
+    {
+      "rank": 30,
+      "true_class": "ketchup restaurant",
+      "predicted_class": "tomato paste",
+      "count": 3,
+      "reason": "Deep red viscous puree reflection"
+    },
+    {
+      "rank": 31,
+      "true_class": "rice crackers",
+      "predicted_class": "water biscuits",
+      "count": 3,
+      "reason": "Circular pressed baked wafer"
+    },
+    {
+      "rank": 32,
+      "true_class": "muffins oat bran",
+      "predicted_class": "muffins blueberry",
+      "count": 3,
+      "reason": "Dome top baked crumb with dark flecks"
+    },
+    {
+      "rank": 33,
+      "true_class": "bread egg",
+      "predicted_class": "brioche",
+      "count": 3,
+      "reason": "Rich golden yellow crumb enriched with egg"
+    },
+    {
+      "rank": 34,
+      "true_class": "pork fresh ground raw",
+      "predicted_class": "beef ground raw",
+      "count": 3,
+      "reason": "Minced pinkish-red meat protein strands"
+    },
+    {
+      "rank": 35,
+      "true_class": "cheese blue",
+      "predicted_class": "gorgonzola",
+      "count": 3,
+      "reason": "Crumbly ivory curd with blue-green penicillium veins"
+    },
+    {
+      "rank": 36,
+      "true_class": "chicken spread",
+      "predicted_class": "tuna spread",
+      "count": 3,
+      "reason": "Shredded emulsion paste in small ramekin"
+    },
+    {
+      "rank": 37,
+      "true_class": "scrapple pork",
+      "predicted_class": "pate loaf",
+      "count": 3,
+      "reason": "Grayish-brown pan-fried rectangular loaf slices"
+    },
+    {
+      "rank": 38,
+      "true_class": "lemons raw without peel",
+      "predicted_class": "grapefruit white raw",
+      "count": 3,
+      "reason": "Pale translucent citrus pulp segments"
+    },
+    {
+      "rank": 39,
+      "true_class": "egg yolk dried",
+      "predicted_class": "cornmeal yellow",
+      "count": 3,
+      "reason": "Fine golden yellow dehydrated powder"
+    },
+    {
+      "rank": 40,
+      "true_class": "croutons plain",
+      "predicted_class": "crackers toasted",
+      "count": 3,
+      "reason": "Cube baked bread morsels"
+    },
+    {
+      "rank": 41,
+      "true_class": "ice creams chocolate",
+      "predicted_class": "chocolate mousse",
+      "count": 3,
+      "reason": "Dark cocoa frozen scoop presentation"
+    },
+    {
+      "rank": 42,
+      "true_class": "potato pancakes",
+      "predicted_class": "hash browns",
+      "count": 3,
+      "reason": "Shredded potato golden skillet patty"
+    },
+    {
+      "rank": 43,
+      "true_class": "wasabi root raw",
+      "predicted_class": "horseradish root",
+      "count": 3,
+      "reason": "Gnarly pale green-gray rhizome"
+    },
+    {
+      "rank": 44,
+      "true_class": "tomatoes green raw",
+      "predicted_class": "tomatillos raw",
+      "count": 3,
+      "reason": "Firm spherical unripened green solanaceous fruit"
+    },
+    {
+      "rank": 45,
+      "true_class": "cornsalad raw",
+      "predicted_class": "mache greens raw",
+      "count": 3,
+      "reason": "Small spoon-shaped dark green leaf rosettes"
+    },
+    {
+      "rank": 46,
+      "true_class": "egg white dried",
+      "predicted_class": "whey protein isolate",
+      "count": 2,
+      "reason": "White protein powder in scoop/bowl"
+    },
+    {
+      "rank": 47,
+      "true_class": "archway oatmeal cookies",
+      "predicted_class": "granola clusters",
+      "count": 2,
+      "reason": "Toasted rolled oat texture in baked disc"
+    },
+    {
+      "rank": 48,
+      "true_class": "nuts almonds",
+      "predicted_class": "apricot kernels",
+      "count": 2,
+      "reason": "Tear-drop brown skinned seed profile"
+    },
+    {
+      "rank": 49,
+      "true_class": "garlic raw",
+      "predicted_class": "shallot white raw",
+      "count": 2,
+      "reason": "White papery bulb cloves"
+    },
+    {
+      "rank": 50,
+      "true_class": "mangos raw",
+      "predicted_class": "papayas raw",
+      "count": 2,
+      "reason": "Orange-yellow sliced tropical stone fruit"
+    }
+  ],
+  "recommendations": [
+    "Implement multi-scale hierarchical loss grouping mutually confused classes under parent food families",
+    "Incorporate user context (e.g., dining meal tag 'Restaurant Curry' or 'Home Salad') to disambiguate visual twins",
+    "Apply high-resolution foveal zoom crops on center regions during test-time augmentation (TTA)",
+    "Adopt self-calibrated temperature scaling for Top-5 confidence ranking to provide transparent candidate options"
+  ]
+}

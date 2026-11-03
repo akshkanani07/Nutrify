@@ -1,0 +1,338 @@
+{
+  "timestamp": "2026-11-03T05:28:46Z",
+  "total_test_images": 100,
+  "metrics": {
+    "top1_accuracy": 0.0,
+    "top5_accuracy": 4.0,
+    "average_confidence": 0.1122,
+    "average_latency_ms": 89.67,
+    "confidence_reliability": {
+      "high_confidence_ge_75": 1,
+      "medium_confidence_50_to_75": 0,
+      "low_confidence_lt_50": 99
+    }
+  },
+  "sample_results": [
+    {
+      "image_id": 1,
+      "target_food": "biryani chicken",
+      "predicted_food": "apple juice canned or bottled unsweetened without added ascorbic acid",
+      "confidence": 0.043,
+      "top1_match": false,
+      "top5_match": false,
+      "latency_ms": 266.1,
+      "nutrition": {
+        "calories": 114.1,
+        "protein": 0.25,
+        "carbs": 28.02,
+        "fat": 0.32,
+        "fiber": 0.5
+      }
+    },
+    {
+      "image_id": 2,
+      "target_food": "biryani mutton",
+      "predicted_food": "ice cream cookie sandwich",
+      "confidence": 0.0931,
+      "top1_match": false,
+      "top5_match": false,
+      "latency_ms": 80.13,
+      "nutrition": {
+        "calories": 196.8,
+        "protein": 3.03,
+        "carbs": 32.47,
+        "fat": 6.07,
+        "fiber": 0.98
+      }
+    },
+    {
+      "image_id": 3,
+      "target_food": "paneer butter masala",
+      "predicted_food": "biryani chicken",
+      "confidence": 0.0946,
+      "top1_match": false,
+      "top5_match": false,
+      "latency_ms": 86.01,
+      "nutrition": {
+        "calories": 88.5,
+        "protein": 10.09,
+        "carbs": 2.27,
+        "fat": 9.83,
+        "fiber": 0.17
+      }
+    },
+    {
+      "image_id": 4,
+      "target_food": "paneer tikka",
+      "predicted_food": "lamb ground raw",
+      "confidence": 0.1609,
+      "top1_match": false,
+      "top5_match": false,
+      "latency_ms": 72.37,
+      "nutrition": {
+        "calories": 79.9,
+        "protein": 4.69,
+        "carbs": 0.0,
+        "fat": 6.64,
+        "fiber": 0.0
+      }
+    },
+    {
+      "image_id": 5,
+      "target_food": "dosa plain",
+      "predicted_food": "bananas overripe raw",
+      "confidence": 0.4521,
+      "top1_match": false,
+      "top5_match": false,
+      "latency_ms": 68.94,
+      "nutrition": {
+        "calories": 93.5,
+        "protein": 0.8,
+        "carbs": 22.11,
+        "fat": 0.24,
+        "fiber": 1.87
+      }
+    },
+    {
+      "image_id": 6,
+      "target_food": "masala dosa",
+      "predicted_food": "ice cream cookie sandwich",
+      "confidence": 0.1627,
+      "top1_match": false,
+      "top5_match": false,
+      "latency_ms": 75.61,
+      "nutrition": {
+        "calories": 196.8,
+        "protein": 3.03,
+        "carbs": 32.47,
+        "fat": 6.07,
+        "fiber": 0.98
+      }
+    },
+    {
+      "image_id": 7,
+      "target_food": "samosa",
+      "predicted_food": "beef carpaccio",
+      "confidence": 0.0903,
+      "top1_match": false,
+      "top5_match": false,
+      "latency_ms": 78.05,
+      "nutrition": {
+        "calories": 89.7,
+        "protein": 3.27,
+        "carbs": 1.29,
+        "fat": 7.84,
+        "fiber": 0.0
+      }
+    },
+    {
+      "image_id": 8,
+      "target_food": "palak paneer",
+      "predicted_food": "fish carp raw",
+      "confidence": 0.0679,
+      "top1_match": false,
+      "top5_match": false,
+      "latency_ms": 72.81,
+      "nutrition": {
+        "calories": 108.0,
+        "protein": 15.16,
+        "carbs": 0.0,
+        "fat": 4.76,
+        "fiber": 0.0
+      }
+    },
+    {
+      "image_id": 9,
+      "target_food": "dal makhani",
+      "predicted_food": "balsam pear (bitter gourd) pods raw",
+      "confidence": 0.0594,
+      "top1_match": false,
+      "top5_match": false,
+      "latency_ms": 73.93,
+      "nutrition": {
+        "calories": 15.8,
+        "protein": 0.93,
+        "carbs": 3.44,
+        "fat": 0.16,
+        "fiber": 2.6
+      }
+    },
+    {
+      "image_id": 10,
+      "target_food": "dal tadka",
+      "predicted_food": "biryani chicken",
+      "confidence": 0.1151,
+      "top1_match": false,
+      "top5_match": false,
+      "latency_ms": 75.27,
+      "nutrition": {
+        "calories": 88.5,
+        "protein": 10.09,
+        "carbs": 2.27,
+        "fat": 9.83,
+        "fiber": 0.17
+      }
+    },
+    {
+      "image_id": 11,
+      "target_food": "chana masala",
+      "predicted_food": "orange peel raw",
+      "confidence": 0.1652,
+      "top1_match": false,
+      "top5_match": false,
+      "latency_ms": 72.83,
+      "nutrition": {
+        "calories": 5.8,
+        "protein": 0.09,
+        "carbs": 1.5,
+        "fat": 0.01,
+        "fiber": 0.64
+      }
+    },
+    {
+      "image_id": 12,
+      "target_food": "rajma masala",
+      "predicted_food": "roti chapati",
+      "confidence": 0.0575,
+      "top1_match": false,
+      "top5_match": false,
+      "latency_ms": 80.72,
+      "nutrition": {
+        "calories": 100.0,
+        "protein": 3.0,
+        "carbs": 15.0,
+        "fat": 2.0,
+        "fiber": 2.0
+      }
+    },
+    {
+      "image_id": 13,
+      "target_food": "apples gala with skin raw",
+      "predicted_food": "avocados raw california",
+      "confidence": 0.0394,
+      "top1_match": false,
+      "top5_match": false,
+      "latency_ms": 70.23,
+      "nutrition": {
+        "calories": 384.1,
+        "protein": 4.51,
+        "carbs": 19.87,
+        "fat": 35.44,
+        "fiber": 15.64
+      }
+    },
+    {
+      "image_id": 14,
+      "target_food": "bananas raw",
+      "predicted_food": "bananas overripe raw",
+      "confidence": 0.1744,
+      "top1_match": false,
+      "top5_match": true,
+      "latency_ms": 77.35,
+      "nutrition": {
+        "calories": 93.5,
+        "protein": 0.8,
+        "carbs": 22.11,
+        "fat": 0.24,
+        "fiber": 1.87
+      }
+    },
+    {
+      "image_id": 15,
+      "target_food": "blueberries raw",
+      "predicted_food": "avocados raw california",
+      "confidence": 0.0446,
+      "top1_match": false,
+      "top5_match": false,
+      "latency_ms": 76.53,
+      "nutrition": {
+        "calories": 384.1,
+        "protein": 4.51,
+        "carbs": 19.87,
+        "fat": 35.44,
+        "fiber": 15.64
+      }
+    },
+    {
+      "image_id": 16,
+      "target_food": "strawberries raw",
+      "predicted_food": "lamb ground raw",
+      "confidence": 0.1609,
+      "top1_match": false,
+      "top5_match": false,
+      "latency_ms": 78.09,
+      "nutrition": {
+        "calories": 79.9,
+        "protein": 4.69,
+        "carbs": 0.0,
+        "fat": 6.64,
+        "fiber": 0.0
+      }
+    },
+    {
+      "image_id": 17,
+      "target_food": "oranges raw navels",
+      "predicted_food": "balsam pear (bitter gourd) pods raw",
+      "confidence": 0.0378,
+      "top1_match": false,
+      "top5_match": false,
+      "latency_ms": 79.95,
+      "nutrition": {
+        "calories": 15.8,
+        "protein": 0.93,
+        "carbs": 3.44,
+        "fat": 0.16,
+        "fiber": 2.6
+      }
+    },
+    {
+      "image_id": 18,
+      "target_food": "mangos raw",
+      "predicted_food": "fish carp raw",
+      "confidence": 0.1588,
+      "top1_match": false,
+      "top5_match": false,
+      "latency_ms": 70.58,
+      "nutrition": {
+        "calories": 108.0,
+        "protein": 15.16,
+        "carbs": 0.0,
+        "fat": 4.76,
+        "fiber": 0.0
+      }
+    },
+    {
+      "image_id": 19,
+      "target_food": "lemons raw without peel",
+      "predicted_food": "breadfruit raw",
+      "confidence": 0.0913,
+      "top1_match": false,
+      "top5_match": false,
+      "latency_ms": 69.03,
+      "nutrition": {
+        "calories": 226.6,
+        "protein": 2.35,
+        "carbs": 59.66,
+        "fat": 0.51,
+        "fiber": 10.78
+      }
+    },
+    {
+      "image_id": 20,
+      "target_food": "broccoli raw",
+      "predicted_food": "broccoli raab raw",
+      "confidence": 0.3246,
+      "top1_match": false,
+      "top5_match": true,
+      "latency_ms": 70.0,
+      "nutrition": {
+        "calories": 8.8,
+        "protein": 1.27,
+        "carbs": 1.14,
+        "fat": 0.2,
+        "fiber": 1.08
+      }
+    }
+  ],
+  "fastapi_contract_verified": true
+}

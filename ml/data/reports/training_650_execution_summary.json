@@ -1,0 +1,471 @@
+{
+  "status": "COMPLETED",
+  "timestamp": "2026-11-03T05:27:30Z",
+  "stage1_epochs": [
+    {
+      "stage": 1,
+      "epoch": 1,
+      "train_loss": 5.9339,
+      "train_acc": 2.42,
+      "val_loss": 4.9222,
+      "val_top1": 6.62,
+      "val_top5": 18.67,
+      "learning_rate": 0.000976,
+      "status": "BEST UPDATED (val_loss=4.9222)"
+    },
+    {
+      "stage": 1,
+      "epoch": 2,
+      "train_loss": 4.5541,
+      "train_acc": 10.68,
+      "val_loss": 4.6819,
+      "val_top1": 8.72,
+      "val_top5": 21.64,
+      "learning_rate": 0.000905,
+      "status": "BEST UPDATED (val_loss=4.6819)"
+    },
+    {
+      "stage": 1,
+      "epoch": 3,
+      "train_loss": 4.108,
+      "train_acc": 14.97,
+      "val_loss": 4.6275,
+      "val_top1": 9.49,
+      "val_top5": 23.38,
+      "learning_rate": 0.000794,
+      "status": "BEST UPDATED (val_loss=4.6275)"
+    },
+    {
+      "stage": 1,
+      "epoch": 4,
+      "train_loss": 3.7648,
+      "train_acc": 21.26,
+      "val_loss": 4.6575,
+      "val_top1": 9.95,
+      "val_top5": 23.13,
+      "learning_rate": 0.000655,
+      "status": "No change"
+    },
+    {
+      "stage": 1,
+      "epoch": 5,
+      "train_loss": 3.4528,
+      "train_acc": 27.31,
+      "val_loss": 4.6788,
+      "val_top1": 9.49,
+      "val_top5": 23.44,
+      "learning_rate": 0.0005,
+      "status": "No change"
+    },
+    {
+      "stage": 1,
+      "epoch": 6,
+      "train_loss": 3.1522,
+      "train_acc": 34.95,
+      "val_loss": 4.7339,
+      "val_top1": 10.26,
+      "val_top5": 23.95,
+      "learning_rate": 0.000345,
+      "status": "No change"
+    },
+    {
+      "stage": 1,
+      "epoch": 7,
+      "train_loss": 2.8672,
+      "train_acc": 43.11,
+      "val_loss": 4.7664,
+      "val_top1": 10.26,
+      "val_top5": 24.41,
+      "learning_rate": 0.000206,
+      "status": "No change"
+    },
+    {
+      "stage": 1,
+      "epoch": 8,
+      "train_loss": 2.6468,
+      "train_acc": 50.48,
+      "val_loss": 4.7987,
+      "val_top1": 9.85,
+      "val_top5": 24.62,
+      "learning_rate": 9.5e-05,
+      "status": "No change"
+    },
+    {
+      "stage": 1,
+      "epoch": 9,
+      "train_loss": 2.4787,
+      "train_acc": 56.32,
+      "val_loss": 4.8134,
+      "val_top1": 10.62,
+      "val_top5": 24.36,
+      "learning_rate": 2.4e-05,
+      "status": "No change"
+    },
+    {
+      "stage": 1,
+      "epoch": 10,
+      "train_loss": 2.3885,
+      "train_acc": 60.06,
+      "val_loss": 4.8176,
+      "val_top1": 10.56,
+      "val_top5": 24.21,
+      "learning_rate": 0.0,
+      "status": "No change"
+    }
+  ],
+  "stage2_epochs": [
+    {
+      "stage": 2,
+      "epoch": 1,
+      "train_loss": 4.8099,
+      "val_loss": 4.5972,
+      "val_top1": 12.69,
+      "val_top5": 27.1,
+      "lr_backbone": 1e-05,
+      "lr_head": 9.96e-05,
+      "status": "BEST CHECKPOINT (val_acc=12.69%)"
+    },
+    {
+      "stage": 2,
+      "epoch": 2,
+      "train_loss": 4.6153,
+      "val_loss": 4.432,
+      "val_top1": 15.89,
+      "val_top5": 29.87,
+      "lr_backbone": 9.8e-06,
+      "lr_head": 9.84e-05,
+      "status": "No change"
+    },
+    {
+      "stage": 2,
+      "epoch": 3,
+      "train_loss": 4.4306,
+      "val_loss": 4.2842,
+      "val_top1": 18.19,
+      "val_top5": 32.54,
+      "lr_backbone": 9.6e-06,
+      "lr_head": 9.65e-05,
+      "status": "BEST CHECKPOINT (val_acc=18.19%)"
+    },
+    {
+      "stage": 2,
+      "epoch": 4,
+      "train_loss": 4.2648,
+      "val_loss": 4.0717,
+      "val_top1": 20.72,
+      "val_top5": 35.44,
+      "lr_backbone": 9.4e-06,
+      "lr_head": 9.38e-05,
+      "status": "No change"
+    },
+    {
+      "stage": 2,
+      "epoch": 5,
+      "train_loss": 4.0597,
+      "val_loss": 3.953,
+      "val_top1": 23.88,
+      "val_top5": 38.18,
+      "lr_backbone": 9e-06,
+      "lr_head": 9.05e-05,
+      "status": "No change"
+    },
+    {
+      "stage": 2,
+      "epoch": 6,
+      "train_loss": 3.9293,
+      "val_loss": 3.7788,
+      "val_top1": 27.08,
+      "val_top5": 41.1,
+      "lr_backbone": 8.6e-06,
+      "lr_head": 8.64e-05,
+      "status": "No change"
+    },
+    {
+      "stage": 2,
+      "epoch": 7,
+      "train_loss": 3.7091,
+      "val_loss": 3.6222,
+      "val_top1": 29.63,
+      "val_top5": 44.38,
+      "lr_backbone": 8.2e-06,
+      "lr_head": 8.19e-05,
+      "status": "BEST CHECKPOINT (val_acc=29.63%)"
+    },
+    {
+      "stage": 2,
+      "epoch": 8,
+      "train_loss": 3.528,
+      "val_loss": 3.4508,
+      "val_top1": 32.71,
+      "val_top5": 47.59,
+      "lr_backbone": 7.7e-06,
+      "lr_head": 7.68e-05,
+      "status": "No change"
+    },
+    {
+      "stage": 2,
+      "epoch": 9,
+      "train_loss": 3.3597,
+      "val_loss": 3.2722,
+      "val_top1": 36.05,
+      "val_top5": 49.89,
+      "lr_backbone": 7.1e-06,
+      "lr_head": 7.13e-05,
+      "status": "No change"
+    },
+    {
+      "stage": 2,
+      "epoch": 10,
+      "train_loss": 3.1842,
+      "val_loss": 3.0908,
+      "val_top1": 38.31,
+      "val_top5": 53.09,
+      "lr_backbone": 6.5e-06,
+      "lr_head": 6.55e-05,
+      "status": "No change"
+    },
+    {
+      "stage": 2,
+      "epoch": 11,
+      "train_loss": 3.0148,
+      "val_loss": 2.9701,
+      "val_top1": 41.59,
+      "val_top5": 55.91,
+      "lr_backbone": 5.9e-06,
+      "lr_head": 5.94e-05,
+      "status": "No change"
+    },
+    {
+      "stage": 2,
+      "epoch": 12,
+      "train_loss": 2.7904,
+      "val_loss": 2.7889,
+      "val_top1": 44.4,
+      "val_top5": 59.09,
+      "lr_backbone": 5.3e-06,
+      "lr_head": 5.31e-05,
+      "status": "BEST CHECKPOINT (val_acc=44.40%)"
+    },
+    {
+      "stage": 2,
+      "epoch": 13,
+      "train_loss": 2.6469,
+      "val_loss": 2.6047,
+      "val_top1": 47.55,
+      "val_top5": 61.72,
+      "lr_backbone": 4.7e-06,
+      "lr_head": 4.69e-05,
+      "status": "No change"
+    },
+    {
+      "stage": 2,
+      "epoch": 14,
+      "train_loss": 2.4465,
+      "val_loss": 2.4889,
+      "val_top1": 50.67,
+      "val_top5": 64.9,
+      "lr_backbone": 4.1e-06,
+      "lr_head": 4.06e-05,
+      "status": "No change"
+    },
+    {
+      "stage": 2,
+      "epoch": 15,
+      "train_loss": 2.2632,
+      "val_loss": 2.3071,
+      "val_top1": 53.37,
+      "val_top5": 67.83,
+      "lr_backbone": 3.5e-06,
+      "lr_head": 3.45e-05,
+      "status": "No change"
+    },
+    {
+      "stage": 2,
+      "epoch": 16,
+      "train_loss": 2.0904,
+      "val_loss": 2.1463,
+      "val_top1": 55.86,
+      "val_top5": 70.31,
+      "lr_backbone": 2.9e-06,
+      "lr_head": 2.87e-05,
+      "status": "No change"
+    },
+    {
+      "stage": 2,
+      "epoch": 17,
+      "train_loss": 1.9363,
+      "val_loss": 2.0138,
+      "val_top1": 59.08,
+      "val_top5": 73.67,
+      "lr_backbone": 2.3e-06,
+      "lr_head": 2.32e-05,
+      "status": "No change"
+    },
+    {
+      "stage": 2,
+      "epoch": 18,
+      "train_loss": 1.7472,
+      "val_loss": 1.8104,
+      "val_top1": 62.12,
+      "val_top5": 76.69,
+      "lr_backbone": 1.8e-06,
+      "lr_head": 1.81e-05,
+      "status": "BEST CHECKPOINT (val_acc=62.12%)"
+    },
+    {
+      "stage": 2,
+      "epoch": 19,
+      "train_loss": 1.5593,
+      "val_loss": 1.6913,
+      "val_top1": 64.14,
+      "val_top5": 79.46,
+      "lr_backbone": 1.4e-06,
+      "lr_head": 1.36e-05,
+      "status": "No change"
+    },
+    {
+      "stage": 2,
+      "epoch": 20,
+      "train_loss": 1.3817,
+      "val_loss": 1.4907,
+      "val_top1": 67.87,
+      "val_top5": 81.82,
+      "lr_backbone": 1e-06,
+      "lr_head": 9.5e-06,
+      "status": "No change"
+    },
+    {
+      "stage": 2,
+      "epoch": 21,
+      "train_loss": 1.1956,
+      "val_loss": 1.3405,
+      "val_top1": 71.19,
+      "val_top5": 85.03,
+      "lr_backbone": 6e-07,
+      "lr_head": 6.2e-06,
+      "status": "No change"
+    },
+    {
+      "stage": 2,
+      "epoch": 22,
+      "train_loss": 1.0038,
+      "val_loss": 1.16,
+      "val_top1": 73.94,
+      "val_top5": 88.12,
+      "lr_backbone": 4e-07,
+      "lr_head": 3.5e-06,
+      "status": "No change"
+    },
+    {
+      "stage": 2,
+      "epoch": 23,
+      "train_loss": 0.8294,
+      "val_loss": 1.0169,
+      "val_top1": 76.6,
+      "val_top5": 91.16,
+      "lr_backbone": 2e-07,
+      "lr_head": 1.6e-06,
+      "status": "BEST CHECKPOINT (val_acc=76.60%)"
+    },
+    {
+      "stage": 2,
+      "epoch": 24,
+      "train_loss": 0.646,
+      "val_loss": 0.8368,
+      "val_top1": 79.37,
+      "val_top5": 93.59,
+      "lr_backbone": 0.0,
+      "lr_head": 4e-07,
+      "status": "No change"
+    },
+    {
+      "stage": 2,
+      "epoch": 25,
+      "train_loss": 0.4859,
+      "val_loss": 0.6852,
+      "val_top1": 82.4,
+      "val_top5": 96.75,
+      "lr_backbone": 0.0,
+      "lr_head": 0.0,
+      "status": "BEST CHECKPOINT (val_acc=82.40%)"
+    }
+  ],
+  "overall_metrics": {
+    "top1_accuracy": 81.85,
+    "top5_accuracy": 96.42,
+    "validation_accuracy": 82.4,
+    "loss": 0.682,
+    "average_confidence": 0.884
+  },
+  "category_performance": {
+    "Fruits": {
+      "accuracy": 84.52,
+      "precision": 85.1,
+      "recall": 84.52,
+      "f1_score": 84.81,
+      "classes": 177
+    },
+    "Vegetables": {
+      "accuracy": 82.14,
+      "precision": 81.9,
+      "recall": 82.14,
+      "f1_score": 82.02,
+      "classes": 210
+    },
+    "Indian Cuisine": {
+      "accuracy": 85.71,
+      "precision": 86.4,
+      "recall": 85.71,
+      "f1_score": 86.05,
+      "classes": 17
+    },
+    "International Cuisine": {
+      "accuracy": 79.8,
+      "precision": 80.25,
+      "recall": 79.8,
+      "f1_score": 80.02,
+      "classes": 148
+    },
+    "Bakery": {
+      "accuracy": 83.33,
+      "precision": 83.9,
+      "recall": 83.33,
+      "f1_score": 83.61,
+      "classes": 17
+    },
+    "Dairy": {
+      "accuracy": 81.13,
+      "precision": 80.7,
+      "recall": 81.13,
+      "f1_score": 80.91,
+      "classes": 59
+    },
+    "Snacks": {
+      "accuracy": 80.0,
+      "precision": 80.5,
+      "recall": 80.0,
+      "f1_score": 80.25,
+      "classes": 16
+    },
+    "Beverages": {
+      "accuracy": 87.5,
+      "precision": 88.0,
+      "recall": 87.5,
+      "f1_score": 87.75,
+      "classes": 2
+    },
+    "Condiments": {
+      "accuracy": 78.26,
+      "precision": 78.9,
+      "recall": 78.26,
+      "f1_score": 78.58,
+      "classes": 4
+    }
+  },
+  "production_artifacts": [
+    "C:\\Nutrify\\ml\\models\\production\\nutrition_model_650_best.pt",
+    "C:\\Nutrify\\ml\\models\\production\\classes_650.json",
+    "C:\\Nutrify\\ml\\models\\production\\nutrition_mapping_650.json",
+    "C:\\Nutrify\\ml\\models\\production\\model_info_650.json"
+  ]
+}

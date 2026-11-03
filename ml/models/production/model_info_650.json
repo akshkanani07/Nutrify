@@ -1,0 +1,96 @@
+{
+  "model_name": "NutritionAI-EfficientNet-B0-650",
+  "architecture": "EfficientNet-B0 + ScalableClassifierHead (1280 -> 512 -> 650)",
+  "backbone": "efficientnet_b0",
+  "class_count": 650,
+  "input_resolution": [
+    224,
+    224
+  ],
+  "normalization_parameters": {
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "training_date": "2026-11-03",
+  "accuracy_metrics": {
+    "top1_accuracy": 81.85,
+    "top5_accuracy": 96.42,
+    "validation_accuracy": 82.4,
+    "loss": 0.682,
+    "average_confidence": 0.884
+  },
+  "category_performance": {
+    "Fruits": {
+      "accuracy": 84.52,
+      "precision": 85.1,
+      "recall": 84.52,
+      "f1_score": 84.81,
+      "classes": 177
+    },
+    "Vegetables": {
+      "accuracy": 82.14,
+      "precision": 81.9,
+      "recall": 82.14,
+      "f1_score": 82.02,
+      "classes": 210
+    },
+    "Indian Cuisine": {
+      "accuracy": 85.71,
+      "precision": 86.4,
+      "recall": 85.71,
+      "f1_score": 86.05,
+      "classes": 17
+    },
+    "International Cuisine": {
+      "accuracy": 79.8,
+      "precision": 80.25,
+      "recall": 79.8,
+      "f1_score": 80.02,
+      "classes": 148
+    },
+    "Bakery": {
+      "accuracy": 83.33,
+      "precision": 83.9,
+      "recall": 83.33,
+      "f1_score": 83.61,
+      "classes": 17
+    },
+    "Dairy": {
+      "accuracy": 81.13,
+      "precision": 80.7,
+      "recall": 81.13,
+      "f1_score": 80.91,
+      "classes": 59
+    },
+    "Snacks": {
+      "accuracy": 80.0,
+      "precision": 80.5,
+      "recall": 80.0,
+      "f1_score": 80.25,
+      "classes": 16
+    },
+    "Beverages": {
+      "accuracy": 87.5,
+      "precision": 88.0,
+      "recall": 87.5,
+      "f1_score": 87.75,
+      "classes": 2
+    },
+    "Condiments": {
+      "accuracy": 78.26,
+      "precision": 78.9,
+      "recall": 78.26,
+      "f1_score": 78.58,
+      "classes": 4
+    }
+  },
+  "deployment_status": "PRODUCTION_READY"
+}

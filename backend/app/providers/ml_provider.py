@@ -27,12 +27,14 @@ from app.exceptions import ModelNotReadyError
 
 logger = logging.getLogger("nutrify.provider.ml")
 
-MODEL_CHECKPOINT_PATH = Path("ml/models/production/nutrition_model_best.pt")
+MODEL_CHECKPOINT_PATH_650 = Path("ml/models/production/nutrition_model_650_best.pt")
+MODEL_CHECKPOINT_PATH_DEFAULT = Path("ml/models/production/nutrition_model_best.pt")
+MODEL_CHECKPOINT_PATH = MODEL_CHECKPOINT_PATH_650 if MODEL_CHECKPOINT_PATH_650.exists() else MODEL_CHECKPOINT_PATH_DEFAULT
 CANDIDATES_CSV_PATH = Path("ml/data/raw/candidates.csv")
 
 
 class MLModelProvider:
-    """Production ML model provider backed by EfficientNet-B0 + MLP classifier."""
+    """Production ML model provider backed by EfficientNet-B0 + MLP classifier (650-class scaling)."""
 
     name = "ml_model"
 
@@ -43,7 +45,7 @@ class MLModelProvider:
     ) -> None:
         self.checkpoint_path = Path(checkpoint_path)
         self.candidates_csv = Path(candidates_csv)
-        self._model_version = "v1.0-efficientnet-b0-mlp"
+        self._model_version = "v2.0-efficientnet-b0-650" if "650" in str(self.checkpoint_path) else "v1.0-efficientnet-b0-mlp"
         self._service: Any = None
         self._ready = False
 
