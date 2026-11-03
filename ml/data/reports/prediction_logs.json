@@ -1,0 +1,13 @@
+{
+  "total_predictions": 45,
+  "average_confidence": 0.95,
+  "failed_requests": 12,
+  "low_confidence_count": 45,
+  "low_confidence_rate": 1.0,
+  "latency_ms": {
+    "mean": 0.76,
+    "p50": 0.77,
+    "p95": 1.1
+  },
+  "status": "degraded"
+}

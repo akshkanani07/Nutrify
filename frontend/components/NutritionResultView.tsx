@@ -56,6 +56,31 @@ export const NutritionResultView: React.FC<NutritionResultViewProps> = ({
   const baseServing = prediction.serving_size || 100;
   const [currentServing, setCurrentServing] = useState<number>(baseServing);
   const [copied, setCopied] = useState<boolean>(false);
+  const [feedbackSubmitted, setFeedbackSubmitted] = useState<boolean>(false);
+  const [showCorrection, setShowCorrection] = useState<boolean>(false);
+  const [submittingFeedback, setSubmittingFeedback] = useState<boolean>(false);
+
+  const handleFeedback = async (isCorrect: boolean, selectedFood?: string) => {
+    setSubmittingFeedback(true);
+    try {
+      await fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          request_id: prediction.request_id || "web-client",
+          food_name: prediction.food_name,
+          is_correct: isCorrect,
+          selected_food: selectedFood || null,
+        }),
+      });
+      setFeedbackSubmitted(true);
+      setShowCorrection(false);
+    } catch {
+      setFeedbackSubmitted(true);
+    } finally {
+      setSubmittingFeedback(false);
+    }
+  };
 
   // Scaling factor for interactive portion adjustments
   const scale = currentServing / baseServing;
@@ -488,6 +513,78 @@ export const NutritionResultView: React.FC<NutritionResultViewProps> = ({
           </CardContent>
         </Card>
       </div>
+
+      {/* ================= USER FEEDBACK LOOP ================= */}
+      <Card className="border-slate-200/90 shadow-sm bg-slate-50/70">
+        <CardContent className="p-4 sm:p-5">
+          {!feedbackSubmitted ? (
+            <div className="space-y-3">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <span className="text-xs sm:text-sm font-semibold text-slate-800">
+                  Was this prediction correct?
+                </span>
+                <div className="flex items-center gap-2">
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    onClick={() => handleFeedback(true)}
+                    disabled={submittingFeedback}
+                    className="h-8 px-3 text-xs bg-white text-emerald-700 border-emerald-300 hover:bg-emerald-50"
+                  >
+                    <Check className="w-3.5 h-3.5 mr-1 text-emerald-600" />
+                    <span>Yes, Correct</span>
+                  </Button>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    onClick={() => setShowCorrection(!showCorrection)}
+                    disabled={submittingFeedback}
+                    className="h-8 px-3 text-xs bg-white text-rose-700 border-rose-300 hover:bg-rose-50"
+                  >
+                    <RotateCcw className="w-3.5 h-3.5 mr-1 text-rose-600" />
+                    <span>Wrong</span>
+                  </Button>
+                </div>
+              </div>
+
+              {showCorrection && (
+                <div className="pt-2 border-t border-slate-200/60 space-y-2">
+                  <p className="text-xs text-slate-600">
+                    Select the actual food from top predictions to help retrain the model:
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {prediction.candidates && prediction.candidates.length > 0 ? (
+                      prediction.candidates.map((cand) => (
+                        <button
+                          key={cand.rank}
+                          type="button"
+                          onClick={() => handleFeedback(false, cand.food_name)}
+                          className="px-2.5 py-1 text-xs bg-white rounded-md border border-slate-300 text-slate-700 hover:border-emerald-500 hover:text-emerald-700 transition-colors"
+                        >
+                          {cand.food_name}
+                        </button>
+                      ))
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={() => handleFeedback(false, "Unknown")}
+                        className="px-2.5 py-1 text-xs bg-white rounded-md border border-slate-300 text-slate-700"
+                      >
+                        Food not listed
+                      </button>
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
+          ) : (
+            <div className="flex items-center gap-2 text-xs text-emerald-800 bg-emerald-50 p-2.5 rounded-md border border-emerald-200">
+              <Check className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+              <span>Feedback recorded! Thank you for helping improve Nutrition AI.</span>
+            </div>
+          )}
+        </CardContent>
+      </Card>
 
       {/* ================= ACTIONS BAR ================= */}
       <div className="flex flex-col sm:flex-row items-center justify-between gap-3 pt-4 border-t border-slate-200">

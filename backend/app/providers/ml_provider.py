@@ -183,10 +183,29 @@ class MLModelProvider:
         if calories > 400.0:
             advice.append("Hearty energy-dense portion.")
 
+        per_100g_raw = pred.get("nutrition_per_100g")
+        nutrition_per_100g = None
+        if per_100g_raw:
+            nutrition_per_100g = {
+                "calories": per_100g_raw.get("calories", 0.0),
+                "protein_g": per_100g_raw.get("protein", 0.0),
+                "carbs_g": per_100g_raw.get("carbs", 0.0),
+                "fat_g": per_100g_raw.get("fat", 0.0),
+                "fiber_g": per_100g_raw.get("fiber", 0.0),
+                "sugar_g": per_100g_raw.get("sugar", 0.0),
+                "sodium_mg": per_100g_raw.get("sodium", 0.0),
+            }
+
         return {
             "status": status,
+            "confidence_tier": pred.get("confidence_tier", "medium"),
+            "user_message": pred.get("user_message", "Likely match."),
             "items": [food_item],
             "totals": nutrition,
+            "candidates": candidate_items,
+            "serving_weight_g": pred.get("serving_weight_g", 100.0),
+            "reference_serving_g": pred.get("reference_serving_g", 100.0),
+            "nutrition_per_100g": nutrition_per_100g,
             "score": {
                 "value": score_val,
                 "band": band,

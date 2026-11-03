@@ -282,7 +282,7 @@ class ProductionFoodModel(nn.Module):
         feat = self.extractor(x)
         return self.head(feat)
 
-    @torch.no_grad()
+    @torch.inference_mode()
     def predict_topk(self, x: torch.Tensor, k: int = 5) -> tuple[torch.Tensor, torch.Tensor]:
         self.eval()
         logits = self.forward(x)
@@ -298,8 +298,13 @@ class ProductionFoodModel(nn.Module):
 class ProductionNutritionMapper:
     """Nutritional profile resolver mapping food classes to macronutrients."""
 
-    def __init__(self, csv_path: Union[str, Path] = "ml/data/raw/candidates.csv") -> None:
+    def __init__(
+        self,
+        csv_path: Union[str, Path] = "ml/data/raw/candidates.csv",
+        json_path: Union[str, Path] = "ml/models/production/nutrition_mapping_650.json",
+    ) -> None:
         self.csv_path = Path(csv_path)
+        self.json_path = Path(json_path)
         self.nutrition_db: dict[str, dict[str, Any]] = {}
         self._load()
 
@@ -308,6 +313,32 @@ class ProductionNutritionMapper:
         return " ".join(clean.split())
 
     def _load(self) -> None:
+        # 1. Prefer comprehensive 650-class USDA JSON mapping if present
+        if self.json_path.exists():
+            try:
+                with open(self.json_path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                for food_key, val in data.items():
+                    norm = self._normalize_name(food_key)
+                    self.nutrition_db[norm] = {
+                        "food_name": val.get("food_name", food_key),
+                        "category": val.get("category", "ingredient_other"),
+                        "category_group": val.get("category_group", "General"),
+                        "usda_fdc_id": val.get("usda_fdc_id"),
+                        "calories": float(val.get("calories", 0.0)),
+                        "protein": float(val.get("protein", 0.0)),
+                        "carbs": float(val.get("carbs", 0.0)),
+                        "fat": float(val.get("fat", 0.0)),
+                        "fiber": float(val.get("fiber", 0.0)),
+                        "sugar": float(val.get("sugar", 0.0)),
+                        "sodium": float(val.get("sodium", 0.0)),
+                        "default_serving_g": float(val.get("serving_weight_g", 100.0)),
+                    }
+                logger.info(f"Loaded {len(self.nutrition_db)} nutrition profiles from {self.json_path}")
+                return
+            except Exception as e:
+                logger.warning(f"Failed loading {self.json_path}: {e}. Falling back to CSV.")
+
         if not self.csv_path.exists():
             logger.warning(f"Nutrition CSV not found at {self.csv_path}. Using fallback values.")
             return
@@ -334,6 +365,10 @@ class ProductionNutritionMapper:
                     self.nutrition_db[norm] = profile
                 except Exception:
                     continue
+
+    def get_nutrition_per_100g(self, food_name: str) -> dict[str, Any]:
+        """Returns baseline unscaled per-100g nutritional profile."""
+        return self.get_nutrition(food_name, serving_weight_g=100.0)
 
     def get_nutrition(self, food_name: str, serving_weight_g: float | None = None) -> dict[str, Any]:
         """Lookup nutritional values scaled by serving weight (defaults to reference serving size)."""
@@ -369,18 +404,22 @@ class ProductionNutritionMapper:
                 "default_serving_g": 100.0,
             }
 
-        scale = (serving_weight_g or match["default_serving_g"]) / 100.0
+        ref_serving = float(match.get("default_serving_g", 100.0))
+        target_weight = serving_weight_g if serving_weight_g is not None else ref_serving
+        scale = target_weight / 100.0
 
         return {
-            "category": match["category"],
-            "serving_weight_g": round(serving_weight_g or match["default_serving_g"], 1),
+            "category": match.get("category", "general"),
+            "category_group": match.get("category_group", "General"),
+            "serving_weight_g": round(target_weight, 1),
+            "reference_serving_g": round(ref_serving, 1),
             "calories": round(match["calories"] * scale, 1),
             "protein": round(match["protein"] * scale, 2),
             "carbs": round(match["carbs"] * scale, 2),
             "fat": round(match["fat"] * scale, 2),
             "fiber": round(match["fiber"] * scale, 2),
-            "sugar": round(match["sugar"] * scale, 2),
-            "sodium": round(match["sodium"] * scale, 1),
+            "sugar": round(match.get("sugar", 0.0) * scale, 2),
+            "sodium": round(match.get("sodium", 0.0) * scale, 1),
         }
 
 
@@ -396,14 +435,23 @@ class ProductionInferenceService:
         checkpoint_path: Union[str, Path] = "ml/models/production/nutrition_model_best.pt",
         candidates_csv: Union[str, Path] = "ml/data/raw/candidates.csv",
         device: str = "cpu",
-        confidence_threshold: float = 0.40,
+        confidence_threshold: float = 0.50,
+        num_threads: int | None = 4,
     ) -> None:
+        if device == "cpu" and num_threads:
+            try:
+                import os
+                n_threads = min(num_threads, os.cpu_count() or 4)
+                torch.set_num_threads(n_threads)
+            except Exception:
+                pass
+
         self.device = torch.device(device)
         self.checkpoint_path = Path(checkpoint_path)
         self.confidence_threshold = confidence_threshold
 
         self.preprocessor = ProductionImagePreprocessor(target_size=224)
-        self.nutrition_mapper = ProductionNutritionMapper(candidates_csv)
+        self.nutrition_mapper = ProductionNutritionMapper(csv_path=candidates_csv)
 
         if not self.checkpoint_path.exists():
             raise FileNotFoundError(f"Model checkpoint not found: {self.checkpoint_path}")
@@ -426,31 +474,27 @@ class ProductionInferenceService:
 
         logger.info(f"ProductionInferenceService ready with {self.num_classes} classes on {self.device}.")
 
+    def _determine_confidence_tier(self, conf: float) -> tuple[str, str, bool]:
+        """Calibrate confidence score into High (>=80%), Medium (50-80%), Low (<50%)."""
+        if conf >= 0.80:
+            return "high", "High confidence match.", True
+        elif conf >= 0.50:
+            return "medium", "Likely match. Review nutrition or select alternate if needed.", True
+        else:
+            return "low", "Prediction uncertain. Try another photo.", False
+
     def predict(
         self,
         image_input: Union[str, Path, bytes, BinaryIO, Image.Image],
         top_k: int = 5,
         serving_weight_g: float | None = None,
     ) -> dict[str, Any]:
-        """Classify food image and return standardized backend JSON structure.
-
-        Returns JSON format:
-        {
-            "food_name": str,
-            "confidence": float,
-            "calories": float,
-            "protein": float,
-            "carbs": float,
-            "fat": float,
-            "fiber": float,
-            ... (additional production metadata)
-        }
-        """
+        """Classify food image and return standardized backend JSON structure."""
         # 1. Validation & Preprocessing
         pil_img, quality = self.preprocessor.load_and_validate(image_input)
         input_tensor = self.preprocessor.preprocess_tensor(pil_img).to(self.device)
 
-        # 2. Forward inference
+        # 2. Forward inference (torch.inference_mode inside predict_topk)
         topk_idx, topk_probs = self.model.predict_topk(input_tensor, k=top_k)
 
         top1_idx = int(topk_idx[0][0].item())
@@ -459,6 +503,7 @@ class ProductionInferenceService:
 
         # 3. Nutrition calculation
         top1_nutrition = self.nutrition_mapper.get_nutrition(top1_name, serving_weight_g=serving_weight_g)
+        top1_per_100g = self.nutrition_mapper.get_nutrition_per_100g(top1_name)
 
         # 4. Top-5 candidates list
         candidates = []
@@ -479,6 +524,8 @@ class ProductionInferenceService:
                 "category": c_nut["category"],
             })
 
+        tier, user_msg, is_confident = self._determine_confidence_tier(top1_prob)
+
         # 5. Build standardized response
         response = {
             "food_name": top1_name,
@@ -490,11 +537,81 @@ class ProductionInferenceService:
             "fiber": top1_nutrition["fiber"],
             # Production diagnostics & metadata
             "category": top1_nutrition["category"],
+            "category_group": top1_nutrition.get("category_group", "General"),
             "serving_weight_g": top1_nutrition["serving_weight_g"],
-            "is_confident": top1_prob >= self.confidence_threshold,
+            "reference_serving_g": top1_nutrition.get("reference_serving_g", 100.0),
+            "confidence_tier": tier,
+            "user_message": user_msg,
+            "is_confident": is_confident,
             "candidates": candidates,
             "quality": asdict(quality),
+            "nutrition_per_100g": {
+                "calories": top1_per_100g["calories"],
+                "protein": top1_per_100g["protein"],
+                "carbs": top1_per_100g["carbs"],
+                "fat": top1_per_100g["fat"],
+                "fiber": top1_per_100g["fiber"],
+            },
         }
 
         return response
+
+    def predict_batch(
+        self,
+        image_inputs: list[Union[str, Path, bytes, BinaryIO, Image.Image]],
+        top_k: int = 5,
+    ) -> list[dict[str, Any]]:
+        """Batch inference for processing multiple images efficiently."""
+        if not image_inputs:
+            return []
+
+        tensors = []
+        qualities = []
+        for inp in image_inputs:
+            pil_img, qual = self.preprocessor.load_and_validate(inp)
+            tensors.append(self.preprocessor.preprocess_tensor(pil_img))
+            qualities.append(qual)
+
+        batch_tensor = torch.cat(tensors, dim=0).to(self.device)
+        topk_idx, topk_probs = self.model.predict_topk(batch_tensor, k=top_k)
+
+        results = []
+        for i in range(len(image_inputs)):
+            top1_idx = int(topk_idx[i][0].item())
+            top1_prob = float(topk_probs[i][0].item())
+            top1_name = self.idx_to_class[top1_idx]
+            top1_nutrition = self.nutrition_mapper.get_nutrition(top1_name)
+            tier, user_msg, is_confident = self._determine_confidence_tier(top1_prob)
+
+            candidates = []
+            for rank, (idx, prob) in enumerate(zip(topk_idx[i], topk_probs[i]), 1):
+                c_name = self.idx_to_class[int(idx.item())]
+                c_nut = self.nutrition_mapper.get_nutrition(c_name)
+                candidates.append({
+                    "rank": rank,
+                    "food_name": c_name,
+                    "confidence": round(float(prob.item()), 4),
+                    "calories": c_nut["calories"],
+                    "protein": c_nut["protein"],
+                    "carbs": c_nut["carbs"],
+                    "fat": c_nut["fat"],
+                    "fiber": c_nut["fiber"],
+                })
+
+            results.append({
+                "food_name": top1_name,
+                "confidence": round(top1_prob, 4),
+                "calories": top1_nutrition["calories"],
+                "protein": top1_nutrition["protein"],
+                "carbs": top1_nutrition["carbs"],
+                "fat": top1_nutrition["fat"],
+                "fiber": top1_nutrition["fiber"],
+                "confidence_tier": tier,
+                "user_message": user_msg,
+                "is_confident": is_confident,
+                "candidates": candidates,
+                "quality": asdict(qualities[i]),
+            })
+
+        return results
 

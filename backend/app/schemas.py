@@ -90,6 +90,13 @@ class AnalysisResponse(BaseModel):
     carbs: float | None = None
     fat: float | None = None
     fiber: float | None = None
+    # Calibrated confidence & serving metadata
+    confidence_tier: str | None = None  # "high" | "medium" | "low"
+    user_message: str | None = None
+    candidates: list[CandidateItem] = []
+    serving_weight_g: float | None = None
+    reference_serving_g: float | None = None
+    nutrition_per_100g: NutritionInfo | None = None
 
 
 # ---------------------------------------------------------------------------
@@ -101,4 +108,39 @@ class HealthResponse(BaseModel):
     provider: str
     provider_ready: bool
     model_version: str | None = None
+
+
+# ---------------------------------------------------------------------------
+# Feedback
+# ---------------------------------------------------------------------------
+class FeedbackRequest(BaseModel):
+    request_id: str
+    food_name: str
+    is_correct: bool
+    selected_food: str | None = None
+    comments: str | None = None
+
+
+class FeedbackResponse(BaseModel):
+    success: bool = True
+    message: str
+
+
+# ---------------------------------------------------------------------------
+# Monitoring / Metrics
+# ---------------------------------------------------------------------------
+class LatencyMetrics(BaseModel):
+    mean: float
+    p50: float
+    p95: float
+
+
+class MetricsResponse(BaseModel):
+    total_predictions: int
+    average_confidence: float
+    failed_requests: int
+    low_confidence_count: int
+    low_confidence_rate: float
+    latency_ms: LatencyMetrics
+    status: str
 

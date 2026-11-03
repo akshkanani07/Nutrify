@@ -46,6 +46,39 @@ export const ImageUploadZone: React.FC<ImageUploadZoneProps> = ({
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const cameraInputRef = useRef<HTMLInputElement | null>(null);
 
+  const handleSampleFood = (name: string, bgHue: number) => {
+    if (disabled || isLoading) return;
+    try {
+      const canvas = document.createElement("canvas");
+      canvas.width = 256;
+      canvas.height = 256;
+      const ctx = canvas.getContext("2d");
+      if (ctx) {
+        // Draw colorful textured meal representation
+        ctx.fillStyle = `hsl(${bgHue}, 65%, 45%)`;
+        ctx.fillRect(0, 0, 256, 256);
+        ctx.fillStyle = `hsl(${bgHue}, 75%, 65%)`;
+        ctx.beginPath();
+        ctx.arc(128, 128, 90, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.fillStyle = "#ffffff";
+        ctx.font = "bold 18px sans-serif";
+        ctx.textAlign = "center";
+        ctx.fillText(name, 128, 134);
+
+        canvas.toBlob((blob) => {
+          if (blob) {
+            const fileName = `${name.toLowerCase().replace(/\s+/g, "_")}_sample.jpg`;
+            const file = new File([blob], fileName, { type: "image/jpeg" });
+            onFileSelect(file);
+          }
+        }, "image/jpeg", 0.9);
+      }
+    } catch {
+      // Graceful fallback
+    }
+  };
+
   // Client-side image validation (type, size, resolution, corruption)
   const validateFile = (file: File): Promise<boolean> => {
     return new Promise((resolve) => {
@@ -201,6 +234,51 @@ export const ImageUploadZone: React.FC<ImageUploadZoneProps> = ({
               <span className="px-2 py-0.5 rounded bg-slate-100 text-slate-600">Min 64×64 px</span>
               <span>•</span>
               <span className="px-2 py-0.5 rounded bg-slate-100 text-slate-600">Private Offline AI</span>
+            </div>
+          </div>
+
+          {/* Quick Try Sample Meals */}
+          <div className="p-4 bg-white rounded-xl border border-slate-200/80 shadow-sm space-y-2.5">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-semibold text-slate-700 flex items-center gap-1.5">
+                <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+                Quick Try Sample Meals
+              </span>
+              <span className="text-[11px] text-slate-400">Click to test instantly</span>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+              <button
+                type="button"
+                onClick={() => handleSampleFood("Gala Apple", 0)}
+                disabled={disabled || isLoading}
+                className="p-2 text-left bg-slate-50 hover:bg-emerald-50/70 border border-slate-200 hover:border-emerald-300 rounded-lg transition-all text-xs font-medium text-slate-700"
+              >
+                🍎 Gala Apple
+              </button>
+              <button
+                type="button"
+                onClick={() => handleSampleFood("Chicken Biryani", 35)}
+                disabled={disabled || isLoading}
+                className="p-2 text-left bg-slate-50 hover:bg-emerald-50/70 border border-slate-200 hover:border-emerald-300 rounded-lg transition-all text-xs font-medium text-slate-700"
+              >
+                🍛 Chicken Biryani
+              </button>
+              <button
+                type="button"
+                onClick={() => handleSampleFood("Greek Salad", 140)}
+                disabled={disabled || isLoading}
+                className="p-2 text-left bg-slate-50 hover:bg-emerald-50/70 border border-slate-200 hover:border-emerald-300 rounded-lg transition-all text-xs font-medium text-slate-700"
+              >
+                🥗 Greek Salad
+              </button>
+              <button
+                type="button"
+                onClick={() => handleSampleFood("Avocado Toast", 95)}
+                disabled={disabled || isLoading}
+                className="p-2 text-left bg-slate-50 hover:bg-emerald-50/70 border border-slate-200 hover:border-emerald-300 rounded-lg transition-all text-xs font-medium text-slate-700"
+              >
+                🥑 Avocado Toast
+              </button>
             </div>
           </div>
 

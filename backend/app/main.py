@@ -4,7 +4,9 @@ from __future__ import annotations
 
 import logging
 import os
+import time
 import uuid
+from contextlib import asynccontextmanager
 from typing import Annotated
 
 from fastapi import FastAPI, File, Request, UploadFile
@@ -12,7 +14,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from app import config
+from app.analytics import analytics_tracker
 from app.exceptions import ConfigurationError, ModelNotReadyError
+from app.feedback import feedback_manager
 from app.image_utils import validate_and_preprocess
 from app.providers.ml_provider import MLModelProvider
 from app.providers.mock_provider import MockProvider
@@ -21,7 +25,10 @@ from app.schemas import (
     AnalysisResponse,
     ErrorDetail,
     ErrorResponse,
+    FeedbackRequest,
+    FeedbackResponse,
     HealthResponse,
+    MetricsResponse,
 )
 
 logger = logging.getLogger("nutrify.proxy")
@@ -100,6 +107,63 @@ def _resolve_provider(application: FastAPI) -> MockProvider | MLModelProvider:
     return provider
 
 
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """Lifespan context: preloads the ML provider at startup for zero cold-start."""
+    try:
+        provider = _resolve_provider(app)
+        logger.info(f"Nutrify AI lifespan: Provider '{provider.name}' preloaded successfully (ready={provider.ready}).")
+    except Exception as exc:
+        logger.warning(f"Nutrify AI lifespan: Provider pre-warming deferred: {exc}")
+    yield
+
+
+class SecurityAndTracingMiddleware:
+    """Pure ASGI middleware for security headers, request tracing, and latency monitoring.
+    
+    Zero body-stream interception, fully compatible with multipart uploads and TestClient.
+    """
+
+    def __init__(self, app):
+        self.app = app
+
+    async def __call__(self, scope, receive, send):
+        if scope["type"] != "http":
+            await self.app(scope, receive, send)
+            return
+
+        rid = None
+        for name, value in scope.get("headers", []):
+            if name.lower() == b"x-request-id":
+                rid = value.decode("latin1")
+                break
+        if not rid:
+            rid = str(uuid.uuid4())
+
+        if "state" not in scope:
+            scope["state"] = {}
+        scope["state"]["request_id"] = rid
+
+        start_time = time.perf_counter()
+
+        async def send_wrapper(message):
+            if message["type"] == "http.response.start":
+                headers = list(message.get("headers", []))
+                headers.append((b"x-request-id", rid.encode("latin1")))
+                headers.append((b"x-content-type-options", b"nosniff"))
+                headers.append((b"x-frame-options", b"DENY"))
+                headers.append((b"x-xss-protection", b"1; mode=block"))
+                headers.append((b"referrer-policy", b"strict-origin-when-cross-origin"))
+                if config.APP_ENV == "production":
+                    headers.append((b"strict-transport-security", b"max-age=31536000; includeSubDomains"))
+                elapsed_ms = (time.perf_counter() - start_time) * 1000.0
+                headers.append((b"x-process-time", f"{elapsed_ms:.2f}ms".encode("latin1")))
+                message["headers"] = headers
+            await send(message)
+
+        await self.app(scope, receive, send_wrapper)
+
+
 def create_app() -> FastAPI:
     """Application factory: validates configuration, instantiates FastAPI, and owns RateLimiter."""
     # Single source of truth for production configuration validation
@@ -115,8 +179,16 @@ def create_app() -> FastAPI:
                 "TRUST_EDGE_PROXY is not enabled in production: all clients behind an edge proxy will share one rate-limit bucket."
             )
 
-    application = FastAPI(title="Nutrify AI", version=config.APP_VERSION)
+    application = FastAPI(
+        title="Nutrify AI",
+        version=config.APP_VERSION,
+        lifespan=lifespan,
+    )
 
+    # Pure ASGI Security & Tracing Middleware
+    application.add_middleware(SecurityAndTracingMiddleware)
+
+    # Production CORS Middleware
     application.add_middleware(
         CORSMiddleware,
         allow_origins=config.ALLOWED_ORIGINS,
@@ -139,17 +211,38 @@ def create_app() -> FastAPI:
             model_version=getattr(provider, "model_version", None),
         )
 
+    @application.get("/api/v1/metrics", response_model=MetricsResponse)
+    async def metrics() -> MetricsResponse:
+        """Production monitoring endpoint reporting real-time inference analytics."""
+        return MetricsResponse(**analytics_tracker.get_metrics())
+
+    @application.post("/api/v1/feedback", response_model=FeedbackResponse)
+    async def submit_feedback(payload: FeedbackRequest, request: Request) -> FeedbackResponse:
+        """User feedback loop for recording user corrections for model retraining."""
+        client_ip = _get_client_ip(request)
+        res = feedback_manager.record_feedback(
+            request_id=payload.request_id,
+            predicted_food=payload.food_name,
+            is_correct=payload.is_correct,
+            corrected_food=payload.selected_food,
+            comments=payload.comments,
+            client_ip=client_ip,
+        )
+        return FeedbackResponse(success=res["success"], message=res["message"])
+
     @application.post("/api/v1/analyze-food")
     async def analyze_food(
         request: Request,
         image: Annotated[UploadFile | None, File()] = None,
     ) -> JSONResponse:
-        rid = _request_id()
+        t0 = time.perf_counter()
+        rid = getattr(request.state, "request_id", _request_id())
 
         # --- rate limit ---
         rate_limiter: RateLimiter = request.app.state.rate_limiter
         client_ip = _get_client_ip(request)
         if not rate_limiter.is_allowed(client_ip):
+            analytics_tracker.log_failure(rid, client_ip, "RATE_LIMITED")
             return _error_response(
                 rid,
                 429,
@@ -164,6 +257,7 @@ def create_app() -> FastAPI:
 
         # --- image present? ---
         if image is None or image.filename == "":
+            analytics_tracker.log_failure(rid, client_ip, "MISSING_IMAGE")
             return _error_response(
                 rid,
                 400,
@@ -176,6 +270,7 @@ def create_app() -> FastAPI:
         try:
             data = await image.read()
         except Exception:
+            analytics_tracker.log_failure(rid, client_ip, "INVALID_IMAGE")
             return _error_response(
                 rid,
                 400,
@@ -197,12 +292,14 @@ def create_app() -> FastAPI:
             msg = args[1] if len(args) > 1 else str(exc)
             hint = args[2] if len(args) > 2 else None
             status = ERROR_CODES.get(code, 400)
+            analytics_tracker.log_failure(rid, client_ip, code)
             return _error_response(rid, status, code, msg, hint)
 
         # --- run provider ---
         try:
             result = provider.analyze(img)
         except ModelNotReadyError as exc:
+            analytics_tracker.log_failure(rid, client_ip, "MODEL_NOT_READY")
             return _error_response(
                 rid,
                 503,
@@ -212,6 +309,7 @@ def create_app() -> FastAPI:
                 retryable=True,
             )
         except Exception as exc:
+            analytics_tracker.log_failure(rid, client_ip, "INTERNAL_ERROR")
             return _error_response(rid, 500, "INTERNAL_ERROR", f"Unexpected error: {exc}")
 
         # --- build response ---
@@ -235,7 +333,27 @@ def create_app() -> FastAPI:
             carbs=totals_dict.get("carbs_g") if isinstance(totals_dict, dict) else getattr(totals_dict, "carbs_g", None),
             fat=totals_dict.get("fat_g") if isinstance(totals_dict, dict) else getattr(totals_dict, "fat_g", None),
             fiber=totals_dict.get("fiber_g") if isinstance(totals_dict, dict) else getattr(totals_dict, "fiber_g", None),
+            confidence_tier=result.get("confidence_tier"),
+            user_message=result.get("user_message"),
+            candidates=result.get("candidates", []),
+            serving_weight_g=result.get("serving_weight_g"),
+            reference_serving_g=result.get("reference_serving_g"),
+            nutrition_per_100g=result.get("nutrition_per_100g"),
         )
+
+        latency_ms = (time.perf_counter() - t0) * 1000.0
+        conf_val = resp.confidence if resp.confidence is not None else 0.0
+        analytics_tracker.log_prediction(
+            request_id=rid,
+            client_ip=client_ip,
+            food_name=resp.food_name or "Unknown",
+            confidence=conf_val,
+            confidence_tier=resp.confidence_tier or "low",
+            status=resp.status,
+            latency_ms=latency_ms,
+            is_confident=(resp.status == "ok"),
+        )
+
         return JSONResponse(status_code=200, content=resp.model_dump())
 
     return application

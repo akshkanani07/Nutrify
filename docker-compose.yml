@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: nutrify-backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENV=production
+      - AI_PROVIDER=ml_model
+      - ENABLE_ML_INTEGRATION=true
+      - ALLOW_MOCK=false
+      - ALLOWED_ORIGINS=http://localhost:3000,https://nutrify.yourdomain.com
+      - TRUSTED_PROXIES=127.0.0.1,10.0.0.0/8
+      - TRUST_EDGE_PROXY=true
+      - RATE_LIMIT_MAX_REQUESTS=60
+      - RATE_LIMIT_WINDOW_SECONDS=60
+    volumes:
+      - ./ml/models/production:/app/ml/models/production:ro
+      - ./ml/data/reports:/app/ml/data/reports:rw
+      - ./ml/data/feedback:/app/ml/data/feedback:rw
+    deploy:
+      resources:
+        limits:
+          cpus: '4.0'
+          memory: 4096M
+        reservations:
+          cpus: '1.0'
+          memory: 1024M
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/api/v1/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: nutrify-frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - BACKEND_API_URL=http://backend:8000
+      - TRUST_EDGE_PROXY=true
+      - NODE_ENV=production
+    depends_on:
+      backend:
+        condition: service_healthy
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2048M
