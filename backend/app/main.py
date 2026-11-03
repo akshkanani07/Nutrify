@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import asyncio
 import logging
 import os
 import time
@@ -297,7 +298,7 @@ def create_app() -> FastAPI:
 
         # --- run provider ---
         try:
-            result = provider.analyze(img)
+            result = await asyncio.to_thread(provider.analyze, img)
         except ModelNotReadyError as exc:
             analytics_tracker.log_failure(rid, client_ip, "MODEL_NOT_READY")
             return _error_response(
