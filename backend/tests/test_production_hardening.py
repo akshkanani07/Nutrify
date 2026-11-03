@@ -57,3 +57,4 @@ def test_prediction_logging_on_analyze(client):
     assert metrics_resp.status_code == 200
     m_data = metrics_resp.json()
     assert m_data["total_predictions"] >= 1
+

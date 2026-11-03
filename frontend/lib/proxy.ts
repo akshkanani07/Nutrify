@@ -126,8 +126,8 @@ export async function handleAnalyzeProxy(
       return makeErrorResponse(
         504,
         "ANALYSIS_TIMEOUT",
-        "The analysis request timed out.",
-        "Please try again with a smaller image or retry later.",
+        "The analysis request timed out waiting for the ML backend.",
+        "Ensure the FastAPI server is running (python backend/run_server.py) on http://127.0.0.1:8000.",
         true
       );
     }

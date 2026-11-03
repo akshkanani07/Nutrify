@@ -141,3 +141,4 @@ Nutrify AI operates as a decoupled, multi-tier microservice architecture:
 - **Real-time Analytics**: `GET /api/v1/metrics`
 - **Prediction Logs**: `ml/data/reports/prediction_logs.json` and `ml/data/reports/prediction_logs.jsonl`
 - **User Feedback Storage**: `ml/data/feedback/user_feedback.jsonl`
+

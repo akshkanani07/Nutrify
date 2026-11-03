@@ -36,3 +36,4 @@ def test_portion_scaling_linear():
     assert abs(n200["calories"] - 2.0 * n100["calories"]) <= 0.2
     assert abs(n200["protein"] - 2.0 * n100["protein"]) <= 0.05
     assert abs(n200["carbs"] - 2.0 * n100["carbs"]) <= 0.1
+

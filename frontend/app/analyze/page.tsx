@@ -31,26 +31,34 @@ export default function AnalyzePage() {
 
   const abortControllerRef = useRef<AbortController | null>(null);
 
-  // Check backend health on mount
+  // Check backend health on mount and periodically
   useEffect(() => {
+    let isMounted = true;
     async function checkHealth() {
       try {
         const res = await fetch("/api/v1/health", { cache: "no-store" }).catch(() => null);
         if (res && res.ok) {
           const data = await res.json();
-          setHealthStatus({
-            provider: data.provider,
-            ready: data.provider_ready,
-            version: data.model_version,
-          });
+          if (isMounted) {
+            setHealthStatus({
+              provider: data.provider || "ml_model",
+              ready: Boolean(data.provider_ready),
+              version: data.model_version,
+            });
+          }
         } else {
-          setHealthStatus({ provider: "ml_model", ready: true });
+          if (isMounted) setHealthStatus({ provider: "ml_model", ready: false });
         }
       } catch {
-        setHealthStatus({ provider: "ml_model", ready: true });
+        if (isMounted) setHealthStatus({ provider: "ml_model", ready: false });
       }
     }
     checkHealth();
+    const interval = setInterval(checkHealth, 10000);
+    return () => {
+      isMounted = false;
+      clearInterval(interval);
+    };
   }, []);
 
   // Cleanup object URLs on unmount or file replace
@@ -192,9 +200,23 @@ export default function AnalyzePage() {
 
         {/* Engine Status Pill */}
         <div className="flex items-center gap-2 text-xs">
-          <div className="hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-100 border border-slate-200/80 text-slate-700 font-mono text-[11px]">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span>EfficientNet-B0 Ready</span>
+          <div
+            className={`hidden sm:flex items-center gap-1.5 px-2.5 py-1 rounded-full border font-mono text-[11px] ${
+              healthStatus?.ready
+                ? "bg-emerald-50 border-emerald-200 text-emerald-800"
+                : "bg-amber-50 border-amber-200 text-amber-800"
+            }`}
+          >
+            <span
+              className={`w-2 h-2 rounded-full ${
+                healthStatus?.ready ? "bg-emerald-500 animate-pulse" : "bg-amber-500"
+              }`}
+            />
+            <span>
+              {healthStatus?.ready
+                ? "FastAPI ML Ready"
+                : "Backend Offline (Port 8000)"}
+            </span>
           </div>
         </div>
       </header>
