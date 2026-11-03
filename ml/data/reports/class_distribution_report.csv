@@ -1,0 +1,651 @@
+class_name,category,train_samples,val_samples,test_samples,total_samples
+abiyuch raw,fruit,210,45,45,300
+acerola (west indian cherry) raw,fruit,210,45,45,300
+acerola juice raw,fruit,210,45,45,300
+alfalfa seeds sprouted raw,vegetable,210,45,45,300
+amaranth leaves raw,vegetable,210,45,45,300
+apple juice canned or bottled unsweetened with added ascorbic acid,fruit,210,45,45,300
+apple juice canned or bottled unsweetened without added ascorbic acid,fruit,210,45,45,300
+apple pie,sweet,210,45,45,300
+apples gala with skin raw,fruit,210,45,45,300
+apples raw without skin,fruit,210,45,45,300
+applesauce canned sweetened with salt,fruit,210,45,45,300
+applesauce canned sweetened without salt,fruit,210,45,45,300
+apricot nectar canned with added ascorbic acid,fruit,210,45,45,300
+apricots frozen sweetened,fruit,210,45,45,300
+apricots raw,fruit,210,45,45,300
+archway home style cookies oatmeal,bakery,210,45,45,300
+arrowhead raw,vegetable,210,45,45,300
+arrowroot raw,vegetable,210,45,45,300
+artichokes (globe or french) frozen unprepared,vegetable,210,45,45,300
+artichokes (globe or french) raw,vegetable,210,45,45,300
+arugula raw,vegetable,210,45,45,300
+asparagus frozen unprepared,vegetable,210,45,45,300
+asparagus raw,vegetable,210,45,45,300
+avocados raw california,fruit,210,45,45,300
+avocados raw florida,fruit,210,45,45,300
+bacon and beef sticks,meat,210,45,45,300
+bacon turkey microwaved,meat,210,45,45,300
+baklava,sweet,210,45,45,300
+balsam pear (bitter gourd) leafy tips raw,vegetable,210,45,45,300
+balsam pear (bitter gourd) pods raw,vegetable,210,45,45,300
+bamboo shoots canned drained solids,vegetable,210,45,45,300
+bamboo shoots raw,vegetable,210,45,45,300
+bananas overripe raw,fruit,210,45,45,300
+bananas raw,fruit,210,45,45,300
+baobab powder,fruit,210,45,45,300
+barbecue loaf pork beef,meat,210,45,45,300
+beans fava in pod raw,vegetable,210,45,45,300
+beans snap green raw,vegetable,210,45,45,300
+beef carpaccio,meat,210,45,45,300
+beef cured dried,meat,210,45,45,300
+beef cured pastrami,meat,210,45,45,300
+beerwurst pork and beef,meat,210,45,45,300
+beet greens raw,vegetable,210,45,45,300
+beets canned drained solids,vegetable,210,45,45,300
+beets raw,vegetable,210,45,45,300
+beverage instant breakfast powder chocolate not reconstituted,dairy,210,45,45,300
+beverage instant breakfast powder chocolate sugar free not reconstituted,dairy,210,45,45,300
+bibimbap,mixed_dish,210,45,45,300
+biryani chicken,mixed_dish,210,45,45,300
+biryani mutton,mixed_dish,210,45,45,300
+bison ground grass fed cooked,meat,210,45,45,300
+bison ground grass fed raw,meat,210,45,45,300
+blackberries raw,fruit,210,45,45,300
+blackberry juice canned,fruit,210,45,45,300
+blood sausage,meat,210,45,45,300
+blueberries raw,fruit,210,45,45,300
+bockwurst pork veal raw,meat,210,45,45,300
+bologna beef,meat,210,45,45,300
+bologna pork,meat,210,45,45,300
+borage raw,vegetable,210,45,45,300
+boysenberries canned heavy syrup,fruit,210,45,45,300
+boysenberries frozen unsweetened,fruit,210,45,45,300
+bratwurst pork cooked,meat,210,45,45,300
+bratwurst veal cooked,meat,210,45,45,300
+braunschweiger (a liver sausage) pork,meat,210,45,45,300
+bread egg,bakery,210,45,45,300
+bread rye,bakery,210,45,45,300
+breadfruit raw,fruit,210,45,45,300
+broadbeans immature seeds raw,vegetable,210,45,45,300
+broccoli leaves raw,vegetable,210,45,45,300
+broccoli raab cooked,vegetable,210,45,45,300
+broccoli raab raw,vegetable,210,45,45,300
+broccoli raw,vegetable,210,45,45,300
+bruschetta,bakery,210,45,45,300
+brussels sprouts frozen unprepared,vegetable,210,45,45,300
+brussels sprouts raw,vegetable,210,45,45,300
+burdock root raw,vegetable,210,45,45,300
+butter chicken,poultry,210,45,45,300
+butter oil anhydrous,dairy,210,45,45,300
+butter salted,dairy,210,45,45,300
+butter without salt,dairy,210,45,45,300
+butterbur (fuki) raw,vegetable,210,45,45,300
+butterbur canned,vegetable,210,45,45,300
+cabbage kimchi,vegetable,210,45,45,300
+cabbage raw,vegetable,210,45,45,300
+caesar salad,vegetable,210,45,45,300
+canada goose breast meat only skinless raw,poultry,210,45,45,300
+canadian bacon cooked pan fried,meat,210,45,45,300
+canadian bacon unprepared,meat,210,45,45,300
+candied fruit,fruit,210,45,45,300
+cannoli,sweet,210,45,45,300
+caprese salad,vegetable,210,45,45,300
+carambola (starfruit) raw,fruit,210,45,45,300
+cardoon raw,vegetable,210,45,45,300
+carissa (natal plum) raw,fruit,210,45,45,300
+carrot cake,sweet,210,45,45,300
+carrot dehydrated,vegetable,210,45,45,300
+carrot juice canned,vegetable,210,45,45,300
+carrots baby raw,vegetable,210,45,45,300
+carrots raw,vegetable,210,45,45,300
+cassava raw,vegetable,210,45,45,300
+catsup,vegetable,210,45,45,300
+catsup low sodium,vegetable,210,45,45,300
+cauliflower green raw,vegetable,210,45,45,300
+cauliflower raw,vegetable,210,45,45,300
+celeriac raw,vegetable,210,45,45,300
+celery raw,vegetable,210,45,45,300
+celtuce raw,vegetable,210,45,45,300
+ceviche,seafood,210,45,45,300
+chana masala,legume,210,45,45,300
+chard swiss raw,vegetable,210,45,45,300
+chayote fruit raw,vegetable,210,45,45,300
+cheese blue,dairy,210,45,45,300
+cheese brie,dairy,210,45,45,300
+cheese food cold pack american,dairy,210,45,45,300
+cheese food pasteurized process swiss,dairy,210,45,45,300
+cheese sauce prepared from recipe,dairy,210,45,45,300
+cheese spread cream cheese base,dairy,210,45,45,300
+cheese spread pasteurized process american,dairy,210,45,45,300
+cheese substitute mozzarella,dairy,210,45,45,300
+cheesecake,sweet,210,45,45,300
+cheesefurter cheese smokie pork beef,meat,210,45,45,300
+cherimoya raw,fruit,210,45,45,300
+cherries sour red raw,fruit,210,45,45,300
+cherries sweet raw,fruit,210,45,45,300
+cherry juice tart,fruit,210,45,45,300
+chicken breast oven roasted fat free sliced,meat,210,45,45,300
+chicken breast roll oven roasted,meat,210,45,45,300
+chicken breast tenders breaded cooked microwaved,poultry,210,45,45,300
+chicken breast tenders breaded uncooked,poultry,210,45,45,300
+chicken curry,mixed_dish,210,45,45,300
+chicken patty frozen cooked,poultry,210,45,45,300
+chicken patty frozen uncooked,poultry,210,45,45,300
+chicken quesadilla,mixed_dish,210,45,45,300
+chicken skin (drumsticks and thighs) raw,poultry,210,45,45,300
+chicken spread,meat,210,45,45,300
+chicken wings,poultry,210,45,45,300
+chicory greens raw,vegetable,210,45,45,300
+chicory roots raw,vegetable,210,45,45,300
+chicory witloof raw,vegetable,210,45,45,300
+chives freeze dried,vegetable,210,45,45,300
+chives raw,vegetable,210,45,45,300
+chocolate cake,sweet,210,45,45,300
+chrysanthemum garland raw,vegetable,210,45,45,300
+chrysanthemum leaves raw,vegetable,210,45,45,300
+churros,sweet,210,45,45,300
+clam chowder,soup,210,45,45,300
+clementines raw,fruit,210,45,45,300
+club sandwich,mixed_dish,210,45,45,300
+collards frozen chopped unprepared,vegetable,210,45,45,300
+collards raw,vegetable,210,45,45,300
+coriander (cilantro) leaves raw,vegetable,210,45,45,300
+corn pudding home prepared,vegetable,210,45,45,300
+corned beef loaf jellied,meat,210,45,45,300
+cornsalad raw,vegetable,210,45,45,300
+cowpeas (blackeyes) immature seeds raw,vegetable,210,45,45,300
+cowpeas leafy tips raw,vegetable,210,45,45,300
+crab cakes,seafood,210,45,45,300
+crabapples raw,fruit,210,45,45,300
+cranberries raw,fruit,210,45,45,300
+cranberry juice blend 100% juice bottled with added vitamin c and calcium,fruit,210,45,45,300
+cranberry juice unsweetened,fruit,210,45,45,300
+cranberry orange relish canned,fruit,210,45,45,300
+cranberry sauce canned sweetened,fruit,210,45,45,300
+cream fluid light (coffee cream or table cream),dairy,210,45,45,300
+cream sour cultured,dairy,210,45,45,300
+cream substitute liquid light,dairy,210,45,45,300
+cream substitute powdered,dairy,210,45,45,300
+cress garden raw,vegetable,210,45,45,300
+croutons plain,bakery,210,45,45,300
+crustaceans shrimp cooked,seafood,210,45,45,300
+crustaceans shrimp raw,seafood,210,45,45,300
+cucumber peeled raw,vegetable,210,45,45,300
+cucumber with peel raw,vegetable,210,45,45,300
+currants red and white raw,fruit,210,45,45,300
+currants zante dried,fruit,210,45,45,300
+custard apple (bullocks heart) raw,fruit,210,45,45,300
+dal makhani,legume,210,45,45,300
+dal tadka,legume,210,45,45,300
+dandelion greens raw,vegetable,210,45,45,300
+dates deglet noor,fruit,210,45,45,300
+dates medjool,fruit,210,45,45,300
+dessert topping powdered,dairy,210,45,45,300
+dessert topping pressurized,dairy,210,45,45,300
+deviled eggs,egg,210,45,45,300
+dock cooked boiled drained with salt,vegetable,210,45,45,300
+dock raw,vegetable,210,45,45,300
+donuts,sweet,210,45,45,300
+dosa plain,grain,210,45,45,300
+dove cooked (includes squab),poultry,210,45,45,300
+drumstick leaves raw,vegetable,210,45,45,300
+drumstick pods raw,vegetable,210,45,45,300
+duck domesticated liver raw,poultry,210,45,45,300
+duck wild meat and skin raw,poultry,210,45,45,300
+dulce de leche,dairy,210,45,45,300
+dumplings,mixed_dish,210,45,45,300
+durian raw or frozen,fruit,210,45,45,300
+dutch brand loaf chicken pork and beef,meat,210,45,45,300
+edamame,legume,210,45,45,300
+edamame frozen prepared,vegetable,210,45,45,300
+edamame frozen unprepared,vegetable,210,45,45,300
+egg substitute liquid or frozen fat free,dairy,210,45,45,300
+egg substitute powder,dairy,210,45,45,300
+egg white dried,dairy,210,45,45,300
+egg yolk dried,dairy,210,45,45,300
+eggnog,dairy,210,45,45,300
+eggplant pickled,vegetable,210,45,45,300
+eggplant raw,vegetable,210,45,45,300
+eggs benedict,egg,210,45,45,300
+eggs grade a large egg yolk,dairy,210,45,45,300
+eggs scrambled frozen mixture,dairy,210,45,45,300
+elderberries raw,fruit,210,45,45,300
+emu ground raw,poultry,210,45,45,300
+emu oyster raw,poultry,210,45,45,300
+endive raw,vegetable,210,45,45,300
+epazote raw,vegetable,210,45,45,300
+eppaw raw,vegetable,210,45,45,300
+falafel,legume,210,45,45,300
+fat free ice cream no sugar added flavors other than chocolate,dairy,210,45,45,300
+feijoa raw,fruit,210,45,45,300
+fennel bulb raw,vegetable,210,45,45,300
+fiddlehead ferns frozen unprepared,vegetable,210,45,45,300
+fiddlehead ferns raw,vegetable,210,45,45,300
+figs dried stewed,fruit,210,45,45,300
+figs raw,fruit,210,45,45,300
+fireweed leaves raw,vegetable,210,45,45,300
+fish carp raw,seafood,210,45,45,300
+fish surimi,seafood,210,45,45,300
+flour rice brown,grain,210,45,45,300
+flour soy defatted,legume,210,45,45,300
+frankfurter meat,meat,210,45,45,300
+frankfurter pork,meat,210,45,45,300
+french fries,snack,210,45,45,300
+french onion soup,soup,210,45,45,300
+fried calamari,seafood,210,45,45,300
+fried rice,grain,210,45,45,300
+frog legs raw,seafood,210,45,45,300
+fruit salad (peach and pear and apricot and pineapple and cherry) canned juice pack solids and liquids,fruit,210,45,45,300
+fruit salad (peach and pear and apricot and pineapple and cherry) canned water pack solids and liquids,fruit,210,45,45,300
+fungi cloud ears dried,vegetable,210,45,45,300
+game meat bear raw,meat,210,45,45,300
+game meat elk raw,meat,210,45,45,300
+garlic naan,bakery,210,45,45,300
+garlic raw,vegetable,210,45,45,300
+ginger root raw,vegetable,210,45,45,300
+gnocchi,grain,210,45,45,300
+goji berries dried,fruit,210,45,45,300
+goose domesticated meat only raw,poultry,210,45,45,300
+goose liver raw,poultry,210,45,45,300
+gooseberries canned light syrup pack solids and liquids,fruit,210,45,45,300
+gooseberries raw,fruit,210,45,45,300
+gourd dishcloth (towelgourd) raw,vegetable,210,45,45,300
+gourd white flowered (calabash) raw,vegetable,210,45,45,300
+grape juice canned or bottled unsweetened with added ascorbic acid,fruit,210,45,45,300
+grape juice canned or bottled unsweetened without added ascorbic acid,fruit,210,45,45,300
+grape leaves canned,vegetable,210,45,45,300
+grape leaves raw,vegetable,210,45,45,300
+grapefruit juice pink raw,fruit,210,45,45,300
+grapefruit juice white raw,fruit,210,45,45,300
+grapefruit raw white all areas,fruit,210,45,45,300
+grapefruit raw white florida,fruit,210,45,45,300
+grapes muscadine raw,fruit,210,45,45,300
+grapes red or green (european type such as thompson seedless) raw,fruit,210,45,45,300
+groundcherries (cape gooseberries or poha) raw,fruit,210,45,45,300
+guacamole,condiment_sauce,210,45,45,300
+guanabana nectar canned,fruit,210,45,45,300
+guava nectar canned with added ascorbic acid,fruit,210,45,45,300
+guava nectar with sucralose canned,fruit,210,45,45,300
+guava sauce cooked,fruit,210,45,45,300
+guavas common raw,fruit,210,45,45,300
+guavas strawberry raw,fruit,210,45,45,300
+guinea hen meat and skin raw,poultry,210,45,45,300
+guinea hen meat only raw,poultry,210,45,45,300
+gulab jamun,sweet,210,45,45,300
+ham and cheese loaf or roll,meat,210,45,45,300
+ham and cheese spread,meat,210,45,45,300
+ham chopped canned,meat,210,45,45,300
+ham minced,meat,210,45,45,300
+ham salad spread,meat,210,45,45,300
+hamburger,mixed_dish,210,45,45,300
+headcheese pork,meat,210,45,45,300
+hearts of palm canned,vegetable,210,45,45,300
+hearts of palm raw,vegetable,210,45,45,300
+honey roll sausage beef,meat,210,45,45,300
+hormel pillow pak sliced turkey pepperoni,meat,210,45,45,300
+horned melon (kiwano),fruit,210,45,45,300
+hot dog,mixed_dish,210,45,45,300
+hummus commercial,legume,210,45,45,300
+hyacinth beans immature seeds raw,vegetable,210,45,45,300
+ice cream bar covered with chocolate and nuts,dairy,210,45,45,300
+ice cream bar stick or nugget with crunch coating,dairy,210,45,45,300
+ice cream cone chocolate covered with nuts flavors other than chocolate,dairy,210,45,45,300
+ice cream cookie sandwich,dairy,210,45,45,300
+ice cream light soft serve chocolate,dairy,210,45,45,300
+ice cream sandwich,dairy,210,45,45,300
+ice cream sandwich vanilla light no sugar added,dairy,210,45,45,300
+ice cream soft serve chocolate,dairy,210,45,45,300
+ice cream sundae cone,dairy,210,45,45,300
+ice creams chocolate,sweet,210,45,45,300
+idli,grain,210,45,45,300
+imitation cheese american or cheddar low cholesterol,dairy,210,45,45,300
+jackfruit canned syrup pack,fruit,210,45,45,300
+jackfruit raw,fruit,210,45,45,300
+jalebi,sweet,210,45,45,300
+java plum (jambolan) raw,fruit,210,45,45,300
+jellyfish dried salted,seafood,210,45,45,300
+jerusalem artichokes raw,vegetable,210,45,45,300
+jews ear (pepeao) raw,vegetable,210,45,45,300
+juice apple and grape blend with added ascorbic acid,fruit,210,45,45,300
+juice apple grape and pear blend with added ascorbic acid and calcium,fruit,210,45,45,300
+jujube chinese fresh dried,fruit,210,45,45,300
+jujube raw,fruit,210,45,45,300
+jute potherb raw,vegetable,210,45,45,300
+kale frozen unprepared,vegetable,210,45,45,300
+kale raw,vegetable,210,45,45,300
+kanpyo (dried gourd strips),vegetable,210,45,45,300
+ketchup restaurant,vegetable,210,45,45,300
+kielbasa fully cooked grilled,meat,210,45,45,300
+kielbasa fully cooked unheated,meat,210,45,45,300
+kiwifruit green raw,fruit,210,45,45,300
+knackwurst knockwurst pork beef,meat,210,45,45,300
+kohlrabi raw,vegetable,210,45,45,300
+kumquats raw,fruit,210,45,45,300
+lamb ground cooked broiled,meat,210,45,45,300
+lamb ground raw,meat,210,45,45,300
+lambsquarters raw,vegetable,210,45,45,300
+lasagna,mixed_dish,210,45,45,300
+lebanon bologna beef,meat,210,45,45,300
+leeks (bulb and lower leaf portion) freeze dried,vegetable,210,45,45,300
+leeks (bulb and lower leaf portion) raw,vegetable,210,45,45,300
+lemon grass (citronella) raw,vegetable,210,45,45,300
+lemon juice from concentrate canned or bottled,fruit,210,45,45,300
+lemon juice raw,fruit,210,45,45,300
+lemon peel raw,fruit,210,45,45,300
+lemons raw without peel,fruit,210,45,45,300
+lentils sprouted raw,vegetable,210,45,45,300
+lettuce iceberg (includes crisphead types) raw,vegetable,210,45,45,300
+lettuce red leaf raw,vegetable,210,45,45,300
+light ice cream creamsicle,dairy,210,45,45,300
+lima beans immature seeds raw,vegetable,210,45,45,300
+lime juice canned or bottled unsweetened,fruit,210,45,45,300
+lime juice raw,fruit,210,45,45,300
+limes raw,fruit,210,45,45,300
+litchis dried,fruit,210,45,45,300
+litchis raw,fruit,210,45,45,300
+liver cheese pork,meat,210,45,45,300
+liver sausage liverwurst pork,meat,210,45,45,300
+liverwurst spread,meat,210,45,45,300
+loganberries frozen,fruit,210,45,45,300
+longans dried,fruit,210,45,45,300
+longans raw,fruit,210,45,45,300
+loquats raw,fruit,210,45,45,300
+lotus root raw,vegetable,210,45,45,300
+luncheon meat pork canned,meat,210,45,45,300
+luncheon meat pork with ham minced canned includes spam (hormel),meat,210,45,45,300
+luncheon sausage pork and beef,meat,210,45,45,300
+luxury loaf pork,meat,210,45,45,300
+macaroni and cheese,mixed_dish,210,45,45,300
+macaroni and cheese loaf chicken pork and beef,meat,210,45,45,300
+malabar spinach cooked,vegetable,210,45,45,300
+mammy apple (mamey) raw,fruit,210,45,45,300
+mango dried sweetened,fruit,210,45,45,300
+mango nectar canned,fruit,210,45,45,300
+mangos raw,fruit,210,45,45,300
+mangosteen canned syrup pack,fruit,210,45,45,300
+maraschino cherries canned drained,fruit,210,45,45,300
+masala dosa,mixed_dish,210,45,45,300
+meatballs frozen italian style,meat,210,45,45,300
+melon balls frozen,fruit,210,45,45,300
+melons casaba raw,fruit,210,45,45,300
+melons honeydew raw,fruit,210,45,45,300
+milk dessert bar frozen made from lowfat milk,dairy,210,45,45,300
+milk low sodium fluid,dairy,210,45,45,300
+milk shakes thick chocolate,dairy,210,45,45,300
+milk shakes thick vanilla,dairy,210,45,45,300
+milk sheep fluid,dairy,210,45,45,300
+milk substitutes fluid with lauric acid oil,dairy,210,45,45,300
+mollusks mussel blue raw,seafood,210,45,45,300
+mollusks snail raw,seafood,210,45,45,300
+mortadella beef pork,meat,210,45,45,300
+mothers loaf pork,meat,210,45,45,300
+mountain yam hawaii raw,vegetable,210,45,45,300
+muffins oat bran,bakery,210,45,45,300
+mulberries raw,fruit,210,45,45,300
+mung beans mature seeds sprouted raw,vegetable,210,45,45,300
+mushrooms morel raw,vegetable,210,45,45,300
+mushrooms white raw,vegetable,210,45,45,300
+mustard greens frozen unprepared,vegetable,210,45,45,300
+mustard greens raw,vegetable,210,45,45,300
+mustard spinach (tendergreen) raw,vegetable,210,45,45,300
+naan plain,bakery,210,45,45,300
+nachos,snack,210,45,45,300
+nance canned syrup drained,fruit,210,45,45,300
+nance frozen unsweetened,fruit,210,45,45,300
+naranjilla (lulo) pulp frozen unsweetened,fruit,210,45,45,300
+nectarines raw,fruit,210,45,45,300
+new zealand spinach raw,vegetable,210,45,45,300
+nopales cooked without salt,vegetable,210,45,45,300
+nopales raw,vegetable,210,45,45,300
+nutritional supplement for people with diabetes liquid,dairy,210,45,45,300
+nuts almonds,nut_seed,210,45,45,300
+oheloberries raw,fruit,210,45,45,300
+okra frozen unprepared,vegetable,210,45,45,300
+okra raw,vegetable,210,45,45,300
+olive loaf pork,meat,210,45,45,300
+olives ripe canned (jumbo super colossal),fruit,210,45,45,300
+olives ripe canned (small extra large),fruit,210,45,45,300
+omelette,egg,210,45,45,300
+onions raw,vegetable,210,45,45,300
+onions red raw,vegetable,210,45,45,300
+orange grapefruit juice canned or bottled unsweetened,fruit,210,45,45,300
+orange juice canned unsweetened,fruit,210,45,45,300
+orange juice chilled includes from concentrate,fruit,210,45,45,300
+orange peel raw,fruit,210,45,45,300
+orange pineapple juice blend,fruit,210,45,45,300
+oranges raw florida,fruit,210,45,45,300
+oranges raw navels,fruit,210,45,45,300
+oscar mayer ham (chopped with natural juice),meat,210,45,45,300
+oscar mayer salami (hard),meat,210,45,45,300
+ostrich fan raw,poultry,210,45,45,300
+ostrich round raw,poultry,210,45,45,300
+pad thai,mixed_dish,210,45,45,300
+paella,mixed_dish,210,45,45,300
+palak paneer,dairy,210,45,45,300
+pancakes,bakery,210,45,45,300
+paneer butter masala,dairy,210,45,45,300
+paneer tikka,dairy,210,45,45,300
+papaya canned heavy syrup drained,fruit,210,45,45,300
+papaya nectar canned,fruit,210,45,45,300
+papayas raw,fruit,210,45,45,300
+paratha aloo,bakery,210,45,45,300
+parmesan cheese topping fat free,dairy,210,45,45,300
+parsley freeze dried,vegetable,210,45,45,300
+parsley fresh,vegetable,210,45,45,300
+parsnips raw,vegetable,210,45,45,300
+passion fruit (granadilla) purple raw,fruit,210,45,45,300
+passion fruit juice purple raw,fruit,210,45,45,300
+passion fruit juice yellow raw,fruit,210,45,45,300
+pasta gluten free corn cooked,grain,210,45,45,300
+pastrami beef 98% fat free,meat,210,45,45,300
+pastrami turkey,meat,210,45,45,300
+pate chicken liver canned,meat,210,45,45,300
+pate de foie gras canned (goose liver pate) smoked,poultry,210,45,45,300
+pate truffle flavor,meat,210,45,45,300
+pav bhaji,mixed_dish,210,45,45,300
+peach nectar canned with added ascorbic acid,fruit,210,45,45,300
+peach nectar canned with sucralose without added ascorbic acid,fruit,210,45,45,300
+peaches frozen sliced sweetened,fruit,210,45,45,300
+peaches yellow raw,fruit,210,45,45,300
+peanuts spanish raw,legume,210,45,45,300
+pear nectar canned with added ascorbic acid,fruit,210,45,45,300
+pear nectar canned without added ascorbic acid,fruit,210,45,45,300
+pears asian raw,fruit,210,45,45,300
+pears raw,fruit,210,45,45,300
+peas and carrots frozen unprepared,vegetable,210,45,45,300
+peas and onions frozen unprepared,vegetable,210,45,45,300
+peas edible podded raw,vegetable,210,45,45,300
+peas green raw,vegetable,210,45,45,300
+peking duck,poultry,210,45,45,300
+pepeao dried,vegetable,210,45,45,300
+pepper banana raw,vegetable,210,45,45,300
+peppered loaf pork beef,meat,210,45,45,300
+pepperoni beef and pork sliced,meat,210,45,45,300
+peppers ancho dried,vegetable,210,45,45,300
+peppers serrano raw,vegetable,210,45,45,300
+persimmons japanese raw,fruit,210,45,45,300
+persimmons native raw,fruit,210,45,45,300
+pheasant raw meat and skin,poultry,210,45,45,300
+pheasant raw meat only,poultry,210,45,45,300
+pho,soup,210,45,45,300
+pickle and pimiento loaf pork,meat,210,45,45,300
+pickle relish hot dog,vegetable,210,45,45,300
+pickle relish sweet,vegetable,210,45,45,300
+pickles cucumber sour,vegetable,210,45,45,300
+pickles cucumber sweet (includes bread and butter pickles),vegetable,210,45,45,300
+picnic loaf pork beef,meat,210,45,45,300
+pigeonpeas immature seeds raw,vegetable,210,45,45,300
+pimento canned,vegetable,210,45,45,300
+pineapple juice canned or bottled unsweetened with added ascorbic acid,fruit,210,45,45,300
+pineapple juice frozen concentrate unsweetened undiluted,fruit,210,45,45,300
+pineapple raw all varieties,fruit,210,45,45,300
+pineapple raw extra sweet variety,fruit,210,45,45,300
+pitanga (surinam cherry) raw,fruit,210,45,45,300
+pizza,mixed_dish,210,45,45,300
+pizza rolls frozen unprepared,mixed_dish,210,45,45,300
+plantains green raw,fruit,210,45,45,300
+plantains yellow raw,fruit,210,45,45,300
+plums raw,fruit,210,45,45,300
+poi,vegetable,210,45,45,300
+pokeberry shoots (poke) raw,vegetable,210,45,45,300
+polish sausage pork,meat,210,45,45,300
+pomegranate juice bottled,fruit,210,45,45,300
+pomegranates raw,fruit,210,45,45,300
+pork fresh belly raw,meat,210,45,45,300
+pork fresh ground raw,meat,210,45,45,300
+pork sausage link/patty cooked pan fried,meat,210,45,45,300
+pork sausage link/patty unprepared,meat,210,45,45,300
+pork sausage rice links brown and serve cooked,meat,210,45,45,300
+potato flour,vegetable,210,45,45,300
+potato pancakes,vegetable,210,45,45,300
+potato puffs frozen oven heated,vegetable,210,45,45,300
+potato puffs frozen unprepared,vegetable,210,45,45,300
+potato salad home prepared,vegetable,210,45,45,300
+potatoes flesh and skin raw,vegetable,210,45,45,300
+potatoes raw skin,vegetable,210,45,45,300
+poultry mechanically deboned from backs and necks with skin raw,poultry,210,45,45,300
+poultry mechanically deboned from mature hens raw,poultry,210,45,45,300
+poultry salad sandwich spread,meat,210,45,45,300
+prickly pears raw,fruit,210,45,45,300
+protein supplement milk based muscle milk light powder,dairy,210,45,45,300
+protein supplement milk based muscle milk powder,dairy,210,45,45,300
+prune juice canned,fruit,210,45,45,300
+prune puree,fruit,210,45,45,300
+prunes dehydrated (low moisture) stewed,fruit,210,45,45,300
+prunes dehydrated (low moisture) uncooked,fruit,210,45,45,300
+pummelo raw,fruit,210,45,45,300
+pumpkin canned with salt,vegetable,210,45,45,300
+pumpkin flowers raw,vegetable,210,45,45,300
+pumpkin leaves raw,vegetable,210,45,45,300
+pumpkin pie mix canned,vegetable,210,45,45,300
+pumpkin raw,vegetable,210,45,45,300
+purslane raw,vegetable,210,45,45,300
+quail meat and skin raw,poultry,210,45,45,300
+quail meat only raw,poultry,210,45,45,300
+quinces raw,fruit,210,45,45,300
+radicchio raw,vegetable,210,45,45,300
+radish seeds sprouted raw,vegetable,210,45,45,300
+radishes oriental raw,vegetable,210,45,45,300
+radishes raw,vegetable,210,45,45,300
+raisins golden seedless,fruit,210,45,45,300
+raisins seeded,fruit,210,45,45,300
+rajma masala,legume,210,45,45,300
+rambutan canned syrup pack,fruit,210,45,45,300
+ramen,soup,210,45,45,300
+raspberries raw,fruit,210,45,45,300
+raspberry juice concentrate,fruit,210,45,45,300
+ravioli,mixed_dish,210,45,45,300
+rhubarb raw,fruit,210,45,45,300
+rice crackers,snack,210,45,45,300
+risotto,grain,210,45,45,300
+roast beef deli style prepackaged sliced,meat,210,45,45,300
+roast beef spread,meat,210,45,45,300
+rose apples raw,fruit,210,45,45,300
+roselle raw,fruit,210,45,45,300
+roti chapati,bakery,210,45,45,300
+rowal raw,fruit,210,45,45,300
+ruffed grouse breast meat skinless raw,poultry,210,45,45,300
+rutabagas raw,vegetable,210,45,45,300
+salami cooked beef,meat,210,45,45,300
+salami italian pork,meat,210,45,45,300
+salmon nuggets breaded frozen heated,seafood,210,45,45,300
+salmon nuggets cooked as purchased unheated,seafood,210,45,45,300
+salmon sockeye canned total can contents,seafood,210,45,45,300
+salsify (vegetable oyster) raw,vegetable,210,45,45,300
+samosa,snack,210,45,45,300
+sandwich spread pork beef,meat,210,45,45,300
+sapodilla raw,fruit,210,45,45,300
+sapote mamey raw,fruit,210,45,45,300
+sashimi,seafood,210,45,45,300
+sauerkraut canned solids and liquids,vegetable,210,45,45,300
+sausage turkey fresh raw,meat,210,45,45,300
+scrapple pork,meat,210,45,45,300
+seaweed agar raw,vegetable,210,45,45,300
+seaweed kelp raw,vegetable,210,45,45,300
+sesbania flower raw,vegetable,210,45,45,300
+shallots freeze dried,vegetable,210,45,45,300
+shallots raw,vegetable,210,45,45,300
+soursop raw,fruit,210,45,45,300
+soybeans green raw,vegetable,210,45,45,300
+spaghetti bolognese,mixed_dish,210,45,45,300
+spinach raw,vegetable,210,45,45,300
+spinach souffle,vegetable,210,45,45,300
+spring rolls,snack,210,45,45,300
+squab (pigeon) meat and skin raw,poultry,210,45,45,300
+squab (pigeon) meat only raw,poultry,210,45,45,300
+squash winter acorn raw,vegetable,210,45,45,300
+steak,meat,210,45,45,300
+strawberries frozen sweetened sliced,fruit,210,45,45,300
+strawberries raw,fruit,210,45,45,300
+succotash (corn and limas) frozen unprepared,vegetable,210,45,45,300
+succotash (corn and limas) raw,vegetable,210,45,45,300
+sugar apples (sweetsop) raw,fruit,210,45,45,300
+sushi,seafood,210,45,45,300
+sweet potato canned mashed,vegetable,210,45,45,300
+sweet potato canned vacuum pack,vegetable,210,45,45,300
+sweet potato leaves raw,vegetable,210,45,45,300
+sweet potato puffs frozen unprepared,vegetable,210,45,45,300
+swisswurst pork and beef with swiss cheese smoked,meat,210,45,45,300
+tacos,mixed_dish,210,45,45,300
+tamarind nectar canned,fruit,210,45,45,300
+tamarinds raw,fruit,210,45,45,300
+tangerine juice raw,fruit,210,45,45,300
+tangerines (mandarin oranges) canned juice pack,fruit,210,45,45,300
+tangerines (mandarin oranges) raw,fruit,210,45,45,300
+taro leaves raw,vegetable,210,45,45,300
+taro raw,vegetable,210,45,45,300
+taro shoots cooked without salt,vegetable,210,45,45,300
+taro shoots raw,vegetable,210,45,45,300
+taro tahitian raw,vegetable,210,45,45,300
+thuringer cervelat summer sausage beef pork,meat,210,45,45,300
+tiramisu,sweet,210,45,45,300
+tomatillos raw,vegetable,210,45,45,300
+tomato and vegetable juice low sodium,vegetable,210,45,45,300
+tomato juice canned with salt added,vegetable,210,45,45,300
+tomato powder,vegetable,210,45,45,300
+tomato products canned sauce,vegetable,210,45,45,300
+tomato sauce canned no salt added,vegetable,210,45,45,300
+tomatoes green raw,vegetable,210,45,45,300
+tomatoes sun dried,vegetable,210,45,45,300
+tortilla chips yellow plain salted,snack,210,45,45,300
+tree fern cooked with salt,vegetable,210,45,45,300
+tree fern cooked without salt,vegetable,210,45,45,300
+turkey and gravy frozen,poultry,210,45,45,300
+turkey breast pre basted meat and skin cooked roasted,poultry,210,45,45,300
+turkey breast sliced prepackaged,meat,210,45,45,300
+turkey from whole light meat meat and skin with added solution raw,poultry,210,45,45,300
+turkey from whole light meat meat only with added solution raw,poultry,210,45,45,300
+turkey ground cooked,poultry,210,45,45,300
+turkey ground raw,poultry,210,45,45,300
+turkey roast boneless frozen seasoned light and dark meat raw,poultry,210,45,45,300
+turkey sticks breaded battered fried,poultry,210,45,45,300
+turkey thigh pre basted meat and skin cooked roasted,poultry,210,45,45,300
+turnip greens frozen unprepared,vegetable,210,45,45,300
+turnip greens raw,vegetable,210,45,45,300
+turnips frozen unprepared,vegetable,210,45,45,300
+turnips raw,vegetable,210,45,45,300
+turtle green raw,seafood,210,45,45,300
+vada pav,snack,210,45,45,300
+veal ground raw,meat,210,45,45,300
+veal seam fat only raw,meat,210,45,45,300
+vegetables mixed (corn lima beans peas green beans carrots) canned no salt added,vegetable,210,45,45,300
+vegetables mixed frozen unprepared,vegetable,210,45,45,300
+vinespinach (basella) raw,vegetable,210,45,45,300
+waffles,bakery,210,45,45,300
+wasabi root raw,vegetable,210,45,45,300
+water convolvulus raw,vegetable,210,45,45,300
+waterchestnuts chinese (matai) raw,vegetable,210,45,45,300
+watercress raw,vegetable,210,45,45,300
+watermelon raw,fruit,210,45,45,300
+waxgourd (chinese preserving melon) raw,vegetable,210,45,45,300
+winged bean leaves raw,vegetable,210,45,45,300
+winged bean tuber raw,vegetable,210,45,45,300
+winged beans immature seeds raw,vegetable,210,45,45,300
+yachtwurst with pistachio nuts cooked,meat,210,45,45,300
+yam raw,vegetable,210,45,45,300
+yambean (jicama) raw,vegetable,210,45,45,300
+yardlong bean raw,vegetable,210,45,45,300
+yautia (tannier) raw,vegetable,210,45,45,300
+yeast extract spread,vegetable,210,45,45,300
+yogurt plain low fat,dairy,210,45,45,300

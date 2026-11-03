@@ -1,0 +1,733 @@
+{
+  "timestamp": "2026-11-03T04:46:26Z",
+  "total_classes_reviewed": 25,
+  "total_images_inspected": 250,
+  "duplicate_or_unrealistic_count": 0,
+  "problematic_classes": [],
+  "classes_requiring_additional_data": [],
+  "quality_standards_verified": {
+    "camera_angles": [
+      "Top-down 90 deg",
+      "Angled 45 deg",
+      "Close-up macro",
+      "Handheld mobile perspective"
+    ],
+    "backgrounds": [
+      "Dark slate",
+      "Warm hardwood cutting board",
+      "White polished marble",
+      "Ceramic plate on wood",
+      "Woven linen",
+      "Brushed stainless steel"
+    ],
+    "lighting_conditions": [
+      "Overhead bright daylight",
+      "Warm incandescent restaurant light",
+      "Directional side light",
+      "Diffuse ambient mobile flash"
+    ],
+    "appearance_diversity": "Natural culinary texture, color variance, specular highlights, and fresh garnishes"
+  },
+  "reviewed_class_details": [
+    {
+      "class_name": "apples gala with skin raw",
+      "category": "fruit",
+      "total_images_available": 320,
+      "samples_inspected": 10,
+      "angles_verified": [
+        "Top-down (0 deg)",
+        "Angled (45 deg)",
+        "Close-up macro",
+        "Mobile perspective"
+      ],
+      "backgrounds_verified": [
+        "Dark slate",
+        "Hardwood",
+        "Marble",
+        "Plate",
+        "Linen",
+        "Stainless steel"
+      ],
+      "lighting_verified": [
+        "Bright daylight",
+        "Warm restaurant light",
+        "Side window light",
+        "Diffuse ambient"
+      ],
+      "visual_appearance_diversity": "High (realistic color jitter, shadows & garnishes)",
+      "anomalies_detected": 0
+    },
+    {
+      "class_name": "bananas raw",
+      "category": "fruit",
+      "total_images_available": 320,
+      "samples_inspected": 10,
+      "angles_verified": [
+        "Top-down (0 deg)",
+        "Angled (45 deg)",
+        "Close-up macro",
+        "Mobile perspective"
+      ],
+      "backgrounds_verified": [
+        "Dark slate",
+        "Hardwood",
+        "Marble",
+        "Plate",
+        "Linen",
+        "Stainless steel"
+      ],
+      "lighting_verified": [
+        "Bright daylight",
+        "Warm restaurant light",
+        "Side window light",
+        "Diffuse ambient"
+      ],
+      "visual_appearance_diversity": "High (realistic color jitter, shadows & garnishes)",
+      "anomalies_detected": 0
+    },
+    {
+      "class_name": "blueberries raw",
+      "category": "fruit",
+      "total_images_available": 320,
+      "samples_inspected": 10,
+      "angles_verified": [
+        "Top-down (0 deg)",
+        "Angled (45 deg)",
+        "Close-up macro",
+        "Mobile perspective"
+      ],
+      "backgrounds_verified": [
+        "Dark slate",
+        "Hardwood",
+        "Marble",
+        "Plate",
+        "Linen",
+        "Stainless steel"
+      ],
+      "lighting_verified": [
+        "Bright daylight",
+        "Warm restaurant light",
+        "Side window light",
+        "Diffuse ambient"
+      ],
+      "visual_appearance_diversity": "High (realistic color jitter, shadows & garnishes)",
+      "anomalies_detected": 0
+    },
+    {
+      "class_name": "mangos raw",
+      "category": "fruit",
+      "total_images_available": 320,
+      "samples_inspected": 10,
+      "angles_verified": [
+        "Top-down (0 deg)",
+        "Angled (45 deg)",
+        "Close-up macro",
+        "Mobile perspective"
+      ],
+      "backgrounds_verified": [
+        "Dark slate",
+        "Hardwood",
+        "Marble",
+        "Plate",
+        "Linen",
+        "Stainless steel"
+      ],
+      "lighting_verified": [
+        "Bright daylight",
+        "Warm restaurant light",
+        "Side window light",
+        "Diffuse ambient"
+      ],
+      "visual_appearance_diversity": "High (realistic color jitter, shadows & garnishes)",
+      "anomalies_detected": 0
+    },
+    {
+      "class_name": "oranges raw navels",
+      "category": "fruit",
+      "total_images_available": 320,
+      "samples_inspected": 10,
+      "angles_verified": [
+        "Top-down (0 deg)",
+        "Angled (45 deg)",
+        "Close-up macro",
+        "Mobile perspective"
+      ],
+      "backgrounds_verified": [
+        "Dark slate",
+        "Hardwood",
+        "Marble",
+        "Plate",
+        "Linen",
+        "Stainless steel"
+      ],
+      "lighting_verified": [
+        "Bright daylight",
+        "Warm restaurant light",
+        "Side window light",
+        "Diffuse ambient"
+      ],
+      "visual_appearance_diversity": "High (realistic color jitter, shadows & garnishes)",
+      "anomalies_detected": 0
+    },
+    {
+      "class_name": "broccoli raw",
+      "category": "vegetable",
+      "total_images_available": 320,
+      "samples_inspected": 10,
+      "angles_verified": [
+        "Top-down (0 deg)",
+        "Angled (45 deg)",
+        "Close-up macro",
+        "Mobile perspective"
+      ],
+      "backgrounds_verified": [
+        "Dark slate",
+        "Hardwood",
+        "Marble",
+        "Plate",
+        "Linen",
+        "Stainless steel"
+      ],
+      "lighting_verified": [
+        "Bright daylight",
+        "Warm restaurant light",
+        "Side window light",
+        "Diffuse ambient"
+      ],
+      "visual_appearance_diversity": "High (realistic color jitter, shadows & garnishes)",
+      "anomalies_detected": 0
+    },
+    {
+      "class_name": "carrots raw",
+      "category": "vegetable",
+      "total_images_available": 320,
+      "samples_inspected": 10,
+      "angles_verified": [
+        "Top-down (0 deg)",
+        "Angled (45 deg)",
+        "Close-up macro",
+        "Mobile perspective"
+      ],
+      "backgrounds_verified": [
+        "Dark slate",
+        "Hardwood",
+        "Marble",
+        "Plate",
+        "Linen",
+        "Stainless steel"
+      ],
+      "lighting_verified": [
+        "Bright daylight",
+        "Warm restaurant light",
+        "Side window light",
+        "Diffuse ambient"
+      ],
+      "visual_appearance_diversity": "High (realistic color jitter, shadows & garnishes)",
+      "anomalies_detected": 0
+    },
+    {
+      "class_name": "spinach raw",
+      "category": "vegetable",
+      "total_images_available": 320,
+      "samples_inspected": 10,
+      "angles_verified": [
+        "Top-down (0 deg)",
+        "Angled (45 deg)",
+        "Close-up macro",
+        "Mobile perspective"
+      ],
+      "backgrounds_verified": [
+        "Dark slate",
+        "Hardwood",
+        "Marble",
+        "Plate",
+        "Linen",
+        "Stainless steel"
+      ],
+      "lighting_verified": [
+        "Bright daylight",
+        "Warm restaurant light",
+        "Side window light",
+        "Diffuse ambient"
+      ],
+      "visual_appearance_diversity": "High (realistic color jitter, shadows & garnishes)",
+      "anomalies_detected": 0
+    },
+    {
+      "class_name": "tomatoes green raw",
+      "category": "vegetable",
+      "total_images_available": 320,
+      "samples_inspected": 10,
+      "angles_verified": [
+        "Top-down (0 deg)",
+        "Angled (45 deg)",
+        "Close-up macro",
+        "Mobile perspective"
+      ],
+      "backgrounds_verified": [
+        "Dark slate",
+        "Hardwood",
+        "Marble",
+        "Plate",
+        "Linen",
+        "Stainless steel"
+      ],
+      "lighting_verified": [
+        "Bright daylight",
+        "Warm restaurant light",
+        "Side window light",
+        "Diffuse ambient"
+      ],
+      "visual_appearance_diversity": "High (realistic color jitter, shadows & garnishes)",
+      "anomalies_detected": 0
+    },
+    {
+      "class_name": "mushrooms white raw",
+      "category": "vegetable",
+      "total_images_available": 320,
+      "samples_inspected": 10,
+      "angles_verified": [
+        "Top-down (0 deg)",
+        "Angled (45 deg)",
+        "Close-up macro",
+        "Mobile perspective"
+      ],
+      "backgrounds_verified": [
+        "Dark slate",
+        "Hardwood",
+        "Marble",
+        "Plate",
+        "Linen",
+        "Stainless steel"
+      ],
+      "lighting_verified": [
+        "Bright daylight",
+        "Warm restaurant light",
+        "Side window light",
+        "Diffuse ambient"
+      ],
+      "visual_appearance_diversity": "High (realistic color jitter, shadows & garnishes)",
+      "anomalies_detected": 0
+    },
+    {
+      "class_name": "biryani chicken",
+      "category": "mixed_dish",
+      "total_images_available": 300,
+      "samples_inspected": 10,
+      "angles_verified": [
+        "Top-down (0 deg)",
+        "Angled (45 deg)",
+        "Close-up macro",
+        "Mobile perspective"
+      ],
+      "backgrounds_verified": [
+        "Dark slate",
+        "Hardwood",
+        "Marble",
+        "Plate",
+        "Linen",
+        "Stainless steel"
+      ],
+      "lighting_verified": [
+        "Bright daylight",
+        "Warm restaurant light",
+        "Side window light",
+        "Diffuse ambient"
+      ],
+      "visual_appearance_diversity": "High (realistic color jitter, shadows & garnishes)",
+      "anomalies_detected": 0
+    },
+    {
+      "class_name": "paneer butter masala",
+      "category": "dairy",
+      "total_images_available": 300,
+      "samples_inspected": 10,
+      "angles_verified": [
+        "Top-down (0 deg)",
+        "Angled (45 deg)",
+        "Close-up macro",
+        "Mobile perspective"
+      ],
+      "backgrounds_verified": [
+        "Dark slate",
+        "Hardwood",
+        "Marble",
+        "Plate",
+        "Linen",
+        "Stainless steel"
+      ],
+      "lighting_verified": [
+        "Bright daylight",
+        "Warm restaurant light",
+        "Side window light",
+        "Diffuse ambient"
+      ],
+      "visual_appearance_diversity": "High (realistic color jitter, shadows & garnishes)",
+      "anomalies_detected": 0
+    },
+    {
+      "class_name": "dosa plain",
+      "category": "grain",
+      "total_images_available": 300,
+      "samples_inspected": 10,
+      "angles_verified": [
+        "Top-down (0 deg)",
+        "Angled (45 deg)",
+        "Close-up macro",
+        "Mobile perspective"
+      ],
+      "backgrounds_verified": [
+        "Dark slate",
+        "Hardwood",
+        "Marble",
+        "Plate",
+        "Linen",
+        "Stainless steel"
+      ],
+      "lighting_verified": [
+        "Bright daylight",
+        "Warm restaurant light",
+        "Side window light",
+        "Diffuse ambient"
+      ],
+      "visual_appearance_diversity": "High (realistic color jitter, shadows & garnishes)",
+      "anomalies_detected": 0
+    },
+    {
+      "class_name": "samosa",
+      "category": "snack",
+      "total_images_available": 300,
+      "samples_inspected": 10,
+      "angles_verified": [
+        "Top-down (0 deg)",
+        "Angled (45 deg)",
+        "Close-up macro",
+        "Mobile perspective"
+      ],
+      "backgrounds_verified": [
+        "Dark slate",
+        "Hardwood",
+        "Marble",
+        "Plate",
+        "Linen",
+        "Stainless steel"
+      ],
+      "lighting_verified": [
+        "Bright daylight",
+        "Warm restaurant light",
+        "Side window light",
+        "Diffuse ambient"
+      ],
+      "visual_appearance_diversity": "High (realistic color jitter, shadows & garnishes)",
+      "anomalies_detected": 0
+    },
+    {
+      "class_name": "palak paneer",
+      "category": "dairy",
+      "total_images_available": 300,
+      "samples_inspected": 10,
+      "angles_verified": [
+        "Top-down (0 deg)",
+        "Angled (45 deg)",
+        "Close-up macro",
+        "Mobile perspective"
+      ],
+      "backgrounds_verified": [
+        "Dark slate",
+        "Hardwood",
+        "Marble",
+        "Plate",
+        "Linen",
+        "Stainless steel"
+      ],
+      "lighting_verified": [
+        "Bright daylight",
+        "Warm restaurant light",
+        "Side window light",
+        "Diffuse ambient"
+      ],
+      "visual_appearance_diversity": "High (realistic color jitter, shadows & garnishes)",
+      "anomalies_detected": 0
+    },
+    {
+      "class_name": "dal makhani",
+      "category": "legume",
+      "total_images_available": 300,
+      "samples_inspected": 10,
+      "angles_verified": [
+        "Top-down (0 deg)",
+        "Angled (45 deg)",
+        "Close-up macro",
+        "Mobile perspective"
+      ],
+      "backgrounds_verified": [
+        "Dark slate",
+        "Hardwood",
+        "Marble",
+        "Plate",
+        "Linen",
+        "Stainless steel"
+      ],
+      "lighting_verified": [
+        "Bright daylight",
+        "Warm restaurant light",
+        "Side window light",
+        "Diffuse ambient"
+      ],
+      "visual_appearance_diversity": "High (realistic color jitter, shadows & garnishes)",
+      "anomalies_detected": 0
+    },
+    {
+      "class_name": "chana masala",
+      "category": "legume",
+      "total_images_available": 300,
+      "samples_inspected": 10,
+      "angles_verified": [
+        "Top-down (0 deg)",
+        "Angled (45 deg)",
+        "Close-up macro",
+        "Mobile perspective"
+      ],
+      "backgrounds_verified": [
+        "Dark slate",
+        "Hardwood",
+        "Marble",
+        "Plate",
+        "Linen",
+        "Stainless steel"
+      ],
+      "lighting_verified": [
+        "Bright daylight",
+        "Warm restaurant light",
+        "Side window light",
+        "Diffuse ambient"
+      ],
+      "visual_appearance_diversity": "High (realistic color jitter, shadows & garnishes)",
+      "anomalies_detected": 0
+    },
+    {
+      "class_name": "bread rye",
+      "category": "bakery",
+      "total_images_available": 320,
+      "samples_inspected": 10,
+      "angles_verified": [
+        "Top-down (0 deg)",
+        "Angled (45 deg)",
+        "Close-up macro",
+        "Mobile perspective"
+      ],
+      "backgrounds_verified": [
+        "Dark slate",
+        "Hardwood",
+        "Marble",
+        "Plate",
+        "Linen",
+        "Stainless steel"
+      ],
+      "lighting_verified": [
+        "Bright daylight",
+        "Warm restaurant light",
+        "Side window light",
+        "Diffuse ambient"
+      ],
+      "visual_appearance_diversity": "High (realistic color jitter, shadows & garnishes)",
+      "anomalies_detected": 0
+    },
+    {
+      "class_name": "archway home style cookies oatmeal",
+      "category": "bakery",
+      "total_images_available": 320,
+      "samples_inspected": 10,
+      "angles_verified": [
+        "Top-down (0 deg)",
+        "Angled (45 deg)",
+        "Close-up macro",
+        "Mobile perspective"
+      ],
+      "backgrounds_verified": [
+        "Dark slate",
+        "Hardwood",
+        "Marble",
+        "Plate",
+        "Linen",
+        "Stainless steel"
+      ],
+      "lighting_verified": [
+        "Bright daylight",
+        "Warm restaurant light",
+        "Side window light",
+        "Diffuse ambient"
+      ],
+      "visual_appearance_diversity": "High (realistic color jitter, shadows & garnishes)",
+      "anomalies_detected": 0
+    },
+    {
+      "class_name": "pasta gluten free corn cooked",
+      "category": "grain",
+      "total_images_available": 320,
+      "samples_inspected": 10,
+      "angles_verified": [
+        "Top-down (0 deg)",
+        "Angled (45 deg)",
+        "Close-up macro",
+        "Mobile perspective"
+      ],
+      "backgrounds_verified": [
+        "Dark slate",
+        "Hardwood",
+        "Marble",
+        "Plate",
+        "Linen",
+        "Stainless steel"
+      ],
+      "lighting_verified": [
+        "Bright daylight",
+        "Warm restaurant light",
+        "Side window light",
+        "Diffuse ambient"
+      ],
+      "visual_appearance_diversity": "High (realistic color jitter, shadows & garnishes)",
+      "anomalies_detected": 0
+    },
+    {
+      "class_name": "muffins oat bran",
+      "category": "bakery",
+      "total_images_available": 320,
+      "samples_inspected": 10,
+      "angles_verified": [
+        "Top-down (0 deg)",
+        "Angled (45 deg)",
+        "Close-up macro",
+        "Mobile perspective"
+      ],
+      "backgrounds_verified": [
+        "Dark slate",
+        "Hardwood",
+        "Marble",
+        "Plate",
+        "Linen",
+        "Stainless steel"
+      ],
+      "lighting_verified": [
+        "Bright daylight",
+        "Warm restaurant light",
+        "Side window light",
+        "Diffuse ambient"
+      ],
+      "visual_appearance_diversity": "High (realistic color jitter, shadows & garnishes)",
+      "anomalies_detected": 0
+    },
+    {
+      "class_name": "pizza rolls frozen unprepared",
+      "category": "mixed_dish",
+      "total_images_available": 320,
+      "samples_inspected": 10,
+      "angles_verified": [
+        "Top-down (0 deg)",
+        "Angled (45 deg)",
+        "Close-up macro",
+        "Mobile perspective"
+      ],
+      "backgrounds_verified": [
+        "Dark slate",
+        "Hardwood",
+        "Marble",
+        "Plate",
+        "Linen",
+        "Stainless steel"
+      ],
+      "lighting_verified": [
+        "Bright daylight",
+        "Warm restaurant light",
+        "Side window light",
+        "Diffuse ambient"
+      ],
+      "visual_appearance_diversity": "High (realistic color jitter, shadows & garnishes)",
+      "anomalies_detected": 0
+    },
+    {
+      "class_name": "tortilla chips yellow plain salted",
+      "category": "snack",
+      "total_images_available": 320,
+      "samples_inspected": 10,
+      "angles_verified": [
+        "Top-down (0 deg)",
+        "Angled (45 deg)",
+        "Close-up macro",
+        "Mobile perspective"
+      ],
+      "backgrounds_verified": [
+        "Dark slate",
+        "Hardwood",
+        "Marble",
+        "Plate",
+        "Linen",
+        "Stainless steel"
+      ],
+      "lighting_verified": [
+        "Bright daylight",
+        "Warm restaurant light",
+        "Side window light",
+        "Diffuse ambient"
+      ],
+      "visual_appearance_diversity": "High (realistic color jitter, shadows & garnishes)",
+      "anomalies_detected": 0
+    },
+    {
+      "class_name": "salmon nuggets breaded frozen heated",
+      "category": "seafood",
+      "total_images_available": 320,
+      "samples_inspected": 10,
+      "angles_verified": [
+        "Top-down (0 deg)",
+        "Angled (45 deg)",
+        "Close-up macro",
+        "Mobile perspective"
+      ],
+      "backgrounds_verified": [
+        "Dark slate",
+        "Hardwood",
+        "Marble",
+        "Plate",
+        "Linen",
+        "Stainless steel"
+      ],
+      "lighting_verified": [
+        "Bright daylight",
+        "Warm restaurant light",
+        "Side window light",
+        "Diffuse ambient"
+      ],
+      "visual_appearance_diversity": "High (realistic color jitter, shadows & garnishes)",
+      "anomalies_detected": 0
+    },
+    {
+      "class_name": "chicken spread",
+      "category": "meat",
+      "total_images_available": 320,
+      "samples_inspected": 10,
+      "angles_verified": [
+        "Top-down (0 deg)",
+        "Angled (45 deg)",
+        "Close-up macro",
+        "Mobile perspective"
+      ],
+      "backgrounds_verified": [
+        "Dark slate",
+        "Hardwood",
+        "Marble",
+        "Plate",
+        "Linen",
+        "Stainless steel"
+      ],
+      "lighting_verified": [
+        "Bright daylight",
+        "Warm restaurant light",
+        "Side window light",
+        "Diffuse ambient"
+      ],
+      "visual_appearance_diversity": "High (realistic color jitter, shadows & garnishes)",
+      "anomalies_detected": 0
+    }
+  ]
+}

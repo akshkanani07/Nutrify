@@ -218,3 +218,4 @@ def run_scalability_verification() -> dict[str, Any]:
 
 if __name__ == "__main__":
     run_scalability_verification()
+

@@ -1,0 +1,10 @@
+{
+  "total_classes": 650,
+  "images_per_class": 300,
+  "total_images": 195000,
+  "train_samples": 136500,
+  "val_samples": 29250,
+  "test_samples": 29250,
+  "split_ratio": "70% / 15% / 15%",
+  "generation_time_s": 1029.61
+}

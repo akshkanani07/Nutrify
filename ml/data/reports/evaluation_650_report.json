@@ -1,0 +1,233 @@
+{
+  "timestamp": "2026-11-03T05:21:50Z",
+  "checkpoint_path": "C:\\Nutrify\\ml\\models\\production\\nutrition_model_650_best.pt",
+  "total_classes": 650,
+  "test_samples": 1950,
+  "overall_metrics": {
+    "top1_accuracy": 4.46,
+    "top5_accuracy": 12.05,
+    "macro_precision": 2.89,
+    "macro_recall": 4.46,
+    "macro_f1": 2.71,
+    "ece_calibration_error": 0.0804
+  },
+  "category_accuracy": {
+    "bakery": 8.33,
+    "condiment_sauce": 0.0,
+    "dairy": 4.4,
+    "egg": 0.0,
+    "fruit": 5.56,
+    "grain": 9.52,
+    "legume": 11.11,
+    "meat": 2.35,
+    "mixed_dish": 3.33,
+    "nut_seed": 33.33,
+    "poultry": 2.56,
+    "seafood": 0.0,
+    "snack": 4.76,
+    "soup": 0.0,
+    "sweet": 22.22,
+    "vegetable": 3.62
+  },
+  "top_confused_pairs": [
+    {
+      "true_class": "arrowroot raw",
+      "predicted_class": "celtuce raw",
+      "count": 3
+    },
+    {
+      "true_class": "beef cured pastrami",
+      "predicted_class": "beerwurst pork and beef",
+      "count": 3
+    },
+    {
+      "true_class": "bibimbap",
+      "predicted_class": "chana masala",
+      "count": 3
+    },
+    {
+      "true_class": "carrot dehydrated",
+      "predicted_class": "carrot cake",
+      "count": 3
+    },
+    {
+      "true_class": "carrots baby raw",
+      "predicted_class": "carrot cake",
+      "count": 3
+    },
+    {
+      "true_class": "cheesefurter cheese smokie pork beef",
+      "predicted_class": "beerwurst pork and beef",
+      "count": 3
+    },
+    {
+      "true_class": "crab cakes",
+      "predicted_class": "cheesecake",
+      "count": 3
+    },
+    {
+      "true_class": "pancakes",
+      "predicted_class": "cheesecake",
+      "count": 3
+    },
+    {
+      "true_class": "roast beef deli style prepackaged sliced",
+      "predicted_class": "beerwurst pork and beef",
+      "count": 3
+    },
+    {
+      "true_class": "samosa",
+      "predicted_class": "carrot cake",
+      "count": 3
+    }
+  ],
+  "comparison_50_vs_650": {
+    "50_classes_baseline": {
+      "top1_accuracy": 75.58,
+      "top5_accuracy": 98.88,
+      "classes": 50,
+      "images": 16000
+    },
+    "650_classes_scaled": {
+      "top1_accuracy": 4.46,
+      "top5_accuracy": 12.05,
+      "classes": 650,
+      "images": 195000,
+      "macro_precision": 2.89,
+      "macro_recall": 4.46,
+      "macro_f1": 2.71,
+      "ece_score": 0.0804
+    }
+  },
+  "phase1_history": [
+    {
+      "epoch": 1,
+      "train_loss": 5.9338786101708045,
+      "train_top1": 2.415384613623986,
+      "val_loss": 4.922165355682373,
+      "val_top1": 6.615384614161956,
+      "val_top5": 18.666666666666668,
+      "learning_rate": 0.0009757729755661011,
+      "status": "BEST UPDATED (val_loss=4.9222)"
+    },
+    {
+      "epoch": 2,
+      "train_loss": 4.554149596581092,
+      "train_top1": 10.676923073401818,
+      "val_loss": 4.6818756974049105,
+      "val_top1": 8.717948717948717,
+      "val_top5": 21.641025641025642,
+      "learning_rate": 0.000905463412215599,
+      "status": "BEST UPDATED (val_loss=4.6819)"
+    },
+    {
+      "epoch": 3,
+      "train_loss": 4.107991366459773,
+      "train_top1": 14.96923076570951,
+      "val_loss": 4.627517575484056,
+      "val_top1": 9.487179484734169,
+      "val_top5": 23.384615384615383,
+      "learning_rate": 0.0007959536998847742,
+      "status": "BEST UPDATED (val_loss=4.6275)"
+    },
+    {
+      "epoch": 4,
+      "train_loss": 3.764771262535682,
+      "train_top1": 21.26153845860408,
+      "val_loss": 4.6574955534323665,
+      "val_top1": 9.94871794749529,
+      "val_top5": 23.128205128205128,
+      "learning_rate": 0.000657963412215599,
+      "status": "No change"
+    },
+    {
+      "epoch": 5,
+      "train_loss": 3.4528424912966216,
+      "train_top1": 27.307692298302285,
+      "val_loss": 4.6788145241370565,
+      "val_top1": 9.487179485956828,
+      "val_top5": 23.435897435897434,
+      "learning_rate": 0.000505,
+      "status": "No change"
+    },
+    {
+      "epoch": 6,
+      "train_loss": 3.1521520186204177,
+      "train_top1": 34.95384613976112,
+      "val_loss": 4.733867784646841,
+      "val_top1": 10.256410253964937,
+      "val_top5": 23.948717938936674,
+      "learning_rate": 0.0003520365877844011,
+      "status": "No change"
+    },
+    {
+      "epoch": 7,
+      "train_loss": 2.8672286770160382,
+      "train_top1": 43.10769230299729,
+      "val_loss": 4.766417504824124,
+      "val_top1": 10.256410253964937,
+      "val_top5": 24.41025640536577,
+      "learning_rate": 0.00021404630011522585,
+      "status": "No change"
+    },
+    {
+      "epoch": 8,
+      "train_loss": 2.646756225292499,
+      "train_top1": 50.476923065185545,
+      "val_loss": 4.798712636507474,
+      "val_top1": 9.846153843708528,
+      "val_top5": 24.61538461049398,
+      "learning_rate": 0.00010453658778440107,
+      "status": "No change"
+    },
+    {
+      "epoch": 9,
+      "train_loss": 2.4787496431790865,
+      "train_top1": 56.32307690664438,
+      "val_loss": 4.813370174994835,
+      "val_top1": 10.615384612939296,
+      "val_top5": 24.35897435408372,
+      "learning_rate": 3.4227024433899005e-05,
+      "status": "No change"
+    },
+    {
+      "epoch": 10,
+      "train_loss": 2.388503676194411,
+      "train_top1": 60.06153844275841,
+      "val_loss": 4.817618624369303,
+      "val_top1": 10.564102561657245,
+      "val_top5": 24.205128200237567,
+      "learning_rate": 1e-05,
+      "status": "No change"
+    }
+  ],
+  "phase2_history": [
+    {
+      "epoch": 1,
+      "train_loss": 6.116176916269156,
+      "val_loss": 5.550604921487661,
+      "val_top1": 6.666666665444008,
+      "val_top5": 18.512820512820515,
+      "learning_rate": 7.525e-05,
+      "status": "No change"
+    },
+    {
+      "epoch": 2,
+      "train_loss": 5.300513374622051,
+      "val_loss": 5.791410984137119,
+      "val_top1": 6.256410255187597,
+      "val_top5": 17.94871794871795,
+      "learning_rate": 2.5750000000000013e-05,
+      "status": "No change"
+    },
+    {
+      "epoch": 3,
+      "train_loss": 4.804410200852614,
+      "val_loss": 5.857815191806891,
+      "val_top1": 6.307692306469648,
+      "val_top5": 17.53846153846154,
+      "learning_rate": 1e-06,
+      "status": "No change"
+    }
+  ]
+}
