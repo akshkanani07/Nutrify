@@ -215,15 +215,26 @@ def create_app() -> FastAPI:
             return _error_response(rid, 500, "INTERNAL_ERROR", f"Unexpected error: {exc}")
 
         # --- build response ---
+        items_list = result.get("items", [])
+        totals_dict = result.get("totals") or {}
+        first_item = items_list[0] if items_list else {}
+
         resp = AnalysisResponse(
             request_id=rid,
             provider=provider.name,
             model_version=getattr(provider, "model_version", None),
             status=result.get("status", "ok"),
-            items=result.get("items", []),
+            items=items_list,
             totals=result.get("totals"),
             score=result.get("score"),
             advice=result.get("advice", []),
+            food_name=first_item.get("name") if isinstance(first_item, dict) else getattr(first_item, "name", None),
+            confidence=first_item.get("confidence") if isinstance(first_item, dict) else getattr(first_item, "confidence", None),
+            calories=totals_dict.get("calories") if isinstance(totals_dict, dict) else getattr(totals_dict, "calories", None),
+            protein=totals_dict.get("protein_g") if isinstance(totals_dict, dict) else getattr(totals_dict, "protein_g", None),
+            carbs=totals_dict.get("carbs_g") if isinstance(totals_dict, dict) else getattr(totals_dict, "carbs_g", None),
+            fat=totals_dict.get("fat_g") if isinstance(totals_dict, dict) else getattr(totals_dict, "fat_g", None),
+            fiber=totals_dict.get("fiber_g") if isinstance(totals_dict, dict) else getattr(totals_dict, "fiber_g", None),
         )
         return JSONResponse(status_code=200, content=resp.model_dump())
 

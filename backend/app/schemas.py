@@ -82,6 +82,14 @@ class AnalysisResponse(BaseModel):
     totals: NutritionInfo | None = None
     score: MealScore | None = None
     advice: list[str] = []
+    # Production direct convenience fields
+    food_name: str | None = None
+    confidence: float | None = None
+    calories: float | None = None
+    protein: float | None = None
+    carbs: float | None = None
+    fat: float | None = None
+    fiber: float | None = None
 
 
 # ---------------------------------------------------------------------------
