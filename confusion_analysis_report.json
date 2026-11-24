@@ -1,0 +1,457 @@
+{
+  "audit_timestamp": "2026-11-03T13:47:00Z",
+  "total_classes_audited": 650,
+  "total_confusion_pairs_analyzed": 50,
+  "top_50_confusion_pairs": [
+    {
+      "rank": 1,
+      "true_class": "spinach raw",
+      "predicted_class": "kale raw",
+      "food_pair": "spinach raw -> kale raw",
+      "error_frequency": 14,
+      "root_cause": "Visual similarity in leafy green morphology and color reflectance",
+      "improvement_recommendation": "Fine-tune with high-resolution texture patches (macro crop) and color constancy normalization."
+    },
+    {
+      "rank": 2,
+      "true_class": "butter chicken",
+      "predicted_class": "paneer butter masala",
+      "food_pair": "butter chicken -> paneer butter masala",
+      "error_frequency": 12,
+      "root_cause": "Identical makhani tomato-cream sauce profile and bowl presentation",
+      "improvement_recommendation": "Incorporate multi-modal ingredient cues, bowl geometry, and side-dish context."
+    },
+    {
+      "rank": 3,
+      "true_class": "dal makhani",
+      "predicted_class": "chana masala",
+      "food_pair": "dal makhani -> chana masala",
+      "error_frequency": 11,
+      "root_cause": "Similar dark legume gravy hue and spice simmer texture",
+      "improvement_recommendation": "Incorporate multi-modal ingredient cues, bowl geometry, and side-dish context."
+    },
+    {
+      "rank": 4,
+      "true_class": "biryani chicken",
+      "predicted_class": "biryani mutton",
+      "food_pair": "biryani chicken -> biryani mutton",
+      "error_frequency": 10,
+      "root_cause": "Shared saffron rice matrix with internal protein obscured by rice",
+      "improvement_recommendation": "Provide multi-candidate suggestions and portion-level cross-sectional guidance in UI."
+    },
+    {
+      "rank": 5,
+      "true_class": "dosa plain",
+      "predicted_class": "masala dosa",
+      "food_pair": "dosa plain -> masala dosa",
+      "error_frequency": 9,
+      "root_cause": "Golden rolled crepe exterior identical; spiced filling hidden inside",
+      "improvement_recommendation": "Provide multi-candidate suggestions and portion-level cross-sectional guidance in UI."
+    },
+    {
+      "rank": 6,
+      "true_class": "samosa",
+      "predicted_class": "pastry pocket",
+      "food_pair": "samosa -> pastry pocket",
+      "error_frequency": 8,
+      "root_cause": "Crisp triangular fried pastry crust geometry",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 7,
+      "true_class": "garlic naan",
+      "predicted_class": "naan plain",
+      "food_pair": "garlic naan -> naan plain",
+      "error_frequency": 8,
+      "root_cause": "Identical tandoor blister pattern with subtle garlic herb garnish",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 8,
+      "true_class": "apples gala with skin raw",
+      "predicted_class": "apples fuji raw",
+      "food_pair": "apples gala with skin raw -> apples fuji raw",
+      "error_frequency": 8,
+      "root_cause": "Nearly indistinguishable red/yellow striated apple skin pigmentation",
+      "improvement_recommendation": "Fine-tune with high-resolution texture patches (macro crop) and color constancy normalization."
+    },
+    {
+      "rank": 9,
+      "true_class": "blueberries raw",
+      "predicted_class": "blackberries raw",
+      "food_pair": "blueberries raw -> blackberries raw",
+      "error_frequency": 7,
+      "root_cause": "Dark berry coloration under specular overhead lighting",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 10,
+      "true_class": "broccoli raw",
+      "predicted_class": "broccoli leaves raw",
+      "food_pair": "broccoli raw -> broccoli leaves raw",
+      "error_frequency": 7,
+      "root_cause": "Identical cruciferous chlorophyll tones and texture clusters",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 11,
+      "true_class": "bread rye",
+      "predicted_class": "bread whole wheat",
+      "food_pair": "bread rye -> bread whole wheat",
+      "error_frequency": 7,
+      "root_cause": "Shared dark dense crumb structure and loaf silhouette",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 12,
+      "true_class": "cheese brie",
+      "predicted_class": "cheese camembert",
+      "food_pair": "cheese brie -> cheese camembert",
+      "error_frequency": 6,
+      "root_cause": "Identical bloomy white rind and pale ivory soft paste interior",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 13,
+      "true_class": "hummus commercial",
+      "predicted_class": "tahini dip",
+      "food_pair": "hummus commercial -> tahini dip",
+      "error_frequency": 6,
+      "root_cause": "Monochromatic beige emulsion dip presentation",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 14,
+      "true_class": "salmon nuggets breaded",
+      "predicted_class": "chicken nuggets",
+      "food_pair": "salmon nuggets breaded -> chicken nuggets",
+      "error_frequency": 6,
+      "root_cause": "Golden fried breadcrumb coating concealing core protein",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 15,
+      "true_class": "tortilla chips yellow",
+      "predicted_class": "corn chips",
+      "food_pair": "tortilla chips yellow -> corn chips",
+      "error_frequency": 6,
+      "root_cause": "Triangular toasted corn meal shape and golden hue",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 16,
+      "true_class": "palak paneer",
+      "predicted_class": "saag paneer",
+      "food_pair": "palak paneer -> saag paneer",
+      "error_frequency": 5,
+      "root_cause": "Vibrant emerald green pureed spinach gravy with white curd cubes",
+      "improvement_recommendation": "Incorporate multi-modal ingredient cues, bowl geometry, and side-dish context."
+    },
+    {
+      "rank": 17,
+      "true_class": "carrots baby raw",
+      "predicted_class": "carrots raw",
+      "food_pair": "carrots baby raw -> carrots raw",
+      "error_frequency": 5,
+      "root_cause": "Identical beta-carotene orange tone and root geometry",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 18,
+      "true_class": "onions red raw",
+      "predicted_class": "shallots raw",
+      "food_pair": "onions red raw -> shallots raw",
+      "error_frequency": 5,
+      "root_cause": "Purple-red outer tunic and concentric bulb cross-section",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 19,
+      "true_class": "raspberries raw",
+      "predicted_class": "blackberries raw",
+      "food_pair": "raspberries raw -> blackberries raw",
+      "error_frequency": 5,
+      "root_cause": "Drupelet cluster fruit morphology",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 20,
+      "true_class": "yogurt plain low fat",
+      "predicted_class": "greek yogurt",
+      "food_pair": "yogurt plain low fat -> greek yogurt",
+      "error_frequency": 5,
+      "root_cause": "Smooth porcelain white dairy surface in serving bowl",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 21,
+      "true_class": "mushrooms white raw",
+      "predicted_class": "mushrooms crimini raw",
+      "food_pair": "mushrooms white raw -> mushrooms crimini raw",
+      "error_frequency": 4,
+      "root_cause": "Hemispherical cap and stem structure",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 22,
+      "true_class": "pizza rolls frozen",
+      "predicted_class": "calzone bites",
+      "food_pair": "pizza rolls frozen -> calzone bites",
+      "error_frequency": 4,
+      "root_cause": "Stuffed crust rectangle with baked golden finish",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 23,
+      "true_class": "pasta gluten free cooked",
+      "predicted_class": "pasta wheat cooked",
+      "food_pair": "pasta gluten free cooked -> pasta wheat cooked",
+      "error_frequency": 4,
+      "root_cause": "Identical yellow semolina tube geometry",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 24,
+      "true_class": "flour rice brown",
+      "predicted_class": "flour soy defatted",
+      "food_pair": "flour rice brown -> flour soy defatted",
+      "error_frequency": 4,
+      "root_cause": "Fine granular off-white powder presentation",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 25,
+      "true_class": "peanuts spanish raw",
+      "predicted_class": "peanuts roasted",
+      "food_pair": "peanuts spanish raw -> peanuts roasted",
+      "error_frequency": 4,
+      "root_cause": "Oval legume seed shape under varied lighting",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 26,
+      "true_class": "nectarines raw",
+      "predicted_class": "peaches raw",
+      "food_pair": "nectarines raw -> peaches raw",
+      "error_frequency": 4,
+      "root_cause": "Stone fruit blush coloration and spherical form",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 27,
+      "true_class": "lentils sprouted raw",
+      "predicted_class": "mung beans sprouted",
+      "food_pair": "lentils sprouted raw -> mung beans sprouted",
+      "error_frequency": 4,
+      "root_cause": "Pale sprout tails with small seed heads",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 28,
+      "true_class": "cabbage raw",
+      "predicted_class": "iceberg lettuce raw",
+      "food_pair": "cabbage raw -> iceberg lettuce raw",
+      "error_frequency": 4,
+      "root_cause": "Pale green dense spherical leafy head",
+      "improvement_recommendation": "Fine-tune with high-resolution texture patches (macro crop) and color constancy normalization."
+    },
+    {
+      "rank": 29,
+      "true_class": "celery raw",
+      "predicted_class": "rhubarb raw",
+      "food_pair": "celery raw -> rhubarb raw",
+      "error_frequency": 3,
+      "root_cause": "Long fibrous ribbed stalks",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 30,
+      "true_class": "ketchup restaurant",
+      "predicted_class": "tomato paste",
+      "food_pair": "ketchup restaurant -> tomato paste",
+      "error_frequency": 3,
+      "root_cause": "Deep red viscous puree reflection",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 31,
+      "true_class": "rice crackers",
+      "predicted_class": "water biscuits",
+      "food_pair": "rice crackers -> water biscuits",
+      "error_frequency": 3,
+      "root_cause": "Circular pressed baked wafer",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 32,
+      "true_class": "muffins oat bran",
+      "predicted_class": "muffins blueberry",
+      "food_pair": "muffins oat bran -> muffins blueberry",
+      "error_frequency": 3,
+      "root_cause": "Dome top baked crumb with dark flecks",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 33,
+      "true_class": "bread egg",
+      "predicted_class": "brioche",
+      "food_pair": "bread egg -> brioche",
+      "error_frequency": 3,
+      "root_cause": "Rich golden yellow crumb enriched with egg",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 34,
+      "true_class": "pork fresh ground raw",
+      "predicted_class": "beef ground raw",
+      "food_pair": "pork fresh ground raw -> beef ground raw",
+      "error_frequency": 3,
+      "root_cause": "Minced pinkish-red meat protein strands",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 35,
+      "true_class": "cheese blue",
+      "predicted_class": "gorgonzola",
+      "food_pair": "cheese blue -> gorgonzola",
+      "error_frequency": 3,
+      "root_cause": "Crumbly ivory curd with blue-green penicillium veins",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 36,
+      "true_class": "chicken spread",
+      "predicted_class": "tuna spread",
+      "food_pair": "chicken spread -> tuna spread",
+      "error_frequency": 3,
+      "root_cause": "Shredded emulsion paste in small ramekin",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 37,
+      "true_class": "scrapple pork",
+      "predicted_class": "pate loaf",
+      "food_pair": "scrapple pork -> pate loaf",
+      "error_frequency": 3,
+      "root_cause": "Grayish-brown pan-fried rectangular loaf slices",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 38,
+      "true_class": "lemons raw without peel",
+      "predicted_class": "grapefruit white raw",
+      "food_pair": "lemons raw without peel -> grapefruit white raw",
+      "error_frequency": 3,
+      "root_cause": "Pale translucent citrus pulp segments",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 39,
+      "true_class": "egg yolk dried",
+      "predicted_class": "cornmeal yellow",
+      "food_pair": "egg yolk dried -> cornmeal yellow",
+      "error_frequency": 3,
+      "root_cause": "Fine golden yellow dehydrated powder",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 40,
+      "true_class": "croutons plain",
+      "predicted_class": "crackers toasted",
+      "food_pair": "croutons plain -> crackers toasted",
+      "error_frequency": 3,
+      "root_cause": "Cube baked bread morsels",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 41,
+      "true_class": "ice creams chocolate",
+      "predicted_class": "chocolate mousse",
+      "food_pair": "ice creams chocolate -> chocolate mousse",
+      "error_frequency": 3,
+      "root_cause": "Dark cocoa frozen scoop presentation",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 42,
+      "true_class": "potato pancakes",
+      "predicted_class": "hash browns",
+      "food_pair": "potato pancakes -> hash browns",
+      "error_frequency": 3,
+      "root_cause": "Shredded potato golden skillet patty",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 43,
+      "true_class": "wasabi root raw",
+      "predicted_class": "horseradish root",
+      "food_pair": "wasabi root raw -> horseradish root",
+      "error_frequency": 3,
+      "root_cause": "Gnarly pale green-gray rhizome",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 44,
+      "true_class": "tomatoes green raw",
+      "predicted_class": "tomatillos raw",
+      "food_pair": "tomatoes green raw -> tomatillos raw",
+      "error_frequency": 3,
+      "root_cause": "Firm spherical unripened green solanaceous fruit",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 45,
+      "true_class": "cornsalad raw",
+      "predicted_class": "mache greens raw",
+      "food_pair": "cornsalad raw -> mache greens raw",
+      "error_frequency": 3,
+      "root_cause": "Small spoon-shaped dark green leaf rosettes",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 46,
+      "true_class": "egg white dried",
+      "predicted_class": "whey protein isolate",
+      "food_pair": "egg white dried -> whey protein isolate",
+      "error_frequency": 2,
+      "root_cause": "White protein powder in scoop/bowl",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 47,
+      "true_class": "archway oatmeal cookies",
+      "predicted_class": "granola clusters",
+      "food_pair": "archway oatmeal cookies -> granola clusters",
+      "error_frequency": 2,
+      "root_cause": "Toasted rolled oat texture in baked disc",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 48,
+      "true_class": "nuts almonds",
+      "predicted_class": "apricot kernels",
+      "food_pair": "nuts almonds -> apricot kernels",
+      "error_frequency": 2,
+      "root_cause": "Tear-drop brown skinned seed profile",
+      "improvement_recommendation": "Fine-tune with high-resolution texture patches (macro crop) and color constancy normalization."
+    },
+    {
+      "rank": 49,
+      "true_class": "garlic raw",
+      "predicted_class": "shallot white raw",
+      "food_pair": "garlic raw -> shallot white raw",
+      "error_frequency": 2,
+      "root_cause": "White papery bulb cloves",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    },
+    {
+      "rank": 50,
+      "true_class": "mangos raw",
+      "predicted_class": "papayas raw",
+      "food_pair": "mangos raw -> papayas raw",
+      "error_frequency": 2,
+      "root_cause": "Orange-yellow sliced tropical stone fruit",
+      "improvement_recommendation": "Collect diverse real-world photographic samples under varied angles and lighting."
+    }
+  ]
+}

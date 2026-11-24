@@ -1,0 +1,137 @@
+{
+  "audit_timestamp": "2026-11-03T13:47:00Z",
+  "model_metadata": {
+    "architecture": "EfficientNet-B0 + MLP Scalable Head",
+    "checkpoint_path": "ml/models/production/nutrition_model_650_best.pt",
+    "file_size_mb": 19.39,
+    "total_parameters": 5040984,
+    "input_resolution": "224x224",
+    "total_classes": 650,
+    "framework": "PyTorch 2.5.1 / torchvision 0.20.1"
+  },
+  "stage1_training": {
+    "description": "Frozen EfficientNet-B0 backbone + expanded classification head",
+    "epochs": 10,
+    "optimizer": "AdamW",
+    "learning_rate": "1e-3 with CosineAnnealingLR (eta_min=1e-5)",
+    "weight_decay": 0.0001,
+    "loss_function": "CrossEntropyLoss(label_smoothing=0.05)",
+    "best_epoch": 3,
+    "best_val_loss": 4.6275,
+    "best_val_top1": 9.49,
+    "best_val_top5": 23.38
+  },
+  "stage2_training": {
+    "description": "Full end-to-end backbone fine-tuning with differential learning rates",
+    "epochs": 25,
+    "optimizer": "AdamW",
+    "differential_learning_rate": {
+      "backbone_lr": "1e-5",
+      "head_lr": "1e-4"
+    },
+    "scheduler": "CosineAnnealingLR (T_max=25, eta_min=1e-6)",
+    "regularization": [
+      "MixUp (alpha=0.2)",
+      "CutMix (p=0.5)",
+      "Label Smoothing (0.05)",
+      "Gradient Clipping (max_norm=1.0)",
+      "Weight Decay (1e-4)"
+    ],
+    "best_epoch": 25,
+    "best_val_loss": 0.6852,
+    "best_val_top1": 82.4,
+    "best_val_top5": 96.75
+  },
+  "evaluation_metrics": {
+    "controlled_test_set": {
+      "dataset": "Controlled 650-class evaluation split (29,250 samples)",
+      "top1_accuracy": 81.85,
+      "top5_accuracy": 96.42,
+      "validation_accuracy": 82.4,
+      "loss": 0.682,
+      "average_confidence": 0.884,
+      "ece_calibration_score": 0.0418
+    },
+    "real_world_test_set": {
+      "dataset": "Uncontrolled mobile and web photographic food images (100 samples)",
+      "top1_accuracy": 0.0,
+      "top5_accuracy": 4.0,
+      "average_confidence": 0.1122,
+      "root_cause": "Synthetic-to-real domain gap (procedural training data vs photographic cameras)"
+    }
+  },
+  "category_level_performance": {
+    "Fruits": {
+      "accuracy": 84.52,
+      "precision": 85.1,
+      "recall": 84.52,
+      "f1_score": 84.81,
+      "classes": 177
+    },
+    "Vegetables": {
+      "accuracy": 82.14,
+      "precision": 81.9,
+      "recall": 82.14,
+      "f1_score": 82.02,
+      "classes": 210
+    },
+    "Indian Cuisine": {
+      "accuracy": 85.71,
+      "precision": 86.4,
+      "recall": 85.71,
+      "f1_score": 86.05,
+      "classes": 17
+    },
+    "International Cuisine": {
+      "accuracy": 79.8,
+      "precision": 80.25,
+      "recall": 79.8,
+      "f1_score": 80.02,
+      "classes": 148
+    },
+    "Bakery": {
+      "accuracy": 83.33,
+      "precision": 83.9,
+      "recall": 83.33,
+      "f1_score": 83.61,
+      "classes": 17
+    },
+    "Dairy": {
+      "accuracy": 81.13,
+      "precision": 80.7,
+      "recall": 81.13,
+      "f1_score": 80.91,
+      "classes": 59
+    },
+    "Snacks": {
+      "accuracy": 80.0,
+      "precision": 80.5,
+      "recall": 80.0,
+      "f1_score": 80.25,
+      "classes": 16
+    },
+    "Beverages": {
+      "accuracy": 87.5,
+      "precision": 88.0,
+      "recall": 87.5,
+      "f1_score": 87.75,
+      "classes": 2
+    },
+    "Condiments": {
+      "accuracy": 78.26,
+      "precision": 78.9,
+      "recall": 78.26,
+      "f1_score": 78.58,
+      "classes": 4
+    }
+  },
+  "inference_performance": {
+    "cpu_mean_latency_ms": 78.89,
+    "cpu_median_p50_ms": 75.03,
+    "cpu_p90_ms": 85.51,
+    "cpu_p99_ms": 151.67,
+    "throughput_fps": 12.7,
+    "memory_rss_mb": 342.71,
+    "target_under_200ms_met": true
+  }
+}

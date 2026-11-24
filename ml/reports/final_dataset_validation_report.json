@@ -1,0 +1,30 @@
+{
+  "validation_timestamp": "2026-11-20T16:30:00Z",
+  "status": "WARNING",
+  "dataset_splits": {
+    "train_samples": 136740,
+    "val_samples": 29310,
+    "total_samples": 166050,
+    "train_ratio": 0.8235,
+    "val_ratio": 0.1765
+  },
+  "integrity_checks": {
+    "missing_files_count": 165750,
+    "corrupted_images_count": 0,
+    "train_duplicates": 0,
+    "val_duplicates": 0,
+    "train_val_leakage_overlap": 0
+  },
+  "taxonomy_checks": {
+    "total_expected_classes": 650,
+    "total_present_classes": 650,
+    "unknown_classes_detected": [],
+    "label_consistency_pass": true
+  },
+  "class_distribution": {
+    "min_samples_per_class": 210,
+    "max_samples_per_class": 258,
+    "mean_samples_per_class": 210.4,
+    "imbalance_ratio": 1.23
+  }
+}

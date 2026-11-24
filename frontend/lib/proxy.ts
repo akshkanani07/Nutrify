@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export const DEFAULT_BACKEND_URL = "http://127.0.0.1:8000";
+export const DEFAULT_BACKEND_URL = "http://127.0.0.1:8001";
+export const FALLBACK_BACKEND_URL = "http://127.0.0.1:8000";
 export const REQUEST_TIMEOUT_MS = 30000;
 
 export interface ErrorResponseEnvelope {
@@ -100,63 +101,104 @@ export async function handleAnalyzeProxy(
     fetchOptions.headers = backendHeaders;
   }
 
-  try {
-    const backendResponse = await fetch(`${backendUrl}/api/v1/analyze-food`, fetchOptions);
+  const candidateUrls = [backendUrl];
+  if (
+    (backendUrl === DEFAULT_BACKEND_URL ||
+      backendUrl === "http://127.0.0.1:8001" ||
+      backendUrl === "http://localhost:8001" ||
+      backendUrl === "http://127.0.0.1:8000" ||
+      backendUrl === "http://localhost:8000" ||
+      !process.env.BACKEND_API_URL) &&
+    !candidateUrls.includes(FALLBACK_BACKEND_URL)
+  ) {
+    candidateUrls.push(FALLBACK_BACKEND_URL);
+  }
 
-    clearTimeout(timeoutId);
-    request.signal.removeEventListener("abort", onClientAbort);
+  let lastError: unknown = null;
 
-    const data = await backendResponse.json();
-    return NextResponse.json(data, { status: backendResponse.status });
-  } catch (err: unknown) {
-    clearTimeout(timeoutId);
-    request.signal.removeEventListener("abort", onClientAbort);
+  for (let i = 0; i < candidateUrls.length; i++) {
+    const currentUrl = candidateUrls[i];
+    const isLastCandidate = i === candidateUrls.length - 1;
 
-    // Client cancellation check
-    if (request.signal.aborted) {
-      return makeErrorResponse(
-        499,
-        "REQUEST_CANCELLED",
-        "The analysis request was cancelled by the client."
-      );
+    try {
+      const backendResponse = await fetch(`${currentUrl}/api/v1/analyze-food`, fetchOptions);
+
+      clearTimeout(timeoutId);
+      request.signal.removeEventListener("abort", onClientAbort);
+
+      const data = await backendResponse.json();
+      return NextResponse.json(data, { status: backendResponse.status });
+    } catch (err: unknown) {
+      lastError = err;
+
+      // If client cancelled mid-flight, exit immediately
+      if (request.signal.aborted) {
+        clearTimeout(timeoutId);
+        request.signal.removeEventListener("abort", onClientAbort);
+        return makeErrorResponse(
+          499,
+          "REQUEST_CANCELLED",
+          "The analysis request was cancelled by the client."
+        );
+      }
+
+      // If timed out, exit immediately
+      if (err instanceof Error && err.name === "AbortError") {
+        clearTimeout(timeoutId);
+        request.signal.removeEventListener("abort", onClientAbort);
+        return makeErrorResponse(
+          504,
+          "ANALYSIS_TIMEOUT",
+          "The analysis request timed out waiting for the ML backend.",
+          "Ensure the FastAPI server is running (python backend/run_server.py) on http://127.0.0.1:8000 or http://127.0.0.1:8001.",
+          true
+        );
+      }
+
+      // If connection refused and we have another candidate port, retry immediately
+      const errorCause = (err as { cause?: { code?: string; errno?: number } })?.cause;
+      const isConnRefused =
+        errorCause?.code === "ECONNREFUSED" ||
+        errorCause?.errno === -4078 ||
+        (err instanceof Error &&
+          (err.message.includes("ECONNREFUSED") ||
+            err.message.includes("fetch failed")));
+
+      if (isConnRefused && !isLastCandidate) {
+        continue;
+      }
+
+      // If this was the last candidate or non-retryable error, proceed to final error handling
+      break;
     }
+  }
 
-    // Timeout check
-    if (err instanceof Error && err.name === "AbortError") {
-      return makeErrorResponse(
-        504,
-        "ANALYSIS_TIMEOUT",
-        "The analysis request timed out waiting for the ML backend.",
-        "Ensure the FastAPI server is running (python backend/run_server.py) on http://127.0.0.1:8000.",
-        true
-      );
-    }
+  clearTimeout(timeoutId);
+  request.signal.removeEventListener("abort", onClientAbort);
 
-    // Connection refused / Backend unreachable check
-    const errorCause = (err as { cause?: { code?: string; errno?: number } })?.cause;
-    const isConnRefused =
-      errorCause?.code === "ECONNREFUSED" ||
-      errorCause?.errno === -4078 ||
-      (err instanceof Error &&
-        (err.message.includes("ECONNREFUSED") ||
-          err.message.includes("fetch failed")));
+  const errorCause = (lastError as { cause?: { code?: string; errno?: number } })?.cause;
+  const isConnRefused =
+    errorCause?.code === "ECONNREFUSED" ||
+    errorCause?.errno === -4078 ||
+    (lastError instanceof Error &&
+      (lastError.message.includes("ECONNREFUSED") ||
+        lastError.message.includes("fetch failed")));
 
-    if (isConnRefused) {
-      return makeErrorResponse(
-        503,
-        "BACKEND_UNREACHABLE",
-        "The analysis service is not running.",
-        "Ensure the backend server is running and accessible.",
-        true
-      );
-    }
-
-    // Log the real error on the server; return generic message to client to avoid information leakage
-    console.error("Analysis proxy unexpected error:", err);
+  if (isConnRefused) {
     return makeErrorResponse(
-      500,
-      "INTERNAL_ERROR",
-      "An unexpected error occurred."
+      503,
+      "BACKEND_UNREACHABLE",
+      "The analysis service is not running.",
+      "Ensure the backend server is running and accessible.",
+      true
     );
   }
+
+  // Log the real error on the server; return generic message to client to avoid information leakage
+  console.error("Analysis proxy unexpected error:", lastError);
+  return makeErrorResponse(
+    500,
+    "INTERNAL_ERROR",
+    "An unexpected error occurred."
+  );
 }

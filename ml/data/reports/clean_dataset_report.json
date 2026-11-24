@@ -1,0 +1,26 @@
+{
+  "report_title": "Nutrition AI Dataset Cleaning & Integrity Report",
+  "timestamp": "2026-11-03T09:28:39Z",
+  "cleaning_directory": "C:\\Nutrify\\ml\\data\\real_world_dataset",
+  "results": {
+    "total_clean_images_retained": 5286,
+    "total_classes_covered": 648,
+    "duplicates_removed_sha256": 0,
+    "corrupt_images_removed": 0,
+    "blurry_images_removed": 0,
+    "aspect_ratio_rejected": 0,
+    "exif_orientations_corrected": 5286,
+    "color_spaces_normalized_to_rgb": 0
+  },
+  "quality_thresholds": {
+    "min_resolution": "224x224",
+    "min_laplacian_variance": 60.0,
+    "aspect_ratio_range": [
+      0.65,
+      1.55
+    ],
+    "color_space": "RGB 8-bit"
+  },
+  "cleaning_duration_seconds": 12.59,
+  "status": "DATASET_CLEANED_AND_VERIFIED"
+}

@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   async rewrites() {
-    const backendUrl = process.env.BACKEND_API_URL || "http://127.0.0.1:8000";
+    const backendUrl = process.env.BACKEND_API_URL || "http://127.0.0.1:8001";
     return [
       {
         source: "/api/v1/:path*",

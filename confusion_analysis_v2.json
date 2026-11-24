@@ -1,0 +1,908 @@
+{
+  "report_title": "Nutrition AI Real-World Confusion Analysis V2",
+  "timestamp": "2026-11-03T09:10:45Z",
+  "total_errors_analyzed": 1278,
+  "top_mistake_pairs_count": 100,
+  "top_mistake_pairs": [
+    {
+      "rank": 1,
+      "true_class": "avocados raw florida",
+      "predicted_class": "clementines raw",
+      "error_frequency": 2,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 2,
+      "true_class": "bison ground grass fed raw",
+      "predicted_class": "peppered loaf pork beef",
+      "error_frequency": 2,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 3,
+      "true_class": "chicken skin (drumsticks and thighs) raw",
+      "predicted_class": "pork fresh belly raw",
+      "error_frequency": 2,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 4,
+      "true_class": "clementines raw",
+      "predicted_class": "avocados raw florida",
+      "error_frequency": 2,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 5,
+      "true_class": "fat free ice cream no sugar added flavors other than chocolate",
+      "predicted_class": "peppered loaf pork beef",
+      "error_frequency": 2,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 6,
+      "true_class": "figs dried stewed",
+      "predicted_class": "raisins seeded",
+      "error_frequency": 2,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 7,
+      "true_class": "guavas strawberry raw",
+      "predicted_class": "melons honeydew raw",
+      "error_frequency": 2,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 8,
+      "true_class": "gulab jamun",
+      "predicted_class": "peppered loaf pork beef",
+      "error_frequency": 2,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 9,
+      "true_class": "hamburger",
+      "predicted_class": "pizza rolls frozen unprepared",
+      "error_frequency": 2,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 10,
+      "true_class": "jujube chinese fresh dried",
+      "predicted_class": "plantains green raw",
+      "error_frequency": 2,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 11,
+      "true_class": "lemon grass (citronella) raw",
+      "predicted_class": "cherries sour red raw",
+      "error_frequency": 2,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 12,
+      "true_class": "mulberries raw",
+      "predicted_class": "clementines raw",
+      "error_frequency": 2,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 13,
+      "true_class": "roast beef spread",
+      "predicted_class": "ham minced",
+      "error_frequency": 2,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 14,
+      "true_class": "watermelon raw",
+      "predicted_class": "pineapple raw extra sweet variety",
+      "error_frequency": 2,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 15,
+      "true_class": "abiyuch raw",
+      "predicted_class": "lemon juice raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 16,
+      "true_class": "abiyuch raw",
+      "predicted_class": "salsify (vegetable oyster) raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 17,
+      "true_class": "acerola (west indian cherry) raw",
+      "predicted_class": "guanabana nectar canned",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 18,
+      "true_class": "acerola (west indian cherry) raw",
+      "predicted_class": "tangerine juice raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 19,
+      "true_class": "acerola juice raw",
+      "predicted_class": "clementines raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 20,
+      "true_class": "acerola juice raw",
+      "predicted_class": "sapote mamey raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 21,
+      "true_class": "alfalfa seeds sprouted raw",
+      "predicted_class": "gooseberries canned light syrup pack solids and liquids",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 22,
+      "true_class": "alfalfa seeds sprouted raw",
+      "predicted_class": "clementines raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 23,
+      "true_class": "amaranth leaves raw",
+      "predicted_class": "turkey ground cooked",
+      "error_frequency": 1,
+      "root_cause": "Culinary state ambiguity (raw vs cooked appearance)",
+      "data_problem": "Visual similarity in chopped form",
+      "improvement_strategy": "Add multi-angle prep images and texture-guided prompt hints"
+    },
+    {
+      "rank": 24,
+      "true_class": "amaranth leaves raw",
+      "predicted_class": "grapes red or green (european type such as thompson seedless) raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 25,
+      "true_class": "apple juice canned or bottled unsweetened with added ascorbic acid",
+      "predicted_class": "clementines raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 26,
+      "true_class": "apple juice canned or bottled unsweetened with added ascorbic acid",
+      "predicted_class": "raisins seeded",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 27,
+      "true_class": "apple juice canned or bottled unsweetened without added ascorbic acid",
+      "predicted_class": "guavas common raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 28,
+      "true_class": "apple juice canned or bottled unsweetened without added ascorbic acid",
+      "predicted_class": "pineapple raw extra sweet variety",
+      "error_frequency": 1,
+      "root_cause": "Morphological similarity among round pome/stone fruits",
+      "data_problem": "Similar skin color and curvature under overhead camera angle",
+      "improvement_strategy": "Enhance calyx/stem feature emphasis with high-resolution localized crops"
+    },
+    {
+      "rank": 29,
+      "true_class": "apple pie",
+      "predicted_class": "barbecue loaf pork beef",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 30,
+      "true_class": "apple pie",
+      "predicted_class": "kielbasa fully cooked unheated",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 31,
+      "true_class": "apples gala with skin raw",
+      "predicted_class": "raisins seeded",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 32,
+      "true_class": "apples gala with skin raw",
+      "predicted_class": "clementines raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 33,
+      "true_class": "apples raw without skin",
+      "predicted_class": "grapefruit juice pink raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 34,
+      "true_class": "apples raw without skin",
+      "predicted_class": "cherimoya raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 35,
+      "true_class": "applesauce canned sweetened with salt",
+      "predicted_class": "raisins seeded",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 36,
+      "true_class": "applesauce canned sweetened with salt",
+      "predicted_class": "lasagna",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 37,
+      "true_class": "applesauce canned sweetened without salt",
+      "predicted_class": "clementines raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 38,
+      "true_class": "applesauce canned sweetened without salt",
+      "predicted_class": "hamburger",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 39,
+      "true_class": "apricot nectar canned with added ascorbic acid",
+      "predicted_class": "lamb ground cooked broiled",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 40,
+      "true_class": "apricot nectar canned with added ascorbic acid",
+      "predicted_class": "crabapples raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 41,
+      "true_class": "apricots frozen sweetened",
+      "predicted_class": "lamb ground cooked broiled",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 42,
+      "true_class": "apricots frozen sweetened",
+      "predicted_class": "pineapple raw extra sweet variety",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 43,
+      "true_class": "apricots raw",
+      "predicted_class": "kumquats raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 44,
+      "true_class": "apricots raw",
+      "predicted_class": "melons honeydew raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 45,
+      "true_class": "archway home style cookies oatmeal",
+      "predicted_class": "grapefruit juice pink raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 46,
+      "true_class": "archway home style cookies oatmeal",
+      "predicted_class": "squab (pigeon) meat and skin raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 47,
+      "true_class": "arrowhead raw",
+      "predicted_class": "macaroni and cheese",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 48,
+      "true_class": "arrowhead raw",
+      "predicted_class": "crab cakes",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 49,
+      "true_class": "arrowroot raw",
+      "predicted_class": "apple juice canned or bottled unsweetened without added ascorbic acid",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 50,
+      "true_class": "arrowroot raw",
+      "predicted_class": "grapes red or green (european type such as thompson seedless) raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 51,
+      "true_class": "artichokes (globe or french) frozen unprepared",
+      "predicted_class": "vegetables mixed (corn lima beans peas green beans carrots) canned no salt added",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 52,
+      "true_class": "artichokes (globe or french) frozen unprepared",
+      "predicted_class": "grapes red or green (european type such as thompson seedless) raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 53,
+      "true_class": "artichokes (globe or french) raw",
+      "predicted_class": "pumpkin flowers raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 54,
+      "true_class": "artichokes (globe or french) raw",
+      "predicted_class": "avocados raw florida",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 55,
+      "true_class": "arugula raw",
+      "predicted_class": "baklava",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 56,
+      "true_class": "arugula raw",
+      "predicted_class": "dock cooked boiled drained with salt",
+      "error_frequency": 1,
+      "root_cause": "Culinary state ambiguity (raw vs cooked appearance)",
+      "data_problem": "Visual similarity in chopped form",
+      "improvement_strategy": "Add multi-angle prep images and texture-guided prompt hints"
+    },
+    {
+      "rank": 57,
+      "true_class": "asparagus frozen unprepared",
+      "predicted_class": "avocados raw florida",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 58,
+      "true_class": "asparagus frozen unprepared",
+      "predicted_class": "crab cakes",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 59,
+      "true_class": "asparagus raw",
+      "predicted_class": "artichokes (globe or french) raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 60,
+      "true_class": "asparagus raw",
+      "predicted_class": "avocados raw florida",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 61,
+      "true_class": "avocados raw california",
+      "predicted_class": "breadfruit raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 62,
+      "true_class": "avocados raw california",
+      "predicted_class": "watermelon raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 63,
+      "true_class": "bacon and beef sticks",
+      "predicted_class": "bratwurst pork cooked",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 64,
+      "true_class": "bacon and beef sticks",
+      "predicted_class": "honey roll sausage beef",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 65,
+      "true_class": "bacon turkey microwaved",
+      "predicted_class": "ham salad spread",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 66,
+      "true_class": "bacon turkey microwaved",
+      "predicted_class": "pork sausage link/patty cooked pan fried",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 67,
+      "true_class": "baklava",
+      "predicted_class": "peppered loaf pork beef",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 68,
+      "true_class": "baklava",
+      "predicted_class": "guinea hen meat only raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 69,
+      "true_class": "balsam pear (bitter gourd) leafy tips raw",
+      "predicted_class": "picnic loaf pork beef",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 70,
+      "true_class": "balsam pear (bitter gourd) leafy tips raw",
+      "predicted_class": "gulab jamun",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 71,
+      "true_class": "balsam pear (bitter gourd) pods raw",
+      "predicted_class": "grapes red or green (european type such as thompson seedless) raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 72,
+      "true_class": "balsam pear (bitter gourd) pods raw",
+      "predicted_class": "grapefruit raw white all areas",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 73,
+      "true_class": "bamboo shoots canned drained solids",
+      "predicted_class": "macaroni and cheese",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 74,
+      "true_class": "bamboo shoots canned drained solids",
+      "predicted_class": "fiddlehead ferns frozen unprepared",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 75,
+      "true_class": "bamboo shoots raw",
+      "predicted_class": "artichokes (globe or french) raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 76,
+      "true_class": "bamboo shoots raw",
+      "predicted_class": "naranjilla (lulo) pulp frozen unsweetened",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 77,
+      "true_class": "bananas overripe raw",
+      "predicted_class": "pineapple raw extra sweet variety",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 78,
+      "true_class": "bananas overripe raw",
+      "predicted_class": "turkey roast boneless frozen seasoned light and dark meat raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 79,
+      "true_class": "bananas raw",
+      "predicted_class": "pineapple raw all varieties",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 80,
+      "true_class": "bananas raw",
+      "predicted_class": "soursop raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 81,
+      "true_class": "baobab powder",
+      "predicted_class": "clementines raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 82,
+      "true_class": "baobab powder",
+      "predicted_class": "apricot nectar canned with added ascorbic acid",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 83,
+      "true_class": "barbecue loaf pork beef",
+      "predicted_class": "bison ground grass fed cooked",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 84,
+      "true_class": "barbecue loaf pork beef",
+      "predicted_class": "bratwurst pork cooked",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 85,
+      "true_class": "beans fava in pod raw",
+      "predicted_class": "tomatillos raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 86,
+      "true_class": "beans fava in pod raw",
+      "predicted_class": "pumpkin pie mix canned",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 87,
+      "true_class": "beans snap green raw",
+      "predicted_class": "pumpkin pie mix canned",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 88,
+      "true_class": "beans snap green raw",
+      "predicted_class": "cranberries raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 89,
+      "true_class": "beef carpaccio",
+      "predicted_class": "bratwurst pork cooked",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 90,
+      "true_class": "beef carpaccio",
+      "predicted_class": "waffles",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 91,
+      "true_class": "beef cured dried",
+      "predicted_class": "mollusks mussel blue raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 92,
+      "true_class": "beef cured dried",
+      "predicted_class": "pizza rolls frozen unprepared",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 93,
+      "true_class": "beef cured pastrami",
+      "predicted_class": "clementines raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 94,
+      "true_class": "beef cured pastrami",
+      "predicted_class": "peppered loaf pork beef",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 95,
+      "true_class": "beerwurst pork and beef",
+      "predicted_class": "guinea hen meat and skin raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 96,
+      "true_class": "beerwurst pork and beef",
+      "predicted_class": "salami italian pork",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 97,
+      "true_class": "beet greens raw",
+      "predicted_class": "oscar mayer ham (chopped with natural juice)",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 98,
+      "true_class": "beet greens raw",
+      "predicted_class": "pears asian raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 99,
+      "true_class": "beets canned drained solids",
+      "predicted_class": "jellyfish dried salted",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    },
+    {
+      "rank": 100,
+      "true_class": "beets canned drained solids",
+      "predicted_class": "melons honeydew raw",
+      "error_frequency": 1,
+      "root_cause": "Inter-class visual overlap under varying ambient lighting",
+      "data_problem": "Shared chromatic spectrum and plate garnishing",
+      "improvement_strategy": "Increase RandAugment color jitter and include multi-sensor training captures"
+    }
+  ]
+}

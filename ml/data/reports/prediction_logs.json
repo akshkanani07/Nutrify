@@ -1,13 +1,13 @@
 {
-  "total_predictions": 1,
+  "total_predictions": 45,
   "average_confidence": 0.95,
-  "failed_requests": 0,
-  "low_confidence_count": 1,
+  "failed_requests": 12,
+  "low_confidence_count": 45,
   "low_confidence_rate": 1.0,
   "latency_ms": {
-    "mean": 2.29,
-    "p50": 2.29,
-    "p95": 2.29
+    "mean": 1.64,
+    "p50": 1.58,
+    "p95": 2.27
   },
-  "status": "healthy"
+  "status": "degraded"
 }

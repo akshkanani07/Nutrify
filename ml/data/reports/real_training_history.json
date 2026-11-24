@@ -1,0 +1,70 @@
+{
+  "title": "Phase 7 Real Transfer Learning Execution Summary",
+  "timestamp": "2026-11-03T09:52:17Z",
+  "total_epochs_trained": 6,
+  "best_epoch": 1,
+  "best_val_loss": 5.9004,
+  "total_duration_seconds": 713.21,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 6.073,
+      "train_acc": 2.39,
+      "val_loss": 5.9004,
+      "val_top1": 0.61,
+      "val_top5": 4.6,
+      "learning_rate": 0.0019877,
+      "is_best": true
+    },
+    {
+      "epoch": 2,
+      "train_loss": 4.3683,
+      "train_acc": 12.83,
+      "val_loss": 6.2952,
+      "val_top1": 0.77,
+      "val_top5": 4.45,
+      "learning_rate": 0.0019513,
+      "is_best": false
+    },
+    {
+      "epoch": 3,
+      "train_loss": 3.2346,
+      "train_acc": 35.69,
+      "val_loss": 6.7869,
+      "val_top1": 0.92,
+      "val_top5": 4.14,
+      "learning_rate": 0.0018916,
+      "is_best": false
+    },
+    {
+      "epoch": 4,
+      "train_loss": 2.2332,
+      "train_acc": 62.13,
+      "val_loss": 7.5418,
+      "val_top1": 1.53,
+      "val_top5": 3.53,
+      "learning_rate": 0.00181,
+      "is_best": false
+    },
+    {
+      "epoch": 5,
+      "train_loss": 1.5503,
+      "train_acc": 80.17,
+      "val_loss": 8.0506,
+      "val_top1": 0.46,
+      "val_top5": 3.22,
+      "learning_rate": 0.0017086,
+      "is_best": false
+    },
+    {
+      "epoch": 6,
+      "train_loss": 1.1861,
+      "train_acc": 90.15,
+      "val_loss": 8.3617,
+      "val_top1": 1.07,
+      "val_top5": 3.07,
+      "learning_rate": 0.0015898,
+      "is_best": false
+    }
+  ]
+}

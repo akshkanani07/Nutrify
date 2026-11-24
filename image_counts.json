@@ -1,0 +1,42 @@
+{
+  "dal_makhani": {
+    "missing": false,
+    "count": 30
+  },
+  "shahi_paneer": {
+    "missing": false,
+    "count": 30
+  },
+  "vegetable_biryani": {
+    "missing": false,
+    "count": 30
+  },
+  "pulao": {
+    "missing": false,
+    "count": 30
+  },
+  "jeera_rice": {
+    "missing": false,
+    "count": 30
+  },
+  "khichdi": {
+    "missing": false,
+    "count": 30
+  },
+  "roti": {
+    "missing": false,
+    "count": 30
+  },
+  "naan": {
+    "missing": false,
+    "count": 30
+  },
+  "kulcha": {
+    "missing": false,
+    "count": 30
+  },
+  "paratha": {
+    "missing": false,
+    "count": 30
+  }
+}

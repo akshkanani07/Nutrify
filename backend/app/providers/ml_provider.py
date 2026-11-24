@@ -27,10 +27,18 @@ from app.exceptions import ModelNotReadyError
 
 logger = logging.getLogger("nutrify.provider.ml")
 
-MODEL_CHECKPOINT_PATH_650 = Path("ml/models/production/nutrition_model_650_best.pt")
-MODEL_CHECKPOINT_PATH_DEFAULT = Path("ml/models/production/nutrition_model_best.pt")
-MODEL_CHECKPOINT_PATH = MODEL_CHECKPOINT_PATH_650 if MODEL_CHECKPOINT_PATH_650.exists() else MODEL_CHECKPOINT_PATH_DEFAULT
-CANDIDATES_CSV_PATH = Path("ml/data/raw/candidates.csv")
+REPO_ROOT = Path(__file__).resolve().parent.parent.parent.parent
+MODEL_CHECKPOINT_PATH_REALWORLD = REPO_ROOT / "ml" / "models" / "production" / "nutrition_model_650_realworld.pt"
+MODEL_CHECKPOINT_PATH_650 = REPO_ROOT / "ml" / "models" / "production" / "nutrition_model_650_best.pt"
+MODEL_CHECKPOINT_PATH_DEFAULT = REPO_ROOT / "ml" / "models" / "production" / "nutrition_model_best.pt"
+
+if MODEL_CHECKPOINT_PATH_REALWORLD.exists():
+    MODEL_CHECKPOINT_PATH = MODEL_CHECKPOINT_PATH_REALWORLD
+elif MODEL_CHECKPOINT_PATH_650.exists():
+    MODEL_CHECKPOINT_PATH = MODEL_CHECKPOINT_PATH_650
+else:
+    MODEL_CHECKPOINT_PATH = MODEL_CHECKPOINT_PATH_DEFAULT
+CANDIDATES_CSV_PATH = REPO_ROOT / "ml" / "data" / "raw" / "candidates.csv"
 
 
 class MLModelProvider:
@@ -59,6 +67,10 @@ class MLModelProvider:
             return
 
         try:
+            import sys
+            if str(REPO_ROOT) not in sys.path:
+                sys.path.insert(0, str(REPO_ROOT))
+
             from ml.src.production_pipeline import ProductionInferenceService
 
             self._service = ProductionInferenceService(
@@ -67,7 +79,7 @@ class MLModelProvider:
                 device="cpu",
                 confidence_threshold=0.40,
             )
-            # Ready is active when enabled or in production ML mode
+            # Ready is active when enabled via ENABLE_ML_INTEGRATION
             import os
             self._ready = os.getenv("ENABLE_ML_INTEGRATION", "false").lower() in ("true", "1", "yes")
             logger.info("MLModelProvider successfully loaded production inference pipeline.")

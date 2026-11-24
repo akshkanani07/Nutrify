@@ -1,0 +1,53 @@
+{
+  "audit_timestamp": "2026-11-03T13:47:00Z",
+  "dataset_name": "Nutrition AI 650-Class Food Dataset",
+  "dataset_location": "ml/data/images",
+  "annotations_location": "ml/data/annotations",
+  "catalog_path": "ml/knowledge_base/expanded_catalog_650.json",
+  "total_classes": 650,
+  "total_images": 195000,
+  "distribution": {
+    "images_per_class": 300,
+    "class_balance_status": "BALANCED_EXACT",
+    "min_per_class": 300,
+    "max_per_class": 300,
+    "std_dev": 0.0
+  },
+  "splits": {
+    "train_samples": 136500,
+    "train_ratio": 0.70,
+    "val_samples": 29250,
+    "val_ratio": 0.15,
+    "test_samples": 29250,
+    "test_ratio": 0.15
+  },
+  "data_integrity_audit": {
+    "checked_sample_files": 3250,
+    "missing_files": 0,
+    "corrupted_files": 0,
+    "duplicate_images_sha256": 0,
+    "bad_aspect_ratio_files": 0,
+    "detected_blurry_samples": 165,
+    "blur_rate_pct": 5.08
+  },
+  "image_specifications": {
+    "target_resolution": "224x224",
+    "color_channels": 3,
+    "color_mode": "RGB",
+    "aspect_ratio": 1.0,
+    "format": "JPEG",
+    "compression_quality": 88
+  },
+  "nutrition_mapping": {
+    "total_catalog_classes": 650,
+    "mapped_classes": 650,
+    "coverage_pct": 100.0,
+    "database_source": "USDA FoodData Central (FDC) Decoupled Candidates"
+  },
+  "data_synthesis_methodology": {
+    "generation_pipeline": "dataset_generator_650.py",
+    "nature": "Procedurally generated 2D food geometries with textured surface backdrops",
+    "limitations": "Significant domain gap vs. real-world mobile and web photography"
+  }
+}
+

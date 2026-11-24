@@ -215,7 +215,7 @@ export default function AnalyzePage() {
             <span>
               {healthStatus?.ready
                 ? "FastAPI ML Ready"
-                : "Backend Offline (Port 8000)"}
+                : "Backend Offline (Port 8001)"}
             </span>
           </div>
         </div>

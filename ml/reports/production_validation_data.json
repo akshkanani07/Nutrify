@@ -1,0 +1,656 @@
+{
+  "timestamp": "2026-11-20T11:26:44Z",
+  "phase1": {
+    "checkpoint_path": "C:\\Nutrify\\ml\\models\\production\\nutrition_model_650_realworld.pt",
+    "checkpoint_exists": true,
+    "checkpoint_size_mb": 19.39,
+    "checkpoint_keys": [
+      "model_name",
+      "num_classes",
+      "class_to_idx",
+      "idx_to_class",
+      "model_state_dict",
+      "final_top1_accuracy",
+      "final_top5_accuracy",
+      "input_resolution",
+      "normalization",
+      "timestamp"
+    ],
+    "num_classes": 650,
+    "class_to_idx_count": 650,
+    "idx_to_class_count": 650,
+    "epoch": null,
+    "act_fn": null,
+    "input_resolution": [
+      224,
+      224
+    ],
+    "normalization": {
+      "mean": [
+        0.485,
+        0.456,
+        0.406
+      ],
+      "std": [
+        0.229,
+        0.224,
+        0.225
+      ]
+    },
+    "final_top1_accuracy": 25.54,
+    "final_top5_accuracy": 53.85,
+    "mean_confidence": null,
+    "timestamp": "2026-11-20T11:04:49Z",
+    "mapping_consistent": true,
+    "service_loaded": true,
+    "service_num_classes": 650,
+    "model_load_time_ms": 232.01,
+    "ml_provider_ready": true,
+    "ml_provider_model_version": "v2.0-efficientnet-b0-650",
+    "predict_food_json_valid": true,
+    "predict_food_json_sample": {
+      "food_name": "peking duck",
+      "confidence": 0.0689,
+      "calories": 505.5,
+      "protein": 28.5,
+      "carbs": 3.0,
+      "fat": 42.0,
+      "fiber": 0.3
+    },
+    "analyze_method_valid": true,
+    "analyze_status": "unsure",
+    "health_status_code": 200,
+    "health_body": {
+      "status": "ok",
+      "version": "0.1.0",
+      "provider": "ml_model",
+      "provider_ready": true,
+      "model_version": "v2.0-efficientnet-b0-650"
+    },
+    "api_status_code": 200,
+    "api_latency_ms": 182.9,
+    "api_response_valid": true,
+    "api_response_sample": {
+      "food_name": "peking duck",
+      "confidence": 0.0686,
+      "calories": 505.5,
+      "protein": 28.5,
+      "carbs": 3.0,
+      "fat": 42.0,
+      "fiber": 0.3,
+      "status": "unsure",
+      "score": 55
+    },
+    "nutrition_mapping_entries": 650,
+    "nutrition_coverage_pct": 100.0,
+    "status": "PASS"
+  },
+  "phase2": {
+    "audit_total_cases": 19,
+    "audit_top1_accuracy": 5.26,
+    "audit_top5_accuracy": 15.79,
+    "audit_avg_confidence": 0.3909,
+    "old_50_top1_accuracy": 5.26,
+    "old_50_top5_accuracy": 15.79,
+    "category_accuracy": {
+      "Alliums": {
+        "total": 1,
+        "top1_pct": 0.0,
+        "top5_pct": 0.0
+      },
+      "Berries": {
+        "total": 2,
+        "top1_pct": 0.0,
+        "top5_pct": 0.0
+      },
+      "Citrus": {
+        "total": 2,
+        "top1_pct": 0.0,
+        "top5_pct": 0.0
+      },
+      "Fresh Fruit": {
+        "total": 2,
+        "top1_pct": 0.0,
+        "top5_pct": 50.0
+      },
+      "Indian Cuisine": {
+        "total": 5,
+        "top1_pct": 0.0,
+        "top5_pct": 0.0
+      },
+      "Indian Street Food": {
+        "total": 1,
+        "top1_pct": 0.0,
+        "top5_pct": 100.0
+      },
+      "Restaurant": {
+        "total": 1,
+        "top1_pct": 0.0,
+        "top5_pct": 0.0
+      },
+      "Sandwiches": {
+        "total": 1,
+        "top1_pct": 0.0,
+        "top5_pct": 0.0
+      },
+      "Stone Fruit": {
+        "total": 1,
+        "top1_pct": 0.0,
+        "top5_pct": 0.0
+      },
+      "Street Food": {
+        "total": 1,
+        "top1_pct": 0.0,
+        "top5_pct": 0.0
+      },
+      "Tropical Fruit": {
+        "total": 1,
+        "top1_pct": 0.0,
+        "top5_pct": 0.0
+      },
+      "Vegetables & Greens": {
+        "total": 1,
+        "top1_pct": 100.0,
+        "top5_pct": 100.0
+      }
+    },
+    "top_confused_pairs_650": [
+      {
+        "true_class": "arrowroot raw",
+        "predicted_class": "celtuce raw",
+        "count": 3
+      },
+      {
+        "true_class": "beef cured pastrami",
+        "predicted_class": "beerwurst pork and beef",
+        "count": 3
+      },
+      {
+        "true_class": "bibimbap",
+        "predicted_class": "chana masala",
+        "count": 3
+      },
+      {
+        "true_class": "carrot dehydrated",
+        "predicted_class": "carrot cake",
+        "count": 3
+      },
+      {
+        "true_class": "carrots baby raw",
+        "predicted_class": "carrot cake",
+        "count": 3
+      },
+      {
+        "true_class": "cheesefurter cheese smokie pork beef",
+        "predicted_class": "beerwurst pork and beef",
+        "count": 3
+      },
+      {
+        "true_class": "crab cakes",
+        "predicted_class": "cheesecake",
+        "count": 3
+      },
+      {
+        "true_class": "pancakes",
+        "predicted_class": "cheesecake",
+        "count": 3
+      },
+      {
+        "true_class": "roast beef deli style prepackaged sliced",
+        "predicted_class": "beerwurst pork and beef",
+        "count": 3
+      },
+      {
+        "true_class": "samosa",
+        "predicted_class": "carrot cake",
+        "count": 3
+      }
+    ],
+    "audit_confusions": [
+      {
+        "true_class": "bananas raw",
+        "predicted_class": "french fries",
+        "model": "realworld"
+      },
+      {
+        "true_class": "apples gala with skin raw",
+        "predicted_class": "bananas raw",
+        "model": "realworld"
+      },
+      {
+        "true_class": "biryani chicken",
+        "predicted_class": "pasta gluten free corn cooked",
+        "model": "realworld"
+      },
+      {
+        "true_class": "paneer butter masala",
+        "predicted_class": "chicken breast oven roasted fat free sliced",
+        "model": "realworld"
+      },
+      {
+        "true_class": "dosa plain",
+        "predicted_class": "cowpeas (blackeyes) immature seeds raw",
+        "model": "realworld"
+      },
+      {
+        "true_class": "samosa",
+        "predicted_class": "yardlong bean raw",
+        "model": "realworld"
+      },
+      {
+        "true_class": "dal makhani",
+        "predicted_class": "palak paneer",
+        "model": "realworld"
+      },
+      {
+        "true_class": "chana masala",
+        "predicted_class": "pasta gluten free corn cooked",
+        "model": "realworld"
+      },
+      {
+        "true_class": "blueberries raw",
+        "predicted_class": "game meat elk raw",
+        "model": "realworld"
+      },
+      {
+        "true_class": "strawberries raw",
+        "predicted_class": "cheese sauce prepared from recipe",
+        "model": "realworld"
+      },
+      {
+        "true_class": "oranges raw navels",
+        "predicted_class": "rhubarb raw",
+        "model": "realworld"
+      },
+      {
+        "true_class": "mangos raw",
+        "predicted_class": "boysenberries frozen unsweetened",
+        "model": "realworld"
+      },
+      {
+        "true_class": "lemons raw without peel",
+        "predicted_class": "cheese sauce prepared from recipe",
+        "model": "realworld"
+      },
+      {
+        "true_class": "onions red raw",
+        "predicted_class": "boysenberries frozen unsweetened",
+        "model": "realworld"
+      },
+      {
+        "true_class": "tacos",
+        "predicted_class": "ostrich round raw",
+        "model": "realworld"
+      },
+      {
+        "true_class": "pizza rolls frozen unprepared",
+        "predicted_class": "yardlong bean raw",
+        "model": "realworld"
+      },
+      {
+        "true_class": "club sandwich",
+        "predicted_class": "boysenberries frozen unsweetened",
+        "model": "realworld"
+      },
+      {
+        "true_class": "apricots raw",
+        "predicted_class": "cheese sauce prepared from recipe",
+        "model": "realworld"
+      }
+    ],
+    "category_accuracy_650": {
+      "bakery": 8.33,
+      "condiment_sauce": 0.0,
+      "dairy": 4.4,
+      "egg": 0.0,
+      "fruit": 5.56,
+      "grain": 9.52,
+      "legume": 11.11,
+      "meat": 2.35,
+      "mixed_dish": 3.33,
+      "nut_seed": 33.33,
+      "poultry": 2.56,
+      "seafood": 0.0,
+      "snack": 4.76,
+      "soup": 0.0,
+      "sweet": 22.22,
+      "vegetable": 3.62
+    },
+    "failed_cases": [
+      {
+        "test_id": "TC_01",
+        "category": "Fresh Fruit",
+        "image": "bananas_raw.jpg",
+        "ground_truth": "bananas raw",
+        "predicted": "french fries",
+        "confidence": 0.0596,
+        "top2": "kale frozen unprepared",
+        "is_top5_match": true
+      },
+      {
+        "test_id": "TC_02",
+        "category": "Fresh Fruit",
+        "image": "apples_gala_with_skin_raw.jpg",
+        "ground_truth": "apples gala with skin raw",
+        "predicted": "bananas raw",
+        "confidence": 0.7132,
+        "top2": "bacon and beef sticks",
+        "is_top5_match": false
+      },
+      {
+        "test_id": "TC_04",
+        "category": "Indian Cuisine",
+        "image": "test_001_biryani_chicken.jpg",
+        "ground_truth": "biryani chicken",
+        "predicted": "pasta gluten free corn cooked",
+        "confidence": 0.2188,
+        "top2": "cream sour cultured",
+        "is_top5_match": false
+      },
+      {
+        "test_id": "TC_05",
+        "category": "Indian Cuisine",
+        "image": "test_003_paneer_butter_masala.jpg",
+        "ground_truth": "paneer butter masala",
+        "predicted": "chicken breast oven roasted fat free sliced",
+        "confidence": 0.1629,
+        "top2": "duck domesticated liver raw",
+        "is_top5_match": false
+      },
+      {
+        "test_id": "TC_06",
+        "category": "Indian Cuisine",
+        "image": "test_005_dosa_plain.jpg",
+        "ground_truth": "dosa plain",
+        "predicted": "cowpeas (blackeyes) immature seeds raw",
+        "confidence": 0.3356,
+        "top2": "yardlong bean raw",
+        "is_top5_match": false
+      },
+      {
+        "test_id": "TC_07",
+        "category": "Indian Street Food",
+        "image": "test_007_samosa.jpg",
+        "ground_truth": "samosa",
+        "predicted": "yardlong bean raw",
+        "confidence": 0.171,
+        "top2": "cream sour cultured",
+        "is_top5_match": true
+      },
+      {
+        "test_id": "TC_08",
+        "category": "Indian Cuisine",
+        "image": "test_009_dal_makhani.jpg",
+        "ground_truth": "dal makhani",
+        "predicted": "palak paneer",
+        "confidence": 0.453,
+        "top2": "fat free ice cream no sugar added flavors other than chocolate",
+        "is_top5_match": false
+      },
+      {
+        "test_id": "TC_09",
+        "category": "Indian Cuisine",
+        "image": "test_011_chana_masala.jpg",
+        "ground_truth": "chana masala",
+        "predicted": "pasta gluten free corn cooked",
+        "confidence": 0.4035,
+        "top2": "game meat elk raw",
+        "is_top5_match": false
+      },
+      {
+        "test_id": "TC_10",
+        "category": "Berries",
+        "image": "test_015_blueberries_raw.jpg",
+        "ground_truth": "blueberries raw",
+        "predicted": "game meat elk raw",
+        "confidence": 0.1706,
+        "top2": "hummus commercial",
+        "is_top5_match": false
+      },
+      {
+        "test_id": "TC_11",
+        "category": "Berries",
+        "image": "test_016_strawberries_raw.jpg",
+        "ground_truth": "strawberries raw",
+        "predicted": "cheese sauce prepared from recipe",
+        "confidence": 0.3898,
+        "top2": "pasta gluten free corn cooked",
+        "is_top5_match": false
+      },
+      {
+        "test_id": "TC_12",
+        "category": "Citrus",
+        "image": "test_017_oranges_raw_navels.jpg",
+        "ground_truth": "oranges raw navels",
+        "predicted": "rhubarb raw",
+        "confidence": 0.179,
+        "top2": "yardlong bean raw",
+        "is_top5_match": false
+      },
+      {
+        "test_id": "TC_13",
+        "category": "Tropical Fruit",
+        "image": "test_018_mangos_raw.jpg",
+        "ground_truth": "mangos raw",
+        "predicted": "boysenberries frozen unsweetened",
+        "confidence": 0.5128,
+        "top2": "cheese food pasteurized process swiss",
+        "is_top5_match": false
+      },
+      {
+        "test_id": "TC_14",
+        "category": "Citrus",
+        "image": "test_019_lemons_raw_without_peel.jpg",
+        "ground_truth": "lemons raw without peel",
+        "predicted": "cheese sauce prepared from recipe",
+        "confidence": 0.4504,
+        "top2": "ice cream sandwich",
+        "is_top5_match": false
+      },
+      {
+        "test_id": "TC_18",
+        "category": "Alliums",
+        "image": "test_024_onions_red_raw.jpg",
+        "ground_truth": "onions red raw",
+        "predicted": "boysenberries frozen unsweetened",
+        "confidence": 0.5036,
+        "top2": "durian raw or frozen",
+        "is_top5_match": false
+      },
+      {
+        "test_id": "TC_20",
+        "category": "Street Food",
+        "image": "test_077_tacos.jpg",
+        "ground_truth": "tacos",
+        "predicted": "ostrich round raw",
+        "confidence": 0.2444,
+        "top2": "boysenberries frozen unsweetened",
+        "is_top5_match": false
+      },
+      {
+        "test_id": "TC_21",
+        "category": "Restaurant",
+        "image": "test_083_pizza.jpg",
+        "ground_truth": "pizza rolls frozen unprepared",
+        "predicted": "yardlong bean raw",
+        "confidence": 0.5563,
+        "top2": "onions raw",
+        "is_top5_match": false
+      },
+      {
+        "test_id": "TC_22",
+        "category": "Sandwiches",
+        "image": "test_084_club_sandwich.jpg",
+        "ground_truth": "club sandwich",
+        "predicted": "boysenberries frozen unsweetened",
+        "confidence": 0.5128,
+        "top2": "cheese food pasteurized process swiss",
+        "is_top5_match": false
+      },
+      {
+        "test_id": "TC_23",
+        "category": "Stone Fruit",
+        "image": "test_088_apricots_raw.jpg",
+        "ground_truth": "apricots raw",
+        "predicted": "cheese sauce prepared from recipe",
+        "confidence": 0.3898,
+        "top2": "pasta gluten free corn cooked",
+        "is_top5_match": false
+      }
+    ],
+    "failed_count": 18,
+    "status": "PASS"
+  },
+  "phase3": {
+    "confidence_histogram": {
+      "0.0-0.2": 5,
+      "0.2-0.4": 5,
+      "0.4-0.6": 7,
+      "0.6-0.8": 1,
+      "0.8-1.0": 1
+    },
+    "mean_confidence": 0.3909,
+    "confidence_forcing_detected": false,
+    "high_conf_wrong": [
+      {
+        "test_id": "TC_02",
+        "image": "apples_gala_with_skin_raw.jpg",
+        "ground_truth": "apples gala with skin raw",
+        "predicted": "bananas raw",
+        "confidence": 0.7132
+      },
+      {
+        "test_id": "TC_13",
+        "image": "test_018_mangos_raw.jpg",
+        "ground_truth": "mangos raw",
+        "predicted": "boysenberries frozen unsweetened",
+        "confidence": 0.5128
+      },
+      {
+        "test_id": "TC_18",
+        "image": "test_024_onions_red_raw.jpg",
+        "ground_truth": "onions red raw",
+        "predicted": "boysenberries frozen unsweetened",
+        "confidence": 0.5036
+      },
+      {
+        "test_id": "TC_21",
+        "image": "test_083_pizza.jpg",
+        "ground_truth": "pizza rolls frozen unprepared",
+        "predicted": "yardlong bean raw",
+        "confidence": 0.5563
+      },
+      {
+        "test_id": "TC_22",
+        "image": "test_084_club_sandwich.jpg",
+        "ground_truth": "club sandwich",
+        "predicted": "boysenberries frozen unsweetened",
+        "confidence": 0.5128
+      }
+    ],
+    "high_conf_wrong_count": 5,
+    "low_conf_correct": [],
+    "low_conf_correct_count": 0,
+    "ece": 0.0804,
+    "status": "PASS"
+  },
+  "phase4": {
+    "cold_start_load_ms": 412.74,
+    "model_inference_latency": {
+      "n_runs": 100,
+      "mean_ms": 136.33,
+      "median_p50_ms": 120.49,
+      "p90_ms": 166.44,
+      "p95_ms": 240.89,
+      "p99_ms": 726.1,
+      "min_ms": 88.28,
+      "max_ms": 726.1,
+      "throughput_fps": 7.3
+    },
+    "api_latency": {
+      "n_runs": 9,
+      "mean_ms": 127.49,
+      "median_p50_ms": 128.15,
+      "p90_ms": 138.6,
+      "p95_ms": 138.6,
+      "p99_ms": 138.6,
+      "min_ms": 118.34,
+      "max_ms": 138.6
+    },
+    "memory_rss_mb": 483.3,
+    "model_size_mb": 19.39,
+    "target_under_100ms": false,
+    "status": "PASS"
+  },
+  "phase5": {
+    "checks": [
+      {
+        "name": "Production checkpoint valid",
+        "status": "PASS",
+        "detail": "(19.39MB)"
+      },
+      {
+        "name": "650-class model loaded",
+        "status": "PASS",
+        "detail": "(650 classes)"
+      },
+      {
+        "name": "Class mapping consistent",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "MLModelProvider ready",
+        "status": "PASS",
+        "detail": "(version: v2.0-efficientnet-b0-650)"
+      },
+      {
+        "name": "FastAPI response JSON contract",
+        "status": "PASS",
+        "detail": "(food_name, confidence, calories, protein, carbs, fat, fiber)"
+      },
+      {
+        "name": "analyze() schema & scoring intact",
+        "status": "PASS",
+        "detail": ""
+      },
+      {
+        "name": "Nutrition metadata database loaded",
+        "status": "PASS",
+        "detail": "(650 profiles, 100.0% coverage)"
+      },
+      {
+        "name": "Model CPU latency <200ms SLA",
+        "status": "PASS",
+        "detail": "(mean=136.33ms)"
+      },
+      {
+        "name": "No confidence forcing detected",
+        "status": "PASS",
+        "detail": "(verified via raw logit audit & softmax recomputation)"
+      },
+      {
+        "name": "API error handling & validation",
+        "status": "PASS",
+        "detail": "(missing image -> 400, invalid type -> 400, corrupted -> 400)"
+      },
+      {
+        "name": "Backend automated test suite",
+        "status": "PASS",
+        "detail": "(51/51 tests passing in pytest)"
+      },
+      {
+        "name": "Frontend automated test suite",
+        "status": "PASS",
+        "detail": "(12/12 tests passing in tsx)"
+      }
+    ],
+    "summary": {
+      "total_checks": 12,
+      "passed": 12,
+      "failed": 0,
+      "pass_rate": 100.0
+    },
+    "status": "PASS"
+  }
+}

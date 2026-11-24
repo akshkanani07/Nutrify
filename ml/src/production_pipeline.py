@@ -254,11 +254,14 @@ class ProductionImagePreprocessor:
 class EnhancedClassifierHead(nn.Module):
     """Deep 2-layer classifier head matching trained checkpoint."""
 
-    def __init__(self, in_features: int, num_classes: int = 50, hidden_dim: int = 512, dropout: float = 0.3):
+    def __init__(self, in_features: int, num_classes: int = 50, hidden_dim: int = 512, dropout: float = 0.3, act_fn: str = "gelu"):
         super().__init__()
         self.fc1 = nn.Linear(in_features, hidden_dim)
         self.bn1 = nn.BatchNorm1d(hidden_dim)
-        self.act = nn.GELU()
+        if act_fn == "identity":
+            self.act = nn.Identity()
+        else:
+            self.act = nn.GELU()
         self.drop = nn.Dropout(dropout)
         self.fc2 = nn.Linear(hidden_dim, num_classes)
 
@@ -280,6 +283,7 @@ class ProductionFoodModel(nn.Module):
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
         feat = self.extractor(x)
+        feat = F.normalize(feat, p=2, dim=1)
         return self.head(feat)
 
     @torch.inference_mode()
@@ -466,7 +470,8 @@ class ProductionInferenceService:
         # Build architecture
         m = models.efficientnet_b0(weights=None)
         extractor = nn.Sequential(m.features, m.avgpool, nn.Flatten(1))
-        head = EnhancedClassifierHead(in_features=1280, num_classes=self.num_classes, hidden_dim=512, dropout=0.3)
+        act_fn = checkpoint.get("act_fn", "gelu")
+        head = EnhancedClassifierHead(in_features=1280, num_classes=self.num_classes, hidden_dim=512, dropout=0.3, act_fn=act_fn)
         self.model = ProductionFoodModel(extractor=extractor, head=head)
         self.model.load_state_dict(checkpoint["model_state_dict"])
         self.model.to(self.device)

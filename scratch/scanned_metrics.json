@@ -1,0 +1,788 @@
+{
+  "architecture_comparison_report.json": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\architecture_comparison_report.json",
+    "size_bytes": 2236,
+    "json_keys": [
+      "baseline_top1_acc",
+      "baseline_top5_acc",
+      "architectures_tested",
+      "best_architecture",
+      "final_test_top1_acc",
+      "final_test_top5_acc",
+      "final_test_loss",
+      "top_10_errors"
+    ],
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "backbone_comparison_report.json": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\backbone_comparison_report.json",
+    "size_bytes": 1974,
+    "json_keys": [
+      "benchmark_title",
+      "timestamp",
+      "hardware_environment",
+      "results",
+      "architectural_decision"
+    ],
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "clean_dataset_report.json": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\clean_dataset_report.json",
+    "size_bytes": 785,
+    "json_keys": [
+      "report_title",
+      "timestamp",
+      "cleaning_directory",
+      "results",
+      "quality_thresholds",
+      "cleaning_duration_seconds",
+      "status"
+    ],
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "confusion_matrix_650.json": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\confusion_matrix_650.json",
+    "size_bytes": 10735,
+    "json_keys": [
+      "timestamp",
+      "total_classes",
+      "top_mistakes_count",
+      "mistakes",
+      "recommendations"
+    ],
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "confusion_matrix_report.json": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\confusion_matrix_report.json",
+    "size_bytes": 28693,
+    "json_keys": [
+      "total_test_samples",
+      "top1_accuracy",
+      "top5_accuracy",
+      "top_10_errors",
+      "confusion_matrix",
+      "classes"
+    ],
+    "text_matches": {},
+    "extracted_metrics": {
+      "top1_accuracy": 55.0,
+      "top5_accuracy": 94.92
+    }
+  },
+  "dataset_650_preparation_summary.json": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\dataset_650_preparation_summary.json",
+    "size_bytes": 232,
+    "json_keys": [
+      "total_classes",
+      "images_per_class",
+      "total_images",
+      "train_samples",
+      "val_samples",
+      "test_samples",
+      "split_ratio",
+      "generation_time_s"
+    ],
+    "text_matches": {},
+    "extracted_metrics": {
+      "test_samples": 29250
+    }
+  },
+  "dataset_audit_report.json": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\dataset_audit_report.json",
+    "size_bytes": 1186,
+    "json_keys": [
+      "audit_title",
+      "timestamp",
+      "total_images_analyzed",
+      "image_composition",
+      "integrity_metrics",
+      "resolution_statistics",
+      "optical_quality",
+      "class_balance_statistics",
+      "execution_duration_seconds"
+    ],
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "dataset_domain_gap_report.md": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\dataset_domain_gap_report.md",
+    "size_bytes": 4313,
+    "text_matches": {
+      "top1": [
+        "1."
+      ]
+    },
+    "extracted_metrics": {}
+  },
+  "dataset_expansion_report.json": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\dataset_expansion_report.json",
+    "size_bytes": 531,
+    "json_keys": [
+      "tier",
+      "target_classes_count",
+      "indexed_classes_count",
+      "cleaning_stats",
+      "split_counts",
+      "duration_seconds",
+      "timestamp"
+    ],
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "dataset_quality_review.json": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\dataset_quality_review.json",
+    "size_bytes": 19954,
+    "json_keys": [
+      "timestamp",
+      "total_classes_reviewed",
+      "total_images_inspected",
+      "duplicate_or_unrealistic_count",
+      "problematic_classes",
+      "classes_requiring_additional_data",
+      "quality_standards_verified",
+      "reviewed_class_details"
+    ],
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "dataset_quality_review.md": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\dataset_quality_review.md",
+    "size_bytes": 3827,
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "dataset_validation_report.json": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\dataset_validation_report.json",
+    "size_bytes": 804,
+    "json_keys": [
+      "timestamp",
+      "target_classes",
+      "checks",
+      "ready_for_training",
+      "validation_time_s"
+    ],
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "dataset_validation_report.md": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\dataset_validation_report.md",
+    "size_bytes": 1545,
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "evaluation_650_report.json": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\evaluation_650_report.json",
+    "size_bytes": 6347,
+    "json_keys": [
+      "timestamp",
+      "checkpoint_path",
+      "total_classes",
+      "test_samples",
+      "overall_metrics",
+      "category_accuracy",
+      "top_confused_pairs",
+      "comparison_50_vs_650",
+      "phase1_history",
+      "phase2_history"
+    ],
+    "text_matches": {
+      "checkpoint": [
+        "nutrition_model_650_best.pt"
+      ]
+    },
+    "extracted_metrics": {
+      "test_samples": 1950,
+      "checkpoint_path": "C:\\Nutrify\\ml\\models\\production\\nutrition_model_650_best.pt",
+      "overall_metrics": {
+        "top1_accuracy": 4.46,
+        "top5_accuracy": 12.05,
+        "macro_precision": 2.89,
+        "macro_recall": 4.46,
+        "macro_f1": 2.71,
+        "ece_calibration_error": 0.0804
+      }
+    }
+  },
+  "evaluation_650_report.md": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\evaluation_650_report.md",
+    "size_bytes": 1084,
+    "text_matches": {
+      "top1": [
+        "75.58%"
+      ],
+      "top5": [
+        "98.88%"
+      ],
+      "dataset_size": [
+        "16,000"
+      ]
+    },
+    "extracted_metrics": {}
+  },
+  "performance_benchmark_650.json": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\performance_benchmark_650.json",
+    "size_bytes": 652,
+    "json_keys": [
+      "timestamp",
+      "checkpoint_path",
+      "model_classes",
+      "model_size_mb",
+      "memory_rss_mb",
+      "cold_start_load_ms",
+      "inference_latency_cpu",
+      "gpu_projected_latency",
+      "target_status"
+    ],
+    "text_matches": {
+      "checkpoint": [
+        "nutrition_model_650_best.pt"
+      ]
+    },
+    "extracted_metrics": {
+      "checkpoint_path": "C:\\Nutrify\\ml\\models\\production\\nutrition_model_650_best.pt",
+      "inference_latency_cpu": {
+        "mean_ms": 78.89,
+        "median_p50_ms": 75.03,
+        "p90_ms": 85.51,
+        "p99_ms": 151.67,
+        "min_ms": 60.67,
+        "max_ms": 210.46,
+        "throughput_fps": 12.7,
+        "target_under_200ms": true
+      }
+    }
+  },
+  "prediction_logs.json": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\prediction_logs.json",
+    "size_bytes": 259,
+    "json_keys": [
+      "total_predictions",
+      "average_confidence",
+      "failed_requests",
+      "low_confidence_count",
+      "low_confidence_rate",
+      "latency_ms",
+      "status"
+    ],
+    "text_matches": {},
+    "extracted_metrics": {
+      "latency_ms": {
+        "mean": 120.7,
+        "p50": 116.78,
+        "p95": 161.21
+      }
+    }
+  },
+  "production_hardening_100_inferences.json": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\production_hardening_100_inferences.json",
+    "size_bytes": 41312,
+    "json_keys": [
+      "benchmark_timestamp",
+      "total_samples",
+      "total_classes_tested",
+      "top1_accuracy_percent",
+      "top5_accuracy_percent",
+      "latency_ms",
+      "throughput_fps",
+      "memory_rss_mb",
+      "confidence_tier_distribution",
+      "sample_evaluations"
+    ],
+    "text_matches": {},
+    "extracted_metrics": {
+      "latency_ms": {
+        "mean": 156.15,
+        "p50": 135.7,
+        "p95": 380.75,
+        "min": 83.9,
+        "max": 542.16
+      },
+      "total_samples": 100
+    }
+  },
+  "real_training_history.json": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\real_training_history.json",
+    "size_bytes": 1593,
+    "json_keys": [
+      "title",
+      "timestamp",
+      "total_epochs_trained",
+      "best_epoch",
+      "best_val_loss",
+      "total_duration_seconds",
+      "history"
+    ],
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "real_world_650_validation_report.json": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\real_world_650_validation_report.json",
+    "size_bytes": 4979,
+    "json_keys": [
+      "timestamp",
+      "model_classes",
+      "total_test_cases",
+      "results",
+      "fastapi_contract_verified",
+      "edge_cases_verified"
+    ],
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "real_world_validation_650.json": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\real_world_validation_650.json",
+    "size_bytes": 8311,
+    "json_keys": [
+      "timestamp",
+      "total_test_images",
+      "metrics",
+      "sample_results",
+      "fastapi_contract_verified"
+    ],
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "real_world_validation_report.json": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\real_world_validation_report.json",
+    "size_bytes": 1363,
+    "json_keys": [
+      "report_title",
+      "timestamp",
+      "test_dataset",
+      "total_test_images",
+      "metrics",
+      "category_performance",
+      "confidence_distribution",
+      "status"
+    ],
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "real_world_validation_report.md": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\real_world_validation_report.md",
+    "size_bytes": 10720,
+    "text_matches": {
+      "checkpoint": [
+        "nutrition_model_best.pt"
+      ]
+    },
+    "extracted_metrics": {}
+  },
+  "repository_audit.json": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\repository_audit.json",
+    "size_bytes": 5915,
+    "json_keys": [
+      "audit_name",
+      "timestamp",
+      "dataset_folders",
+      "training_pipeline",
+      "validation_pipeline",
+      "checkpoints",
+      "nutrition_mapping",
+      "backend_integration",
+      "frontend_integration",
+      "summary"
+    ],
+    "text_matches": {
+      "checkpoint": [
+        "nutrition_model_650_best.pt",
+        "nutrition_model_650_best.pt",
+        "nutrition_model_650_realworld.pt",
+        "nutrition_model_650_realworld.pt",
+        "nutrition_model_b0.pt"
+      ]
+    },
+    "extracted_metrics": {}
+  },
+  "scalability_validation_report.json": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\scalability_validation_report.json",
+    "size_bytes": 1008,
+    "json_keys": [
+      "timestamp",
+      "checks",
+      "all_passed"
+    ],
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "scalability_validation_report.md": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\scalability_validation_report.md",
+    "size_bytes": 938,
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "training_650_execution_summary.json": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\training_650_execution_summary.json",
+    "size_bytes": 10914,
+    "json_keys": [
+      "status",
+      "timestamp",
+      "stage1_epochs",
+      "stage2_epochs",
+      "overall_metrics",
+      "category_performance",
+      "production_artifacts"
+    ],
+    "text_matches": {
+      "checkpoint": [
+        "nutrition_model_650_best.pt"
+      ]
+    },
+    "extracted_metrics": {
+      "overall_metrics": {
+        "top1_accuracy": 81.85,
+        "top5_accuracy": 96.42,
+        "validation_accuracy": 82.4,
+        "loss": 0.682,
+        "average_confidence": 0.884
+      }
+    }
+  },
+  "verification_audit_results.json": {
+    "category": "ml/data/reports",
+    "path": "C:\\Nutrify\\ml\\data\\reports\\verification_audit_results.json",
+    "size_bytes": 35645,
+    "json_keys": [
+      "audit_name",
+      "timestamp",
+      "total_test_cases",
+      "empirical_metrics",
+      "confusion_samples",
+      "detailed_test_cases"
+    ],
+    "text_matches": {
+      "checkpoint": [
+        "nutrition_model_650_realworld.pt",
+        "nutrition_model_best.pt"
+      ]
+    },
+    "extracted_metrics": {
+      "empirical_metrics": {
+        "realworld_model_650": {
+          "checkpoint": "C:\\Nutrify\\ml\\models\\production\\nutrition_model_650_realworld.pt",
+          "num_classes": 650,
+          "measured_top1_accuracy": 5.26,
+          "measured_top5_accuracy": 15.79,
+          "measured_avg_confidence": 0.3909,
+          "confidence_histogram": {
+            "0.0-0.2": 5,
+            "0.2-0.4": 5,
+            "0.4-0.6": 7,
+            "0.6-0.8": 1,
+            "0.8-1.0": 1
+          },
+          "confidence_forcing_detected": false
+        },
+        "old_production_model_50": {
+          "checkpoint": "C:\\Nutrify\\ml\\models\\production\\nutrition_model_best.pt",
+          "num_classes": 50,
+          "measured_top1_accuracy": 5.26,
+          "measured_top5_accuracy": 15.79,
+          "measured_avg_confidence": 0.2869,
+          "confidence_histogram": {
+            "0.0-0.2": 11,
+            "0.2-0.4": 4,
+            "0.4-0.6": 3,
+            "0.6-0.8": 1,
+            "0.8-1.0": 0
+          }
+        }
+      }
+    }
+  },
+  "confidence_calibration_report.md": {
+    "category": "ml/reports",
+    "path": "C:\\Nutrify\\ml\\reports\\confidence_calibration_report.md",
+    "size_bytes": 2037,
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "dataset_update_report.md": {
+    "category": "ml/reports",
+    "path": "C:\\Nutrify\\ml\\reports\\dataset_update_report.md",
+    "size_bytes": 1681,
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "final_accuracy_comparison_report.md": {
+    "category": "ml/reports",
+    "path": "C:\\Nutrify\\ml\\reports\\final_accuracy_comparison_report.md",
+    "size_bytes": 4810,
+    "text_matches": {
+      "checkpoint": [
+        "nutrition_model_650_realworld.pt"
+      ]
+    },
+    "extracted_metrics": {}
+  },
+  "final_dataset_preparation_report.md": {
+    "category": "ml/reports",
+    "path": "C:\\Nutrify\\ml\\reports\\final_dataset_preparation_report.md",
+    "size_bytes": 1097,
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "final_dataset_validation_report.json": {
+    "category": "ml/reports",
+    "path": "C:\\Nutrify\\ml\\reports\\final_dataset_validation_report.json",
+    "size_bytes": 782,
+    "json_keys": [
+      "validation_timestamp",
+      "status",
+      "dataset_splits",
+      "integrity_checks",
+      "taxonomy_checks",
+      "class_distribution"
+    ],
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "final_image_collection_report.md": {
+    "category": "ml/reports",
+    "path": "C:\\Nutrify\\ml\\reports\\final_image_collection_report.md",
+    "size_bytes": 1164,
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "final_production_readiness_report.md": {
+    "category": "ml/reports",
+    "path": "C:\\Nutrify\\ml\\reports\\final_production_readiness_report.md",
+    "size_bytes": 2481,
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "final_realworld_evaluation_report.md": {
+    "category": "ml/reports",
+    "path": "C:\\Nutrify\\ml\\reports\\final_realworld_evaluation_report.md",
+    "size_bytes": 1895,
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "final_training_report.md": {
+    "category": "ml/reports",
+    "path": "C:\\Nutrify\\ml\\reports\\final_training_report.md",
+    "size_bytes": 1508,
+    "text_matches": {
+      "checkpoint": [
+        "nutrition_model_650_realworld.pt",
+        "nutrition_model_650_best.pt"
+      ]
+    },
+    "extracted_metrics": {}
+  },
+  "image_collection_status_report.md": {
+    "category": "artifacts",
+    "path": "C:\\Users\\AkshKanani\\.gemini\\antigravity\\brain\\b7d6aba7-8151-4941-a38f-feefc1012f2a\\image_collection_status_report.md",
+    "size_bytes": 855,
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "inference_benchmark_report.md": {
+    "category": "ml/reports",
+    "path": "C:\\Nutrify\\ml\\reports\\inference_benchmark_report.md",
+    "size_bytes": 1921,
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "nutrify_ai_final_status_report.md": {
+    "category": "ml/reports",
+    "path": "C:\\Nutrify\\ml\\reports\\nutrify_ai_final_status_report.md",
+    "size_bytes": 6817,
+    "text_matches": {
+      "top1": [
+        "5.26%"
+      ],
+      "top5": [
+        "25.54%"
+      ],
+      "checkpoint": [
+        "nutrition_model_650_realworld.pt",
+        "nutrition_model_650_realworld.pt"
+      ]
+    },
+    "extracted_metrics": {}
+  },
+  "production_error_analysis_report.md": {
+    "category": "ml/reports",
+    "path": "C:\\Nutrify\\ml\\reports\\production_error_analysis_report.md",
+    "size_bytes": 4652,
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "production_model_verification_report.md": {
+    "category": "ml/reports",
+    "path": "C:\\Nutrify\\ml\\reports\\production_model_verification_report.md",
+    "size_bytes": 2519,
+    "text_matches": {
+      "top1": [
+        "25.54%"
+      ],
+      "top5": [
+        "53.85%"
+      ],
+      "latency": [
+        "182.9 ms"
+      ],
+      "checkpoint": [
+        "nutrition_model_650_realworld.pt"
+      ]
+    },
+    "extracted_metrics": {}
+  },
+  "production_validation_data.json": {
+    "category": "ml/reports",
+    "path": "C:\\Nutrify\\ml\\reports\\production_validation_data.json",
+    "size_bytes": 18456,
+    "json_keys": [
+      "timestamp",
+      "phase1",
+      "phase2",
+      "phase3",
+      "phase4",
+      "phase5"
+    ],
+    "text_matches": {
+      "checkpoint": [
+        "nutrition_model_650_realworld.pt"
+      ]
+    },
+    "extracted_metrics": {}
+  },
+  "remaining_image_collection_completion_report.md": {
+    "category": "ml/reports",
+    "path": "C:\\Nutrify\\ml\\reports\\remaining_image_collection_completion_report.md",
+    "size_bytes": 1242,
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "nutrition_ai_650_expansion_strategy.md": {
+    "category": "artifacts",
+    "path": "C:\\Users\\AkshKanani\\.gemini\\antigravity\\brain\\b7d6aba7-8151-4941-a38f-feefc1012f2a\\nutrition_ai_650_expansion_strategy.md",
+    "size_bytes": 6659,
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "nutrition_ai_650_production_execution_report.md": {
+    "category": "artifacts",
+    "path": "C:\\Users\\AkshKanani\\.gemini\\antigravity\\brain\\b7d6aba7-8151-4941-a38f-feefc1012f2a\\nutrition_ai_650_production_execution_report.md",
+    "size_bytes": 9854,
+    "text_matches": {
+      "checkpoint": [
+        "nutrition_model_650_best.pt",
+        "nutrition_model_650_best.pt",
+        "nutrition_model_650_best.pt",
+        "nutrition_model_650_best.pt"
+      ]
+    },
+    "extracted_metrics": {}
+  },
+  "nutrition_ai_650_production_release_report.md": {
+    "category": "artifacts",
+    "path": "C:\\Users\\AkshKanani\\.gemini\\antigravity\\brain\\b7d6aba7-8151-4941-a38f-feefc1012f2a\\nutrition_ai_650_production_release_report.md",
+    "size_bytes": 11106,
+    "text_matches": {
+      "top1": [
+        "81.85%",
+        "81.85%"
+      ],
+      "top5": [
+        "96.42%",
+        "96.42%"
+      ],
+      "checkpoint": [
+        "nutrition_model_650_best.pt",
+        "nutrition_model_650_best.pt",
+        "nutrition_model_650_best.pt",
+        "nutrition_model_650_best.pt"
+      ]
+    },
+    "extracted_metrics": {}
+  },
+  "nutrition_ai_final_release_report.md": {
+    "category": "artifacts",
+    "path": "C:\\Users\\AkshKanani\\.gemini\\antigravity\\brain\\b7d6aba7-8151-4941-a38f-feefc1012f2a\\nutrition_ai_final_release_report.md",
+    "size_bytes": 12949,
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "nutrition_ai_model_training_report.md": {
+    "category": "artifacts",
+    "path": "C:\\Users\\AkshKanani\\.gemini\\antigravity\\brain\\b7d6aba7-8151-4941-a38f-feefc1012f2a\\nutrition_ai_model_training_report.md",
+    "size_bytes": 15047,
+    "text_matches": {
+      "checkpoint": [
+        "nutrition_model_650_best.pt",
+        "nutrition_model_650_best.pt"
+      ]
+    },
+    "extracted_metrics": {}
+  },
+  "nutrition_ai_realworld_upgrade_report.md": {
+    "category": "artifacts",
+    "path": "C:\\Users\\AkshKanani\\.gemini\\antigravity\\brain\\b7d6aba7-8151-4941-a38f-feefc1012f2a\\nutrition_ai_realworld_upgrade_report.md",
+    "size_bytes": 12208,
+    "text_matches": {
+      "checkpoint": [
+        "nutrition_model_650_realworld.pt",
+        "nutrition_model_650_realworld.pt",
+        "nutrition_model_650_realworld.pt",
+        "nutrition_model_650_realworld.pt",
+        "nutrition_model_650_best.pt"
+      ]
+    },
+    "extracted_metrics": {}
+  },
+  "remaining_image_collection_report.md": {
+    "category": "artifacts",
+    "path": "C:\\Users\\AkshKanani\\.gemini\\antigravity\\brain\\b7d6aba7-8151-4941-a38f-feefc1012f2a\\remaining_image_collection_report.md",
+    "size_bytes": 2194,
+    "text_matches": {},
+    "extracted_metrics": {}
+  },
+  "senior_ml_verification_report.md": {
+    "category": "artifacts",
+    "path": "C:\\Users\\AkshKanani\\.gemini\\antigravity\\brain\\b7d6aba7-8151-4941-a38f-feefc1012f2a\\senior_ml_verification_report.md",
+    "size_bytes": 11698,
+    "text_matches": {
+      "checkpoint": [
+        "nutrition_model_650_realworld.pt",
+        "nutrition_model_best.pt",
+        "nutrition_model_650_realworld.pt",
+        "nutrition_model_650_realworld.pt",
+        "nutrition_model_best.pt"
+      ]
+    },
+    "extracted_metrics": {}
+  }
+}

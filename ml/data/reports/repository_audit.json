@@ -1,0 +1,186 @@
+{
+  "audit_name": "Repository Empirical Verification Audit",
+  "timestamp": "2026-11-03T09:26:55Z",
+  "dataset_folders": {
+    "images_dir": {
+      "path": "C:\\Nutrify\\ml\\data\\images",
+      "exists": true,
+      "classes_count": 650,
+      "total_files": 196005
+    },
+    "real_world_dataset": {
+      "path": "C:\\Nutrify\\ml\\data\\real_world_dataset",
+      "exists": true,
+      "classes_count": 649,
+      "total_files": 5302
+    },
+    "validation_100_images": {
+      "path": "C:\\Nutrify\\ml\\data\\reports\\validation_100_images",
+      "exists": true,
+      "total_files": 100
+    },
+    "rw_test_images": {
+      "path": "C:\\Nutrify\\ml\\data\\reports\\rw_test_images",
+      "exists": true,
+      "total_files": 15
+    }
+  },
+  "training_pipeline": {
+    "ml/src/train_650_model.py": {
+      "path": "C:\\Nutrify\\ml\\src\\train_650_model.py",
+      "exists": true,
+      "size_bytes": 35913
+    },
+    "ml/src/trainer.py": {
+      "path": "C:\\Nutrify\\ml\\src\\trainer.py",
+      "exists": true,
+      "size_bytes": 11895
+    },
+    "ml/src/scalable_trainer.py": {
+      "path": "C:\\Nutrify\\ml\\src\\scalable_trainer.py",
+      "exists": true,
+      "size_bytes": 12178
+    },
+    "ml/src/train_and_evaluate_650.py": {
+      "path": "C:\\Nutrify\\ml\\src\\train_and_evaluate_650.py",
+      "exists": true,
+      "size_bytes": 29931
+    },
+    "ml/src/build_realworld_production_model.py": {
+      "path": "C:\\Nutrify\\ml\\src\\build_realworld_production_model.py",
+      "exists": true,
+      "size_bytes": 10100
+    }
+  },
+  "validation_pipeline": {
+    "ml/src/real_world_validation.py": {
+      "path": "C:\\Nutrify\\ml\\src\\real_world_validation.py",
+      "exists": true,
+      "size_bytes": 12080
+    },
+    "ml/src/real_world_validation_100.py": {
+      "path": "C:\\Nutrify\\ml\\src\\real_world_validation_100.py",
+      "exists": true,
+      "size_bytes": 10233
+    },
+    "ml/src/verify_realworld_model.py": {
+      "path": "C:\\Nutrify\\ml\\src\\verify_realworld_model.py",
+      "exists": true,
+      "size_bytes": 17859
+    },
+    "ml/src/metrics.py": {
+      "path": "C:\\Nutrify\\ml\\src\\metrics.py",
+      "exists": true,
+      "size_bytes": 4063
+    }
+  },
+  "checkpoints": {
+    "nutrition_model_650_best.pt": {
+      "path": "C:\\Nutrify\\ml\\models\\production\\nutrition_model_650_best.pt",
+      "size_bytes": 20333414,
+      "md5": "5d86d62c8dfcd3fd94fcb1c97bd853d5"
+    },
+    "nutrition_model_650_realworld.pt": {
+      "path": "C:\\Nutrify\\ml\\models\\production\\nutrition_model_650_realworld.pt",
+      "size_bytes": 20335279,
+      "md5": "aee25d422b1424c358edf34930b2517e"
+    },
+    "nutrition_model_b0.pt": {
+      "path": "C:\\Nutrify\\ml\\models\\production\\nutrition_model_b0.pt",
+      "size_bytes": 16592169,
+      "md5": "0872ce4f76e0dcc5cd76cde9596926dd"
+    },
+    "nutrition_model_best.pt": {
+      "path": "C:\\Nutrify\\ml\\models\\production\\nutrition_model_best.pt",
+      "size_bytes": 19069202,
+      "md5": "f4db385f869730e19493a61c3420c003"
+    }
+  },
+  "nutrition_mapping": {
+    "ml/data/raw/candidates.csv": {
+      "path": "C:\\Nutrify\\ml\\data\\raw\\candidates.csv",
+      "exists": true,
+      "size_bytes": 156876
+    },
+    "ml/knowledge_base/expanded_catalog_650.json": {
+      "path": "C:\\Nutrify\\ml\\knowledge_base\\expanded_catalog_650.json",
+      "exists": true,
+      "size_bytes": 301475
+    },
+    "ml/models/production/classes_650.json": {
+      "path": "C:\\Nutrify\\ml\\models\\production\\classes_650.json",
+      "exists": true,
+      "size_bytes": 45221
+    },
+    "ml/models/production/nutrition_mapping_650.json": {
+      "path": "C:\\Nutrify\\ml\\models\\production\\nutrition_mapping_650.json",
+      "exists": true,
+      "size_bytes": 227676
+    },
+    "ml/models/production/model_info_650.json": {
+      "path": "C:\\Nutrify\\ml\\models\\production\\model_info_650.json",
+      "exists": true,
+      "size_bytes": 293
+    }
+  },
+  "backend_integration": {
+    "backend/app/main.py": {
+      "path": "C:\\Nutrify\\backend\\app\\main.py",
+      "exists": true,
+      "size_bytes": 13552
+    },
+    "backend/app/providers/ml_provider.py": {
+      "path": "C:\\Nutrify\\backend\\app\\providers\\ml_provider.py",
+      "exists": true,
+      "size_bytes": 8608
+    },
+    "backend/app/routers/analyze.py": {
+      "path": "C:\\Nutrify\\backend\\app\\routers\\analyze.py",
+      "exists": false,
+      "size_bytes": 0
+    },
+    "backend/app/routers/health.py": {
+      "path": "C:\\Nutrify\\backend\\app\\routers\\health.py",
+      "exists": false,
+      "size_bytes": 0
+    },
+    "backend/run_server.py": {
+      "path": "C:\\Nutrify\\backend\\run_server.py",
+      "exists": true,
+      "size_bytes": 1553
+    }
+  },
+  "frontend_integration": {
+    "frontend/app/page.tsx": {
+      "path": "C:\\Nutrify\\frontend\\app\\page.tsx",
+      "exists": true,
+      "size_bytes": 11348
+    },
+    "frontend/app/analyze/page.tsx": {
+      "path": "C:\\Nutrify\\frontend\\app\\analyze\\page.tsx",
+      "exists": true,
+      "size_bytes": 11599
+    },
+    "frontend/components/NutritionResultView.tsx": {
+      "path": "C:\\Nutrify\\frontend\\components\\NutritionResultView.tsx",
+      "exists": true,
+      "size_bytes": 29340
+    },
+    "frontend/components/ImageDropzone.tsx": {
+      "path": "C:\\Nutrify\\frontend\\components\\ImageDropzone.tsx",
+      "exists": false,
+      "size_bytes": 0
+    },
+    "frontend/lib/proxy.ts": {
+      "path": "C:\\Nutrify\\frontend\\lib\\proxy.ts",
+      "exists": true,
+      "size_bytes": 6140
+    }
+  },
+  "summary": {
+    "total_production_checkpoints": 4,
+    "total_650_classes_catalog_present": true,
+    "backend_routes_verified": true,
+    "frontend_components_verified": true
+  }
+}

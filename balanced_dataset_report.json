@@ -1,0 +1,50 @@
+{
+  "report_name": "Nutrition AI 650 Balanced Dataset & Stratification Report",
+  "total_classes": 650,
+  "staple_classes_count": 439,
+  "standard_classes_count": 211,
+  "staple_target_per_class": 1000,
+  "standard_target_per_class": 500,
+  "total_effective_samples": 544500,
+  "split_distribution": {
+    "train_samples": 435600,
+    "train_ratio": 0.8,
+    "val_samples": 54450,
+    "val_ratio": 0.1,
+    "test_samples": 54450,
+    "test_ratio": 0.1
+  },
+  "representation_by_cuisine_and_type": {
+    "Indian Cuisine": 14,
+    "International Cuisine": 194,
+    "Street Food": 6,
+    "Packaged Food": 47,
+    "Staples & Fresh Produce": 389
+  },
+  "category_distribution": {
+    "fruit": 168,
+    "bakery": 12,
+    "vegetable": 212,
+    "dairy": 53,
+    "meat": 85,
+    "grain": 7,
+    "legume": 9,
+    "sweet": 12,
+    "nut_seed": 1,
+    "mixed_dish": 20,
+    "snack": 7,
+    "seafood": 17,
+    "poultry": 39,
+    "soup": 4,
+    "egg": 3,
+    "condiment_sauce": 1
+  },
+  "class_weighting_analysis": {
+    "min_weight": 0.7549,
+    "max_weight": 1.5099,
+    "mean_weight": 0.9999846153846154,
+    "std_weight": 0.3535143786568798,
+    "balancing_formula": "Inverse Frequency with L2 Normalization: W_c = N / (C * N_c)"
+  },
+  "status": "BALANCED_READY_FOR_RETRAINING"
+}

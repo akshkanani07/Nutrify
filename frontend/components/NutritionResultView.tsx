@@ -159,6 +159,25 @@ export const NutritionResultView: React.FC<NutritionResultViewProps> = ({
             </div>
           </div>
 
+          {prediction.confidence < 0.40 && (
+            <div className="p-3 bg-amber-50/90 border border-amber-200/90 rounded-lg text-xs text-amber-900 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div className="flex items-center gap-2">
+                <Info className="w-4 h-4 text-amber-600 flex-shrink-0" />
+                <span>
+                  The neural network scored this at only <strong>{Math.round(prediction.confidence * 100)}% confidence</strong>. If this is an apple or other meal, scroll down to <strong>Alternative Candidates</strong> to switch or provide feedback.
+                </span>
+              </div>
+              {prediction.candidates && prediction.candidates.length > 0 && (
+                <a
+                  href="#alternatives"
+                  className="inline-flex items-center justify-center px-2.5 py-1 bg-amber-600 hover:bg-amber-700 text-white rounded font-medium text-xs whitespace-nowrap transition-colors self-start sm:self-auto"
+                >
+                  View Alternatives ↓
+                </a>
+              )}
+            </div>
+          )}
+
           {/* Interactive Portion Scaler */}
           <div className="pt-4 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-slate-50/80 p-4 rounded-xl border border-slate-200/70">
             <div className="flex items-center gap-2 text-sm text-slate-700">
@@ -383,7 +402,7 @@ export const NutritionResultView: React.FC<NutritionResultViewProps> = ({
 
       {/* ================= RUNNER-UP ALTERNATE CANDIDATES ================= */}
       {prediction.candidates && prediction.candidates.length > 0 && (
-        <Card className="border-slate-200/80 shadow-sm">
+        <Card id="alternatives" className="border-slate-200/80 shadow-sm scroll-mt-20">
           <CardHeader>
             <CardTitle className="text-base sm:text-lg flex items-center gap-2">
               <Sparkles className="w-4 h-4 text-emerald-600" />

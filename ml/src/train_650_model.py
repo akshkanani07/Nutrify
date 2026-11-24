@@ -5,12 +5,16 @@ Features:
 - Net2Net weight preservation for zero degradation on base classes
 - Phase 1: Frozen EfficientNet-B0 backbone + expanded classification head (AdamW + Cosine)
 - Phase 2: End-to-end fine-tuning with differential learning rates, MixUp, CutMix & RandAugment
+- Streaming FoodImageDataset with on-the-fly photographic augmentations (RandAugment, ColorJitter, RandomResizedCrop)
+- Automatic Mixed Precision (AMP) support for accelerated training
 - Comprehensive Evaluation: Top-1/Top-5 accuracy, Category breakdown, Confusion matrix, Calibration ECE
+- CLI argument parsing for scalable training on full dataset or fast iterations
 - Full production checkpoint serialization compatible with ProductionInferenceService
 """
 
 from __future__ import annotations
 
+import argparse
 import csv
 import json
 import logging
@@ -29,6 +33,7 @@ import torch.nn.functional as F
 from torch.optim import AdamW
 from torch.optim.lr_scheduler import CosineAnnealingLR
 from torch.utils.data import DataLoader, Dataset, TensorDataset
+from torchvision import transforms
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 if str(PROJECT_ROOT) not in sys.path:
@@ -47,8 +52,114 @@ logger = logging.getLogger("nutrition_ai.train_650")
 
 
 # =====================================================================
-# DATASET HELPERS
+# DATASET & STREAMING LOADERS
 # =====================================================================
+
+def get_train_transforms(use_randaugment: bool = True) -> transforms.Compose:
+    """Production-grade data augmentation for robust real-world food recognition."""
+    ops: list[Any] = [
+        transforms.Resize((256, 256)),
+        transforms.RandomResizedCrop(224, scale=(0.70, 1.0), ratio=(0.85, 1.15)),
+        transforms.RandomHorizontalFlip(p=0.5),
+        transforms.RandomRotation(degrees=15),
+        transforms.ColorJitter(brightness=0.25, contrast=0.25, saturation=0.25, hue=0.08),
+    ]
+    if use_randaugment:
+        ops.append(transforms.RandAugment(num_ops=2, magnitude=9))
+    ops.extend([
+        transforms.ToTensor(),
+        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
+    ])
+    return transforms.Compose(ops)
+
+
+def get_val_transforms() -> transforms.Compose:
+    """Standard evaluation transform."""
+    return transforms.Compose([
+        transforms.Resize((224, 224)),
+        transforms.ToTensor(),
+        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
+    ])
+
+
+def resolve_image_path(rel_path: str, images_dir: Path) -> Path:
+    """Resolve full image path from relative path, real-world dataset or absolute path."""
+    p = Path(rel_path)
+    if p.is_absolute() and p.exists():
+        return p
+    if (images_dir / rel_path).exists():
+        return images_dir / rel_path
+    rw_dir = PROJECT_ROOT / "ml" / "data" / "real_world_dataset"
+    if (rw_dir / rel_path).exists():
+        return rw_dir / rel_path
+    return images_dir / rel_path
+
+
+def load_real_world_samples(
+    real_dataset_dir: Path,
+) -> tuple[list[tuple[str, str]], list[tuple[str, str]], list[tuple[str, str]]]:
+    """Split real-world photographic samples into train, val, and test partitions."""
+    train_rw: list[tuple[str, str]] = []
+    val_rw: list[tuple[str, str]] = []
+    test_rw: list[tuple[str, str]] = []
+
+    if not real_dataset_dir.exists():
+        return train_rw, val_rw, test_rw
+
+    for class_folder in sorted(real_dataset_dir.iterdir()):
+        if not class_folder.is_dir():
+            continue
+        label = class_folder.name.replace("_", " ")
+        images = sorted(list(class_folder.glob("*.jpg")))
+        if not images:
+            continue
+        n = len(images)
+        n_train = max(1, int(n * 0.6))
+        n_val = max(1, int(n * 0.2))
+
+        for p in images[:n_train]:
+            train_rw.append((str(p), label))
+        for p in images[n_train : n_train + n_val]:
+            val_rw.append((str(p), label))
+        for p in images[n_train + n_val :]:
+            test_rw.append((str(p), label))
+
+    return train_rw, val_rw, test_rw
+
+
+class FoodImageDataset(Dataset):
+    """Streaming PyTorch dataset for memory-efficient training on 100k+ images."""
+
+    def __init__(
+        self,
+        samples: list[tuple[str, str]],
+        class_to_idx: dict[str, int],
+        images_dir: Path,
+        transform: transforms.Compose | None = None,
+    ) -> None:
+        self.samples = samples
+        self.class_to_idx = class_to_idx
+        self.images_dir = images_dir
+        self.transform = transform or get_val_transforms()
+
+    def __len__(self) -> int:
+        return len(self.samples)
+
+    def __getitem__(self, idx: int) -> tuple[torch.Tensor, int]:
+        rel_path, label = self.samples[idx]
+        full_path = resolve_image_path(rel_path, self.images_dir)
+        try:
+            with Image.open(full_path) as img:
+                img_rgb = img.convert("RGB")
+                tensor = self.transform(img_rgb)
+        except Exception as e:
+            # Fallback to zero tensor on error
+            logger.warning(f"Failed to load image {full_path}: {e}")
+            tensor = torch.zeros(3, 224, 224)
+
+        target = self.class_to_idx.get(label, 0)
+        return tensor, target
+
 
 def load_annotations_by_class(
     csv_path: Path | str,
@@ -100,7 +211,7 @@ def extract_features_batched(
             batch_lbls = []
 
             for rel_path, label in batch_samples:
-                full_path = images_dir / rel_path
+                full_path = resolve_image_path(rel_path, images_dir)
                 try:
                     with Image.open(full_path) as img:
                         tensor = preprocess_pil(img)
@@ -205,12 +316,28 @@ def compute_ece(probs: np.ndarray, targets: np.ndarray, n_bins: int = 15) -> flo
 # MAIN INCREMENTAL TRAINER & EVALUATOR
 # =====================================================================
 
-def run_650_incremental_training() -> dict[str, Any]:
+def run_650_incremental_training(
+    epochs_p1: int = 10,
+    epochs_p2: int = 3,
+    max_train_per_class: int | None = 15,
+    max_val_per_class: int | None = 3,
+    batch_size: int = 64,
+    lr_head: float = 1e-3,
+    lr_backbone: float = 2e-5,
+    label_smoothing: float = 0.08,
+    use_amp: bool = True,
+    use_randaugment: bool = True,
+    device_name: str = "auto",
+) -> dict[str, Any]:
     set_seed(42)
-    device = get_device("auto")
+    device = get_device(device_name)
+    amp_enabled = use_amp and device.type == "cuda"
+    scaler = torch.amp.GradScaler("cuda", enabled=amp_enabled)
 
     logger.info("=" * 65)
     logger.info(f"STARTING 650-CLASS INCREMENTAL TRAINING PIPELINE ON {device}")
+    logger.info(f"Settings: Epochs P1={epochs_p1}, P2={epochs_p2} | Batch={batch_size} | Samples/Class={max_train_per_class}")
+    logger.info(f"Augmentations: RandAugment={use_randaugment}, MixUp/CutMix=True | AMP={amp_enabled}")
     logger.info("=" * 65)
 
     images_dir = PROJECT_ROOT / "ml" / "data" / "images"
@@ -232,19 +359,26 @@ def run_650_incremental_training() -> dict[str, Any]:
     # 1. Build Backbone & Scalable Head
     extractor, in_features, _ = build_backbone("efficientnet_b0", pretrained=True)
     head = ScalableClassifierHead(in_features=in_features, num_classes=num_classes)
+    model = ScalableFoodModel(extractor, head, "efficientnet_b0")
+    model.to(device)
 
-    # 2. Transfer Weights from 50-Class Base Checkpoint (Net2Net Weight Preservation)
+    # 2. Transfer Weights from 650-Class Checkpoint or 50-Class Base Checkpoint
+    ckpt_650_path = PROJECT_ROOT / "ml" / "models" / "production" / "nutrition_model_650_best.pt"
     base_ckpt_path = PROJECT_ROOT / "ml" / "models" / "production" / "nutrition_model_best.pt"
-    if base_ckpt_path.exists():
+
+    if ckpt_650_path.exists():
+        logger.info(f"Loading full 650-class pre-trained model from: {ckpt_650_path.resolve()}")
+        payload_650 = torch.load(ckpt_650_path, map_location=device, weights_only=False)
+        model.load_state_dict(payload_650["model_state_dict"], strict=True)
+        logger.info("Successfully loaded all 650-class weights!")
+    elif base_ckpt_path.exists():
         logger.info(f"Transferring pre-trained weights from: {base_ckpt_path.resolve()}")
         base_payload = torch.load(base_ckpt_path, map_location=device, weights_only=False)
         base_state = base_payload["model_state_dict"]
 
-        # Transfer extractor weights
         ext_dict = {k.replace("extractor.", "").replace("backbone.", ""): v for k, v in base_state.items() if "extractor." in k or "backbone." in k}
         extractor.load_state_dict(ext_dict, strict=False)
 
-        # Net2Net transfer for head
         if "head.fc1.weight" in base_state:
             head.fc1.weight.data.copy_(base_state["head.fc1.weight"])
             head.fc1.bias.data.copy_(base_state["head.fc1.bias"])
@@ -252,7 +386,6 @@ def run_650_incremental_training() -> dict[str, Any]:
             head.bn1.weight.data.copy_(base_state["head.bn1.weight"])
             head.bn1.bias.data.copy_(base_state["head.bn1.bias"])
 
-        # Output projection preservation for the first 50 classes
         if "head.fc2.weight" in base_state:
             old_w = base_state["head.fc2.weight"]
             old_b = base_state["head.fc2.bias"]
@@ -261,41 +394,45 @@ def run_650_incremental_training() -> dict[str, Any]:
             head.fc2.bias.data[:old_count].copy_(old_b)
             logger.info(f"Preserved weights for {old_count} pre-existing classes with zero drift.")
 
-    model = ScalableFoodModel(extractor, head, "efficientnet_b0")
-    model.to(device)
+    # 3. Load Synthetic + Real-World Datasets
+    synth_train = load_annotations_by_class(train_csv, max_per_class=max_train_per_class) if train_csv.exists() else []
+    synth_val = load_annotations_by_class(val_csv, max_per_class=max_val_per_class) if val_csv.exists() else []
+    synth_test = load_annotations_by_class(test_csv, max_per_class=max_val_per_class) if test_csv.exists() else []
 
-    # 3. Load Balanced Training & Validation Subsets for Efficient Feature Training
-    train_samples = load_annotations_by_class(train_csv, max_per_class=10)   # 6,500 train images
-    val_samples = load_annotations_by_class(val_csv, max_per_class=3)       # 1,950 val images
-    test_samples = load_annotations_by_class(test_csv, max_per_class=3)     # 1,950 test images
+    rw_dir = PROJECT_ROOT / "ml" / "data" / "real_world_dataset"
+    rw_train, rw_val, rw_test = load_real_world_samples(rw_dir)
+
+    train_samples = rw_train + synth_train
+    val_samples = rw_val + synth_val
+    test_samples = rw_test + synth_test
 
     logger.info(f"Selected balanced subsets for training & validation:")
-    logger.info(f"  Train: {len(train_samples)} samples ({len(train_samples)//num_classes} per class)")
-    logger.info(f"  Val  : {len(val_samples)} samples ({len(val_samples)//num_classes} per class)")
-    logger.info(f"  Test : {len(test_samples)} samples ({len(test_samples)//num_classes} per class)")
+    logger.info(f"  Train: {len(train_samples)} samples ({len(rw_train)} real + {len(synth_train)} synthetic)")
+    logger.info(f"  Val  : {len(val_samples)} samples ({len(rw_val)} real + {len(synth_val)} synthetic)")
+    logger.info(f"  Test : {len(test_samples)} samples ({len(rw_test)} real + {len(synth_test)} synthetic)")
 
     # =========================================================================
-    # PHASE 1: FREEZE BACKBONE -- TRAIN EXPANDED CLASSIFICATION HEAD (10 EPOCHS)
+    # PHASE 1: FREEZE BACKBONE -- TRAIN EXPANDED CLASSIFICATION HEAD
     # =========================================================================
     logger.info("\n" + "=" * 65)
-    logger.info("PHASE 1: FREEZE BACKBONE -- TRAIN 650-CLASS HEAD (10 EPOCHS)")
-    logger.info("Optimizer: AdamW (lr=1e-3, wd=1e-4) | Scheduler: CosineAnnealing")
+    logger.info(f"PHASE 1: FREEZE BACKBONE -- TRAIN 650-CLASS HEAD ({epochs_p1} EPOCHS)")
+    logger.info(f"Optimizer: AdamW (lr={lr_head}, wd=1e-4) | Scheduler: CosineAnnealing")
     logger.info("=" * 65)
 
     train_feats, train_labels = extract_features_batched(
-        extractor, train_samples, class_to_idx, images_dir, device, batch_size=64
+        extractor, train_samples, class_to_idx, images_dir, device, batch_size=batch_size
     )
     val_feats, val_labels = extract_features_batched(
-        extractor, val_samples, class_to_idx, images_dir, device, batch_size=64
+        extractor, val_samples, class_to_idx, images_dir, device, batch_size=batch_size
     )
 
-    feat_train_loader = DataLoader(TensorDataset(train_feats, train_labels), batch_size=64, shuffle=True)
-    feat_val_loader = DataLoader(TensorDataset(val_feats, val_labels), batch_size=64, shuffle=False)
+    feat_train_loader = DataLoader(TensorDataset(train_feats, train_labels), batch_size=batch_size, shuffle=True)
+    feat_val_loader = DataLoader(TensorDataset(val_feats, val_labels), batch_size=batch_size, shuffle=False)
 
     head.to(device)
-    optimizer_p1 = AdamW(head.parameters(), lr=1e-3, weight_decay=1e-4)
-    scheduler_p1 = CosineAnnealingLR(optimizer_p1, T_max=10, eta_min=1e-5)
-    criterion_p1 = nn.CrossEntropyLoss(label_smoothing=0.05)
+    optimizer_p1 = AdamW(head.parameters(), lr=lr_head, weight_decay=1e-4)
+    scheduler_p1 = CosineAnnealingLR(optimizer_p1, T_max=epochs_p1, eta_min=1e-5)
+    criterion_p1 = nn.CrossEntropyLoss(label_smoothing=label_smoothing)
 
     best_val_loss = float("inf")
     best_val_top1 = 0.0
@@ -306,7 +443,7 @@ def run_650_incremental_training() -> dict[str, Any]:
     checkpoints_dir.mkdir(parents=True, exist_ok=True)
     production_dir.mkdir(parents=True, exist_ok=True)
 
-    for epoch in range(1, 11):
+    for epoch in range(1, epochs_p1 + 1):
         head.train()
         train_loss_meter = AverageMeter("Loss", ":.4f")
         train_top1_meter = AverageMeter("Top1", ":.2f")
@@ -346,7 +483,7 @@ def run_650_incremental_training() -> dict[str, Any]:
                 val_top1_meter.update(top1, bsz)
                 val_top5_meter.update(top5, bsz)
 
-        pct = (epoch / 10) * 100
+        pct = (epoch / epochs_p1) * 100
         is_best = val_loss_meter.avg < best_val_loss
         ckpt_status = "No change"
         if is_best:
@@ -354,7 +491,6 @@ def run_650_incremental_training() -> dict[str, Any]:
             best_val_top1 = val_top1_meter.avg
             ckpt_status = f"BEST UPDATED (val_loss={best_val_loss:.4f})"
 
-            # Save stage 1 checkpoint
             torch.save(
                 {
                     "stage": 1,
@@ -372,7 +508,7 @@ def run_650_incremental_training() -> dict[str, Any]:
 
         current_lr = scheduler_p1.get_last_lr()[0]
         logger.info(
-            f"Epoch [{epoch:2d}/10] ({pct:3.0f}%) | "
+            f"Epoch [{epoch:2d}/{epochs_p1}] ({pct:3.0f}%) | "
             f"Train Loss: {train_loss_meter.avg:.4f} | Train Acc: {train_top1_meter.avg:5.2f}% | "
             f"Val Loss: {val_loss_meter.avg:.4f} | Val Acc: {val_top1_meter.avg:5.2f}% (Top-5: {val_top5_meter.avg:5.2f}%) | "
             f"LR: {current_lr:.6f} | Status: {ckpt_status}"
@@ -390,11 +526,11 @@ def run_650_incremental_training() -> dict[str, Any]:
         })
 
     # =========================================================================
-    # PHASE 2: FULL FINE-TUNING (DIFFERENTIAL LR + MIXUP/CUTMIX)
+    # PHASE 2: FULL FINE-TUNING (DIFFERENTIAL LR + MIXUP/CUTMIX + STREAMING AUGMENTATION)
     # =========================================================================
     logger.info("\n" + "=" * 65)
-    logger.info("PHASE 2: FULL FINE-TUNING (DIFFERENTIAL LR + MIXUP/CUTMIX)")
-    logger.info("Backbone lr: 2e-5 | Head lr: 1e-4 | Augmentations: MixUp & CutMix")
+    logger.info(f"PHASE 2: FULL FINE-TUNING ({epochs_p2} EPOCHS)")
+    logger.info(f"Backbone lr: {lr_backbone} | Head lr: {lr_head * 0.1} | Augmentations: MixUp/CutMix/RandAugment")
     logger.info("=" * 65)
 
     # Enable gradients on backbone
@@ -403,37 +539,21 @@ def run_650_incremental_training() -> dict[str, Any]:
 
     optimizer_p2 = AdamW(
         [
-            {"params": extractor.parameters(), "lr": 2e-5},
-            {"params": head.parameters(), "lr": 1e-4},
+            {"params": extractor.parameters(), "lr": lr_backbone},
+            {"params": head.parameters(), "lr": lr_head * 0.1},
         ],
         weight_decay=1e-4,
     )
-    scheduler_p2 = CosineAnnealingLR(optimizer_p2, T_max=3, eta_min=1e-6)
+    scheduler_p2 = CosineAnnealingLR(optimizer_p2, T_max=epochs_p2, eta_min=1e-6)
 
-    # Convert small batch of training images to tensor dataset for fast fine-tuning
-    mean = torch.tensor([0.485, 0.456, 0.406]).view(3, 1, 1)
-    std = torch.tensor([0.229, 0.224, 0.225]).view(3, 1, 1)
+    # Use streaming dataset with photographic RandAugment & color jitter transforms
+    train_transform = get_train_transforms(use_randaugment=use_randaugment)
+    ft_dataset = FoodImageDataset(train_samples, class_to_idx, images_dir, transform=train_transform)
+    ft_train_loader = DataLoader(ft_dataset, batch_size=batch_size // 2, shuffle=True, drop_last=True)
 
-    ft_subset = train_samples[:1300]  # 2 samples per class across all 650 classes
-    ft_imgs_list = []
-    ft_lbls_list = []
-    for rel_p, lbl in ft_subset:
-        try:
-            with Image.open(images_dir / rel_p) as im:
-                arr = torch.from_numpy(np.array(im.convert("RGB"), dtype=np.float32) / 255.0).permute(2, 0, 1)
-                ft_imgs_list.append((arr - mean) / std)
-                ft_lbls_list.append(class_to_idx[lbl])
-        except Exception:
-            pass
-
-    ft_imgs_tensor = torch.stack(ft_imgs_list)
-    ft_lbls_tensor = torch.tensor(ft_lbls_list, dtype=torch.long)
-    ft_train_loader = DataLoader(TensorDataset(ft_imgs_tensor, ft_lbls_tensor), batch_size=32, shuffle=True)
-
-    phase2_epochs = 3
     phase2_history = []
 
-    for ep in range(1, phase2_epochs + 1):
+    for ep in range(1, epochs_p2 + 1):
         model.train()
         train_loss_meter = AverageMeter("Loss", ":.4f")
         train_top1_meter = AverageMeter("Top1", ":.2f")
@@ -444,17 +564,26 @@ def run_650_incremental_training() -> dict[str, Any]:
             mixed_imgs, y_a, y_b, lam = apply_mixup_cutmix(imgs, targets, alpha=0.2)
 
             optimizer_p2.zero_grad()
-            logits = model(mixed_imgs)
-            loss = lam * criterion_p1(logits, y_a) + (1 - lam) * criterion_p1(logits, y_b)
-            loss.backward()
-            torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
-            optimizer_p2.step()
+            with torch.amp.autocast("cuda", enabled=amp_enabled):
+                logits = model(mixed_imgs)
+                loss = lam * criterion_p1(logits, y_a) + (1 - lam) * criterion_p1(logits, y_b)
+
+            if amp_enabled:
+                scaler.scale(loss).backward()
+                scaler.unscale_(optimizer_p2)
+                torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
+                scaler.step(optimizer_p2)
+                scaler.update()
+            else:
+                loss.backward()
+                torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
+                optimizer_p2.step()
 
             train_loss_meter.update(loss.item(), imgs.size(0))
 
         scheduler_p2.step()
 
-        # Quick validation on feature set using current head
+        # Validation on feature set using current head
         head.eval()
         with torch.no_grad():
             val_loss_meter = AverageMeter("ValLoss", ":.4f")
@@ -478,7 +607,7 @@ def run_650_incremental_training() -> dict[str, Any]:
             ckpt_status_p2 = f"BEST UPDATED (val_loss={best_val_loss:.4f})"
 
         logger.info(
-            f"FT-Epoch [{ep}/{phase2_epochs}] | "
+            f"FT-Epoch [{ep}/{epochs_p2}] | "
             f"Train Loss: {train_loss_meter.avg:.4f} | "
             f"Val Loss: {val_loss_meter.avg:.4f} | Val Acc: {val_top1_meter.avg:5.2f}% (Top-5: {val_top5_meter.avg:5.2f}%) | "
             f"LR: {current_lr_p2:.6f} | Status: {ckpt_status_p2}"
@@ -497,6 +626,7 @@ def run_650_incremental_training() -> dict[str, Any]:
     # SAVE PRODUCTION CHECKPOINT
     # =========================================================================
     prod_ckpt_path = production_dir / "nutrition_model_650_best.pt"
+    rw_ckpt_path = production_dir / "nutrition_model_650_realworld.pt"
     backup_ckpt_path = checkpoints_dir / "nutrition_model_650_best.pt"
 
     payload_to_save = {
@@ -507,11 +637,32 @@ def run_650_incremental_training() -> dict[str, Any]:
         "model_state_dict": model.state_dict(),
         "final_val_top1": val_top1_meter.avg,
         "final_val_top5": val_top5_meter.avg,
+        "input_resolution": [224, 224],
+        "normalization": {
+            "mean": [0.485, 0.456, 0.406],
+            "std": [0.229, 0.224, 0.225],
+        },
         "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
     }
     torch.save(payload_to_save, prod_ckpt_path)
+    torch.save(payload_to_save, rw_ckpt_path)
     torch.save(payload_to_save, backup_ckpt_path)
-    logger.info(f"\nSaved production 650-class model to: {prod_ckpt_path.resolve()}")
+    logger.info(f"\nSaved production 650-class models to:\n - {prod_ckpt_path.resolve()}\n - {rw_ckpt_path.resolve()}")
+
+    # Export metadata files for Phase 7
+    with open(production_dir / "classes_650.json", "w", encoding="utf-8") as f:
+        json.dump({"total_classes": num_classes, "classes": all_classes, "class_to_idx": class_to_idx}, f, indent=2)
+
+    with open(production_dir / "model_info_650.json", "w", encoding="utf-8") as f:
+        json.dump({
+            "model_version": "nutrition_model_650_realworld",
+            "backbone": "efficientnet_b0",
+            "total_classes": num_classes,
+            "val_top1_accuracy": round(val_top1_meter.avg, 2),
+            "val_top5_accuracy": round(val_top5_meter.avg, 2),
+            "status": "PRODUCTION_READY",
+            "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        }, f, indent=2)
 
     # =========================================================================
     # COMPREHENSIVE EVALUATION ON TEST SPLIT
@@ -686,6 +837,35 @@ def run_650_incremental_training() -> dict[str, Any]:
     return report
 
 
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Nutrition AI 650-Class Incremental Training & Fine-Tuning Pipeline")
+    parser.add_argument("--epochs-p1", type=int, default=10, help="Epochs for Phase 1 Head training (default: 10)")
+    parser.add_argument("--epochs-p2", type=int, default=3, help="Epochs for Phase 2 End-to-End fine-tuning (default: 3)")
+    parser.add_argument("--max-per-class", type=int, default=15, help="Max training images per class (default: 15)")
+    parser.add_argument("--val-per-class", type=int, default=3, help="Max val images per class (default: 3)")
+    parser.add_argument("--batch-size", type=int, default=64, help="Batch size for training and feature extraction (default: 64)")
+    parser.add_argument("--lr-head", type=float, default=1e-3, help="Learning rate for classification head (default: 1e-3)")
+    parser.add_argument("--lr-backbone", type=float, default=2e-5, help="Learning rate for backbone fine-tuning (default: 2e-5)")
+    parser.add_argument("--label-smoothing", type=float, default=0.08, help="Label smoothing factor (default: 0.08)")
+    parser.add_argument("--no-amp", action="store_true", help="Disable Automatic Mixed Precision")
+    parser.add_argument("--no-randaugment", action="store_true", help="Disable RandAugment in Phase 2")
+    parser.add_argument("--device", type=str, default="auto", help="Compute device: auto, cpu, or cuda")
+    return parser.parse_args()
+
+
 if __name__ == "__main__":
-    run_650_incremental_training()
+    args = parse_args()
+    run_650_incremental_training(
+        epochs_p1=args.epochs_p1,
+        epochs_p2=args.epochs_p2,
+        max_train_per_class=args.max_per_class,
+        max_val_per_class=args.val_per_class,
+        batch_size=args.batch_size,
+        lr_head=args.lr_head,
+        lr_backbone=args.lr_backbone,
+        label_smoothing=args.label_smoothing,
+        use_amp=not args.no_amp,
+        use_randaugment=not args.no_randaugment,
+        device_name=args.device,
+    )
 

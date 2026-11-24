@@ -1,0 +1,197 @@
+{
+  "evaluation_timestamp": "2026-11-23T03:44:28Z",
+  "total_test_images": 138,
+  "metrics": {
+    "top1_accuracy": 18.12,
+    "top5_accuracy": 39.86,
+    "macro_precision": 1.91,
+    "macro_recall": 3.21,
+    "macro_f1": 2.3,
+    "average_confidence": 0.2579,
+    "ece": 0.1393,
+    "cpu_forward_latency_ms": 139.94
+  },
+  "cluster_performance": {
+    "dal_makhani": {
+      "total": 6,
+      "top1_pct": 50.0,
+      "top5_pct": 100.0,
+      "avg_conf": 0.4155
+    },
+    "shahi_paneer": {
+      "total": 6,
+      "top1_pct": 16.7,
+      "top5_pct": 66.7,
+      "avg_conf": 0.2985
+    },
+    "vegetable_biryani": {
+      "total": 6,
+      "top1_pct": 0.0,
+      "top5_pct": 100.0,
+      "avg_conf": 0.5465
+    },
+    "pulao": {
+      "total": 6,
+      "top1_pct": 83.3,
+      "top5_pct": 100.0,
+      "avg_conf": 0.4886
+    },
+    "jeera_rice": {
+      "total": 6,
+      "top1_pct": 50.0,
+      "top5_pct": 100.0,
+      "avg_conf": 0.4453
+    },
+    "khichdi": {
+      "total": 6,
+      "top1_pct": 16.7,
+      "top5_pct": 100.0,
+      "avg_conf": 0.4624
+    },
+    "roti": {
+      "total": 6,
+      "top1_pct": 16.7,
+      "top5_pct": 66.7,
+      "avg_conf": 0.3176
+    },
+    "naan": {
+      "total": 6,
+      "top1_pct": 83.3,
+      "top5_pct": 100.0,
+      "avg_conf": 0.5758
+    },
+    "kulcha": {
+      "total": 6,
+      "top1_pct": 66.7,
+      "top5_pct": 100.0,
+      "avg_conf": 0.3545
+    },
+    "paratha": {
+      "total": 6,
+      "top1_pct": 33.3,
+      "top5_pct": 66.7,
+      "avg_conf": 0.2704
+    },
+    "baseline_validation": {
+      "total": 79,
+      "top1_pct": 0.0,
+      "top5_pct": 1.3,
+      "avg_conf": 0.1334
+    }
+  },
+  "confidence_distribution": {
+    "0.0-0.1": 19,
+    "0.1-0.2": 68,
+    "0.2-0.3": 19,
+    "0.3-0.4": 5,
+    "0.4-0.5": 8,
+    "0.5-0.6": 3,
+    "0.6-0.7": 6,
+    "0.7-0.8": 3,
+    "0.8-0.9": 3,
+    "0.9-1.0": 4
+  },
+  "confusions": [
+    {
+      "true": "paneer butter masala",
+      "predicted": "naan plain",
+      "confidence": 0.4026
+    },
+    {
+      "true": "paneer butter masala",
+      "predicted": "roti chapati",
+      "confidence": 0.4703
+    },
+    {
+      "true": "roti chapati",
+      "predicted": "paratha aloo",
+      "confidence": 0.1339
+    },
+    {
+      "true": "paratha aloo",
+      "predicted": "naan plain",
+      "confidence": 0.1957
+    },
+    {
+      "true": "paratha aloo",
+      "predicted": "fried rice",
+      "confidence": 0.3326
+    },
+    {
+      "true": "biryani chicken",
+      "predicted": "apple pie",
+      "confidence": 0.0409
+    },
+    {
+      "true": "biryani mutton",
+      "predicted": "naan plain",
+      "confidence": 0.0927
+    },
+    {
+      "true": "paneer tikka",
+      "predicted": "paneer butter masala",
+      "confidence": 0.1189
+    },
+    {
+      "true": "dosa plain",
+      "predicted": "roti chapati",
+      "confidence": 0.1847
+    },
+    {
+      "true": "masala dosa",
+      "predicted": "naan plain",
+      "confidence": 0.0768
+    },
+    {
+      "true": "samosa",
+      "predicted": "paneer butter masala",
+      "confidence": 0.1945
+    },
+    {
+      "true": "palak paneer",
+      "predicted": "roti chapati",
+      "confidence": 0.1278
+    },
+    {
+      "true": "dal makhani",
+      "predicted": "paneer butter masala",
+      "confidence": 0.0373
+    },
+    {
+      "true": "dal tadka",
+      "predicted": "naan plain",
+      "confidence": 0.0493
+    },
+    {
+      "true": "chana masala",
+      "predicted": "naan plain",
+      "confidence": 0.0633
+    },
+    {
+      "true": "rajma masala",
+      "predicted": "naan plain",
+      "confidence": 0.0536
+    },
+    {
+      "true": "apples gala with skin raw",
+      "predicted": "fried rice",
+      "confidence": 0.0438
+    },
+    {
+      "true": "bananas raw",
+      "predicted": "roti chapati",
+      "confidence": 0.1867
+    },
+    {
+      "true": "blueberries raw",
+      "predicted": "paneer butter masala",
+      "confidence": 0.1581
+    },
+    {
+      "true": "strawberries raw",
+      "predicted": "paneer butter masala",
+      "confidence": 0.1189
+    }
+  ],
+  "failed_cases_count": 83
+}

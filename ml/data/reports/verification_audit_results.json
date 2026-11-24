@@ -1,0 +1,1308 @@
+{
+  "audit_name": "Nutrition AI Empirical ML Verification Audit",
+  "timestamp": "2026-11-20T11:05:11Z",
+  "total_test_cases": 19,
+  "empirical_metrics": {
+    "realworld_model_650": {
+      "checkpoint": "C:\\Nutrify\\ml\\models\\production\\nutrition_model_650_realworld.pt",
+      "num_classes": 650,
+      "measured_top1_accuracy": 5.26,
+      "measured_top5_accuracy": 15.79,
+      "measured_avg_confidence": 0.3909,
+      "confidence_histogram": {
+        "0.0-0.2": 5,
+        "0.2-0.4": 5,
+        "0.4-0.6": 7,
+        "0.6-0.8": 1,
+        "0.8-1.0": 1
+      },
+      "confidence_forcing_detected": false
+    },
+    "old_production_model_50": {
+      "checkpoint": "C:\\Nutrify\\ml\\models\\production\\nutrition_model_best.pt",
+      "num_classes": 50,
+      "measured_top1_accuracy": 5.26,
+      "measured_top5_accuracy": 15.79,
+      "measured_avg_confidence": 0.2869,
+      "confidence_histogram": {
+        "0.0-0.2": 11,
+        "0.2-0.4": 4,
+        "0.4-0.6": 3,
+        "0.6-0.8": 1,
+        "0.8-1.0": 0
+      }
+    }
+  },
+  "confusion_samples": [
+    {
+      "true": "bananas raw",
+      "predicted": "french fries",
+      "model": "realworld"
+    },
+    {
+      "true": "apples gala with skin raw",
+      "predicted": "bananas raw",
+      "model": "realworld"
+    },
+    {
+      "true": "biryani chicken",
+      "predicted": "pasta gluten free corn cooked",
+      "model": "realworld"
+    },
+    {
+      "true": "paneer butter masala",
+      "predicted": "chicken breast oven roasted fat free sliced",
+      "model": "realworld"
+    },
+    {
+      "true": "dosa plain",
+      "predicted": "cowpeas (blackeyes) immature seeds raw",
+      "model": "realworld"
+    },
+    {
+      "true": "samosa",
+      "predicted": "yardlong bean raw",
+      "model": "realworld"
+    },
+    {
+      "true": "dal makhani",
+      "predicted": "palak paneer",
+      "model": "realworld"
+    },
+    {
+      "true": "chana masala",
+      "predicted": "pasta gluten free corn cooked",
+      "model": "realworld"
+    },
+    {
+      "true": "blueberries raw",
+      "predicted": "game meat elk raw",
+      "model": "realworld"
+    },
+    {
+      "true": "strawberries raw",
+      "predicted": "cheese sauce prepared from recipe",
+      "model": "realworld"
+    },
+    {
+      "true": "oranges raw navels",
+      "predicted": "rhubarb raw",
+      "model": "realworld"
+    },
+    {
+      "true": "mangos raw",
+      "predicted": "boysenberries frozen unsweetened",
+      "model": "realworld"
+    },
+    {
+      "true": "lemons raw without peel",
+      "predicted": "cheese sauce prepared from recipe",
+      "model": "realworld"
+    },
+    {
+      "true": "onions red raw",
+      "predicted": "boysenberries frozen unsweetened",
+      "model": "realworld"
+    },
+    {
+      "true": "tacos",
+      "predicted": "ostrich round raw",
+      "model": "realworld"
+    },
+    {
+      "true": "pizza rolls frozen unprepared",
+      "predicted": "yardlong bean raw",
+      "model": "realworld"
+    },
+    {
+      "true": "club sandwich",
+      "predicted": "boysenberries frozen unsweetened",
+      "model": "realworld"
+    },
+    {
+      "true": "apricots raw",
+      "predicted": "cheese sauce prepared from recipe",
+      "model": "realworld"
+    }
+  ],
+  "detailed_test_cases": [
+    {
+      "test_id": "TC_01",
+      "category": "Fresh Fruit",
+      "image_filename": "bananas_raw.jpg",
+      "ground_truth": "bananas raw",
+      "realworld_model": {
+        "top1_prediction": "french fries",
+        "confidence": 0.0596,
+        "is_top1_match": false,
+        "is_top5_match": true,
+        "top5_candidates": [
+          [
+            "french fries",
+            0.0596
+          ],
+          [
+            "kale frozen unprepared",
+            0.056
+          ],
+          [
+            "bananas raw",
+            0.0505
+          ],
+          [
+            "fried rice",
+            0.0504
+          ],
+          [
+            "veal seam fat only raw",
+            0.0446
+          ]
+        ],
+        "raw_logits": {
+          "top1_logit": -4.2303,
+          "top2_logit": -4.2924,
+          "logit_margin": 0.062,
+          "min_logit": -18.9784,
+          "max_logit": -4.2303,
+          "mean_logit": -11.0475,
+          "std_logit": 2.8019
+        },
+        "softmax_entropy": 4.3267,
+        "confidence_verification": {
+          "math_recomputed_prob": 0.0596,
+          "matches_pure_softmax": true,
+          "is_artificially_forced": false
+        }
+      },
+      "old_production_model": {
+        "top1_prediction": "bananas raw",
+        "confidence": 0.1923,
+        "is_top1_match": true,
+        "is_top5_match": true,
+        "top5_candidates": [
+          "bananas raw",
+          "onions red raw",
+          "blueberries raw",
+          "potato pancakes",
+          "croutons plain"
+        ]
+      }
+    },
+    {
+      "test_id": "TC_02",
+      "category": "Fresh Fruit",
+      "image_filename": "apples_gala_with_skin_raw.jpg",
+      "ground_truth": "apples gala with skin raw",
+      "realworld_model": {
+        "top1_prediction": "bananas raw",
+        "confidence": 0.7132,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          [
+            "bananas raw",
+            0.7132
+          ],
+          [
+            "bacon and beef sticks",
+            0.0583
+          ],
+          [
+            "cranberry juice blend 100% juice bottled with added vitamin c and calcium",
+            0.0308
+          ],
+          [
+            "macaroni and cheese",
+            0.0271
+          ],
+          [
+            "paella",
+            0.0251
+          ]
+        ],
+        "raw_logits": {
+          "top1_logit": 12.0378,
+          "top2_logit": 9.533,
+          "logit_margin": 2.5048,
+          "min_logit": -17.1151,
+          "max_logit": 12.0378,
+          "mean_logit": -1.1858,
+          "std_logit": 3.987
+        },
+        "softmax_entropy": 1.4833,
+        "confidence_verification": {
+          "math_recomputed_prob": 0.7132,
+          "matches_pure_softmax": true,
+          "is_artificially_forced": false
+        }
+      },
+      "old_production_model": {
+        "top1_prediction": "onions red raw",
+        "confidence": 0.1439,
+        "is_top1_match": false,
+        "is_top5_match": true,
+        "top5_candidates": [
+          "onions red raw",
+          "apples gala with skin raw",
+          "nectarines raw",
+          "mangos raw",
+          "salmon nuggets breaded frozen heated"
+        ]
+      }
+    },
+    {
+      "test_id": "TC_03",
+      "category": "Vegetables & Greens",
+      "image_filename": "real_0001.jpg",
+      "ground_truth": "cornsalad raw",
+      "realworld_model": {
+        "top1_prediction": "cornsalad raw",
+        "confidence": 1.0,
+        "is_top1_match": true,
+        "is_top5_match": true,
+        "top5_candidates": [
+          [
+            "cornsalad raw",
+            1.0
+          ],
+          [
+            "kanpyo (dried gourd strips)",
+            0.0
+          ],
+          [
+            "parsley fresh",
+            0.0
+          ],
+          [
+            "butter without salt",
+            0.0
+          ],
+          [
+            "tortilla chips yellow plain salted",
+            0.0
+          ]
+        ],
+        "raw_logits": {
+          "top1_logit": 24.5233,
+          "top2_logit": 5.7168,
+          "logit_margin": 18.8065,
+          "min_logit": -16.6499,
+          "max_logit": 24.5233,
+          "mean_logit": -4.3375,
+          "std_logit": 3.6304
+        },
+        "softmax_entropy": 0.0,
+        "confidence_verification": {
+          "math_recomputed_prob": 1.0,
+          "matches_pure_softmax": true,
+          "is_artificially_forced": false
+        }
+      },
+      "old_production_model": {
+        "top1_prediction": "spinach raw",
+        "confidence": 0.3151,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          "spinach raw",
+          "bananas raw",
+          "yogurt plain low fat",
+          "hummus commercial",
+          "strawberries raw"
+        ]
+      }
+    },
+    {
+      "test_id": "TC_04",
+      "category": "Indian Cuisine",
+      "image_filename": "test_001_biryani_chicken.jpg",
+      "ground_truth": "biryani chicken",
+      "realworld_model": {
+        "top1_prediction": "pasta gluten free corn cooked",
+        "confidence": 0.2188,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          [
+            "pasta gluten free corn cooked",
+            0.2188
+          ],
+          [
+            "cream sour cultured",
+            0.1107
+          ],
+          [
+            "cheese food pasteurized process swiss",
+            0.0791
+          ],
+          [
+            "cheese spread pasteurized process american",
+            0.0757
+          ],
+          [
+            "cream substitute powdered",
+            0.0589
+          ]
+        ],
+        "raw_logits": {
+          "top1_logit": -2.0129,
+          "top2_logit": -2.6944,
+          "logit_margin": 0.6815,
+          "min_logit": -19.9083,
+          "max_logit": -2.0129,
+          "mean_logit": -11.6851,
+          "std_logit": 3.0597
+        },
+        "softmax_entropy": 3.2124,
+        "confidence_verification": {
+          "math_recomputed_prob": 0.2188,
+          "matches_pure_softmax": true,
+          "is_artificially_forced": false
+        }
+      },
+      "old_production_model": {
+        "top1_prediction": "chicken spread",
+        "confidence": 0.1218,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          "chicken spread",
+          "blueberries raw",
+          "lemons raw without peel",
+          "flour soy defatted",
+          "croutons plain"
+        ]
+      }
+    },
+    {
+      "test_id": "TC_05",
+      "category": "Indian Cuisine",
+      "image_filename": "test_003_paneer_butter_masala.jpg",
+      "ground_truth": "paneer butter masala",
+      "realworld_model": {
+        "top1_prediction": "chicken breast oven roasted fat free sliced",
+        "confidence": 0.1629,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          [
+            "chicken breast oven roasted fat free sliced",
+            0.1629
+          ],
+          [
+            "duck domesticated liver raw",
+            0.1291
+          ],
+          [
+            "fat free ice cream no sugar added flavors other than chocolate",
+            0.0774
+          ],
+          [
+            "spring rolls",
+            0.0671
+          ],
+          [
+            "fireweed leaves raw",
+            0.0491
+          ]
+        ],
+        "raw_logits": {
+          "top1_logit": 13.6804,
+          "top2_logit": 13.4481,
+          "logit_margin": 0.2323,
+          "min_logit": -7.9017,
+          "max_logit": 13.6804,
+          "mean_logit": 3.9984,
+          "std_logit": 3.4235
+        },
+        "softmax_entropy": 3.3787,
+        "confidence_verification": {
+          "math_recomputed_prob": 0.1629,
+          "matches_pure_softmax": true,
+          "is_artificially_forced": false
+        }
+      },
+      "old_production_model": {
+        "top1_prediction": "flour soy defatted",
+        "confidence": 0.4321,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          "flour soy defatted",
+          "chicken spread",
+          "blueberries raw",
+          "egg yolk dried",
+          "oranges raw navels"
+        ]
+      }
+    },
+    {
+      "test_id": "TC_06",
+      "category": "Indian Cuisine",
+      "image_filename": "test_005_dosa_plain.jpg",
+      "ground_truth": "dosa plain",
+      "realworld_model": {
+        "top1_prediction": "cowpeas (blackeyes) immature seeds raw",
+        "confidence": 0.3356,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          [
+            "cowpeas (blackeyes) immature seeds raw",
+            0.3356
+          ],
+          [
+            "yardlong bean raw",
+            0.1331
+          ],
+          [
+            "rose apples raw",
+            0.0569
+          ],
+          [
+            "onions raw",
+            0.0563
+          ],
+          [
+            "loganberries frozen",
+            0.0542
+          ]
+        ],
+        "raw_logits": {
+          "top1_logit": 4.889,
+          "top2_logit": 3.9644,
+          "logit_margin": 0.9247,
+          "min_logit": -15.4861,
+          "max_logit": 4.889,
+          "mean_logit": -4.7592,
+          "std_logit": 2.8064
+        },
+        "softmax_entropy": 2.9214,
+        "confidence_verification": {
+          "math_recomputed_prob": 0.3356,
+          "matches_pure_softmax": true,
+          "is_artificially_forced": false
+        }
+      },
+      "old_production_model": {
+        "top1_prediction": "bananas raw",
+        "confidence": 0.1404,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          "bananas raw",
+          "lemons raw without peel",
+          "kale raw",
+          "blueberries raw",
+          "raspberries raw"
+        ]
+      }
+    },
+    {
+      "test_id": "TC_07",
+      "category": "Indian Street Food",
+      "image_filename": "test_007_samosa.jpg",
+      "ground_truth": "samosa",
+      "realworld_model": {
+        "top1_prediction": "yardlong bean raw",
+        "confidence": 0.171,
+        "is_top1_match": false,
+        "is_top5_match": true,
+        "top5_candidates": [
+          [
+            "yardlong bean raw",
+            0.171
+          ],
+          [
+            "cream sour cultured",
+            0.1132
+          ],
+          [
+            "asparagus raw",
+            0.0887
+          ],
+          [
+            "vada pav",
+            0.0814
+          ],
+          [
+            "samosa",
+            0.0439
+          ]
+        ],
+        "raw_logits": {
+          "top1_logit": -0.942,
+          "top2_logit": -1.3548,
+          "logit_margin": 0.4128,
+          "min_logit": -17.0811,
+          "max_logit": -0.942,
+          "mean_logit": -9.7468,
+          "std_logit": 2.9697
+        },
+        "softmax_entropy": 3.5313,
+        "confidence_verification": {
+          "math_recomputed_prob": 0.171,
+          "matches_pure_softmax": true,
+          "is_artificially_forced": false
+        }
+      },
+      "old_production_model": {
+        "top1_prediction": "pork fresh ground raw",
+        "confidence": 0.1892,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          "pork fresh ground raw",
+          "mangos raw",
+          "onions red raw",
+          "tortilla chips yellow plain salted",
+          "cheese brie"
+        ]
+      }
+    },
+    {
+      "test_id": "TC_08",
+      "category": "Indian Cuisine",
+      "image_filename": "test_009_dal_makhani.jpg",
+      "ground_truth": "dal makhani",
+      "realworld_model": {
+        "top1_prediction": "palak paneer",
+        "confidence": 0.453,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          [
+            "palak paneer",
+            0.453
+          ],
+          [
+            "fat free ice cream no sugar added flavors other than chocolate",
+            0.1423
+          ],
+          [
+            "chicken breast oven roasted fat free sliced",
+            0.1139
+          ],
+          [
+            "fried rice",
+            0.0555
+          ],
+          [
+            "cheese spread cream cheese base",
+            0.051
+          ]
+        ],
+        "raw_logits": {
+          "top1_logit": 13.3543,
+          "top2_logit": 12.1962,
+          "logit_margin": 1.1581,
+          "min_logit": -10.7828,
+          "max_logit": 13.3543,
+          "mean_logit": 0.8537,
+          "std_logit": 3.5676
+        },
+        "softmax_entropy": 2.0855,
+        "confidence_verification": {
+          "math_recomputed_prob": 0.453,
+          "matches_pure_softmax": true,
+          "is_artificially_forced": false
+        }
+      },
+      "old_production_model": {
+        "top1_prediction": "chicken spread",
+        "confidence": 0.3795,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          "chicken spread",
+          "egg yolk dried",
+          "flour soy defatted",
+          "hummus commercial",
+          "oranges raw navels"
+        ]
+      }
+    },
+    {
+      "test_id": "TC_09",
+      "category": "Indian Cuisine",
+      "image_filename": "test_011_chana_masala.jpg",
+      "ground_truth": "chana masala",
+      "realworld_model": {
+        "top1_prediction": "pasta gluten free corn cooked",
+        "confidence": 0.4035,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          [
+            "pasta gluten free corn cooked",
+            0.4035
+          ],
+          [
+            "game meat elk raw",
+            0.1262
+          ],
+          [
+            "cheese food pasteurized process swiss",
+            0.1078
+          ],
+          [
+            "cheese spread cream cheese base",
+            0.0625
+          ],
+          [
+            "loganberries frozen",
+            0.0529
+          ]
+        ],
+        "raw_logits": {
+          "top1_logit": -0.7392,
+          "top2_logit": -1.9014,
+          "logit_margin": 1.1623,
+          "min_logit": -21.2477,
+          "max_logit": -0.7392,
+          "mean_logit": -11.3537,
+          "std_logit": 3.0353
+        },
+        "softmax_entropy": 2.4446,
+        "confidence_verification": {
+          "math_recomputed_prob": 0.4035,
+          "matches_pure_softmax": true,
+          "is_artificially_forced": false
+        }
+      },
+      "old_production_model": {
+        "top1_prediction": "flour soy defatted",
+        "confidence": 0.1895,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          "flour soy defatted",
+          "blueberries raw",
+          "chicken spread",
+          "hummus commercial",
+          "mangos raw"
+        ]
+      }
+    },
+    {
+      "test_id": "TC_10",
+      "category": "Berries",
+      "image_filename": "test_015_blueberries_raw.jpg",
+      "ground_truth": "blueberries raw",
+      "realworld_model": {
+        "top1_prediction": "game meat elk raw",
+        "confidence": 0.1706,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          [
+            "game meat elk raw",
+            0.1706
+          ],
+          [
+            "hummus commercial",
+            0.0694
+          ],
+          [
+            "fried rice",
+            0.0515
+          ],
+          [
+            "durian raw or frozen",
+            0.051
+          ],
+          [
+            "avocados raw california",
+            0.0506
+          ]
+        ],
+        "raw_logits": {
+          "top1_logit": -1.9285,
+          "top2_logit": -2.8277,
+          "logit_margin": 0.8992,
+          "min_logit": -24.4542,
+          "max_logit": -1.9285,
+          "mean_logit": -11.1739,
+          "std_logit": 3.6893
+        },
+        "softmax_entropy": 3.7235,
+        "confidence_verification": {
+          "math_recomputed_prob": 0.1706,
+          "matches_pure_softmax": true,
+          "is_artificially_forced": false
+        }
+      },
+      "old_production_model": {
+        "top1_prediction": "bread rye",
+        "confidence": 0.5729,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          "bread rye",
+          "salmon nuggets breaded frozen heated",
+          "peanuts spanish raw",
+          "croutons plain",
+          "hummus commercial"
+        ]
+      }
+    },
+    {
+      "test_id": "TC_11",
+      "category": "Berries",
+      "image_filename": "test_016_strawberries_raw.jpg",
+      "ground_truth": "strawberries raw",
+      "realworld_model": {
+        "top1_prediction": "cheese sauce prepared from recipe",
+        "confidence": 0.3898,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          [
+            "cheese sauce prepared from recipe",
+            0.3898
+          ],
+          [
+            "pasta gluten free corn cooked",
+            0.126
+          ],
+          [
+            "milk shakes thick vanilla",
+            0.1219
+          ],
+          [
+            "ostrich round raw",
+            0.0859
+          ],
+          [
+            "risotto",
+            0.0305
+          ]
+        ],
+        "raw_logits": {
+          "top1_logit": 1.5012,
+          "top2_logit": 0.3718,
+          "logit_margin": 1.1294,
+          "min_logit": -21.0183,
+          "max_logit": 1.5012,
+          "mean_logit": -9.2474,
+          "std_logit": 3.2441
+        },
+        "softmax_entropy": 2.4878,
+        "confidence_verification": {
+          "math_recomputed_prob": 0.3898,
+          "matches_pure_softmax": true,
+          "is_artificially_forced": false
+        }
+      },
+      "old_production_model": {
+        "top1_prediction": "potato pancakes",
+        "confidence": 0.1336,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          "potato pancakes",
+          "croutons plain",
+          "pork fresh ground raw",
+          "bread rye",
+          "salmon nuggets breaded frozen heated"
+        ]
+      }
+    },
+    {
+      "test_id": "TC_12",
+      "category": "Citrus",
+      "image_filename": "test_017_oranges_raw_navels.jpg",
+      "ground_truth": "oranges raw navels",
+      "realworld_model": {
+        "top1_prediction": "rhubarb raw",
+        "confidence": 0.179,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          [
+            "rhubarb raw",
+            0.179
+          ],
+          [
+            "yardlong bean raw",
+            0.1337
+          ],
+          [
+            "chicken quesadilla",
+            0.103
+          ],
+          [
+            "hot dog",
+            0.082
+          ],
+          [
+            "pimento canned",
+            0.0571
+          ]
+        ],
+        "raw_logits": {
+          "top1_logit": -1.2164,
+          "top2_logit": -1.5082,
+          "logit_margin": 0.2918,
+          "min_logit": -24.6497,
+          "max_logit": -1.2164,
+          "mean_logit": -11.6937,
+          "std_logit": 3.8485
+        },
+        "softmax_entropy": 3.1892,
+        "confidence_verification": {
+          "math_recomputed_prob": 0.179,
+          "matches_pure_softmax": true,
+          "is_artificially_forced": false
+        }
+      },
+      "old_production_model": {
+        "top1_prediction": "mangos raw",
+        "confidence": 0.7554,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          "mangos raw",
+          "muffins oat bran",
+          "bread rye",
+          "onions red raw",
+          "archway home style cookies oatmeal"
+        ]
+      }
+    },
+    {
+      "test_id": "TC_13",
+      "category": "Tropical Fruit",
+      "image_filename": "test_018_mangos_raw.jpg",
+      "ground_truth": "mangos raw",
+      "realworld_model": {
+        "top1_prediction": "boysenberries frozen unsweetened",
+        "confidence": 0.5128,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          [
+            "boysenberries frozen unsweetened",
+            0.5128
+          ],
+          [
+            "cheese food pasteurized process swiss",
+            0.0657
+          ],
+          [
+            "durian raw or frozen",
+            0.0634
+          ],
+          [
+            "game meat elk raw",
+            0.0423
+          ],
+          [
+            "vada pav",
+            0.037
+          ]
+        ],
+        "raw_logits": {
+          "top1_logit": 1.832,
+          "top2_logit": -0.2235,
+          "logit_margin": 2.0555,
+          "min_logit": -17.7791,
+          "max_logit": 1.832,
+          "mean_logit": -8.4914,
+          "std_logit": 2.7912
+        },
+        "softmax_entropy": 2.4278,
+        "confidence_verification": {
+          "math_recomputed_prob": 0.5128,
+          "matches_pure_softmax": true,
+          "is_artificially_forced": false
+        }
+      },
+      "old_production_model": {
+        "top1_prediction": "nuts almonds",
+        "confidence": 0.198,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          "nuts almonds",
+          "scrapple pork",
+          "onions red raw",
+          "potato pancakes",
+          "cheese brie"
+        ]
+      }
+    },
+    {
+      "test_id": "TC_14",
+      "category": "Citrus",
+      "image_filename": "test_019_lemons_raw_without_peel.jpg",
+      "ground_truth": "lemons raw without peel",
+      "realworld_model": {
+        "top1_prediction": "cheese sauce prepared from recipe",
+        "confidence": 0.4504,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          [
+            "cheese sauce prepared from recipe",
+            0.4504
+          ],
+          [
+            "ice cream sandwich",
+            0.1355
+          ],
+          [
+            "vada pav",
+            0.1099
+          ],
+          [
+            "cheese spread cream cheese base",
+            0.0649
+          ],
+          [
+            "butter without salt",
+            0.0601
+          ]
+        ],
+        "raw_logits": {
+          "top1_logit": 3.4861,
+          "top2_logit": 2.2846,
+          "logit_margin": 1.2015,
+          "min_logit": -19.3955,
+          "max_logit": 3.4861,
+          "mean_logit": -9.1484,
+          "std_logit": 3.4164
+        },
+        "softmax_entropy": 2.0654,
+        "confidence_verification": {
+          "math_recomputed_prob": 0.4504,
+          "matches_pure_softmax": true,
+          "is_artificially_forced": false
+        }
+      },
+      "old_production_model": {
+        "top1_prediction": "cheese brie",
+        "confidence": 0.3051,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          "cheese brie",
+          "croutons plain",
+          "potato pancakes",
+          "pork fresh ground raw",
+          "bread rye"
+        ]
+      }
+    },
+    {
+      "test_id": "TC_18",
+      "category": "Alliums",
+      "image_filename": "test_024_onions_red_raw.jpg",
+      "ground_truth": "onions red raw",
+      "realworld_model": {
+        "top1_prediction": "boysenberries frozen unsweetened",
+        "confidence": 0.5036,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          [
+            "boysenberries frozen unsweetened",
+            0.5036
+          ],
+          [
+            "durian raw or frozen",
+            0.077
+          ],
+          [
+            "cheese food pasteurized process swiss",
+            0.0649
+          ],
+          [
+            "game meat elk raw",
+            0.0481
+          ],
+          [
+            "vada pav",
+            0.0297
+          ]
+        ],
+        "raw_logits": {
+          "top1_logit": 1.8294,
+          "top2_logit": -0.0492,
+          "logit_margin": 1.8786,
+          "min_logit": -17.979,
+          "max_logit": 1.8294,
+          "mean_logit": -8.4341,
+          "std_logit": 2.7911
+        },
+        "softmax_entropy": 2.4571,
+        "confidence_verification": {
+          "math_recomputed_prob": 0.5036,
+          "matches_pure_softmax": true,
+          "is_artificially_forced": false
+        }
+      },
+      "old_production_model": {
+        "top1_prediction": "nuts almonds",
+        "confidence": 0.1943,
+        "is_top1_match": false,
+        "is_top5_match": true,
+        "top5_candidates": [
+          "nuts almonds",
+          "scrapple pork",
+          "onions red raw",
+          "potato pancakes",
+          "tortilla chips yellow plain salted"
+        ]
+      }
+    },
+    {
+      "test_id": "TC_20",
+      "category": "Street Food",
+      "image_filename": "test_077_tacos.jpg",
+      "ground_truth": "tacos",
+      "realworld_model": {
+        "top1_prediction": "ostrich round raw",
+        "confidence": 0.2444,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          [
+            "ostrich round raw",
+            0.2444
+          ],
+          [
+            "boysenberries frozen unsweetened",
+            0.1857
+          ],
+          [
+            "pasta gluten free corn cooked",
+            0.1472
+          ],
+          [
+            "game meat elk raw",
+            0.0685
+          ],
+          [
+            "chicken quesadilla",
+            0.0575
+          ]
+        ],
+        "raw_logits": {
+          "top1_logit": 0.9587,
+          "top2_logit": 0.6839,
+          "logit_margin": 0.2748,
+          "min_logit": -19.8166,
+          "max_logit": 0.9587,
+          "mean_logit": -9.0624,
+          "std_logit": 3.1746
+        },
+        "softmax_entropy": 2.8038,
+        "confidence_verification": {
+          "math_recomputed_prob": 0.2444,
+          "matches_pure_softmax": true,
+          "is_artificially_forced": false
+        }
+      },
+      "old_production_model": {
+        "top1_prediction": "croutons plain",
+        "confidence": 0.3107,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          "croutons plain",
+          "bread rye",
+          "nuts almonds",
+          "potato pancakes",
+          "peanuts spanish raw"
+        ]
+      }
+    },
+    {
+      "test_id": "TC_21",
+      "category": "Restaurant",
+      "image_filename": "test_083_pizza.jpg",
+      "ground_truth": "pizza rolls frozen unprepared",
+      "realworld_model": {
+        "top1_prediction": "yardlong bean raw",
+        "confidence": 0.5563,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          [
+            "yardlong bean raw",
+            0.5563
+          ],
+          [
+            "onions raw",
+            0.117
+          ],
+          [
+            "boysenberries frozen unsweetened",
+            0.0514
+          ],
+          [
+            "carissa (natal plum) raw",
+            0.0332
+          ],
+          [
+            "jujube chinese fresh dried",
+            0.0231
+          ]
+        ],
+        "raw_logits": {
+          "top1_logit": 3.1064,
+          "top2_logit": 1.547,
+          "logit_margin": 1.5594,
+          "min_logit": -20.8181,
+          "max_logit": 3.1064,
+          "mean_logit": -7.6654,
+          "std_logit": 3.0075
+        },
+        "softmax_entropy": 2.1525,
+        "confidence_verification": {
+          "math_recomputed_prob": 0.5563,
+          "matches_pure_softmax": true,
+          "is_artificially_forced": false
+        }
+      },
+      "old_production_model": {
+        "top1_prediction": "tortilla chips yellow plain salted",
+        "confidence": 0.5455,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          "tortilla chips yellow plain salted",
+          "blueberries raw",
+          "mangos raw",
+          "onions red raw",
+          "hummus commercial"
+        ]
+      }
+    },
+    {
+      "test_id": "TC_22",
+      "category": "Sandwiches",
+      "image_filename": "test_084_club_sandwich.jpg",
+      "ground_truth": "club sandwich",
+      "realworld_model": {
+        "top1_prediction": "boysenberries frozen unsweetened",
+        "confidence": 0.5128,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          [
+            "boysenberries frozen unsweetened",
+            0.5128
+          ],
+          [
+            "cheese food pasteurized process swiss",
+            0.0657
+          ],
+          [
+            "durian raw or frozen",
+            0.0634
+          ],
+          [
+            "game meat elk raw",
+            0.0423
+          ],
+          [
+            "vada pav",
+            0.037
+          ]
+        ],
+        "raw_logits": {
+          "top1_logit": 1.832,
+          "top2_logit": -0.2235,
+          "logit_margin": 2.0555,
+          "min_logit": -17.7791,
+          "max_logit": 1.832,
+          "mean_logit": -8.4914,
+          "std_logit": 2.7912
+        },
+        "softmax_entropy": 2.4278,
+        "confidence_verification": {
+          "math_recomputed_prob": 0.5128,
+          "matches_pure_softmax": true,
+          "is_artificially_forced": false
+        }
+      },
+      "old_production_model": {
+        "top1_prediction": "nuts almonds",
+        "confidence": 0.198,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          "nuts almonds",
+          "scrapple pork",
+          "onions red raw",
+          "potato pancakes",
+          "cheese brie"
+        ]
+      }
+    },
+    {
+      "test_id": "TC_23",
+      "category": "Stone Fruit",
+      "image_filename": "test_088_apricots_raw.jpg",
+      "ground_truth": "apricots raw",
+      "realworld_model": {
+        "top1_prediction": "cheese sauce prepared from recipe",
+        "confidence": 0.3898,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          [
+            "cheese sauce prepared from recipe",
+            0.3898
+          ],
+          [
+            "pasta gluten free corn cooked",
+            0.126
+          ],
+          [
+            "milk shakes thick vanilla",
+            0.1219
+          ],
+          [
+            "ostrich round raw",
+            0.0859
+          ],
+          [
+            "risotto",
+            0.0305
+          ]
+        ],
+        "raw_logits": {
+          "top1_logit": 1.5012,
+          "top2_logit": 0.3718,
+          "logit_margin": 1.1294,
+          "min_logit": -21.0183,
+          "max_logit": 1.5012,
+          "mean_logit": -9.2474,
+          "std_logit": 3.2441
+        },
+        "softmax_entropy": 2.4878,
+        "confidence_verification": {
+          "math_recomputed_prob": 0.3898,
+          "matches_pure_softmax": true,
+          "is_artificially_forced": false
+        }
+      },
+      "old_production_model": {
+        "top1_prediction": "potato pancakes",
+        "confidence": 0.1336,
+        "is_top1_match": false,
+        "is_top5_match": false,
+        "top5_candidates": [
+          "potato pancakes",
+          "croutons plain",
+          "pork fresh ground raw",
+          "bread rye",
+          "salmon nuggets breaded frozen heated"
+        ]
+      }
+    }
+  ]
+}
